@@ -1,0 +1,8 @@
+// Universal Links.
+a {
+  // @include word-wrap(normal);
+  // @include transition(color 1s ease);
+  &:link {
+    text-decoration: none;
+  }
+}

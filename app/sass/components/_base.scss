@@ -1,0 +1,64 @@
+// 1. Media Queries
+$tablet: "only screen and (max-width: $screen-sm-max)";
+$tablet__up: "only screen and (min-width: $screen-sm-max)";
+// Useful mixins: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/.
+// 2. REM Font Sizes.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+// 3. Font-weights.
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+// 4. Colors.
+$black: #000000;
+$white: #FFFFFF;
+$grey: #333333;
+$light-grey: #f3f0f2;
+$lighter-grey: #e6e4e7;
+$lightest-grey: #e1e1e1;
+$extra-light-grey: #fafafa;
+$dark-grey: #bbbbbb;
+$darker-grey: #b5b5b5;
+$darkest-grey: #cccccc;
+$extra-dark-grey: #c2c2c2;
+$medium-grey-light: #949494;
+$medium-grey: #999999;
+$medium-grey-dark: #d7d7d7;
+$transparent-grey: rgba(61, 61, 61, 0.95);
+$red: #ef4036;
+$light-red: #fde6e5;
+$green: #00a99d;
+// 5. Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
+*::-moz-selection {
+    color: $white;
+    background-color: $red;
+}
+
+*::selection {
+    color: $white;
+    background-color: $red;
+}
+// 6. Font Awesome Icon Insertion
+@mixin icon-before($content) {
+    &::before {
+        margin-right: 5px;
+        content: $content;
+        font-family: "fontawesome";
+    }
+}
+// 7. Disable Border and Background
+@mixin border-and-background() {
+    border: none;
+    background: none;
+}
+// 8. Define Margin and Padding
+@mixin margin-and-padding($mar, $pad) {
+    margin: $mar;
+    padding: $pad;
+}

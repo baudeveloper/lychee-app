@@ -1,0 +1,182 @@
+.container {
+    @include container-fixed();
+    @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+}
+
+body,
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    @include container-fixed();
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    padding-bottom: 50px;
+    transition: all 0.5s;
+    background: $light-grey no-repeat bottom right url('../images/pattern.png');
+
+    .page-title {
+        padding: 0;
+        color: $grey;
+        margin: 80px 0 30px;
+        @include font-size(24px);
+        @media #{$tablet} {
+            margin-top: 36px;
+        }
+
+        .fa {
+            margin-right: 10px;
+        }
+    }
+
+    .page-row {
+        @include make-row();
+
+        h2 {
+            color: $red;
+            text-transform: uppercase;
+            @include font-size(18px);
+        }
+
+        li {
+            @include panel-standard();
+
+            &.skinned {
+                @include panel-skinned();
+            }
+
+            &.employee-of-the-month {
+                @include panel-employee();
+            }
+        }
+
+        > ul {
+            padding-left: 0;
+            padding-right: 0;
+            @include make-sm-column(12);
+            @include make-md-column(10);
+            @include margin-and-padding(0, 0);
+            @include border-and-background();
+
+            > li {
+                list-style-type: none;
+
+                .panel-heading {
+                    &:hover {
+                        cursor: crosshair;
+                    }
+                }
+
+                &.placeholder {
+                    margin: 0 15px 15px;
+                    border: 1px solid darken($light-grey, 5%);
+                    background-color: darken($light-grey, 2.5%);
+                    @include make-sm-column(3);
+                    @include make-md-column(3);
+                }
+
+                &.tile {
+                    height: 350px;
+                }
+            }
+        }
+    }
+
+    #my-stats {
+        @include make-sm-column(12);
+        @include make-md-column(2);
+        @include widget-mystats();
+    }
+
+    #my-todo {
+        @include make-sm-column(6);
+        @include make-md-column(5);
+
+        .tab {
+            border: 1px solid $lightest-grey;
+            background-color: $extra-light-grey;
+            @include widget-todo();
+        }
+    }
+
+    #my-tasks {
+        @include make-sm-column(6);
+        @include make-md-column(4);
+        @include widget-mytasks();
+    }
+
+    #did-you-know {
+        @include make-sm-column(12);
+        @include make-md-column(3);
+    }
+
+    #my-team {
+        @include make-sm-column(12);
+        @include make-md-column(9);
+        @include widget-myteam();
+    }
+
+    #team-member {
+        @include make-sm-column(12);
+        @include make-md-column(3);
+    }
+
+    #my-projects {
+        overflow: hidden !important;
+        @include make-sm-column(12);
+        @include make-md-column(9);
+
+        h3 {
+            color: $grey;
+            @include font-size(16px);
+            @include margin-and-padding(0 0 20px, 0);
+        }
+    }
+
+    footer {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: $medium-grey-light;
+        @include font-size(14px);
+    }
+
+    .feed {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        width: 378px;
+        right: -378px;
+        padding: 20px;
+        overflow-y: scroll;
+        transition: all 0.5s;
+        background-color: $transparent-grey;
+        @include widget-feed();
+
+        h2 {
+            color: $medium-grey;
+            @include font-size(28px);
+            @include margin-and-padding(0, 0);
+            font-weight: $font-weight-light;
+
+            &:last-of-type {
+                margin-top: 60px;
+            }
+        }
+
+        &.active {
+            right: 0;
+        }
+    }
+}
