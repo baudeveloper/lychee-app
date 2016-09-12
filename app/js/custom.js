@@ -71,15 +71,16 @@ $(document).ready(function() {
         snap: true
     });
     $(".dropbox").droppable({
-        accept: ".draggable",
+        tolerance: "intersect",
+        accept: function(draggable) {
+          return $(this).find("#member-" + draggable.attr("id")).length == 0;
+        },
         drop: function(event, ui) {
             tag = ui.draggable;
             tag.clone().attr("id", "member-" + tag.attr("id")).prependTo(this);
             $(this).parent().removeClass("over");
         },
-        accept: function(draggable) {
-          return $(this).find("#member-" + draggable.attr("id")).length == 0;
-        },
+
         over: function(event, elem) {
             $(this).parent().addClass("over");
         },
@@ -87,7 +88,6 @@ $(document).ready(function() {
             $(this).parent().removeClass("over");
         }
     });
-    $("#drop").sortable();
     
     // Widget Drag and Drop.
     var temp = $(".page-row > ul");
