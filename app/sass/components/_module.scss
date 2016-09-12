@@ -1,6 +1,9 @@
 /* Dashboard Page Widgets */
 // 1. Widget - My Stats
 @mixin widget-mystats() {
+  h2 {
+    padding-top: 3px;
+  }
     ul {
         li {
             color: $grey;
