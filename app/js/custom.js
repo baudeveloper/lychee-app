@@ -88,7 +88,7 @@ $(document).ready(function() {
         }
     });
     $("#drop").sortable();
-
+    
     // Widget Drag and Drop.
     var temp = $(".page-row > ul");
     temp.sortable({
