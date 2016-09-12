@@ -62,7 +62,7 @@ $(document).ready(function() {
     });
 
     // Drag and Drop Team Members
-    // Source: http://jsfiddle.net/39khs/82/
+    // Source: http://jsfiddle.net/39khs/82/ && http://stackoverflow.com/questions/9279380/jquery-droppable-avoid-multiple-drops-of-the-same-object
     $(".draggable").draggable({
         cursor: "crosshair",
         revert: "invalid",
@@ -73,14 +73,15 @@ $(document).ready(function() {
     $(".dropbox").droppable({
         accept: ".draggable",
         drop: function(event, ui) {
+            tag = ui.draggable;
+            tag.clone().attr("id", "member-" + tag.attr("id")).prependTo(this);
             $(this).parent().removeClass("over");
-            var dropped = ui.draggable;
-            var droppedOn = $(this);
-            $(dropped).clone().appendTo(droppedOn);
+        },
+        accept: function(draggable) {
+          return $(this).find("#member-" + draggable.attr("id")).length == 0;
         },
         over: function(event, elem) {
             $(this).parent().addClass("over");
-            // console.log("over");
         },
         out: function(event, elem) {
             $(this).parent().removeClass("over");
