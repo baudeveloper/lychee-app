@@ -68,15 +68,13 @@ main {
             @include make-md-column(10);
             @include margin-and-padding(0, 0);
             @include border-and-background();
-
+            .panel-heading {
+                &:hover {
+                    cursor: move;
+                }
+            }
             > li {
                 list-style-type: none;
-
-                .panel-heading {
-                    &:hover {
-                        cursor: crosshair;
-                    }
-                }
 
                 &.placeholder {
                     margin: 0 15px 15px;

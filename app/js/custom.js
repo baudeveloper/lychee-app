@@ -94,7 +94,9 @@ $(document).ready(function() {
         tolerance: 'pointer',
         revert: 'invalid',
         placeholder: 'placeholder tile',
-        forceHelperSize: true
+        forceHelperSize: true,
+        handle: ".panel-heading",
+        cursor: "move"
     });
     // Source: https://jsfiddle.net/ramnathv/1064q7jm/.
 
