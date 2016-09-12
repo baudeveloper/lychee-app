@@ -477,6 +477,10 @@
                 color: $dark-grey;
                 @include font-size(14px);
             }
+
+            &:last-of-type {
+              margin-bottom: 60px;
+            }
         }
     }
 }
