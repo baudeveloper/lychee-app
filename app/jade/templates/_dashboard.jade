@@ -53,9 +53,46 @@
                                         span.description Please Enter your Time for this week
                             footer
                                 a(href="#") See All Notifications
-                    li
-                        a(href="#")
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                             i.fa.fa-clock-o
+                        .dropdown-menu.dropdown-time-entry
+                          table
+                            colgroup
+                              col
+                              col
+                              col
+                            thead
+                              tr
+                                td Project/Task
+                                td Time Today
+                                  span (hh:mm:ss:)
+                                td Timer Actions
+                            tbody
+                              tr
+                                td FFD-C2029 - UI Design
+                                  span.description RONE-0757 (Remote Document Delivery)
+                                td 
+                                td
+                                  i.fa.fa-share
+                                  i.fa.fa-close
+                              tr
+                                td FFD-C2029 - Development
+                                  span.description RONE-0757 (Remote Document Delivery)
+                                td
+                                td 
+                              tr
+                                td FFD-C2029 - Testing
+                                  span RONE-0757 (Remote Document Delivery)
+                                td
+                                td
+                            tfoot
+                              tr
+                                td(colspan="3")
+                                  .input
+                                    input.form-control(type='text', placeholder='Add a Task')
+                                    span
+                                      i.fa.fa-search
                     li
                         a(href="#")
                             i.fa.fa-keyboard-o
@@ -63,7 +100,7 @@
                         a(href="#") Log out
                     li
                         a.feed-toggle(href="#", title="View Live Feed")
-                            i.fa.fa-rss
+                          i.fa.fa-align-left(aria-hidden='true')
     #sidebar-wrapper
         ul#secondary-nav.visible(role="navigation")
             li.site-user
@@ -164,49 +201,46 @@
                                         ul.list-group
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
-                                                    //- img.draggable.ui-draggable.ui-draggable-handle(id="member-1", src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
-                                                    //- img.draggable.ui-draggable.ui-draggable-handle(id="member-2", src='../images/team-member-cindy.png', alt='Cindy Lopes')
+                                                .droppable
+                                                    img#member-1.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
+                                                    img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
-                                                    //- img.draggable.ui-draggable.ui-draggable-handle(id="member-2", src="../images/team-member-cindy.png", alt="Cindy Lopes")
+                                                .droppable
+                                                    img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
-                                                    //- img.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
-                                                    //- img.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
-                                                    //- img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                             li.list-group-item
                                                 i.fa.fa-check-square-o(aria-hidden='true')
-                                                #drop.dropbox
+                                                .droppable
                                                 | Do Something
                                     #task-deferred.tab-pane(role='tabpanel')
                                         p Dummy content in Deferred Tab.
@@ -266,7 +300,7 @@
                             ul.list-group
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - UI Design
@@ -275,7 +309,7 @@
                                         span.sr-only 60% Complete
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - Development
@@ -284,7 +318,7 @@
                                         span.sr-only 60% Complete
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - Testing
@@ -293,7 +327,7 @@
                                         span.sr-only 60% Complete
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - Testing
@@ -302,7 +336,7 @@
                                         span.sr-only 60% Complete
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - Development
@@ -311,7 +345,7 @@
                                         span.sr-only 60% Complete
                                 li.list-group-item
                                     i.fa.fa-check-square-o(aria-hidden='true')
-                                    i.fa.fa-info-circle(aria-hidden='true')
+                                    i.fa.fa-list-alt(aria-hidden='true')
                                     span 1
                                     | RONE-0757 (Remote Document Delivery)
                                     span FFD-C2029 - Testing

@@ -62,7 +62,8 @@ main {
             padding-left: 0;
             padding-right: 0;
             @include make-sm-column(12);
-            @include make-md-column(10);
+            @include make-md-column(12);
+            @include make-lg-column(9);
             @include margin-and-padding(0, 0);
             @include border-and-background();
             .panel-heading {
@@ -90,13 +91,15 @@ main {
 
     #my-stats {
         @include make-sm-column(12);
-        @include make-md-column(2);
+        @include make-md-column(12);
+        @include make-lg-column(3);
         @include widget-mystats();
     }
 
     #my-todo {
-        @include make-sm-column(6);
-        @include make-md-column(5);
+        @include make-sm-column(12);
+        @include make-md-column(6);
+        @include make-lg-column(4);
 
         .tab {
             border: 1px solid $lightest-grey;
@@ -106,31 +109,36 @@ main {
     }
 
     #my-tasks {
-        @include make-sm-column(6);
-        @include make-md-column(4);
+        @include make-sm-column(12);
+        @include make-md-column(6);
+        @include make-lg-column(5);
         @include widget-mytasks();
     }
 
     #did-you-know {
-        @include make-sm-column(12);
-        @include make-md-column(3);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(3);
     }
 
     #my-team {
         @include make-sm-column(12);
-        @include make-md-column(9);
+        @include make-md-column(12);
+        @include make-lg-column(9);
         @include widget-myteam();
     }
 
     #team-member {
-        @include make-sm-column(12);
-        @include make-md-column(3);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(3);
     }
 
     #my-projects {
         overflow: hidden !important;
         @include make-sm-column(12);
-        @include make-md-column(9);
+        @include make-md-column(12);
+        @include make-lg-column(9);
 
         h3 {
             color: $grey;

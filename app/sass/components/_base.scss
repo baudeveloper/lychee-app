@@ -1,5 +1,6 @@
 // 1. Media Queries
 $tablet: "only screen and (max-width: $screen-sm-max)";
+$desktop: "only screen and (max-width: $screen-md-max)";
 $tablet__up: "only screen and (min-width: $screen-sm-max)";
 // Useful mixins: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/.
 // 2. REM Font Sizes.
@@ -22,6 +23,7 @@ $grey: #333333;
 $light-grey: #f3f0f2;
 $lighter-grey: #e6e4e7;
 $lightest-grey: #e1e1e1;
+$medium-light-grey: #eeeeee;
 $extra-light-grey: #fafafa;
 $dark-grey: #bbbbbb;
 $darker-grey: #b5b5b5;

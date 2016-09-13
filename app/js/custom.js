@@ -64,13 +64,13 @@ $(document).ready(function() {
     // Drag and Drop Team Members
     // Source: http://jsfiddle.net/39khs/82/ && http://stackoverflow.com/questions/9279380/jquery-droppable-avoid-multiple-drops-of-the-same-object
     $(".draggable").draggable({
-        cursor: "crosshair",
+        cursor: "move",
         revert: "invalid",
         helper: "clone",
         opacity: 0.35,
         snap: true
     });
-    $(".dropbox").droppable({
+    $(".droppable").droppable({
         tolerance: "intersect",
         accept: function(draggable) {
           return $(this).find("#member-" + draggable.attr("id")).length == 0;
@@ -80,7 +80,6 @@ $(document).ready(function() {
             tag.clone().attr("id", "member-" + tag.attr("id")).prependTo(this);
             $(this).parent().removeClass("over");
         },
-
         over: function(event, elem) {
             $(this).parent().addClass("over");
         },
@@ -88,7 +87,6 @@ $(document).ready(function() {
             $(this).parent().removeClass("over");
         }
     });
-    
     // Widget Drag and Drop.
     var temp = $(".page-row > ul");
     temp.sortable({

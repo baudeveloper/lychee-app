@@ -66,7 +66,7 @@
                         background-color: transparent;
                     }
 
-                    input {
+                    .input-search {
                         height: 80px;
                         font-weight: 200;
                         @include font-size(20px);
@@ -113,13 +113,13 @@
                                 .feed-toggle {
                                     padding-left: 30px;
                                     padding-right: 30px;
-                                    color: $red;
+                                    color: $grey;
 
                                     &:active,
                                     &:focus,
                                     &:hover {
                                         .fa {
-                                            color: $grey;
+                                            color: $red;
                                         }
                                     }
                                 }
@@ -137,6 +137,7 @@
                             background-color: $red;
                         }
                         @include dropdown-notification();
+                        @include dropdown-time-entry();
                     }
                 }
             }
