@@ -94,7 +94,7 @@
                                     span
                                       i.fa.fa-search
                     li
-                        a(href="#")
+                        a(data-toggle="modal", data-target="#task-details-modal")
                             i.fa.fa-keyboard-o
                     li
                         a(href="#") Log out
@@ -457,3 +457,15 @@
                         | Task was marked 'Completed'
                         span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
         footer Lychee 2.0.0a
+  .modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title FFD-C2029 - UI Design
+        .modal-body
+          p One fine body…
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Log Time

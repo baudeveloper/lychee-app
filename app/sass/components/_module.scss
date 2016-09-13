@@ -711,3 +711,31 @@
         }
     }
 }
+// 12. Standard Modal
+@mixin modal-standard() {
+  .modal {
+    .modal-content {
+      box-shadow: none;
+      border-radius: 0;
+      .modal-header {
+        color: $white;
+        @include font-size(18px);
+        background-color: $red;
+        button {
+          opacity: 1;
+          color: inherit;
+        }
+      }
+      .modal-body {
+
+      }
+      .modal-footer {
+        border-top-color: $lightest-grey;
+        .btn {
+          border-radius: 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

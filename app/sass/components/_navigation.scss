@@ -97,6 +97,9 @@
                             a {
                                 color: $grey;
 
+                                &:hover {
+                                  cursor: pointer;
+                                }
                                 &:active,
                                 &:focus,
                                 &:hover {
@@ -335,4 +338,5 @@
             }
         }
     }
+
 }
