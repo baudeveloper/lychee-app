@@ -1,3 +1,24 @@
+/* Elements Snippets */
+@mixin inline-input {
+  .input {
+    padding: 15px;
+    position: relative;
+    input {
+      height: 40px;
+      border-radius: 0;
+      padding-left: 35px;
+    }
+    span {
+      position: absolute;
+      display: block;
+      top: 25px;
+      left: 25px;
+      color: $red;
+      @include font-size(14px);
+    }
+  }
+}
+
 /* Dashboard Page Widgets */
 // 1. Widget - My Stats
 @mixin widget-mystats() {
@@ -641,23 +662,7 @@
           }
           tfoot {
             background-color: $medium-light-grey;
-            .input {
-              padding: 15px;
-              position: relative;
-              input {
-                height: 40px;
-                border-radius: 0;
-                padding-left: 35px;
-              }
-              span {
-                position: absolute;
-                display: block;
-                top: 25px;
-                left: 25px;
-                color: $red;
-                @include font-size(14px);
-              }
-            }
+            @include inline-input();
           }
         }
     }
@@ -747,6 +752,37 @@
         .btn {
           border-radius: 0;
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+// 13. Standard Modal Content - table-border-color
+@mixin modal-content-todo() {
+  #task-details-modal {
+    .modal-body {
+      padding-bottom: 0;
+      p {
+        margin: 15px -15px 0;
+        padding: 0 15px 15px;
+        border-bottom: 1px solid $darkest-grey;
+      }
+      .row {
+        display: flex;
+        .col-sm-6 {
+          .input {
+            padding: 15px 0;
+            span {
+              left: 10px;
+            }
+          }
+          p {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+          &:last-of-type {
+            border-left: 1px solid $lightest-grey;
+          }
         }
       }
     }
