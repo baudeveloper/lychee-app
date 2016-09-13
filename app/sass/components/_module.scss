@@ -721,13 +721,26 @@
         color: $white;
         @include font-size(18px);
         background-color: $red;
+        border-bottom: none;
         button {
           opacity: 1;
           color: inherit;
         }
       }
       .modal-body {
-
+        position: relative;
+        padding: 65px 15px 15px;
+        nav {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 50px;
+          color: $white;
+          padding: 15px;
+          @include font-size(16px);
+          background-color: $black;
+        }
       }
       .modal-footer {
         border-top-color: $lightest-grey;
