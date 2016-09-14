@@ -18,6 +18,35 @@
     }
   }
 }
+// 11. Typeahead styles
+@mixin typeahead-standard() {
+  .twitter-typeahead {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    .tt-menu {
+      padding: 15px 0;
+      width: 100% !important;
+      background-color: $white;
+      box-shadow: 1px 2px 2px 1px rgba(204,204,204,0.5);
+      .tt-dataset {
+        .tt-suggestion {
+          color: $grey;
+          line-height: 2;
+          padding: 0 35px;
+          &.tt-cursor, &:hover {
+            color: $red;
+            cursor: pointer;
+            background-color: $light-red;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* Dashboard Page Widgets */
 // 1. Widget - My Stats
@@ -714,6 +743,7 @@
           tfoot {
             background-color: $medium-light-grey;
             @include inline-input();
+            @include typeahead-standard();
           }
         }
     }
@@ -828,6 +858,7 @@
           display: flex;
           > .column {
             @include make-sm-column(6);
+            @include typeahead-standard();
             .bg-color {
               padding: 15px;
               margin: 0 -15px;
