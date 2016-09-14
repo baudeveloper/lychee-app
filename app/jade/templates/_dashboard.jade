@@ -466,22 +466,54 @@
           h4.modal-title FFD-C2029 - UI Design
         .modal-body
           nav Do Something...
-          p #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
-          .row
-            .col-sm-6
-              p
-                strong Collaborators:
-              .input
-                input.form-control(type='text', placeholder='Add a Collaborator')
-                span
-                  i.fa.fa-search
-            .col-sm-6
-              p
-                strong Task
-              .input
-                input.form-control(type='text', placeholder='Add a Task')
-                span
-                  i.fa.fa-search
+          section            
+            p #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
+            .row              
+              .column
+                p
+                  strong Collaborators:
+                .input
+                  input.form-control(type='text', placeholder='Add a Collaborator')
+                  span
+                    i.fa.fa-search
+                ul
+                  li.team-member
+                      figure
+                          img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+                      .info
+                          span Abdikadir Kedie
+                          span Technical Architect
+                  li.team-member
+                      figure
+                          img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+                      .info
+                          span Cindy Lopes
+                          span Technical Developer
+              .column
+                .bg-color
+                  p
+                    strong Task
+                  .input
+                    input.form-control(type='text', placeholder='Add a Task')
+                    span
+                      i.fa.fa-search
+                form
+                  .form-group                  
+                    .column
+                      label(for='input-comment') Enter a comment
+                      textarea#input-comment(placeholder='Write a comment...', rows='3')
         .modal-footer
-          button.btn.btn-default(type='button', data-dismiss='modal') Close
-          button.btn.btn-primary(type='button') Log Time
+          .left
+            button.btn.btn-primary(type='button')
+              i.fa.fa-check-square-o              
+              | Mark as Complete              
+            button.btn.btn-default(type='button', data-dismiss='modal') Defer
+          .right
+            form.form-inline
+              .form-group
+                label(for="input-hours") Hrs.
+                .input-group
+                  .input-group-addon
+                    input(type="text", placeholder="0.0")
+                  button.btn.btn-primary(type='button') Log Time
+              button.btn.btn-default(type='button', data-dismiss='modal') Close
