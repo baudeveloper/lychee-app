@@ -30,13 +30,17 @@ $dark-grey: #bbbbbb;
 $darker-grey: #b5b5b5;
 $darkest-grey: #cccccc;
 $extra-dark-grey: #c2c2c2;
+$super-dark-grey: #cbcbcb;
 $medium-grey-light: #949494;
 $medium-grey: #999999;
 $medium-grey-dark: #d7d7d7;
 $transparent-grey: rgba(61, 61, 61, 0.95);
 $red: #ef4036;
 $light-red: #fde6e5;
+$light-green: #bdc9c8;
 $green: #00a99d;
+$dark-green: #1da99e;
+$purple: #400099;
 // 5. Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
 *::-moz-selection {
     color: $white;
@@ -48,8 +52,9 @@ $green: #00a99d;
     background-color: $red;
 }
 // 6. Font Awesome Icon Insertion
-@mixin icon-before($content) {
+@mixin icon-before($content, $color) {
     &::before {
+        color: $color;
         margin-right: 5px;
         content: $content;
         font-family: "fontawesome";

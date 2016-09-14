@@ -18,6 +18,8 @@ module.exports = function() {
             './bower_components/typeahead.js/dist/bloodhound.min.js',
             './bower_components/typeahead.js/dist/typeahead.bundle.min.js',
             './bower_components/highcharts/highcharts.js',
+            './bower_components/highcharts/highcharts-more.js',
+            './bower_components/highcharts/modules/solid-gauge.js',
             './app/js/custom.js'
         ],
         vendorJS: [
