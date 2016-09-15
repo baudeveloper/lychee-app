@@ -36,7 +36,7 @@ module.exports = function() {
             './bower_components/animate.css/animate.min.css',
             './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
 						'./bower_components/filament-tablesaw/dist/tablesaw.css',
-            './bower_components/jquery.fancytree/dist/skin-win8/ui.fancytree.min.css',
+            './bower_components/jquery.fancytree/dist/skin-bootstrap/ui.fancytree.min.css',
         ],
         // ./app Locations
         css: './dist/css',
