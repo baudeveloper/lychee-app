@@ -15,6 +15,7 @@ module.exports = function() {
             './bower_components/jquery/dist/jquery.min.js',
             './bower_components/jquery-ui/jquery-ui.min.js',
             './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            './bower_components/bootstrap-select/js/bootstrap-select.js',
             './bower_components/typeahead.js/dist/bloodhound.min.js',
             './bower_components/typeahead.js/dist/typeahead.bundle.min.js',
             './bower_components/highcharts/highcharts.js',

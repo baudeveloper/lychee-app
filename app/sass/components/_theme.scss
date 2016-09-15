@@ -1,0 +1,114 @@
+// Team List Page
+#team-list {
+	form {
+		@extend .form-inline;
+		label {
+			color: $grey;
+			font-weight: 400;
+			@include font-size(20px);
+		}
+		.bootstrap-select {
+			button {
+				color: $red;
+				border-radius: 0;
+				@include font-size(16px);
+				box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+			}
+			.dropdown-menu {
+				@include font-size(16px);
+				a {
+					padding: 3px 12px;
+				}
+			}
+		}
+		.checkbox {
+			margin-left: 15px;
+			> label {
+				@include font-size(14px);
+			}
+		}
+		nav > ul {
+			@extend .pagination;
+			margin: 0;
+			padding: 0;
+			li {
+				> a {
+					color: $grey;
+					border: none;
+					background: none;
+					box-shadow: none;
+					padding: 0 5px;
+					@include font-size(20px);
+					&:hover, &:active, &:focus {
+						color: $white;
+						border-radius: 4px;
+						background-color: $red;
+					}
+				}
+				&:first-of-type {
+					> a {
+						padding-left: 0;
+						margin-right: 10px;
+						padding-right: 10px;
+						border-right: 1px solid $darkest-grey;
+						&:hover, &:active, &:focus {
+							color: $red;
+							border-radius: 0;
+							background-color: transparent;
+						}
+					}
+				}
+				&.disabled {
+					> a {
+						color: $darkest-grey;
+						border: none;
+						background: none;
+						box-shadow: none;
+						&:hover, &:active, &:focus {
+							color: $white;
+							background-color: lighten($red, 15%);
+						}
+					}
+				}
+			}
+		}
+		.form-group {
+			&:first-of-type + div {
+				margin-top: -4px;
+			}
+			&:last-of-type {
+				@extend .pull-right;
+				@media (max-width: 1366px) {
+					float: none !important;
+					clear: both;
+					display: block;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	.team-row {
+		margin: 50px 0;
+		.team-member {
+			@include make-sm-column(4);
+			@include make-md-column(3);
+			@include make-lg-column(2);
+			@extend .text-center;
+			img {
+				@extend .img-circle;
+			}
+			.info {
+				margin: 15px 0 30px;
+				span {
+					display: block;
+					&:first-of-type {
+						@include font-size(14px);
+					}
+					&:last-of-type {
+						@include font-size(12px);
+					}
+				}
+			}
+		}
+	}
+}
