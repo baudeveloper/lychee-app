@@ -24,6 +24,7 @@ module.exports = function() {
 						'./bower_components/isotope/dist/isotope.pkgd.min.js',
 						'./bower_components/filament-tablesaw/dist/tablesaw.js',
 						'./bower_components/filament-tablesaw/dist/tablesaw-init.js',
+            './bower_components/jquery.fancytree/dist/jquery.fancytree-all.min.js',
             './app/js/custom.js'
         ],
         vendorJS: [
@@ -34,7 +35,8 @@ module.exports = function() {
         vendorCSS: [
             './bower_components/animate.css/animate.min.css',
             './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
-						'./bower_components/filament-tablesaw/dist/tablesaw.css'
+						'./bower_components/filament-tablesaw/dist/tablesaw.css',
+            './bower_components/jquery.fancytree/dist/skin-win8/ui.fancytree.min.css',
         ],
         // ./app Locations
         css: './dist/css',

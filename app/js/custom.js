@@ -14,6 +14,9 @@ document.onreadystatechange = function () {
 
 $(document).ready(function() {
 
+    /* Time Entry Page */
+    $("#fancytree").fancytree();
+
     /* Dashboard Page */
 
     // Task Details Modal

@@ -7,10 +7,21 @@ a {
   }
 }
 
+// Buttons
+.btn-secondary {
+  color: $red;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: $extra-light-grey;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
+
+// Modals State
 @include modal-standard();
 @include modal-content-todo();
 @include modal-content-taskdetails();
 
+// Loading State
 #loading {
   width: 100%;
   height: 100%;
@@ -30,5 +41,13 @@ a {
     text-transform: uppercase;
   }
 }
-
 @include loader();
+
+// Alert Box State
+.alert-timesheet {
+  @extend .alert, .alert-warning;
+  @include font-size(16px);
+  color: $dark-yellow;
+  border-color: $yellow;
+  background-color: $light-yellow;
+}

@@ -258,3 +258,20 @@
 		}
 	}
 }
+
+// Time Entry Page
+#task-directory {
+	.bg {
+		background-color: $white;
+		.btn-group {
+			padding: 15px 0 0 15px;
+		}
+		@include inline-input();
+		@include typeahead-standard();
+		.input {
+			span {
+				color: $medium-grey;
+			}
+		}
+	}
+}

@@ -28,6 +28,7 @@
     "jquery-ui": "^1.12.0",
     "typeahead.js": "typehead.js#^0.11.1",
     "isotope": "^3.0.1",
-    "filament-tablesaw": "tablesaw#^2.0.3"
+    "filament-tablesaw": "tablesaw#^2.0.3",
+    "jquery.fancytree": "fancytree#^2.19.0"
   }
 }

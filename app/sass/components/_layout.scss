@@ -46,6 +46,7 @@ main {
     .page-title {
         padding: 0;
         color: $grey;
+        display: inline-block;
         margin: 80px 0 30px !important;
         @include font-size(24px);
 
@@ -125,6 +126,23 @@ main {
       @include make-lg-column(3);
     }
     #member-assignments {
+      @include make-sm-column(12);
+      @include make-md-column(12);
+      @include make-lg-column(9);
+    }
+
+    // Time Entry Page Layout.
+    .alert-timesheet {
+      padding: 20px 25px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+    #task-directory {
+      @include make-sm-column(12);
+      @include make-md-column(12);
+      @include make-lg-column(3);
+    }
+    #task-list {
       @include make-sm-column(12);
       @include make-md-column(12);
       @include make-lg-column(9);
