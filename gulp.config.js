@@ -29,8 +29,7 @@ module.exports = function() {
         vendorJS: [
             './bower_components/html5shiv/dist/html5shiv.min.js',
             './app/js/respond.min.js',
-            './app/js/modernizr.min.js',
-            './app/js/header.js'
+            './app/js/modernizr.min.js'
         ],
         vendorCSS: [
             './bower_components/animate.css/animate.min.css',
