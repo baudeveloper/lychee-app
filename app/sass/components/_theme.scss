@@ -279,40 +279,58 @@
 				font-weight: 400;
 				@include font-size(12px);
 				font-family: "Roboto Condensed";
-				// .fancytree-icon {
-				// 	background: none;
-				// }
+				.fancytree-expander {
+					&::before {
+						color: $grey;
+						content: '\f0d7';
+						font-family: 'fontawesome';
+					}
+				}
+				.fancytree-expanded {
+					.fancytree-expander {
+						&::before {
+							color: $grey;
+							content: '\f0da';
+							font-family: 'fontawesome';
+						}
+					}
+				}
+				.fancytree-ico-c {
+					.fancytree-expander {
+						&::before {
+							content: '';
+						}
+					}
+					.fancytree-icon {
+						&::before {
+							color: $red;
+							content: '\f1b3';
+							font-family: 'fontawesome';
+						}
+					}
+				}
+				.fancytree-ico-ef {
+					.fancytree-icon {
+						&::before {
+							color: $grey;
+							content: '\f115';
+							font-family: 'fontawesome';
+						}
+					}
+				}
+				.fancytree-ico-cf {
+					.fancytree-icon {
+						&::before {
+							color: $grey;
+							content: '\f07b';
+							font-family: 'fontawesome';
+						}
+					}
+				}
 			}
 			> ul > li > span > .fancytree-title {
 				color: $blue;
 				@include font-size(14px);
-			}
-			.fancytree-ico-c {
-				.fancytree-icon {
-					&::before {
-						color: $red;
-						content: '\f1b3';
-						font-family: 'fontawesome';
-					}
-				}
-			}
-			.fancytree-ico-ef {
-				.fancytree-icon {
-					&::before {
-						color: $grey;
-						content: '\f115';
-						font-family: 'fontawesome';
-					}
-				}
-			}
-			.fancytree-ico-cf {
-				.fancytree-icon {
-					&::before {
-						color: $grey;
-						content: '\f07b';
-						font-family: 'fontawesome';
-					}
-				}
 			}
 		}
 	}
