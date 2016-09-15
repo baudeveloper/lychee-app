@@ -1,0 +1,107 @@
+nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
+	.navbar-inner
+		.navbar-header
+			a.navbar-brand(href="#", title="Welcome to Lychee by Jonah Group")
+				.logo
+			button.collapse.navbar-collapsed(type="button", data-toggle="collapse", data-target="#main-navbar-collapse")
+				i.fa.fa-bars
+		#primary-nav-collapse.collapse.navbar-collapse
+			.input-group
+				span#search.input-group-addon
+					i.fa.fa-search
+				input.input-search.form-control.typeahead(type='text', placeholder='Search...', aria-describedby='search')
+			ul.nav.navbar-nav.navbar-right
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+						img(src="../images/icon-notify.png", alt="Notify")
+						span.badge.badge-notify 2
+					.dropdown-menu.dropdown-notification
+						header
+							h2 You have 6 notifications
+						section
+							ul.list-group
+								li.list-group-item
+									i.fa.fa-circle.fa-red(aria-hidden='true')
+									span.badge 5 min
+									| Time sheet is due
+									span.description Please Enter your Time for this week
+								li.list-group-item
+									i.fa.fa-circle.fa-yellow(aria-hidden='true')
+									span.badge 10 min
+									| Your Task has been changed
+									span.description Task RONE-0754 has been renamed...
+								li.list-group-item
+									i.fa.fa-circle.fa-blue(aria-hidden='true')
+									span.badge 20 min
+									| Update your timesheet
+									span.description Please Enter your Time for this week
+								li.list-group-item
+									i.fa.fa-circle.fa-red(aria-hidden='true')
+									span.badge 5 min
+									| Time sheet is due
+									span.description Please Enter your Time for this week
+								li.list-group-item
+									i.fa.fa-circle.fa-yellow(aria-hidden='true')
+									span.badge 10 min
+									| Your Task has been changed
+									span.description Task RONE-0754 has been renamed...
+								li.list-group-item
+									i.fa.fa-circle.fa-blue(aria-hidden='true')
+									span.badge 20 min
+									| Update your timesheet
+									span.description Please Enter your Time for this week
+						footer
+							a(href="#") See All Notifications
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+						i.fa.fa-clock-o
+					.dropdown-menu.dropdown-time-entry
+						table
+							colgroup
+								col
+								col
+								col
+							thead
+								tr
+									td Project/Task
+									td Time Today
+										span (hh:mm:ss:)
+									td Timer Actions
+							tbody
+								tr
+									td FFD-C2029 - UI Design
+										span.description RONE-0757 (Remote Document Delivery)
+									td
+										.col-sm-12.input-group
+											a.input-group-addon
+												span
+													i.fa.fa-play
+											input.form-control(type='text', placeholder='00:55:00', maxlength="8")
+									td
+										i.fa.fa-share
+										i.fa.fa-close
+								tr
+									td FFD-C2029 - Development
+										span.description RONE-0757 (Remote Document Delivery)
+									td
+									td 
+								tr
+									td FFD-C2029 - Testing
+										span RONE-0757 (Remote Document Delivery)
+									td
+									td
+							tfoot
+								tr
+									td(colspan="3")
+										.input
+											input.form-control(id="input-time-entry", type='text', placeholder='Add a Task')
+											span
+												i.fa.fa-search
+				li
+					a(data-toggle="modal", data-target="#todo-modal")
+						i.fa.fa-keyboard-o
+				li
+					a(href="#") Log out
+				li
+					a.feed-toggle(href="#", title="View Live Feed")
+						i.fa.fa-align-left(aria-hidden='true')

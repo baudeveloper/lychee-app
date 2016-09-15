@@ -1,574 +1,426 @@
-#loading
-  .loading.loading-2.wave.wave-2
-    .loading-2-text
-  h1 Loading...
-#wrapper
-    nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
-        .navbar-inner
-            .navbar-header
-                a.navbar-brand(href="#", title="Welcome to Lychee by Jonah Group")
-                    .logo
-                button.collapse.navbar-collapsed(type="button", data-toggle="collapse", data-target="#main-navbar-collapse")
-                    i.fa.fa-bars
-            #primary-nav-collapse.collapse.navbar-collapse
-                .input-group
-                    span#search.input-group-addon
-                        i.fa.fa-search
-                    input.input-search.form-control.typeahead(type='text', placeholder='Search...', aria-describedby='search')
-                ul.nav.navbar-nav.navbar-right
-                    li.dropdown
-                        a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                            img(src="../images/icon-notify.png", alt="Notify")
-                            span.badge.badge-notify 2
-                        .dropdown-menu.dropdown-notification
-                            header
-                                h2 You have 6 notifications
-                            section
-                                ul.list-group
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-red(aria-hidden='true')
-                                        span.badge 5 min
-                                        | Time sheet is due
-                                        span.description Please Enter your Time for this week
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-yellow(aria-hidden='true')
-                                        span.badge 10 min
-                                        | Your Task has been changed
-                                        span.description Task RONE-0754 has been renamed...
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-blue(aria-hidden='true')
-                                        span.badge 20 min
-                                        | Update your timesheet
-                                        span.description Please Enter your Time for this week
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-red(aria-hidden='true')
-                                        span.badge 5 min
-                                        | Time sheet is due
-                                        span.description Please Enter your Time for this week
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-yellow(aria-hidden='true')
-                                        span.badge 10 min
-                                        | Your Task has been changed
-                                        span.description Task RONE-0754 has been renamed...
-                                    li.list-group-item
-                                        i.fa.fa-circle.fa-blue(aria-hidden='true')
-                                        span.badge 20 min
-                                        | Update your timesheet
-                                        span.description Please Enter your Time for this week
-                            footer
-                                a(href="#") See All Notifications
-                    li.dropdown
-                        a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                            i.fa.fa-clock-o
-                        .dropdown-menu.dropdown-time-entry
-                          table
-                            colgroup
-                              col
-                              col
-                              col
-                            thead
-                              tr
-                                td Project/Task
-                                td Time Today
-                                  span (hh:mm:ss:)
-                                td Timer Actions
-                            tbody
-                              tr
-                                td FFD-C2029 - UI Design
-                                  span.description RONE-0757 (Remote Document Delivery)
-                                td
-                                  .col-sm-12.input-group
-                                    a.input-group-addon
-                                      span
-                                        i.fa.fa-play
-                                    input.form-control(type='text', placeholder='00:55:00', maxlength="8")
-                                td
-                                  i.fa.fa-share
-                                  i.fa.fa-close
-                              tr
-                                td FFD-C2029 - Development
-                                  span.description RONE-0757 (Remote Document Delivery)
-                                td
-                                td 
-                              tr
-                                td FFD-C2029 - Testing
-                                  span RONE-0757 (Remote Document Delivery)
-                                td
-                                td
-                            tfoot
-                              tr
-                                td(colspan="3")
-                                  .input
-                                    input.form-control(id="input-time-entry", type='text', placeholder='Add a Task')
-                                    span
-                                      i.fa.fa-search
-                    li
-                        a(data-toggle="modal", data-target="#todo-modal")
-                            i.fa.fa-keyboard-o
-                    li
-                        a(href="#") Log out
-                    li
-                        a.feed-toggle(href="#", title="View Live Feed")
-                          i.fa.fa-align-left(aria-hidden='true')
-    #sidebar-wrapper
-        ul#secondary-nav.visible(role="navigation")
-            li.site-user
-                figure
-                    img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-                .info
-                    span Welcome,
-                    span Abdikidar Kedie
-            li
-                a(href="#", title="Dashboard")
-                    i.fa.fa-dashboard
-                    span Dashboard
-            li
-                a(href="#", title="Time Entry")
-                    i.fa.fa-clock-o
-                    span Time Entry
-            li
-                a(href="#", title="Customers")
-                    i.fa.fa-street-view
-                    span Customers
-            li
-                a(href="#", title="Projects")
-                    i.fa.fa-briefcase
-                    span Projects
-            li
-                a(href="#", title="Team")
-                    i.fa.fa-users
-                    span Team
-            li
-                a(href="#", title="Reports")
-                    i.fa.fa-file-text-o
-                    span Reports
-            li
-                a.menu-toggle(href="#", title="Show/Hide Menu")
-                    i.fa.fa-long-arrow-left
-                    span Collapse
-    main(role='main')
-        h1.page-title
-            i.fa.fa-dashboard
-            | Dashboard
-        .page-row
-            section#my-stats
-                h2 My Stats (12 Months)
-                ul.list-group
-                    li.list-group-item
-                        span.badge
-                            span.value 100
-                            | %
-                        | Billable (avg 75%)
-                    li.list-group-item
-                        span.badge
-                            span.value 0
-                            | %
-                        | Under-Estimating (avg 43% over)
-                    li.list-group-item
-                        span.badge
-                            span.value 96
-                            | %
-                        | Timesheets On-time (avg 91%)
-                    li.list-group-item
-                        span.badge
-                            span.value 0.0
-                            | days
-                        | Vacation Taken
-                    li.list-group-item
-                        span.badge
-                            span.value 0
-                            | hrs
-                        | Overtime Accrued
-                    li.list-group-item
-                        span.badge
-                            span.value 0
-                            | hrs
-                        | Training Time
-                    li.list-group-item
-                        span.badge
-                            span.value 0
-                            | hrs
-                        | Working Group Time
-            ul
-                li#my-todo
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title My To-Do's
-                            a(href="#", title="Expand My To-Do List")
-                                i.fa.fa-plus
-                        .panel-body
-                            .tab
-                                ul.nav.nav-tabs(role='tablist')
-                                    li.active(role='presentation')
-                                        a(href='#task-active', aria-controls='home', role='tab', data-toggle='tab') Active
-                                    li(role='presentation')
-                                        a(href='#task-deferred', aria-controls='profile', role='tab', data-toggle='tab') Deferred
-                                    li(role='presentation')
-                                        a(href='#task-complete', aria-controls='messages', role='tab', data-toggle='tab') Complete
-                                .tab-content
-                                    #task-active.tab-pane.active(role='tabpanel')
-                                        ul.list-group
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                    img#member-1.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
-                                                    img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                    img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                            li.list-group-item
-                                                i.fa.fa-check-square-o(aria-hidden='true')
-                                                .droppable
-                                                a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-                                    #task-deferred.tab-pane(role='tabpanel')
-                                        p Dummy content in Deferred Tab.
-                                        //- ul.list-group
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-                                        //- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                                        //- 		| Do Something More
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                                        //- 		| Do Something More
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something More
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something More
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something More
-                                    #task-complete.tab-pane(role='tabpanel')
-                                        p Dummy content in Complete Tab.
-                                        //- ul.list-group
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-                                        //- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                                        //- 		| Do Something Much
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                                        //- 		| Do Something Much
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something Much
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something Much
-                                        //- 	li.list-group-item
-                                        //- 		i.fa.fa-check-square-o(aria-hidden='true')
-                                        //- 		| Do Something Much
-                                a.view-more(href="#", title="View More Tasks")
-                                    i.fa.fa-angle-double-down(aria-hidden='true')
-                li#my-tasks
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title My Current Tasks
-                        .panel-body
-                            header
-                                .tasks
-                                    | Tasks
-                                    span.value (10)
-                                .status
-                                    | Status
-                            ul.list-group
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - UI Design
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width: 100%;')
-                                        span.sr-only 60% Complete
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - Development
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
-                                        span.sr-only 60% Complete
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - Testing
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-                                        span.sr-only 60% Complete
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - Testing
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-                                        span.sr-only 60% Complete
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - Development
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
-                                        span.sr-only 60% Complete
-                                li.list-group-item
-                                    a(href="#")
-                                      i.fa.fa-check-square-o(aria-hidden='true')
-                                    a(href="#", data-toggle="modal", data-target="#task-details-modal")
-                                      i.fa.fa-list-alt(aria-hidden='true')
-                                    span 1
-                                    | RONE-0757 (Remote Document Delivery)
-                                    span FFD-C2029 - Testing
-                                    .progress
-                                        .progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-                                        span.sr-only 60% Complete
-                            a.view-more(href="#", title="View More Tasks")
-                                i.fa.fa-angle-double-down(aria-hidden='true')
-                li#did-you-know.skinned
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title Did you know?
-                        .panel-body
-                            figure
-                                img(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
-                            p.lead Why does the timesheet week start on a Saturday?
-                            p That is to match payroll which is based on Saturday to Friday periods.
-                li#my-team
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title My Team
-                        .panel-body
-                            .row
-                                .team-member
-                                    figure
-                                        img.draggable(id="1", src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-                                    .info
-                                        span Abdikadir Kedie
-                                        span Technical Architect
-                                .team-member
-                                    figure
-                                        img.draggable(id="2", src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                                    .info
-                                        span Cindy Lopes
-                                        span Technical Developer
-                                .team-member
-                                    figure
-                                        img.draggable(id="3", src="../images/team-member-dan.png", alt="Dan Sarbu")
-                                    .info
-                                        span Dan Sarbu
-                                        span Director - Software
-                                .team-member
-                                    figure
-                                        img.draggable(id="4", src="../images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
-                                    .info
-                                        span Emmanuel Ballerini
-                                        span Senior Technical Developer
-                                .team-member
-                                    figure
-                                        img.draggable(id="5", src="../images/team-member-jacob.png", alt="Jacob Tseng")
-                                    .info
-                                        span Jacob Tseng
-                                        span Technical Architect
-                                .team-member
-                                    figure
-                                        img.draggable(id="6", src="../images/team-member-robbie.png", alt="Robbie Bisnath")
-                                    .info
-                                        span Robbie Bisnath
-                                        span Business Analyst
-                                .team-member
-                                    figure
-                                        img.draggable(id="7", src="../images/team-member-saba.png", alt="Saba Saba")
-                                    .info
-                                        span Saba Saba
-                                        span Technical Developer
-                                .team-member
-                                    figure
-                                        img.draggable(id="8", src="../images/team-member-tim.png", alt="Tim Wilson")
-                                    .info
-                                        span Tim Wilson
-                                        span Senior Business Analyst
-                li#team-member.skinned.employee-of-the-month
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title Team Member of the Day
-                        .panel-body
-                            figure.full
-                                img(src="../images/employee.png", alt="Abdul Basit | Employee of the Month")
-                            p.lead Abdul Basit
-                            p Technical Architect
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis posuere urna. Integer quam augue, porta ut efficitur id, aliquet faucibus eros. Proin quis odio non arcu iaculis vulputate non sed justo. Duis pellentesque leo vel turpis fringilla, ut volutpat nibh placerat. Aenean egestas blandit nibh, tristique tempor lorem vehicula ac.
-                li#my-projects
-                    .panel.panel-default
-                        .panel-heading
-                            h2.panel-title My Projects
-                        .panel-body
-                            h3 My Projects Allocation Hours
-                            .projects-map
-            aside.feed
-                h2 Today
-                ul.list-group
-                    li.list-group-item
-                        span.badge 2hrs ago
-                        | You were assigned to a To-Do:
-                        span.description Do Something... by Dan Sabru
-                    li.list-group-item
-                        span.badge 4hrs ago
-                        | Task was marked 'Completed'
-                        span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-                h2 Yesterday
-                ul.list-group
-                    li.list-group-item
-                        | You were assigned to a Task:
-                        span.description Do Something...
-                    li.list-group-item
-                        | Task was marked 'Completed'
-                        span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-                    li.list-group-item
-                        | Task was marked 'Completed'
-                        span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-        footer Lychee 2.0.0a
-  .modal.fade(id='todo-modal', tabindex='-1', role='dialog')
-    .modal-dialog(role='document')
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-          h4.modal-title FFD-C2029 - UI Design
-        .modal-body
-          nav Do Something...
-          section            
-            p #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
-            .row              
-              .column
-                p
-                  strong Collaborators:
-                .input
-                  input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
-                  span
-                    i.fa.fa-search
-                ul
-                  li.team-member
-                      figure
-                          img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-                      .info
-                          span Abdikadir Kedie
-                          span Technical Architect
-                  li.team-member
-                      figure
-                          img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-                      .info
-                          span Cindy Lopes
-                          span Technical Developer
-              .column
-                .bg-color
-                  p
-                    strong Task
-                  .input
-                    input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
-                    span
-                      i.fa.fa-search
-                form
-                  .form-group                  
-                    .column
-                      label(for='input-comment') Enter a comment
-                      textarea#input-comment(placeholder='Write a comment...', rows='3')
-        .modal-footer
-          .left
-            button.btn.btn-primary(type='button')
-              i.fa.fa-check-square-o              
-              | Mark as Complete              
-            button.btn.btn-default(type='button', data-dismiss='modal') Defer
-          .right
-            form.form-inline
-              .form-group
-                label(for="input-hours") Hrs.
-                .input-group
-                  .input-group-addon
-                    input.form-control(type="text", placeholder="0.0")
-                  button.btn.btn-primary(type='button') Log Time
-              button.btn.btn-default(type='button', data-dismiss='modal') Close
-  .modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
-    .modal-dialog(role='document')
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-          h4.modal-title FFD-C2029 - UI Design
-        .modal-body
-          nav
-            p #[span Project:] RONE-0757 (Remote Document Delivery)
-            a.modal-details.pull-right(href="#") Details
-              i.fa.fa-caret-down
-            .modal-info
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
-          .row
-            .column
-              img(src="http://placehold.it/1000x1000", alt="Graph")
-            .column
-              ul
-                li
-                  .title Estimated                    
-                  .description 750 hrs
-                li
-                  .title Spent
-                    span (33% of Estimate)                    
-                  .description 250 hrs
-                li
-                  .title Remaining 
-                    span (66% of Estimate)                    
-                  .description 500 hrs
-        .modal-footer
-          .right
-            button.btn.btn-default(type='button', data-dismiss='modal') Close
-            button.btn.btn-primary(type='button') Log Time
+main(role='main')
+	h1.page-title
+		i.fa.fa-dashboard
+		| Dashboard
+	.page-row
+		section#my-stats
+			h2 My Stats (12 Months)
+			ul.list-group
+				li.list-group-item
+					span.badge
+						span.value 100
+						| %
+					| Billable (avg 75%)
+				li.list-group-item
+					span.badge
+						span.value 0
+						| %
+					| Under-Estimating (avg 43% over)
+				li.list-group-item
+					span.badge
+						span.value 96
+						| %
+					| Timesheets On-time (avg 91%)
+				li.list-group-item
+					span.badge
+						span.value 0.0
+						| days
+					| Vacation Taken
+				li.list-group-item
+					span.badge
+						span.value 0
+						| hrs
+					| Overtime Accrued
+				li.list-group-item
+					span.badge
+						span.value 0
+						| hrs
+					| Training Time
+				li.list-group-item
+					span.badge
+						span.value 0
+						| hrs
+					| Working Group Time
+		ul
+			li#my-todo
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title My To-Do's
+						a(href="#", title="Expand My To-Do List")
+							i.fa.fa-plus
+					.panel-body
+						.tab
+							ul.nav.nav-tabs(role='tablist')
+								li.active(role='presentation')
+									a(href='#task-active', aria-controls='home', role='tab', data-toggle='tab') Active
+								li(role='presentation')
+									a(href='#task-deferred', aria-controls='profile', role='tab', data-toggle='tab') Deferred
+								li(role='presentation')
+									a(href='#task-complete', aria-controls='messages', role='tab', data-toggle='tab') Complete
+							.tab-content
+								#task-active.tab-pane.active(role='tabpanel')
+									ul.list-group
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+												img#member-1.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
+												img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+												img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+										li.list-group-item
+											i.fa.fa-check-square-o(aria-hidden='true')
+											.droppable
+											a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
+								#task-deferred.tab-pane(role='tabpanel')
+									p Dummy content in Deferred Tab.
+									//- ul.list-group
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+									//- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+									//- 		| Do Something More
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+									//- 		| Do Something More
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something More
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something More
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something More
+								#task-complete.tab-pane(role='tabpanel')
+									p Dummy content in Complete Tab.
+									//- ul.list-group
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+									//- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+									//- 		| Do Something Much
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+									//- 		| Do Something Much
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something Much
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something Much
+									//- 	li.list-group-item
+									//- 		i.fa.fa-check-square-o(aria-hidden='true')
+									//- 		| Do Something Much
+							a.view-more(href="#", title="View More Tasks")
+								i.fa.fa-angle-double-down(aria-hidden='true')
+			li#my-tasks
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title My Current Tasks
+					.panel-body
+						header
+							.tasks
+								| Tasks
+								span.value (10)
+							.status
+								| Status
+						ul.list-group
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - UI Design
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width: 100%;')
+									span.sr-only 60% Complete
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - Development
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+									span.sr-only 60% Complete
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - Testing
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+									span.sr-only 60% Complete
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - Testing
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+									span.sr-only 60% Complete
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - Development
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+									span.sr-only 60% Complete
+							li.list-group-item
+								a(href="#")
+									i.fa.fa-check-square-o(aria-hidden='true')
+								a(href="#", data-toggle="modal", data-target="#task-details-modal")
+									i.fa.fa-list-alt(aria-hidden='true')
+								span 1
+								| RONE-0757 (Remote Document Delivery)
+								span FFD-C2029 - Testing
+								.progress
+									.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+									span.sr-only 60% Complete
+						a.view-more(href="#", title="View More Tasks")
+							i.fa.fa-angle-double-down(aria-hidden='true')
+			li#did-you-know.skinned
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title Did you know?
+					.panel-body
+						figure
+							img(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
+						p.lead Why does the timesheet week start on a Saturday?
+						p That is to match payroll which is based on Saturday to Friday periods.
+			li#my-team
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title My Team
+					.panel-body
+						.row
+							.team-member
+								figure
+									img.draggable(id="1", src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+								.info
+									span Abdikadir Kedie
+									span Technical Architect
+							.team-member
+								figure
+									img.draggable(id="2", src="../images/team-member-cindy.png", alt="Cindy Lopes")
+								.info
+									span Cindy Lopes
+									span Technical Developer
+							.team-member
+								figure
+									img.draggable(id="3", src="../images/team-member-dan.png", alt="Dan Sarbu")
+								.info
+									span Dan Sarbu
+									span Director - Software
+							.team-member
+								figure
+									img.draggable(id="4", src="../images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
+								.info
+									span Emmanuel Ballerini
+									span Senior Technical Developer
+							.team-member
+								figure
+									img.draggable(id="5", src="../images/team-member-jacob.png", alt="Jacob Tseng")
+								.info
+									span Jacob Tseng
+									span Technical Architect
+							.team-member
+								figure
+									img.draggable(id="6", src="../images/team-member-robbie.png", alt="Robbie Bisnath")
+								.info
+									span Robbie Bisnath
+									span Business Analyst
+							.team-member
+								figure
+									img.draggable(id="7", src="../images/team-member-saba.png", alt="Saba Saba")
+								.info
+									span Saba Saba
+									span Technical Developer
+							.team-member
+								figure
+									img.draggable(id="8", src="../images/team-member-tim.png", alt="Tim Wilson")
+								.info
+									span Tim Wilson
+									span Senior Business Analyst
+			li#team-member.skinned.employee-of-the-month
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title Team Member of the Day
+					.panel-body
+						figure.full
+							img(src="../images/employee.png", alt="Abdul Basit | Employee of the Month")
+						p.lead Abdul Basit
+						p Technical Architect
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis posuere urna. Integer quam augue, porta ut efficitur id, aliquet faucibus eros. Proin quis odio non arcu iaculis vulputate non sed justo. Duis pellentesque leo vel turpis fringilla, ut volutpat nibh placerat. Aenean egestas blandit nibh, tristique tempor lorem vehicula ac.
+			li#my-projects
+				.panel.panel-default
+					.panel-heading
+						h2.panel-title My Projects
+					.panel-body
+						h3 My Projects Allocation Hours
+						.projects-map
+		aside.feed
+			h2 Today
+			ul.list-group
+				li.list-group-item
+					span.badge 2hrs ago
+					| You were assigned to a To-Do:
+					span.description Do Something... by Dan Sabru
+				li.list-group-item
+					span.badge 4hrs ago
+					| Task was marked 'Completed'
+					span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+			h2 Yesterday
+			ul.list-group
+				li.list-group-item
+					| You were assigned to a Task:
+					span.description Do Something...
+				li.list-group-item
+					| Task was marked 'Completed'
+					span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+				li.list-group-item
+					| Task was marked 'Completed'
+					span.description RONE--757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+	footer Lychee 2.0.0a
+.modal.fade(id='todo-modal', tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4.modal-title FFD-C2029 - UI Design
+			.modal-body
+				nav Do Something...
+				section            
+					p #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
+					.row              
+						.column
+							p
+								strong Collaborators:
+							.input
+								input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
+								span
+									i.fa.fa-search
+							ul
+								li.team-member
+									figure
+										img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+									.info
+										span Abdikadir Kedie
+										span Technical Architect
+								li.team-member
+									figure
+										img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+									.info
+										span Cindy Lopes
+										span Technical Developer
+						.column
+							.bg-color
+								p
+									strong Task
+								.input
+									input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
+									span
+										i.fa.fa-search
+							form
+								.form-group                  
+									.column
+										label(for='input-comment') Enter a comment
+										textarea#input-comment(placeholder='Write a comment...', rows='3')
+			.modal-footer
+				.left
+					button.btn.btn-primary(type='button')
+						i.fa.fa-check-square-o              
+						| Mark as Complete              
+					button.btn.btn-default(type='button', data-dismiss='modal') Defer
+				.right
+					form.form-inline
+						.form-group
+							label(for="input-hours") Hrs.
+							.input-group
+								.input-group-addon
+									input.form-control(type="text", placeholder="0.0")
+								button.btn.btn-primary(type='button') Log Time
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+.modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
+.modal-dialog(role='document')
+	.modal-content
+		.modal-header
+			button.close(type='button', data-dismiss='modal', aria-label='Close')
+				span(aria-hidden='true') ×
+			h4.modal-title FFD-C2029 - UI Design
+		.modal-body
+			nav
+				p #[span Project:] RONE-0757 (Remote Document Delivery)
+				a.modal-details.pull-right(href="#") Details
+					i.fa.fa-caret-down
+				.modal-info
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
+			.row
+				.column
+					img(src="http://placehold.it/1000x1000", alt="Graph")
+				.column
+					ul
+						li
+							.title Estimated                    
+							.description 750 hrs
+						li
+							.title Spent
+								span (33% of Estimate)                    
+							.description 250 hrs
+						li
+							.title Remaining 
+								span (66% of Estimate)                    
+							.description 500 hrs
+		.modal-footer
+			.right
+				button.btn.btn-default(type='button', data-dismiss='modal') Close
+				button.btn.btn-primary(type='button') Log Time
