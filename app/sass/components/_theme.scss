@@ -25,6 +25,9 @@
 			margin-left: 15px;
 			> label {
 				@include font-size(14px);
+				input {
+					margin-right: 5px;
+				}
 			}
 		}
 		nav > ul {
@@ -116,7 +119,7 @@
 // Team Member Page
 #member-profile {
 	h2 {
-		margin-bottom: 20px;
+		margin: 35px 0 20px;
 	}
 	p {
 		margin: 0;
@@ -154,13 +157,39 @@
 			}
 	}
 	@media #{$desktop} {
-		.value {
-				@include font-size(44px);
+		.stats {
+			@include make-sm-column(4);
+			@include make-md-column(4);
+			padding: 0;
+			.value {
+					@include font-size(44px);
+			}
+		}
+		.member-card {
+			@include make-sm-column(8);
+			@include make-md-column(8);
+			padding: 0;
+			margin-bottom: 30px;
+			figure {
+				margin: 0 15px 0 0;
+				display: inline-block;
+			}
+			.description {
+				display: inline-block;
+				p {
+					&:first-of-type {
+						margin: 0;
+					}
+				}
+			}
 		}
 	}
 }
 #member-assignments {
-	background-color: $white;
+	.bg {
+		padding: 15px;
+		background-color: $white;
+	}
 	h2 {
 		margin-bottom: 15px;
 		padding-bottom: 15px;
@@ -182,6 +211,7 @@
 			.checkbox {
 				@extend .pull-right;
 				@include font-size(14px);
+				margin: 0;
 				input {
 					margin-right: 5px;
 				}
@@ -191,7 +221,7 @@
 	table {
 		margin-bottom: 50px;
 		border-color: $darkest-grey;
-		@extend .table, .table-condensed, .table-bordered, .table-striped;
+		@extend .table, .table-condensed, .table-bordered, .table-striped, .table-responsive;
 		&.table-striped {
 			tbody {
 				tr {
