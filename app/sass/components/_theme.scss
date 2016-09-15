@@ -99,6 +99,11 @@
 			@extend .text-center;
 			img {
 				@extend .img-circle;
+				transition: border .5s;
+				border: 5px solid transparent;
+				&:hover {
+					border: 5px solid $red;
+				}
 			}
 			.info {
 				margin: 15px 0 30px;
