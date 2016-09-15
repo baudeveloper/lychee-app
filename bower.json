@@ -26,6 +26,8 @@
     "bootstrap-select": "~1.10.0",
     "highcharts": "^4.2.6",
     "jquery-ui": "^1.12.0",
-    "typeahead.js": "typehead.js#^0.11.1"
+    "typeahead.js": "typehead.js#^0.11.1",
+    "isotope": "^3.0.1",
+    "filament-tablesaw": "tablesaw#^2.0.3"
   }
 }

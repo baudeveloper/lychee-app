@@ -21,6 +21,9 @@ module.exports = function() {
             './bower_components/highcharts/highcharts.js',
             './bower_components/highcharts/highcharts-more.js',
             './bower_components/highcharts/modules/solid-gauge.js',
+						'./bower_components/isotope/dist/isotope.pkgd.min.js',
+						'./bower_components/filament-tablesaw/dist/tablesaw.js',
+						'./bower_components/filament-tablesaw/dist/tablesaw-init.js',
             './app/js/custom.js'
         ],
         vendorJS: [
@@ -31,7 +34,8 @@ module.exports = function() {
         ],
         vendorCSS: [
             './bower_components/animate.css/animate.min.css',
-            './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css'
+            './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
+						'./bower_components/filament-tablesaw/dist/tablesaw.css'
         ],
         // ./app Locations
         css: './dist/css',
