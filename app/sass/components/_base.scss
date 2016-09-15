@@ -1,7 +1,11 @@
 // 1. Media Queries
+
 $tablet: "only screen and (max-width: $screen-sm-max)";
-$desktop: "only screen and (max-width: $screen-md-max)";
 $tablet__up: "only screen and (min-width: $screen-sm-max)";
+
+$desktop: "only screen and (max-width: $screen-md-max)";
+$desktop__up: "only screen and (min-width: $screen-md-max)";
+
 // Useful mixins: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/.
 // 2. REM Font Sizes.
 @function calculateRem($size) {

@@ -15,7 +15,7 @@ main(role="main")
 					.checkbox
 						label
 							input(type='checkbox')
-							|  Hide Inactive Users
+							| Hide Inactive Users
 				.form-group
 					nav(aria-label='Page navigation')
 						ul
@@ -78,7 +78,8 @@ main(role="main")
 					figure
 						img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson")
 					.info
-						span Dallas Richardson
+						a(href="team-member.html", title="Check Dallas Richardson's Assignments")
+							span Dallas Richardson
 						span Technical Developer
 				.team-member
 					figure
@@ -157,4 +158,5 @@ main(role="main")
 					.info
 						span Dustin Gadal
 						span Technical Developer
+		include feed.jade
 	footer Lychee 2.0.0a
