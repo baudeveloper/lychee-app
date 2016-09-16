@@ -112,7 +112,26 @@ main(role="main")
 									th Fri<br>Aug 19
 									th Total					
 					.headers(id="headers-three")
-						p Remove
+						table(width="100%")
+							colgroup
+								col(width="3%")
+								col(width="49%")
+								col(width="8%")
+								col(width="8%")
+								col(width="8%")
+								col(width="8%")
+								col(width="8%")
+								col(width="8%")
+							thead
+								tr
+									th &nbsp;
+									th Task
+									th Mon<br>Aug 15
+									th Tue<br>Aug 16
+									th Wed<br>Aug 17
+									th Thu<br>Aug 18
+									th Fri<br>Aug 19
+									th Total					
 				.body
 					ul.view(id='view-one')
 						li.sticky
@@ -402,7 +421,156 @@ main(role="main")
 										td
 											span 0:00
 					ul.view(id='view-three')
-						li Dummy Content.						
+						li.sticky
+							table
+								colgroup
+									col(width="3%")
+									col(width="49%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack
+										td										
+											input(id-="input-comments", type="text", placeholder="Add Comments here...")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											span 0:00
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="49%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90
+										td										
+											input(id-="input-comments", type="text", placeholder="Add Comments here...")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											span 0:00
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="49%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90
+										td										
+											input(id-="input-comments", type="text", placeholder="Add Comments here...")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00")
+										td
+											span 0:00
 				.foot
 					a.btn-add-task(href="#", title="Add New Task") Add New Task
 					a.btn-task-list(href="#", title="Show Task List") Show Task List
