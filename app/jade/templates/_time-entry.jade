@@ -73,7 +73,20 @@ main(role="main")
 						button(type='button', id='tabone') Day
 						button.active(type='button', id='tabtwo') Week
 						button(type='button', id='tabthree') Business Week
-					.headers
+					.headers(id='headers-one')
+						table(width="100%")
+							colgroup
+								col(width="3%")
+								col(width="67%")									
+								col(width="10%")
+								col(width="20%")
+							thead
+								tr
+									th &nbsp;
+									th Task
+									th &nbsp;
+									th Time
+					.headers(id='headers-two')
 						table(width="100%")
 							colgroup
 								col(width="3%")
@@ -97,7 +110,9 @@ main(role="main")
 									th Wed<br>Aug 17
 									th Thu<br>Aug 18
 									th Fri<br>Aug 19
-									th Total
+									th Total					
+					.headers(id="headers-three")
+						p Remove
 				.body
 					ul.view(id='view-one')
 						li.sticky
@@ -171,7 +186,7 @@ main(role="main")
 									tr
 										td
 											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack
+												i.fa.fa-thumb-tack.fa-rotate-90
 										td						
 											input(id="input-comments", type="text", placeholder="Add Comments here...")											
 										td
@@ -210,7 +225,7 @@ main(role="main")
 									tr
 										td
 											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack
+												i.fa.fa-thumb-tack.fa-rotate-90
 										td						
 											input(id="input-comments", type="text", placeholder="Add Comments here...")											
 										td
@@ -311,7 +326,7 @@ main(role="main")
 									tr
 										td
 											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack
+												i.fa.fa-thumb-tack.fa-rotate-90
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
@@ -367,7 +382,7 @@ main(role="main")
 									tr
 										td
 											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack
+												i.fa.fa-thumb-tack.fa-rotate-90
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
