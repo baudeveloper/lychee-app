@@ -293,18 +293,27 @@
 			padding: 15px;
 			background-color: transparent;
 			border-color: $extra-darkest-grey;
-			.buttons {
-				@extend .btn-group;
-			}
-			> .buttons {
+			.input-group {
+				max-width: 250px;
+				@extend .pull-left;
+				input {
+					border-radius: 0;
+					@extend .form-control;
+					background-color: $extra-light-grey;
+				}
 				button {
 					@extend .btn, .btn-default, .btn-secondary;
-					&.btn-datepicker {
-						@include icon-before('\f073', $red);
-					}
 				}
-				& + .buttons {
-					@extend .pull-right;
+				.input-group-addon {
+					color: $red;
+					border-radius: 0;
+					background-color: $extra-light-grey;
+				}
+			}
+			.buttons {
+				@extend .btn-group, .pull-right;
+				button {
+					@extend .btn, .btn-default, .btn-secondary;
 				}
 			}
 			> .headers {
@@ -354,11 +363,11 @@
 			> a {
 				@extend .btn, .btn-tertiary;
 				&.btn-add-task {
-					@include icon-before('\f067', $white);
+					@include icon-before('\f067', inherit);
 				}
 				&.btn-task-list {
 					@extend .hidden-lg, .hidden-md;
-					@include icon-before('\f03a', $white);
+					@include icon-before('\f03a', inherit);
 				}
 			}
 			.buttons {

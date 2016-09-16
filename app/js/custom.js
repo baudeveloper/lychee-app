@@ -15,6 +15,9 @@ document.onreadystatechange = function () {
 $(document).ready(function() {
 
     /* Time Entry Page */
+    $(".input-datepicker").datepicker({
+      format: "dd MM, yyyy"
+    });
     $("#fancytree").fancytree();
     $('.fancytree-icon').each(function(){
         $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover" data-toggle="popover" data-content="<div class=\'popover-group\'><button>Log Time</button><button>Start Timer</button><button>Details</button></div>">');

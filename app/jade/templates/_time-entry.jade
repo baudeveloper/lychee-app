@@ -63,16 +63,21 @@ main(role="main")
 		section#task-list
 			form
 				.head
-					.buttons(role='group')						
-						button.btn-datepicker(href="#") August 13, 2016
-						button(type='button')
-							i.fa.fa-chevron-left
-						button(type='button')
-							i.fa.fa-chevron-right
-					.buttons.buttons-tab(role='group')
-						button(type='button', id='tabone') Day
-						button.active(type='button', id='tabtwo') Week
-						button(type='button', id='tabthree') Business Week
+					.clearfix
+						.input-group
+							.input-group-addon
+								span
+									i.fa.fa-calendar
+							input.input-datepicker(type='text', placeholder='August 13, 2016', data-date='12-02-2012', data-date-format='dd-mm-yyyy')
+							.input-group-btn
+								button(type='button')
+									i.fa.fa-chevron-left
+								button(type='button')
+									i.fa.fa-chevron-right
+						.buttons.buttons-tab(role='group')
+							button(type='button', id='tabone') Day
+							button.active(type='button', id='tabtwo') Week
+							button(type='button', id='tabthree') Business Week
 					.headers(id='headers-one')
 						table(width="100%")
 							colgroup
@@ -293,75 +298,19 @@ main(role="main")
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											span 0:00
-						li
-							table
-								colgroup
-									col(width="3%")
-									col(width="33%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90
-										td										
-											input(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 						li
@@ -405,19 +354,75 @@ main(role="main")
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											span 0:00
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="33%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90
+										td										
+											input(id-="input-comments", type="text", placeholder="Add Comments here...")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 					ul.view(id='view-three')
@@ -460,65 +465,15 @@ main(role="main")
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											span 0:00
-						li
-							table
-								colgroup
-									col(width="3%")
-									col(width="49%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90
-										td										
-											input(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
-										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 						li
@@ -560,15 +515,65 @@ main(role="main")
 										td										
 											input(id-="input-comments", type="text", placeholder="Add Comments here...")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
-											input(class-="input-timer", type="text", placeholder="0:00")
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											span 0:00
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="49%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90
+										td										
+											input(id-="input-comments", type="text", placeholder="Add Comments here...")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+										td
+											input(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 				.foot
