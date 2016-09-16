@@ -140,12 +140,12 @@ main {
     #task-directory {
       @include make-sm-column(12);
       @include make-md-column(12);
-      @include make-lg-column(3);
+      @include make-lg-column(4);
     }
     #task-list {
       @include make-sm-column(12);
       @include make-md-column(12);
-      @include make-lg-column(9);
+      @include make-lg-column(8);
     }
 
     #my-todo {

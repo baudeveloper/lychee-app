@@ -262,7 +262,9 @@
 // Time Entry Page
 #task-directory {
 	.bg {
+		margin-bottom: 30px;
 		background-color: $white;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 		.btn-group {
 			padding: 15px 0 0 15px;
 		}
@@ -307,6 +309,150 @@
 						@include icon-before('\f07b', $grey);
 					}
 				}
+			}
+		}
+	}
+}
+#task-list {
+	form {
+		margin: 0;
+		border-radius: 0;
+		@extend .panel, .panel-default;
+		.head {
+			@extend .panel-heading;
+			padding: 15px;
+			background-color: transparent;
+			border-color: $extra-darkest-grey;
+			.buttons {
+				@extend .btn-group;
+			}
+			> .buttons {
+				button {
+					@extend .btn, .btn-default, .btn-secondary;
+					&.btn-datepicker {
+						@include icon-before('\f073', $red);
+					}
+				}
+				& + .buttons {
+					@extend .pull-right;
+				}
+			}
+			> .headers {
+				margin-top: 15px;
+			}
+		}
+		.body {
+			@extend .panel-body;
+			padding: 0;
+			ul {
+				@extend .list-group;
+				margin: 0;
+				li {
+					@extend .list-group-item;
+					margin: 0;
+					border-radius: 0;
+					border: none;
+					border-bottom: 1px solid $extra-darkest-grey;
+					&:last-of-type {
+						border: none;
+					}
+					&.sticky {
+						background-color: $light-blue !important;
+						.btn-pin {
+							color: $blue;
+						}
+					}
+					&:nth-child(odd) {
+						background-color: $extra-light-grey;
+					}
+				}
+			}
+			input {
+				@extend .form-control;
+				border-radius: 0;
+			}
+			.icon-group {
+				@extend .text-right;
+				padding-top: 0;
+			}
+		}
+		.foot {
+			@extend .panel-footer;
+			padding: 20px 15px;
+			background-color: transparent;
+			border-color: $extra-darkest-grey;
+			> a {
+				@extend .btn, .btn-tertiary;
+				&.btn-add-task {
+					@include icon-before('\f067', $white);
+				}
+				&.btn-task-list {
+					@include icon-before('\f03a', $white);
+				}
+			}
+			.buttons {
+				@extend .form-group, .pull-right;
+				.btn-save {
+					@extend .btn, .btn-default, .btn-secondary;
+				}
+				.btn-submit {
+					@extend .btn, .btn-primary;
+				}
+			}
+		}
+	}
+	table {
+		width: 100%;
+		padding: 15px;
+		line-height: 1;
+		@include font-size(14px);
+		th, td {
+			padding: 4px;
+		}
+		th {
+			font-weight: 400;
+			text-align: center;
+			&:first-child + th {
+				text-align: left;
+			}
+			&:last-child {
+				font-weight: 600;
+			}
+		}
+		td {
+			small {
+				display: block;
+				@include font-size(12px);
+			}
+			input {
+				border-radius: 0;
+				text-align: center;
+			}
+			&:first-child + td {
+				input {
+					text-align: left;
+				}
+			}
+			&:last-child {
+				span {
+					display: block;
+					font-weight: 600;
+					text-align: center;
+					color: $medium-grey;
+				}
+			}
+			.btn-edit {
+				margin-left: 10px;
+				color: $medium-grey;
+			}
+			.btn-pin {
+				color: $medium-grey;
+			}
+		}
+		.icon-group {
+			a {
+				color: $medium-grey;
+				margin-left: 10px;
 			}
 		}
 	}

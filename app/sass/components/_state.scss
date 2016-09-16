@@ -8,11 +8,32 @@ a {
 }
 
 // Buttons
+.btn-default {
+  // color: $red;
+  border-radius: 0;
+  text-transform: uppercase;
+  // background-color: $extra-light-grey;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
+.btn-primary {
+  // color: $red;
+  border-radius: 0;
+  text-transform: uppercase;
+  // background-color: $extra-light-grey;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
 .btn-secondary {
   color: $red;
   border-radius: 0;
   text-transform: uppercase;
   background-color: $extra-light-grey;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
+.btn-tertiary {
+  color: $white;
+  border-radius: 0;
+  text-transform: uppercase;
+  background-color: $green;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 }
 
