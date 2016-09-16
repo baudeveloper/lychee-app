@@ -16,6 +16,10 @@ $(document).ready(function() {
 
     /* Time Entry Page */
     $("#fancytree").fancytree();
+    $('.fancytree-icon').each(function(){
+        $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover">');
+    });
+    // Source: http://stackoverflow.com/questions/3475594/jquery-use-wrap-to-wrap-multiple-elements
 
     /* Dashboard Page */
 
