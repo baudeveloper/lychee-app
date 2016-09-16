@@ -72,3 +72,31 @@ a {
   border-color: $yellow;
   background-color: $light-yellow;
 }
+
+// Popover State
+.popover {
+  max-width: 100%;
+  border-radius: 0;
+  background-color: $green;
+  .arrow {
+    &::after {
+      border-right-color: $green !important;
+    }
+  }
+  .popover-group {
+    @extend .btn-group;
+    button {
+      @extend .btn, .btn-default;
+      color: $green;
+      &:first-of-type {
+        @include icon-before('\f017', $green);
+      }
+      &:first-of-type + button {
+        @include icon-before('\f144', $green);
+      }
+      &:last-of-type {
+        @include icon-before('\f022', $green);
+      }
+    }
+  }
+}

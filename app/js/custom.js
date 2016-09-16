@@ -17,9 +17,22 @@ $(document).ready(function() {
     /* Time Entry Page */
     $("#fancytree").fancytree();
     $('.fancytree-icon').each(function(){
-        $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover">');
+        $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover" data-toggle="popover" data-content="<div class=\'popover-group\'><button>Log Time</button><button>Start Timer</button><button>Details</button></div>">');
     });
+    $('.fancytree-hover').popover(
+      {
+        trigger: "hover",
+        html: true,
+        container: "body"
+      }
+    );
     // Source: http://stackoverflow.com/questions/3475594/jquery-use-wrap-to-wrap-multiple-elements
+    $("#view-one, #view-three").hide();
+    $("#task-list .buttons-tab button").click(function () {
+        $('.view').hide().eq($(this).index()).show();
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+    }); // Source: http://stackoverflow.com/questions/25365491/jquery-tab-like-effect-show-hide-div-on-click
 
     /* Dashboard Page */
 

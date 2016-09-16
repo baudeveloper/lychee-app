@@ -6,7 +6,7 @@ main(role="main")
 	.page-row
 		aside#task-directory
 			.bg
-				.btn-group
+				.button
 					button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 						| All Tasks 
 						span.caret
@@ -69,10 +69,10 @@ main(role="main")
 							i.fa.fa-chevron-left
 						button(type='button')
 							i.fa.fa-chevron-right
-					.buttons(role='group')
-						button(type='button') Day
-						button(type='button') Week
-						button(type='button') Business Week
+					.buttons.buttons-tab(role='group')
+						button(type='button', id='tabone') Day
+						button.active(type='button', id='tabtwo') Week
+						button(type='button', id='tabthree') Business Week
 					.headers
 						table(width="100%")
 							colgroup
@@ -99,7 +99,125 @@ main(role="main")
 									th Fri<br>Aug 19
 									th Total
 				.body
-					ul
+					ul.view(id='view-one')
+						li.sticky
+							table
+								colgroup
+									col(width="3%")
+									col(width="67%")									
+									col(width="10%")
+									col(width="20%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)	
+										td(colspan="1").icon-group
+										td(colspan="7").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack
+										td						
+											input(id="input-comments", type="text", placeholder="Add Comments here...")											
+										td
+											a.btn-timer Start Timer
+										td											
+											input(class-="input-timer", type="text", placeholder="2:05")
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="67%")									
+									col(width="10%")
+									col(width="20%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)	
+										td(colspan="1").icon-group
+										td(colspan="7").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack
+										td						
+											input(id="input-comments", type="text", placeholder="Add Comments here...")											
+										td
+											a.btn-timer Start Timer
+										td											
+											input(class-="input-timer", type="text", placeholder="2:05")
+						li
+							table
+								colgroup
+									col(width="3%")
+									col(width="67%")									
+									col(width="10%")
+									col(width="20%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-cubes
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil
+											small RONE-0757 (Remote Document Delivery)	
+										td(colspan="1").icon-group
+										td(colspan="7").icon-group
+											a.btn-details(href="#", title="Details")
+												i.fa.fa-list-alt
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack
+										td						
+											input(id="input-comments", type="text", placeholder="Add Comments here...")											
+										td
+											a.btn-timer Start Timer
+										td											
+											input(class-="input-timer", type="text", placeholder="2:05")
+					ul.view(id='view-two')
 						li.sticky
 							table
 								colgroup
@@ -268,6 +386,8 @@ main(role="main")
 											input(class-="input-timer", type="text", placeholder="0:00")
 										td
 											span 0:00
+					ul.view(id='view-three')
+						li Dummy Content.						
 				.foot
 					a.btn-add-task(href="#", title="Add New Task") Add New Task
 					a.btn-task-list(href="#", title="Show Task List") Show Task List

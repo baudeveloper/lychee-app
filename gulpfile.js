@@ -62,7 +62,7 @@ gulp.task('sass', ['clean-sass', 'vendor-styles'], function() {
         .pipe($.size({title: '************ FILE SIZE: Styles (before) ****'}))
         .pipe($.if(argv.production, cleanCSS({compatibility: 'ie7'})))
         .pipe($.if(argv.production, $.cssnano()))
-        // .pipe($.size({title: '************ FILE SIZE: Styles (after) ****'}))
+        .pipe($.size({title: '************ FILE SIZE: Styles (after) ****'}))
         .pipe($.autoprefixer({
           browsers: ['last 25 versions'],
           cascade: false

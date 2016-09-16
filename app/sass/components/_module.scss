@@ -88,7 +88,99 @@
     background-clip: initial;
     display:inline-block;
   }
-} // Source: https://codepen.io/lbebber/pen/xrwja.
+} // Source: https://codepen.io/lbebber/pen/xrwja
+@mixin fancytree() {
+  #fancytree {
+    padding: 0 15px 15px;
+    * {
+      font-weight: 400;
+      @include font-size(12px);
+      font-family: "Roboto Condensed";
+    }
+    .fancytree-icon {
+      margin-top: 0;
+    }
+    .fancytree-title {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .fancytree-has-children {
+      .fancytree-expander {
+        @include icon-before('\f0d7', $grey);
+      }
+    } // Any element that has children will have a caret before it
+    .fancytree-expanded {
+      .fancytree-expander {
+        @include icon-before('\f0da', $grey);
+      }
+    } // Any element that has children will have a caret before it changes on click
+    .fancytree-ico-c {
+      .fancytree-icon {
+        @include icon-before('\f1b3', $red);
+      }
+    } // Cube Icon
+    .fancytree-ico-ef {
+      .fancytree-icon {
+        @include icon-before('\f115', $grey);
+      }
+    } // Expanded Folder Icon
+    .fancytree-ico-cf {
+      .fancytree-icon {
+        @include icon-before('\f07b', $grey);
+      }
+    } // Folder Icon
+    .fancytree-node {
+      &:hover {
+        .fancytree-icon {
+          &::before {
+            color: $green !important;
+          }
+        }
+        .fancytree-title {
+          color: inherit;
+          border-color: transparent;
+          background-color: transparent;
+        }
+        .fancytree-hover {
+          color: $green;
+          border-radius: 4px;
+          padding: 2px 4px 4px 0;
+          background-color: $lightest-green;
+        }
+      }
+      &.fancytree-active {
+        .fancytree-icon {
+          &::before {
+            color: $green !important;
+          }
+        }
+        .fancytree-title {
+          color: inherit;
+          border: none;
+          background-color: transparent;
+        }
+        .fancytree-hover {
+          color: $green;
+          border-radius: 4px;
+          padding: 2px 4px 4px 0;
+          background-color: $lightest-green;
+        }
+      }
+    }
+    > ul > li > span > a {
+      span {
+        color: $blue;
+        @include font-size(14px);
+        &.fancytree-icon {
+          &::before {
+            color: $blue !important;
+          }
+        }
+      }
+    }    
+  }
+}
 
 /* Dashboard Page Widgets */
 // 1. Widget - My Stats
