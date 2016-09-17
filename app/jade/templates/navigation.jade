@@ -4,11 +4,11 @@ nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
 			a.navbar-brand(href="dashboard.html", title="Welcome to Lychee by Jonah Group")
 				.logo
 			button.collapse.navbar-collapsed(type="button", data-toggle="collapse", data-target="#main-navbar-collapse")
-				i.fa.fa-bars
+				i.fa.fa-bars(aria-hidden='true')
 		#primary-nav-collapse.collapse.navbar-collapse
 			.input-group
 				span#search.input-group-addon
-					i.fa.fa-search
+					i.fa.fa-search(aria-hidden='true')
 				input.input-search.form-control.typeahead(type='text', placeholder='Search...', aria-describedby='search')
 			ul.nav.navbar-nav.navbar-right
 				li.dropdown
@@ -54,7 +54,7 @@ nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
 							a(href="#") See All Notifications
 				li.dropdown
 					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-						i.fa.fa-clock-o
+						i.fa.fa-clock-o(aria-hidden='true')
 					.dropdown-menu.dropdown-time-entry
 						table
 							colgroup
@@ -75,11 +75,11 @@ nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
 										.col-sm-12.input-group
 											a.input-group-addon
 												span
-													i.fa.fa-play
+													i.fa.fa-play(aria-hidden='true')
 											input.form-control(type='text', placeholder='00:55:00', maxlength="8")
 									td
-										i.fa.fa-share
-										i.fa.fa-close
+										i.fa.fa-share(aria-hidden='true')
+										i.fa.fa-close(aria-hidden='true')
 								tr
 									td FFD-C2029 - Development
 										span.description RONE-0757 (Remote Document Delivery)
@@ -96,10 +96,10 @@ nav#primary-nav.navbar.navbar-fixed-top(role="navigation")
 										.input
 											input.form-control(id="input-time-entry", type='text', placeholder='Add a Task')
 											span
-												i.fa.fa-search
+												i.fa.fa-search(aria-hidden='true')
 				li
 					a(data-toggle="modal", data-target="#todo-modal")
-						i.fa.fa-keyboard-o
+						i.fa.fa-keyboard-o(aria-hidden='true')
 				li
 					a(href="#") Log out
 				li
