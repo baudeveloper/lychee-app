@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
     $("#fancytree").fancytree();
     $('.fancytree-icon').each(function(){
-        $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover" data-toggle="popover" data-content="<div class=\'popover-group\'><button>Log Time</button><button>Start Timer</button><button>Details</button></div>">');
+        $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover" data-toggle="popover" data-content="<div class=\'btn-group\'><button class=\'btn btn-default\'>Log Time</button><button class=\'btn btn-default\'>Start Timer</button><button class=\'btn btn-default\'>Details</button></div>">');
     });
     $('.fancytree-hover').popover(
       {

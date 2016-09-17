@@ -1,7 +1,6 @@
 // Team List Page
 #team-list {
 	form {
-		@extend .form-inline;
 		label {
 			color: $grey;
 			font-weight: 400;
@@ -31,7 +30,6 @@
 			}
 		}
 		nav > ul {
-			@extend .pagination;
 			margin: 0;
 			padding: 0;
 			li {
@@ -80,7 +78,6 @@
 				margin-top: -4px;
 			}
 			&:last-of-type {
-				@extend .pull-right;
 				@media (max-width: 1366px) {
 					float: none !important;
 					clear: both;
@@ -96,9 +93,7 @@
 			@include make-sm-column(4);
 			@include make-md-column(3);
 			@include make-lg-column(2);
-			@extend .text-center;
 			img {
-				@extend .img-circle;
 				transition: border .5s;
 				border: 5px solid transparent;
 				&:hover {
@@ -205,7 +200,6 @@
 		@include font-size(16px);
 	}
 	form {
-		@extend .form-inline;
 		.form-group {
 			display: block;
 			margin-bottom: 5px;
@@ -214,7 +208,6 @@
 				@include font-size(16px);
 			}
 			.checkbox {
-				@extend .pull-right;
 				@include font-size(14px);
 				margin: 0;
 				input {
@@ -226,7 +219,6 @@
 	table {
 		margin-bottom: 50px;
 		border-color: $darkest-grey;
-		@extend .table, .table-condensed, .table-bordered, .table-striped, .table-responsive;
 		&.table-striped {
 			tbody {
 				tr {
@@ -240,7 +232,6 @@
 		tbody {
 			tr {
 				* {
-					@extend .text-center;
 					@include font-size(14px);
 				}
 				th {
@@ -271,7 +262,6 @@
 		@include inline-input();
 		@include typeahead-standard();
 		.button {
-			@extend .btn-group;
 			padding: 15px 0 0 15px;
 		}
 		.dropdown-menu {
@@ -287,22 +277,15 @@
 	form {
 		margin: 0;
 		border-radius: 0;
-		@extend .panel, .panel-default;
 		.head {
-			@extend .panel-heading;
 			padding: 15px;
 			background-color: transparent;
 			border-color: $extra-darkest-grey;
 			.input-group {
 				max-width: 250px;
-				@extend .pull-left;
 				input {
 					border-radius: 0;
-					@extend .form-control;
 					background-color: $extra-light-grey;
-				}
-				button {
-					@extend .btn, .btn-default, .btn-secondary;
 				}
 				.input-group-addon {
 					color: $red;
@@ -310,24 +293,15 @@
 					background-color: $extra-light-grey;
 				}
 			}
-			.buttons {
-				@extend .btn-group, .pull-right;
-				button {
-					@extend .btn, .btn-default, .btn-secondary;
-				}
-			}
 			> .headers {
 				margin-top: 15px;
 			}
 		}
 		.body {
-			@extend .panel-body;
 			padding: 0;
 			ul {
-				@extend .list-group;
 				margin: 0;
 				li {
-					@extend .list-group-item;
 					margin: 0;
 					border-radius: 0;
 					border: none;
@@ -347,36 +321,22 @@
 				}
 			}
 			input {
-				@extend .form-control;
 				border-radius: 0;
 			}
 			.icon-group {
-				@extend .text-right;
 				padding-top: 0;
 			}
 		}
 		.foot {
-			@extend .panel-footer;
 			padding: 20px 15px;
 			background-color: transparent;
 			border-color: $extra-darkest-grey;
 			> a {
-				@extend .btn, .btn-tertiary;
 				&.btn-add-task {
 					@include icon-before('\f067', inherit);
 				}
 				&.btn-task-list {
-					@extend .hidden-lg, .hidden-md;
 					@include icon-before('\f03a', inherit);
-				}
-			}
-			.buttons {
-				@extend .form-group, .pull-right;
-				.btn-save {
-					@extend .btn, .btn-default, .btn-secondary;
-				}
-				.btn-submit {
-					@extend .btn, .btn-primary;
 				}
 			}
 		}

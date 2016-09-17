@@ -46,7 +46,7 @@ main(role='main')
               .panel.panel-default
                   .panel-heading
                       h2.panel-title My To-Do's
-                      a(href="#", title="Expand My To-Do List")
+                      a.pull-right(href="#", title="Expand My To-Do List")
                           i.fa.fa-plus
                   .panel-body
                       .tab
@@ -63,13 +63,13 @@ main(role='main')
                                       li.list-group-item
                                           i.fa.fa-check-square-o(aria-hidden='true')
                                           .droppable
-                                              img#member-1.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
-                                              img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
+                                              img.img-circle#member-1.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-abdi.png', alt='Abdikadir Kedie')
+                                              img.img-circle#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
                                           a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
                                       li.list-group-item
                                           i.fa.fa-check-square-o(aria-hidden='true')
                                           .droppable
-                                              img#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
+                                              img.img-circle#member-2.draggable.ui-draggable.ui-draggable-handle(src='../images/team-member-cindy.png', alt='Cindy Lopes')
                                           a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
                                       li.list-group-item
                                           i.fa.fa-check-square-o(aria-hidden='true')
@@ -233,7 +233,7 @@ main(role='main')
                       h2.panel-title Did you know?
                   .panel-body
                       figure
-                          img(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
+                          img.img-responsive(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
                       p.lead Why does the timesheet week start on a Saturday?
                       p That is to match payroll which is based on Saturday to Friday periods.
           li#my-team
@@ -244,49 +244,49 @@ main(role='main')
                       .row
                           .team-member
                               figure
-                                  img.draggable(id="1", src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+                                  img.img-circle.draggable(id="1", src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
                               .info
                                   span Abdikadir Kedie
                                   span Technical Architect
                           .team-member
                               figure
-                                  img.draggable(id="2", src="../images/team-member-cindy.png", alt="Cindy Lopes")
+                                  img.img-circle.draggable(id="2", src="../images/team-member-cindy.png", alt="Cindy Lopes")
                               .info
                                   span Cindy Lopes
                                   span Technical Developer
                           .team-member
                               figure
-                                  img.draggable(id="3", src="../images/team-member-dan.png", alt="Dan Sarbu")
+                                  img.img-circle.draggable(id="3", src="../images/team-member-dan.png", alt="Dan Sarbu")
                               .info
                                   span Dan Sarbu
                                   span Director - Software
                           .team-member
                               figure
-                                  img.draggable(id="4", src="../images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
+                                  img.img-circle.draggable(id="4", src="../images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
                               .info
                                   span Emmanuel Ballerini
                                   span Senior Technical Developer
                           .team-member
                               figure
-                                  img.draggable(id="5", src="../images/team-member-jacob.png", alt="Jacob Tseng")
+                                  img.img-circle.draggable(id="5", src="../images/team-member-jacob.png", alt="Jacob Tseng")
                               .info
                                   span Jacob Tseng
                                   span Technical Architect
                           .team-member
                               figure
-                                  img.draggable(id="6", src="../images/team-member-robbie.png", alt="Robbie Bisnath")
+                                  img.img-circle.draggable(id="6", src="../images/team-member-robbie.png", alt="Robbie Bisnath")
                               .info
                                   span Robbie Bisnath
                                   span Business Analyst
                           .team-member
                               figure
-                                  img.draggable(id="7", src="../images/team-member-saba.png", alt="Saba Saba")
+                                  img.img-circle.draggable(id="7", src="../images/team-member-saba.png", alt="Saba Saba")
                               .info
                                   span Saba Saba
                                   span Technical Developer
                           .team-member
                               figure
-                                  img.draggable(id="8", src="../images/team-member-tim.png", alt="Tim Wilson")
+                                  img.img-circle.draggable(id="8", src="../images/team-member-tim.png", alt="Tim Wilson")
                               .info
                                   span Tim Wilson
                                   span Senior Business Analyst
@@ -296,7 +296,7 @@ main(role='main')
                       h2.panel-title Team Member of the Day
                   .panel-body
                       figure.full
-                          img(src="../images/employee.png", alt="Abdul Basit | Employee of the Month")
+                          img.img-responsive(src="../images/employee.png", alt="Abdul Basit | Employee of the Month")
                       p.lead Abdul Basit
                       p Technical Architect
                       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis posuere urna. Integer quam augue, porta ut efficitur id, aliquet faucibus eros. Proin quis odio non arcu iaculis vulputate non sed justo. Duis pellentesque leo vel turpis fringilla, ut volutpat nibh placerat. Aenean egestas blandit nibh, tristique tempor lorem vehicula ac.

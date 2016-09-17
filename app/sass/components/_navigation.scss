@@ -252,10 +252,6 @@
                 padding: 15px;
                 background: $grey;
 
-                img {
-                    @extend .img-circle;
-                }
-
                 .info {
                     margin-left: 20px;
                     @include font-size(16px);

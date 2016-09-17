@@ -20,13 +20,13 @@
 							ul
 								li.team-member
 										figure
-												img(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+												img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
 										.info
 												span Abdikadir Kedie
 												span Technical Architect
 								li.team-member
 										figure
-												img(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+												img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
 										.info
 												span Cindy Lopes
 												span Technical Developer
@@ -38,18 +38,18 @@
 									input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
 									span
 										i.fa.fa-search
-							form
+							form.form-horizontal
 								.form-group                  
 									.column
-										label(for='input-comment') Enter a comment
-										textarea#input-comment(placeholder='Write a comment...', rows='3')
+										label.control-label(for='input-comment') Enter a comment
+										textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
 			.modal-footer
-				.left
+				.left.pull-left
 					button.btn.btn-primary(type='button')
 						i.fa.fa-check-square-o              
 						| Mark as Complete              
 					button.btn.btn-default(type='button', data-dismiss='modal') Defer
-				.right
+				.right.pull-right
 					form.form-inline
 						.form-group
 							label(for="input-hours") Hrs.

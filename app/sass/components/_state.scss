@@ -66,7 +66,6 @@ a {
 
 // Alert Box State
 .alert-timesheet {
-  @extend .alert, .alert-warning;
   @include font-size(16px);
   color: $dark-yellow;
   border-color: $yellow;
@@ -83,10 +82,8 @@ a {
       border-right-color: $green !important;
     }
   }
-  .popover-group {
-    @extend .btn-group;
+  .btn-group {
     button {
-      @extend .btn, .btn-default;
       color: $green;
       &:first-of-type {
         @include icon-before('\f017', $green);

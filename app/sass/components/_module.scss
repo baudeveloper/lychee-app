@@ -178,7 +178,7 @@
           }
         }
       }
-    }    
+    }
   }
 }
 
@@ -242,7 +242,6 @@
                     margin-right: 10px;
 
                     img {
-                        @extend .img-circle;
 
                         &:hover {
                             cursor: move;
@@ -285,7 +284,6 @@
 
             a {
                 color: $green;
-                @extend .pull-right;
             }
         }
 
@@ -325,7 +323,6 @@
 
                 img {
                     margin: 0 auto;
-                    @extend .img-responsive;
                 }
 
                 &.full {
@@ -501,7 +498,6 @@
                     float: right;
                     width: 20px;
                     margin-right: 10px;
-                    @extend .img-circle;
                 }
 
                 a {
@@ -1022,10 +1018,6 @@
                   margin-bottom: 15px;
                   figure {
                       margin-right: 10px;
-
-                      img {
-                          @extend .img-circle;
-                      }
                   }
                   span {
                       display: block;
@@ -1047,7 +1039,6 @@
             form {
               margin: 0 -15px;
               padding: 0 15px;
-              @extend .form-horizontal;
               .form-group {
                 margin-bottom: 0;
               }
@@ -1058,12 +1049,10 @@
                 padding: 0;
                 margin: 15px 0;
                 text-align: left !important;
-                @extend .control-label;
               }
               textarea {
                 resize: none;
                 border-radius: 0;
-                @extend .form-control;
               }
             }
             &:last-of-type {
@@ -1076,13 +1065,11 @@
     }
     .modal-footer {
       .left {
-        @extend .pull-left;
         .fa {
           margin-right: 5px;
         }
       }
       .right {
-        @extend .pull-right;
         .form-group {
           margin-right: 5px;
         }
