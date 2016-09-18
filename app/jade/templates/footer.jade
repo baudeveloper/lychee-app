@@ -9,40 +9,41 @@
 				nav Do Something...
 				section            
 					p #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
-					.row              
-						.column
-							p
-								strong Collaborators:
-							.input
-								input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
-								span
-									i.fa.fa-search(aria-hidden='true')
-							ul
-								li.team-member
-										figure
-												img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-										.info
-												span Abdikadir Kedie
-												span Technical Architect
-								li.team-member
-										figure
-												img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-										.info
-												span Cindy Lopes
-												span Technical Developer
-						.column
-							.bg-color
+					.container
+						.row              
+							.col-sm-6
 								p
-									strong Task
+									strong Collaborators:
 								.input
-									input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
+									input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
 									span
 										i.fa.fa-search(aria-hidden='true')
-							form.form-horizontal
-								.form-group                  
-									.column
-										label.control-label(for='input-comment') Enter a comment
-										textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
+								ul
+									li.team-member
+											figure
+													img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+											.info
+													span Abdikadir Kedie
+													span Technical Architect
+									li.team-member
+											figure
+													img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+											.info
+													span Cindy Lopes
+													span Technical Developer
+							.col-sm-6
+								.bg-color
+									p
+										strong Task
+									.input
+										input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
+										span
+											i.fa.fa-search(aria-hidden='true')
+								form.form-horizontal
+									.form-group                  
+										.column
+											label.control-label(for='input-comment') Enter a comment
+											textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
 			.modal-footer
 				.left.pull-left
 					button.btn.btn-primary(type='button')
@@ -53,8 +54,8 @@
 					form.form-inline
 						.form-group
 							label(for="input-hours") Hrs.
-							.input-group
-								.input-group-addon
+							.log-group
+								.log-addon
 									input.form-control(type="text", placeholder="0.0")
 								button.btn.btn-primary(type='button') Log Time
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
@@ -72,22 +73,23 @@
 							i.fa.fa-caret-down(aria-hidden='true')
 						.modal-info
 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
-					.row
-						.column
-							img(src="http://placehold.it/1000x1000", alt="Graph")
-						.column
-							ul
-								li
-									.title Estimated                    
-									.description 750 hrs
-								li
-									.title Spent
-										span (33% of Estimate)                    
-									.description 250 hrs
-								li
-									.title Remaining 
-										span (66% of Estimate)                    
-									.description 500 hrs
+					.container
+						.row
+							.col-sm-6
+								img(src="http://placehold.it/1000x1000", alt="Graph")
+							.col-sm-6
+								ul
+									li
+										.title Estimated                    
+										.description 750 hrs
+									li
+										.title Spent
+											span (33% of Estimate)                    
+										.description 250 hrs
+									li
+										.title Remaining 
+											span (66% of Estimate)                    
+										.description 500 hrs
 				.modal-footer
 					.right
 						button.btn.btn-default(type='button', data-dismiss='modal') Close

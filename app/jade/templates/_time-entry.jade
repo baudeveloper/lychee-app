@@ -1,586 +1,586 @@
 main(role="main")
-	h1.page-title
-		i.fa.fa-clock-o(aria-hidden='true')
-		| Time Entry
-	.alert.alert-warning.alert-timesheet(role='alert') The timesheet is open
-	.page-row
-		aside#task-directory
-			.bg
-				.button.btn-group
-					button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-						| All Tasks 
-						span.caret
-					ul.dropdown-menu
-						li
-							a(href='#') Action
-						li
-							a(href='#') Another action
-						li
-							a(href='#') Something else here
-						li.divider(role='separator')
-						li
-							a(href='#') Separated link
-				.input
-					input.form-control(id="input-collaborator", type='text', placeholder='Search for Tasks...')
-					span
-						i.fa.fa-search(aria-hidden='true')
-				#fancytree
-					ul#treeData(style='display: none;')
-						li#id1.folder.expanded(title='RouteOne')
-							| RouteOne
-							ul
-								li(id='id1.1').folder.expanded(title='Credit Aggregation Platform')
-									| Credit Aggregation Platform
-									ul
-										li(id='id1.1.1').folder.expanded(title='RONE-0757 (Remote Document Delivery)')
-											| RONE-0757 (Remote Document Delivery)
-											ul
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Analysis
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Testing
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Development
-												li(id='id1.1.1.1')
-													| FFD-C2029 - UI Design
-										li(id='id1.1.2').folder.expanded(title='Release 16.9')
-											| Release 16.9
-											ul
-												li(id='id1.1.1.1')
-													| CORE-7696 Remove Authy
-												li(id='id1.1.1.1')
-													| CORE-8758 Black list document to not delivery
-												li(id='id1.1.1.1')
-													| CORE-8758 Privacy Policy implementation
-												li(id='id1.1.1.1')
-													| CORE-8758 Capturing billing information
-								li(id='id1.2').folder(title='RONE-0743 (CAMS 2016 Travel)')
-									| RONE-0743 (CAMS 2016 Travel)
-								li(id='id1.3').folder(title='RONE-0749 (R1 Mobile App 2016)')
-									| RONE-0749 (R1 Mobile App 2016)
-								li(id='id1.4').folder(title='RONE-0742 (CAMS 2016)')
-									| RONE-0749 (CAMS 2016)
-		section#task-list
-			form.panel.panel-default
-				.head.panel-heading
-					.clearfix
-						.input-group.pull-left
-							.input-group-addon
-								span
-									i.fa.fa-calendar(aria-hidden='true')
-							input.form-control.input-datepicker(type='text', placeholder='August 13, 2016', data-date='12-02-2012', data-date-format='dd-mm-yyyy')
-							.input-group-btn
-								button.btn.btn-default.btn-secondary(type='button')
-									i.fa.fa-chevron-left(aria-hidden='true')
-								button.btn.btn-default.btn-secondary(type='button')
-									i.fa.fa-chevron-right(aria-hidden='true')
-						.buttons.btn-group.pull-right.buttons-tab(role='group')
-							button.btn.btn-default.btn-secondary(type='button', id='tabone') Day
-							button.btn.btn-default.btn-secondary.active(type='button', id='tabtwo') Week
-							button.btn.btn-default.btn-secondary(type='button', id='tabthree') Business Week
-					.headers(id='headers-one')
-						table(width="100%")
-							colgroup
-								col(width="3%")
-								col(width="67%")									
-								col(width="10%")
-								col(width="20%")
-							thead
-								tr
-									th &nbsp;
-									th Task
-									th &nbsp;
-									th Time
-					.headers(id='headers-two')
-						table(width="100%")
-							colgroup
-								col(width="3%")
-								col(width="33%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-							thead
-								tr
-									th &nbsp;
-									th Task
-									th Sat<br>Aug 13
-									th Sun<br>Aug 14
-									th Mon<br>Aug 15
-									th Tue<br>Aug 16
-									th Wed<br>Aug 17
-									th Thu<br>Aug 18
-									th Fri<br>Aug 19
-									th Total					
-					.headers(id="headers-three")
-						table(width="100%")
-							colgroup
-								col(width="3%")
-								col(width="49%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-								col(width="8%")
-							thead
-								tr
-									th &nbsp;
-									th Task
-									th Mon<br>Aug 15
-									th Tue<br>Aug 16
-									th Wed<br>Aug 17
-									th Thu<br>Aug 18
-									th Fri<br>Aug 19
-									th Total					
-				.body.panel-body
-					ul.list-group.view(id='view-one')
-						li.sticky.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="67%")									
-									col(width="10%")
-									col(width="20%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)	
-										td(colspan="1").icon-group
-										td(colspan="7").icon-group
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack(aria-hidden='true')
-										td						
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")											
-										td
-											a.btn-timer Start Timer
-										td											
-											input.form-control(class-="input-timer", type="text", placeholder="2:05")
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="67%")									
-									col(width="10%")
-									col(width="20%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)	
-										td
-										td(colspan="7").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td						
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")											
-										td
-											a.btn-timer Start Timer
-										td											
-											input.form-control(class-="input-timer", type="text", placeholder="2:05")
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="67%")									
-									col(width="10%")
-									col(width="20%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)	
-										td
-										td(colspan="7").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td						
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")											
-										td
-											a.btn-timer Start Timer
-										td											
-											input.form-control(class-="input-timer", type="text", placeholder="2:05")
-					ul.list-group.view(id='view-two')
-						li.sticky.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="33%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="33%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="33%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-					ul.list-group.view(id='view-three')
-						li.sticky.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="49%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="49%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="49%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-cubes(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group.text-right
-											a.btn-details(href="#", title="Details")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td										
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-				.foot.panel-footer
-					a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task") Add New Task
-					a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List") Show Task List
-					.buttons.form-group.pull-right
-						a.btn-save.btn.btn-default.btn-secondary(href="#", title="Save") Save
-						button.btn.btn-primary.btn-submit(type="submit", role="button") Submit
-		include feed.jade
-	footer Lychee 2.0.0a
+    h1.page-title
+        i.fa.fa-clock-o(aria-hidden='true')
+        | Time Entry
+    .alert.alert-warning.alert-timesheet(role='alert') The timesheet is open
+    .page-row
+        aside#task-directory
+            .bg
+                .button.btn-group
+                    button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | All Tasks 
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='#') Action
+                        li
+                            a(href='#') Another action
+                        li
+                            a(href='#') Something else here
+                        li.divider(role='separator')
+                        li
+                            a(href='#') Separated link
+                .input
+                    input.form-control(id="input-collaborator", type='text', placeholder='Search for Tasks...')
+                    span
+                        i.fa.fa-search(aria-hidden='true')
+                #fancytree
+                    ul#treeData(style='display: none;')
+                        li#id1.folder.expanded(title='RouteOne')
+                            | RouteOne
+                            ul
+                                li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
+                                    | Credit Aggregation Platform
+                                    ul
+                                        li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
+                                            | RONE-0757 (Remote Document Delivery)
+                                            ul
+                                                li(id='id1.1.1.1')
+                                                    | FFD-C2029 - Analysis
+                                                li(id='id1.1.1.1')
+                                                    | FFD-C2029 - Testing
+                                                li(id='id1.1.1.1')
+                                                    | FFD-C2029 - Development
+                                                li(id='id1.1.1.1')
+                                                    | FFD-C2029 - UI Design
+                                        li.folder.expanded(id='id1.1.2', title='Release 16.9')
+                                            | Release 16.9
+                                            ul
+                                                li(id='id1.1.1.1')
+                                                    | CORE-7696 Remove Authy
+                                                li(id='id1.1.1.1')
+                                                    | CORE-8758 Black list document to not delivery
+                                                li(id='id1.1.1.1')
+                                                    | CORE-8758 Privacy Policy implementation
+                                                li(id='id1.1.1.1')
+                                                    | CORE-8758 Capturing billing information
+                                li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
+                                    | RONE-0743 (CAMS 2016 Travel)
+                                li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
+                                    | RONE-0749 (R1 Mobile App 2016)
+                                li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
+                                    | RONE-0749 (CAMS 2016)
+        section#task-list
+            form.panel.panel-default
+                .head.panel-heading
+                    .clearfix
+                        .input-group.pull-left
+                            .input-group-addon
+                                span
+                                    i.fa.fa-calendar(aria-hidden='true')
+                            input.form-control.input-datepicker(type='text', placeholder='August 13, 2016', data-date='12-02-2012', data-date-format='dd-mm-yyyy')
+                            .input-group-btn
+                                button.btn.btn-default.btn-secondary(type='button')
+                                    i.fa.fa-chevron-left(aria-hidden='true')
+                                button.btn.btn-default.btn-secondary(type='button')
+                                    i.fa.fa-chevron-right(aria-hidden='true')
+                        .buttons.btn-group.pull-right.buttons-tab(role='group')
+                            button.btn.btn-default.btn-secondary(type='button', id='tabone') Day
+                            button.btn.btn-default.btn-secondary.active(type='button', id='tabtwo') Week
+                            button.btn.btn-default.btn-secondary(type='button', id='tabthree') Business Week
+                    .headers(id='headers-one')
+                        table(width="100%")
+                            colgroup
+                                col(width="3%")
+                                col(width="67%")
+                                col(width="10%")
+                                col(width="20%")
+                            thead
+                                tr
+                                    th &nbsp;
+                                    th Task
+                                    th &nbsp;
+                                    th Time
+                    .headers(id='headers-two')
+                        table(width="100%")
+                            colgroup
+                                col(width="3%")
+                                col(width="33%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                            thead
+                                tr
+                                    th &nbsp;
+                                    th Task
+                                    th Sat<br>Aug 13
+                                    th Sun<br>Aug 14
+                                    th Mon<br>Aug 15
+                                    th Tue<br>Aug 16
+                                    th Wed<br>Aug 17
+                                    th Thu<br>Aug 18
+                                    th Fri<br>Aug 19
+                                    th Total					
+                    .headers(id="headers-three")
+                        table(width="100%")
+                            colgroup
+                                col(width="3%")
+                                col(width="49%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                                col(width="8%")
+                            thead
+                                tr
+                                    th &nbsp;
+                                    th Task
+                                    th Mon<br>Aug 15
+                                    th Tue<br>Aug 16
+                                    th Wed<br>Aug 17
+                                    th Thu<br>Aug 18
+                                    th Fri<br>Aug 19
+                                    th Total					
+                .body.panel-body
+                    ul.list-group.view(id='view-one')
+                        li.sticky.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="67%")
+                                    col(width="10%")
+                                    col(width="20%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)	
+                                        td(colspan="1").icon-group
+                                        td(colspan="7").icon-group
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack(aria-hidden='true')
+                                        td
+                                            input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            a.btn-timer Start Timer
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="2:05")
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="67%")
+                                    col(width="10%")
+                                    col(width="20%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)	
+                                        td
+                                        td(colspan="7").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            a.btn-timer Start Timer
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="2:05")
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="67%")
+                                    col(width="10%")
+                                    col(width="20%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)	
+                                        td
+                                        td(colspan="7").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            a.btn-timer Start Timer
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="2:05")
+                    ul.list-group.view(id='view-two')
+                        li.sticky.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="33%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="33%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="33%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                    ul.list-group.view(id='view-three')
+                        li.sticky.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="49%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="49%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                        li.list-group-item
+                            table
+                                colgroup
+                                    col(width="3%")
+                                    col(width="49%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                    col(width="8%")
+                                tbody
+                                    tr
+                                        td(colspan="1")
+                                            a.btn-tasks(href="#", title="Tasks")
+                                                i.fa.fa-cubes(aria-hidden='true')
+                                        td(colspan="1")
+                                            span FFD-C2029 - UI Design
+                                            a.btn-edit(href="#", title="Edit")
+                                                i.fa.fa-pencil(aria-hidden='true')
+                                            small RONE-0757 (Remote Document Delivery)									
+                                        td(colspan="8").icon-group.text-right
+                                            a.btn-details(href="#", title="Details")
+                                                i.fa.fa-list-alt(aria-hidden='true')
+                                            a.btn-complete(href="#", title="Complete")
+                                                i.fa.fa-check-square-o(aria-hidden='true')
+                                            a.btn-archive(href="#", title="Archive Tree")
+                                                i.fa.fa-sitemap(aria-hidden='true')
+                                            a.btn-estimate(href="#", title="Estimate")
+                                                i.fa.fa-history(aria-hidden='true')
+                                            a.btn-delete(href="#", title="Delete")
+                                                i.fa.fa-trash(aria-hidden='true')
+                                    tr
+                                        td
+                                            a.btn-pin(href="#", title="Pin")
+                                                i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+                                        td
+                                            input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+                                        td
+                                            span 0:00
+                .foot.panel-footer
+                    a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task") Add New Task
+                    a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List") Show Task List
+                    .buttons.form-group.pull-right
+                        a.btn-save.btn.btn-default.btn-secondary(href="#", title="Save") Save
+                        button.btn.btn-primary.btn-submit(type="submit", role="button") Submit
+        include feed.jade
+    footer Lychee 2.0.0a

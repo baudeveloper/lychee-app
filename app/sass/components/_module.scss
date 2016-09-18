@@ -234,9 +234,6 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 15px;
-                @include make-sm-column(4);
-                @include make-md-column(4);
-                @include make-lg-column(4);
 
                 figure {
                     margin-right: 10px;
@@ -989,10 +986,13 @@
           padding: 0 15px 15px;
           border-bottom: 1px solid $darkest-grey;
         }
+        .container {
+          width: auto;
+          padding: 0;
+        }
         .row {
           display: flex;
-          > .column {
-            @include make-sm-column(6);
+          > .col-sm-6 {
             @include typeahead-standard();
             .bg-color {
               padding: 15px;
@@ -1117,50 +1117,49 @@
       .toggled {
         display: block !important;
       }
-      .row {
-        .column {
-          @include make-sm-column(6);
-          ul {
-            margin: 0;
-            padding: 0;
-            li {
-              margin-bottom: 15px;
-              list-style-type: none;
-              &:first-of-type {
-                .title {
-                  @include icon-before('\f0d7', $purple);
-                }
-              }
-              &:first-of-type + li {
-                .title {
-                  @include icon-before('\f0d7', $dark-green);
-                }
-              }
-              &:last-of-type {
-                margin-bottom: 0;
-                .title {
-                  @include icon-before('\f017', $light-green);
-                }
-              }
+      .container {
+        width: auto;
+        padding: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          margin-bottom: 15px;
+          list-style-type: none;
+          &:first-of-type {
+            .title {
+              @include icon-before('\f0d7', $purple);
             }
           }
-          .title {
-            color: $grey;
-            @include font-size(14px);
-            text-transform: uppercase;
-            span {
-              text-transform: none;
+          &:first-of-type + li {
+            .title {
+              @include icon-before('\f0d7', $dark-green);
             }
           }
-          .description {
-            font-weight: 200;
-            padding: 5px 12px;
-            @include font-size(38px);
-          }
-          img {
-            width: 100%;
+          &:last-of-type {
+            margin-bottom: 0;
+            .title {
+              @include icon-before('\f017', $light-green);
+            }
           }
         }
+      }
+      .title {
+        color: $grey;
+        @include font-size(14px);
+        text-transform: uppercase;
+        span {
+          text-transform: none;
+        }
+      }
+      .description {
+        font-weight: 200;
+        padding: 5px 12px;
+        @include font-size(38px);
+      }
+      img {
+        width: 100%;
       }
     }
   }

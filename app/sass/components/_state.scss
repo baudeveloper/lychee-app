@@ -97,3 +97,11 @@ a {
     }
   }
 }
+
+// Log Time Group Addon
+.log-group {
+  @extend .input-group;
+}
+.log-addon {
+  @extend .input-group-addon;
+}
