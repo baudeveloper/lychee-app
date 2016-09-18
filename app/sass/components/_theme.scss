@@ -206,6 +206,7 @@
 		border-color: $darkest-grey;
 	}
 	tbody tr * {
+		text-align: center;
 		@include font-size(14px);
 	}
 	tbody th {

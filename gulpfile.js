@@ -35,6 +35,7 @@ gulp.task('jade', function() {
         }))
         .pipe($.prettify({ indent_size: 2, unformatted: ['pre', 'code'] }))
         .pipe($.bootlint())
+        .pipe($.htmlmin({collapseWhitespace: true}))
         .pipe($.size({title: '************ FILE SIZE: HTMLs ****'}))
         .pipe(gulp.dest(config.dist))
         .pipe($.notify({

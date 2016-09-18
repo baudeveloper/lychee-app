@@ -34,7 +34,7 @@ main {
     position: absolute;
     top: 0;
     padding: 8px 0;
-
+    background-color: transparent;
     li + * {
         &::before {
             content: '\f105';
