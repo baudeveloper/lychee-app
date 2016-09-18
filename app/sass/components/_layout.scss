@@ -16,7 +16,6 @@ html {
     font-size: 100%;
     overflow-x: hidden;
 }
-
 // Declaration of Inline input.
 @include inline-input();
 
@@ -29,211 +28,216 @@ main {
     transition: all 0.5s;
     min-height: 100vh;
     background: $light-grey no-repeat bottom right url('../images/pattern.png');
+}
 
-    .breadcrumb {
-      position: absolute;
-      top: 0;
-      padding: 8px 0;
-      li + * {
+.breadcrumb {
+    position: absolute;
+    top: 0;
+    padding: 8px 0;
+
+    li + * {
         &::before {
-          content: '\f105';
-          color: $medium-grey;
-          font-family: "fontawesome";
-        }
-      }
-    }
-
-    .page-title {
-        padding: 0;
-        color: $grey;
-        display: inline-block;
-        margin: 80px 0 30px !important;
-        @include font-size(24px);
-
-        .fa {
-            margin-right: 10px;
-        }
-    }
-
-    .page-row {
-        @include make-row();
-
-        h2 {
-            color: $red;
-            text-transform: uppercase;
-            @include font-size(18px);
-        }
-
-        li {
-            @include panel-standard();
-
-            &.skinned {
-                @include panel-skinned();
-            }
-
-            &.employee-of-the-month {
-                @include panel-employee();
-            }
-        }
-
-        > ul {
-            padding-left: 0;
-            padding-right: 0;
-            @include make-sm-column(12);
-            @include make-md-column(12);
-            @include make-lg-column(9);
-            @include margin-and-padding(0, 0);
-            @include border-and-background();
-            .panel-heading {
-                &:hover {
-                    cursor: move;
-                }
-            }
-            > li {
-                list-style-type: none;
-
-                &.placeholder {
-                    margin: 0 15px 15px;
-                    border: 1px solid darken($light-grey, 5%);
-                    background-color: darken($light-grey, 2.5%);
-                    @include make-sm-column(3);
-                    @include make-md-column(3);
-                }
-
-                &.tile {
-                    height: 350px;
-                }
-            }
-        }
-    }
-
-    #my-stats {
-        @include make-sm-column(12);
-        @include make-md-column(12);
-        @include make-lg-column(3);
-        @include widget-mystats();
-    }
-
-    #team-list {
-        @include make-sm-column(12);
-        @include make-md-column(12);
-        @include make-lg-column(12);
-    }
-
-    #member-profile {
-      @include make-sm-column(12);
-      @include make-md-column(12);
-      @include make-lg-column(3);
-    }
-    #member-assignments {
-      @include make-sm-column(12);
-      @include make-md-column(12);
-      @include make-lg-column(9);
-    }
-
-    // Time Entry Page Layout.
-    .alert-timesheet {
-      padding: 20px 25px;
-      margin-left: 10px;
-      display: inline-block;
-    }
-    #task-directory {
-      @include make-sm-column(12);
-      @include make-md-column(12);
-      @include make-lg-column(4);
-    }
-    #task-list {
-      @include make-sm-column(12);
-      @include make-md-column(12);
-      @include make-lg-column(8);
-    }
-
-    #my-todo {
-        @include make-sm-column(12);
-        @include make-md-column(6);
-        @include make-lg-column(4);
-
-        .tab {
-            border: 1px solid $lightest-grey;
-            background-color: $extra-light-grey;
-            @include widget-todo();
-        }
-    }
-
-    #my-tasks {
-        @include make-sm-column(12);
-        @include make-md-column(6);
-        @include make-lg-column(5);
-        @include widget-mytasks();
-    }
-
-    #did-you-know {
-        @include make-sm-column(4);
-        @include make-md-column(4);
-        @include make-lg-column(3);
-    }
-
-    #my-team {
-        @include make-sm-column(12);
-        @include make-md-column(12);
-        @include make-lg-column(9);
-        @include widget-myteam();
-    }
-
-    #team-member {
-        @include make-sm-column(8);
-        @include make-md-column(8);
-        @include make-lg-column(3);
-    }
-
-    #my-projects {
-        overflow: hidden !important;
-        @include make-sm-column(12);
-        @include make-md-column(12);
-        @include make-lg-column(9);
-
-        h3 {
-            color: $grey;
-            @include font-size(16px);
-            @include margin-and-padding(0 0 20px, 0);
-        }
-    }
-
-    footer {
-        position: absolute;
-        z-index: 5;
-        right: 10px;
-        bottom: 10px;
-        color: $medium-grey-light;
-        @include font-size(14px);
-    }
-
-    .feed {
-        position: fixed;
-        z-index: 10;
-        top: 80px;
-        bottom: 0;
-        width: 378px;
-        right: -378px;
-        padding: 20px;
-        overflow-y: scroll;
-        transition: all 0.5s;
-        background-color: $transparent-grey;
-        @include widget-feed();
-
-        h2 {
+            content: '\f105';
             color: $medium-grey;
-            @include font-size(28px);
-            @include margin-and-padding(0, 0);
-            font-weight: $font-weight-light;
+            font-family: "fontawesome";
+        }
+    }
+}
 
-            &:last-of-type {
-                margin-top: 60px;
+.page-title {
+    padding: 0;
+    color: $grey;
+    display: inline-block;
+    margin: 80px 0 30px !important;
+    @include font-size(24px);
+
+    .fa {
+        margin-right: 10px;
+    }
+}
+
+.page-row {
+    @include make-row();
+
+    h2 {
+        color: $red;
+        text-transform: uppercase;
+        @include font-size(18px);
+    }
+
+    li {
+        @include panel-standard();
+
+        &.skinned {
+            @include panel-skinned();
+        }
+
+        &.employee-of-the-month {
+            @include panel-employee();
+        }
+    }
+
+    > ul {
+        padding-left: 0;
+        padding-right: 0;
+        @include make-sm-column(12);
+        @include make-md-column(12);
+        @include make-lg-column(9);
+        @include margin-and-padding(0, 0);
+        @include border-and-background();
+
+        .panel-heading {
+            &:hover {
+                cursor: move;
             }
         }
 
-        &.active {
-            right: -17px;
+        > li {
+            list-style-type: none;
+
+            &.placeholder {
+                margin: 0 15px 15px;
+                border: 1px solid darken($light-grey, 5%);
+                background-color: darken($light-grey, 2.5%);
+                @include make-sm-column(3);
+                @include make-md-column(3);
+            }
+
+            &.tile {
+                height: 350px;
+            }
         }
+    }
+}
+
+#my-stats {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(3);
+    @include widget-mystats();
+}
+
+#team-list {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(12);
+}
+
+#member-profile {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(3);
+}
+
+#member-assignments {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(9);
+}
+// Time Entry Page Layout.
+.alert-timesheet {
+    padding: 20px 25px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#task-directory {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(4);
+}
+
+#task-list {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(8);
+}
+
+#my-todo {
+    @include make-sm-column(12);
+    @include make-md-column(6);
+    @include make-lg-column(4);
+
+    .tab {
+        border: 1px solid $lightest-grey;
+        background-color: $extra-light-grey;
+        @include widget-todo();
+    }
+}
+
+#my-tasks {
+    @include make-sm-column(12);
+    @include make-md-column(6);
+    @include make-lg-column(5);
+    @include widget-mytasks();
+}
+
+#did-you-know {
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(3);
+}
+
+#my-team {
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(9);
+    @include widget-myteam();
+}
+
+#team-member {
+    @include make-sm-column(8);
+    @include make-md-column(8);
+    @include make-lg-column(3);
+}
+
+#my-projects {
+    overflow: hidden !important;
+    @include make-sm-column(12);
+    @include make-md-column(12);
+    @include make-lg-column(9);
+
+    h3 {
+        color: $grey;
+        @include font-size(16px);
+        @include margin-and-padding(0 0 20px, 0);
+    }
+}
+
+footer {
+    position: absolute;
+    z-index: 5;
+    right: 10px;
+    bottom: 10px;
+    color: $medium-grey-light;
+    @include font-size(14px);
+}
+
+.feed {
+    position: fixed;
+    z-index: 10;
+    top: 80px;
+    bottom: 0;
+    width: 378px;
+    right: -378px;
+    padding: 20px;
+    overflow-y: scroll;
+    transition: all 0.5s;
+    background-color: $transparent-grey;
+    @include widget-feed();
+
+    h2 {
+        color: $medium-grey;
+        @include font-size(28px);
+        @include margin-and-padding(0, 0);
+        font-weight: $font-weight-light;
+
+        &:last-of-type {
+            margin-top: 60px;
+        }
+    }
+
+    &.active {
+        right: -17px;
     }
 }

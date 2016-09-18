@@ -1,117 +1,105 @@
 // Team List Page
 #team-list {
-	form {
 		label {
 			color: $grey;
 			font-weight: 400;
 			@include font-size(20px);
 		}
-		.bootstrap-select {
-			button {
-				color: $red;
-				border-radius: 0;
-				@include font-size(16px);
-				box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-			}
-			.dropdown-menu {
-				@include font-size(16px);
-				a {
-					padding: 3px 12px;
-				}
+		.bootstrap-select button {
+			color: $red;
+			border-radius: 0;
+			@include font-size(16px);
+			box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+		}
+		.bootstrap-select .dropdown-menu {
+			@include font-size(16px);
+			a {
+				padding: 3px 12px;
 			}
 		}
 		.checkbox {
 			margin-left: 15px;
-			> label {
-				@include font-size(14px);
-				input {
-					margin-right: 5px;
-				}
+		}
+		.checkbox label {
+			@include font-size(14px);
+			input {
+				margin-right: 5px;
 			}
 		}
-		nav > ul {
+		ul {
 			margin: 0;
 			padding: 0;
-			li {
-				> a {
-					color: $grey;
-					border: none;
-					background: none;
-					box-shadow: none;
-					padding: 0 5px;
-					@include font-size(20px);
-					&:hover, &:active, &:focus {
-						color: $white;
-						border-radius: 4px;
-						background-color: $red;
-					}
-				}
-				&:first-of-type {
-					> a {
-						padding-left: 0;
-						margin-right: 10px;
-						padding-right: 10px;
-						border-right: 1px solid $darkest-grey;
-						&:hover, &:active, &:focus {
-							color: $red;
-							border-radius: 0;
-							background-color: transparent;
-						}
-					}
-				}
-				&.disabled {
-					> a {
-						color: $darkest-grey;
-						border: none;
-						background: none;
-						box-shadow: none;
-						&:hover, &:active, &:focus {
-							color: $white;
-							background-color: lighten($red, 15%);
-						}
-					}
-				}
+		}
+		li a {
+			color: $grey;
+			border: none;
+			background: none;
+			box-shadow: none;
+			padding: 0 5px;
+			@include font-size(20px);
+			&:hover, &:active, &:focus {
+				color: $white;
+				border-radius: 4px;
+				background-color: $red;
 			}
 		}
-		.form-group {
-			&:first-of-type + div {
-				margin-top: -4px;
+		li:first-of-type a {
+			padding-left: 0;
+			margin-right: 10px;
+			padding-right: 10px;
+			border-right: 1px solid $darkest-grey;
+			&:hover, &:active, &:focus {
+				color: $red;
+				border-radius: 0;
+				background-color: transparent;
 			}
-			&:last-of-type {
-				@media (max-width: 1366px) {
-					float: none !important;
-					clear: both;
-					display: block;
-					margin-top: 20px;
-				}
+		}
+		li.disabled a {
+			color: $darkest-grey;
+			border: none;
+			background: none;
+			box-shadow: none;
+			&:hover, &:active, &:focus {
+				color: $white;
+				background-color: lighten($red, 15%);
 			}
+		}
+	.form-group:first-of-type + div {
+		margin-top: -4px;
+	}
+	.form-group:last-of-type {
+		@media (max-width: 1366px) {
+			float: none !important;
+			clear: both;
+			display: block;
+			margin-top: 20px;
 		}
 	}
 	.team-row {
 		margin: 50px 0;
-		.team-member {
-			@include make-sm-column(4);
-			@include make-md-column(3);
-			@include make-lg-column(2);
-			img {
-				transition: border .5s;
-				border: 5px solid transparent;
-				&:hover {
-					border: 5px solid $red;
-				}
-			}
-			.info {
-				margin: 15px 0 30px;
-				span {
-					display: block;
-					&:first-of-type {
-						@include font-size(14px);
-					}
-					&:last-of-type {
-						@include font-size(12px);
-					}
-				}
-			}
+	}
+	.team-member {
+		@include make-sm-column(4);
+		@include make-md-column(3);
+		@include make-lg-column(2);
+	}
+	.team-member img {
+		transition: border .5s;
+		border: 5px solid transparent;
+		&:hover {
+			border: 5px solid $red;
+		}
+	}
+	.info {
+		margin: 15px 0 30px;
+		span {
+			display: block;
+		}
+		span:first-of-type {
+			@include font-size(14px);
+		}
+		span:last-of-type {
+			@include font-size(12px);
 		}
 	}
 }
@@ -142,6 +130,7 @@
 			@include font-size(14px);
 			@include border-and-background();
 			@include margin-and-padding(0 0 30px, 0);
+		}
 			.badge {
 					float: none;
 					display: block;
@@ -151,37 +140,35 @@
 					@include font-size(33px);
 					@include margin-and-padding(0, 0);
 					@include border-and-background();
-					.value {
-							@include font-size(66px);
-					}
+
 			}
-	}
+			.value {
+					@include font-size(66px);
+			}
 	@media #{$desktop} {
 		.stats {
 			@include make-sm-column(4);
 			@include make-md-column(4);
 			padding: 0;
-			.value {
-					@include font-size(44px);
-			}
+		}
+		.value {
+				@include font-size(44px);
 		}
 		.member-card {
 			@include make-sm-column(8);
 			@include make-md-column(8);
 			padding: 0;
 			margin-bottom: 30px;
-			figure {
-				margin: 0 15px 0 0;
-				display: inline-block;
-			}
-			.description {
-				display: inline-block;
-				p {
-					&:first-of-type {
-						margin: 0;
-					}
-				}
-			}
+		}
+		figure {
+			margin: 0 15px 0 0;
+			display: inline-block;
+		}
+		.description {
+			display: inline-block;
+		}
+		.description p:first-of-type {
+			margin: 0;
 		}
 	}
 }
@@ -199,53 +186,43 @@
 		font-weight: 400;
 		@include font-size(16px);
 	}
-	form {
-		.form-group {
-			display: block;
-			margin-bottom: 5px;
-			label {
-				font-weight: 400;
-				@include font-size(16px);
-			}
-			.checkbox {
-				@include font-size(14px);
-				margin: 0;
-				input {
-					margin-right: 5px;
-				}
+	.form-group {
+		display: block;
+		margin-bottom: 5px;
+		label {
+			font-weight: 400;
+			@include font-size(16px);
+		}
+		.checkbox {
+			@include font-size(14px);
+			margin: 0;
+			input {
+				margin-right: 5px;
 			}
 		}
 	}
 	table {
 		margin-bottom: 50px;
 		border-color: $darkest-grey;
-		&.table-striped {
-			tbody {
-				tr {
-					&:nth-of-type(2n+1) {
-						background-color: $extra-light-grey;
-					}
-				}
-			}
+	}
+	tbody tr * {
+		@include font-size(14px);
+	}
+	tbody th {
+		color: $grey;
+	}
+	tbody td:first-of-type {
+		color: $red;
+	}
+	tbody tr:nth-of-type(2n+1) {
+		background-color: $extra-light-grey;
+	}
+	.table-striped {
+		background-color: $extra-light-grey;
+	}
+	.table-striped tbody tr {
+		&:nth-of-type(2n+1) {
 			background-color: $extra-light-grey;
-		} // Stripes BG color override.
-		tbody {
-			tr {
-				* {
-					@include font-size(14px);
-				}
-				th {
-					color: $grey;
-				}
-				td {
-					&:first-of-type {
-						color: $red;
-					}
-				}
-				&:nth-of-type(2n+1) {
-					background-color: $extra-light-grey;
-				}
-			}
 		}
 	}
 }
@@ -390,7 +367,6 @@
 			}
 			.btn-timer {
 				@include icon-before('\f017', $white);
-				@extend .btn, .btn-tertiary;
 			}
 		}
 		.icon-group {
