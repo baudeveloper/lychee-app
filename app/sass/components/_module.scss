@@ -776,7 +776,11 @@
     .dropdown-notification footer {
         border-top: 1px solid $medium-grey-dark;
         padding: 15px;
-
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
         a {
             padding: 0;
             display: block;
