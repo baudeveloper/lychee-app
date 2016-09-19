@@ -186,6 +186,7 @@
             &:hover {
                 .fancytree-icon {
                     &::before {
+                        transition: all 1s;
                         color: $green !important;
                     }
                 }
@@ -199,7 +200,6 @@
                 .fancytree-hover {
                     color: $green;
                     border-radius: 4px;
-                    padding: 2px 4px 4px 0;
                     background-color: $lightest-green;
                 }
             }
@@ -213,7 +213,7 @@
 
                 .fancytree-title {
                     color: inherit;
-                    border: none;
+                    border: 1px solid transparent;
                     background-color: transparent;
                 }
 
