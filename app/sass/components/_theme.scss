@@ -363,6 +363,7 @@
 		th {
 			font-weight: 400;
 			text-align: center;
+			vertical-align: bottom;
 			&:first-child + th {
 				text-align: left;
 			}
@@ -392,22 +393,20 @@
 					color: $medium-grey;
 				}
 			}
-			.btn-edit {
-				margin-left: 10px;
-				color: $medium-grey;
-			}
-			.btn-pin {
-				color: $medium-grey;
-			}
-			.btn-timer {
-				@include icon-before('\f017', $white);
-			}
 		}
-		.icon-group {
-			a {
-				color: $medium-grey;
-				margin-left: 10px;
-			}
+		.btn-edit {
+			margin-left: 10px;
+			color: $medium-grey;
+		}
+		.btn-pin {
+			color: $medium-grey;
+		}
+		.btn-timer {
+			@include icon-before('\f017', $white);
+		}
+		.icon-group a {
+			color: $medium-grey;
+			margin-left: 10px;
 		}
 	}
 	// Hyperlink hover styles.
