@@ -142,6 +142,10 @@
             font-family: "Roboto Condensed";
         }
 
+        .fancytree-container {
+          outline:none !important;
+        } // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
+
         .fancytree-icon {
             margin-top: 0;
         }
@@ -189,7 +193,7 @@
 
                 .fancytree-title {
                     color: inherit;
-                    border-color: transparent;
+                    border: 1px solid transparent;
                     background-color: transparent;
                 }
 
