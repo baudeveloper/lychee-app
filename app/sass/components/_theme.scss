@@ -261,12 +261,15 @@
 			border-color: $extra-darkest-grey;
 			.input-group {
 				max-width: 250px;
+				position: relative;
 				input {
+					position: relative;
 					color: $red;
 					border-radius: 0;
+					padding-left: 35px;
 					text-transform: uppercase;
 					background-color: $extra-light-grey;
-					box-shadow: 0 0 2px 0 rgba(0,0,0,0.15)
+					box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 				}
 				input::-webkit-input-placeholder {
 					color: $red;
@@ -281,9 +284,16 @@
 					color: $red;
 				} // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
 				.input-group-addon {
+					position: absolute;
 					color: $red;
+					top: 2px;
+					left: 0;
+					bottom: 0;
+					z-index: 100;
 					border-radius: 0;
-					background-color: $extra-light-grey;
+					box-shadow: none;
+					border-color: transparent;
+					background-color: transparent;
 				}
 			}
 			> .headers {
