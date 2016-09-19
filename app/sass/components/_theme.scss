@@ -346,13 +346,11 @@
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
-	.foot > a {
-		&.btn-add-task {
-			@include icon-before('\f067', inherit);
-		}
-		&.btn-task-list {
-			@include icon-before('\f03a', inherit);
-		}
+	.foot .btn-add-task {
+		@include icon-before('\f067', inherit);
+	}
+	.foot .btn-task-list {
+		@include icon-before('\f03a', inherit);
 	}
 	table {
 		width: 100%;
