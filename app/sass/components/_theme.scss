@@ -256,12 +256,12 @@
 		margin: 0;
 		border-radius: 0;
 	}
-	.head {
+	.panel-heading {
 		padding: 15px;
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
-	.head .input-group {
+	.panel-heading .input-group {
 		max-width: 260px;
 		position: relative;
 		input {
@@ -303,22 +303,19 @@
 			height: 36px;
 		}
 	}
-	.head .btn-group button {
+	.panel-heading .btn-group button {
 		@include font-size(16px);
 	}
-	.head .headers {
+	.panel-heading .headers {
 		margin-top: 15px;
 	}
-	.head thead {
-		height: 36px;
-	}
-	.body {
+	.panel-body {
 		padding: 0;
 	}
-	.body ul {
+	.panel-body ul {
 		margin: 0;
 	}
-	.body li {
+	.panel-body li {
 		margin: 0;
 		border-radius: 0;
 		border: none;
@@ -336,23 +333,23 @@
 			background-color: $extra-light-grey;
 		}
 	}
-	.body input {
+	.panel-body input {
 		border-radius: 0;
 		box-shadow: none;
 	}
-	.body .icon-group {
+	.panel-body .icon-group {
 		padding-top: 0;
 		text-align: right;
 	}
-	.foot {
+	.panel-foot {
 		padding: 20px 15px;
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
-	.foot .btn-add-task {
+	.panel-foot .btn-add-task {
 		@include icon-before('\f067', inherit);
 	}
-	.foot .btn-task-list {
+	.panel-foot .btn-task-list {
 		@include icon-before('\f03a', inherit);
 	}
 	table {
@@ -413,16 +410,16 @@
 		margin-left: 10px;
 	}
 	// Hyperlink hover styles.
-	.body .sticky .btn-pin {
+	.panel-body .sticky .btn-pin {
 		@include hyperlink-hover($blue);
 	}
-	.body .icon-group a {
+	.panel-body .icon-group a {
 		@include hyperlink-hover($medium-grey);
 	}
-	.body .btn-edit {
+	.panel-body .btn-edit {
 		@include hyperlink-hover($medium-grey);
 	}
-	.body .btn-pin {
+	.panel-body .btn-pin {
 		@include hyperlink-hover($medium-grey);
 	}
 }

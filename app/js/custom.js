@@ -31,7 +31,7 @@ $(document).ready(function() {
     );
     // Source: http://stackoverflow.com/questions/3475594/jquery-use-wrap-to-wrap-multiple-elements
     $("#view-one, #view-three, #headers-one, #headers-three").hide();
-    $("#task-list .buttons-tab button").click(function () {
+    $("#task-list .btn-group button").click(function () {
         $('.view').hide().eq($(this).index()).show();
         $('.headers').hide().eq($(this).index()).show();
         $(this).siblings().removeClass("active");

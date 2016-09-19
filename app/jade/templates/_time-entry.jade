@@ -62,7 +62,7 @@ main(role="main")
                                     | RONE-0749 (CAMS 2016)
         section#task-list
             form.panel.panel-default
-                .head.panel-heading
+                .panel-heading
                     .clearfix
                         .input-group.pull-left
                             .input-group-addon
@@ -74,7 +74,7 @@ main(role="main")
                                     i.fa.fa-chevron-left(aria-hidden='true')
                                 button.btn.btn-default.btn-secondary(type='button')
                                     i.fa.fa-chevron-right(aria-hidden='true')
-                        .buttons.btn-group.pull-right.buttons-tab(role='group')
+                        .btn-group.pull-right(role='group')
                             button.btn.btn-default.btn-secondary(type='button', id='tabone') Day
                             button.btn.btn-default.btn-secondary.active(type='button', id='tabtwo') Week
                             button.btn.btn-default.btn-secondary(type='button', id='tabthree') Business Week
@@ -137,7 +137,7 @@ main(role="main")
                                     th Thu<br>Aug 18
                                     th Fri<br>Aug 19
                                     th Total					
-                .body.panel-body
+                .panel-body
                     ul.list-group.view(id='view-one')
                         li.sticky.list-group-item
                             table
@@ -573,7 +573,7 @@ main(role="main")
                                             input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
                                         td
                                             span 0:00
-                .foot.panel-footer
+                .panel-footer
                     a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task") Add New Task
                     a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List") Show Task List
                     .buttons.form-group.pull-right
