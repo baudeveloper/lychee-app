@@ -261,6 +261,11 @@
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
+	.panel-heading thead {
+		@media #{$tablet} {
+			@include font-size(12px);
+		}
+	}
 	.panel-heading .input-group {
 		max-width: 260px;
 		position: relative;
