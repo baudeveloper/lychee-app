@@ -80,6 +80,8 @@ button {
   .btn-group {
     button {
       color: $green;
+      @include font-size(12px);
+      font-weight: $font-weight-bold;
       &:first-of-type {
         @include icon-before('\f017', $green);
       }
@@ -88,6 +90,9 @@ button {
       }
       &:last-of-type {
         @include icon-before('\f022', $green);
+      }
+      &::before {
+        font-weight: $font-weight-regular;
       }
     }
   }
