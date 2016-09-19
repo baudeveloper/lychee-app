@@ -1,11 +1,11 @@
-/* Links. */
+// Links
 a {
   &:link {
     text-decoration: none;
   }
 }
 
-/* Breadcrumb. */
+// Breadcrumb
 .breadcrumb {
     position: absolute;
     top: 0;
@@ -20,7 +20,7 @@ a {
     }
 }
 
-/* Buttons */
+// Buttons
 .btn-default {
   border-radius: 0;
   text-transform: uppercase;
@@ -46,12 +46,7 @@ a {
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 }
 
-// Modals State
-@include modal-standard();
-@include modal-content-todo();
-@include modal-content-taskdetails();
-
-/* Alert */
+// Alert
 .alert-timesheet {
   @include font-size(16px);
   color: $dark-yellow;
@@ -59,7 +54,7 @@ a {
   background-color: $light-yellow;
 }
 
-/* Popover */
+// Popover
 .popover {
   max-width: 100%;
   border-radius: 0;
@@ -85,7 +80,7 @@ a {
   }
 }
 
-/* Custom Group Addon - Log Time */
+// Custom Group Addon - Log Time
 .log-group {
   @extend .input-group;
 }
@@ -93,7 +88,7 @@ a {
   @extend .input-group-addon;
 }
 
-/* Lychee Loader */
+// Lychee Loader
 #loading {
   width: 100%;
   height: 100%;
@@ -113,4 +108,16 @@ a {
     text-transform: uppercase;
   }
 }
+
+// Declare Mixins
+
+// Inline Input
+@include inline-input();
+
+// Loader
 @include loader();
+
+// Modals State
+@include modal-standard();
+@include modal-content-todo();
+@include modal-content-taskdetails();

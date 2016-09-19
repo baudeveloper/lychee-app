@@ -16,8 +16,6 @@ html {
     font-size: 100%;
     overflow-x: hidden;
 }
-// Declaration of Inline input.
-@include inline-input();
 
 main {
     @include container-fixed();
