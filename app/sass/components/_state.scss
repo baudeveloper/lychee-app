@@ -119,6 +119,9 @@ button {
       &::before {
         font-weight: $font-weight-regular;
       }
+      &:active {
+        color: $green;
+      }
     }
   }
 }
