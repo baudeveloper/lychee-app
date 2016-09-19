@@ -379,6 +379,7 @@
 			@include font-size(12px);
 		}
 		input {
+			height: 37px;
 			text-align: center;
 		}
 		&:first-child + td {
