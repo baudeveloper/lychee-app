@@ -54,11 +54,11 @@ gulp.task('sass', ['clean-sass', 'vendor-styles'], function() {
             errorHandler: onError
         }))
         .pipe($.newer(config.css))
-        .pipe($.sourcemaps.init())
+        // .pipe($.sourcemaps.init())
         .pipe($.sass.sync({
             outputStyle: 'compressed',
-            precision: 10,
-            includePaths: ['sass'].concat(neat)
+            precision: 10
+            // includePaths: ['sass'].concat(neat)
         }).on('error', $.sass.logError))
         .pipe($.size({title: '************ FILE SIZE: Styles (before) ****'}))
         .pipe($.if(argv.production, cleanCSS({compatibility: 'ie7'})))
@@ -68,8 +68,7 @@ gulp.task('sass', ['clean-sass', 'vendor-styles'], function() {
           browsers: ['last 25 versions'],
           cascade: false
         }))
-        .pipe($.sourcemaps.write('./'))
-        .pipe($.if(argv.production, $.rename({suffix: '.min'})))
+        // .pipe($.sourcemaps.write('./'))
         .pipe(gulp.dest(config.css))
         .pipe($.notify({
             title: 'Gulp',
@@ -88,7 +87,7 @@ gulp.task('vendor-styles', function() {
         .pipe($.if(argv.production, cleanCSS({compatibility: 'ie7'})))
         .pipe($.if(argv.production, $.cssnano()))
         .pipe($.size({title: '************ FILE SIZE: Vendor Styles (after) ****'}))
-        .pipe($.if(argv.production, $.rename({suffix: '.min'})))
+        // .pipe($.if(argv.production, $.rename({suffix: '.min'})))
         .pipe(gulp.dest(config.dist + '/css'))
         .pipe($.notify({
             title: 'Gulp',
@@ -112,7 +111,7 @@ gulp.task('scripts', ['clean-scripts', 'vendor-scripts'], function() {
         .pipe($.if(argv.production, stripDebug()))
         .pipe($.if(argv.production, $.uglify()))
         .pipe($.size({title: '************ FILE SIZE: Scripts (after) ****'}))
-        .pipe($.if(argv.production, $.rename({suffix: '.min'})))
+        // .pipe($.if(argv.production, $.rename({suffix: '.min'})))
         .pipe(gulp.dest(config.dist + '/js'))
         .pipe($.notify({
             title: 'Gulp',
