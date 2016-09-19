@@ -405,9 +405,6 @@
 	table .btn-pin {
 		color: $medium-grey;
 	}
-	table .btn-timer {
-		@include icon-before('\f017', $white);
-	}
 	table .icon-group a {
 		color: $medium-grey;
 		margin-left: 10px;

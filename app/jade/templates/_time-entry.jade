@@ -174,7 +174,9 @@ main(role="main")
                                         td
                                             input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
                                         td
-                                            a.btn.btn-timer.btn-tertiary.btn-block Start Timer
+                                            a.btn.btn-tertiary.btn-block
+                                              i.fa.fa-clock-o
+                                              | Start Timer
                                         td
                                             input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
                         li.list-group-item
@@ -212,7 +214,9 @@ main(role="main")
                                         td
                                             input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
                                         td
-                                            a.btn.btn-timer.btn-tertiary.btn-block Start Timer
+                                            a.btn.btn-tertiary.btn-block
+                                              i.fa.fa-clock-o
+                                              | Start Timer
                                         td
                                             input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
                         li.list-group-item
@@ -250,7 +254,9 @@ main(role="main")
                                         td
                                             input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
                                         td
-                                            a.btn.btn-timer.btn-tertiary.btn-block Start Timer
+                                            a.btn.btn-tertiary.btn-block
+                                              i.fa.fa-clock-o
+                                              | Start Timer
                                         td
                                             input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
                     ul.list-group.view(id='view-two')
@@ -574,8 +580,12 @@ main(role="main")
                                         td
                                             span 0:00
                 .panel-footer
-                    a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task") Add New Task
-                    a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List") Show Task List
+                    a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task")
+                      i.fa.fa-plus
+                      | Add New Task
+                    a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List")
+                      i.fa.fa-list
+                      | Show Task List
                     .form-group.pull-right
                         a.btn-save.btn.btn-default.btn-secondary(href="#", title="Save") Save
                         button.btn.btn-primary.btn-submit(type="submit", role="button") Submit
