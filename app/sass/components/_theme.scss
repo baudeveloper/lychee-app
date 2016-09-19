@@ -412,11 +412,18 @@
 			}
 		}
 	}
-	.body .icon-group a, .btn-edit, .btn-pin {
-		@include hyperlink-hover($medium-grey);
-	}
+	// Hyperlink hover styles.
 	.body .sticky .btn-pin {
 		@include hyperlink-hover($blue);
+	}
+	.body .icon-group a {
+		@include hyperlink-hover($medium-grey);
+	}
+	.body.btn-edit {
+		@include hyperlink-hover($medium-grey);
+	}
+	.body .btn-pin {
+		@include hyperlink-hover($medium-grey);
 	}
 }
 @include fancytree();
