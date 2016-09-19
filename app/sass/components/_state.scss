@@ -1,6 +1,9 @@
 // Links
 a {
   transition: all .5s;
+  .fa {
+    margin-right: 5px;
+  }
 }
 
 // Buttons
@@ -56,6 +59,12 @@ button {
   &:hover {
     color: $white;
     background-color: darken($green, 10%);
+  }
+  &:active {
+    color: $white;
+  }
+  &:focus {
+    color: $white;
   }
 }
 
