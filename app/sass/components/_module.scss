@@ -144,13 +144,12 @@
             outline: none !important;
         }
         // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
+        .fancytree-hover {
+            line-height: 2;
+        }
 
         .fancytree-icon {
             margin-top: 0;
-        }
-
-        .fancytree-hover {
-          line-height: 2;
         }
 
         .fancytree-title:hover {
@@ -161,38 +160,28 @@
             border-bottom: 1px dashed $medium-grey;
         }
 
-        .fancytree-has-children {
-            .fancytree-expander {
-                padding: 3px 0;
-                margin: 0 0 0 -5px;
-                @include icon-before( '\f0da', $medium-grey);
-            }
+        .fancytree-has-children .fancytree-expander {
+            padding: 3px 0;
+            margin: 0 0 0 -5px;
+            @include icon-before( '\f0da', $medium-grey);
         }
         // Any element that has children will have a caret before it
-        .fancytree-expanded {
-            .fancytree-expander {
-                margin: 0 0 0 -4px;
-                padding: 4px 0;
-                @include icon-before( '\f0d7', $medium-grey);
-            }
+        .fancytree-expanded .fancytree-expander {
+            margin: 0 0 0 -4px;
+            padding: 4px 0;
+            @include icon-before( '\f0d7', $medium-grey);
         }
         // Any element that has children will have a caret before it changes on click
-        .fancytree-ico-c {
-            .fancytree-icon {
-                @include icon-before( '\f1b3', $red);
-            }
+        .fancytree-ico-c .fancytree-icon {
+            @include icon-before( '\f1b3', $red);
         }
         // Cube Icon
-        .fancytree-ico-ef {
-            .fancytree-icon {
-                @include icon-before( '\f115', $grey);
-            }
+        .fancytree-ico-ef .fancytree-icon {
+            @include icon-before( '\f115', $grey);
         }
         // Expanded Folder Icon
-        .fancytree-ico-cf {
-            .fancytree-icon {
-                @include icon-before( '\f07b', $grey);
-            }
+        .fancytree-ico-cf .fancytree-icon {
+            @include icon-before( '\f07b', $grey);
         }
         // Folder Icon
         .fancytree-node:hover {
@@ -236,11 +225,6 @@
 
         .fancytree-lastsib ul > li {
             border-left: 1px dashed $medium-grey;
-
-            .fancytree-icon {
-                // margin-left: 0;
-                // margin-top: 5px;
-            }
 
             .fancytree-expander {
                 border-bottom: 1px dashed $medium-grey;

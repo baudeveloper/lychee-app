@@ -84,6 +84,12 @@ button {
   }
 }
 
+// Inputs
+input[type="text"] {
+  box-shadow: none;
+  border-radius: 0;
+}
+
 // Alert
 .alert-timesheet {
   @include font-size(16px);

@@ -272,7 +272,6 @@
 		input {
 			color: $red;
 			height: 36px;
-			border-radius: 0;
 			padding-left: 35px;
 			position: relative;
 			@include font-size(16px);
@@ -303,7 +302,6 @@
 			bottom: 0;
 			z-index: 100;
 			border-radius: 0;
-			box-shadow: none;
 			border-color: transparent;
 			background-color: transparent;
 			@media #{$tablet} {
@@ -340,10 +338,6 @@
 		&:nth-child(odd) {
 			background-color: $extra-light-grey;
 		}
-	}
-	.panel-body input {
-		border-radius: 0;
-		box-shadow: none;
 	}
 	.panel-body .icon-group {
 		padding-top: 0;
@@ -383,7 +377,6 @@
 			@include font-size(12px);
 		}
 		input {
-			border-radius: 0;
 			text-align: center;
 		}
 		&:first-child + td {
