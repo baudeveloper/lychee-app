@@ -251,7 +251,6 @@
 		}
 	}
 }
-@include fancytree();
 #task-list {
 	form {
 		margin: 0;
@@ -379,3 +378,4 @@
 		}
 	}
 }
+@include fancytree();
