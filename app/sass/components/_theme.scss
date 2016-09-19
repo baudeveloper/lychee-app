@@ -341,9 +341,6 @@
 		padding-top: 0;
 		text-align: right;
 	}
-	.body .icon-group a, .btn-edit {
-		@include hyperlink-hover($medium-grey);
-	}
 	.foot {
 		padding: 20px 15px;
 		background-color: transparent;
@@ -414,6 +411,12 @@
 				margin-left: 10px;
 			}
 		}
+	}
+	.body .icon-group a, .btn-edit, .btn-pin {
+		@include hyperlink-hover($medium-grey);
+	}
+	.body .sticky .btn-pin {
+		@include hyperlink-hover($blue);
 	}
 }
 @include fancytree();

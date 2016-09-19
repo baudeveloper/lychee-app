@@ -89,7 +89,13 @@ $dark-yellow: #8a6d3b;
 
 // Darken Link Color on hover
 @mixin hyperlink-hover($color) {
-  &:hover, &:active, &:focus {
+  &:hover {
+    color: darken($color, 25%);
+  }
+  &:active {
+    color: darken($color, 25%);
+  }
+  &:focus {
     color: darken($color, 25%);
   }
 }
