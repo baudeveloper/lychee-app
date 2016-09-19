@@ -1,4 +1,28 @@
-/* Elements Snippets */
+/*
+
+  Modules: Table of Contents
+  1. Inline Input
+  2. Typeahead Standard
+  3. Loader
+  4. Fancytree
+  5. Widget: My Stats (Dashboard Page)
+  6. Widget: My Team (Dashboard Page)
+  7. Widget: My Team (Dashboard Page)
+  8. Widget: Panel Standard
+  9. Widget: Panel Skinned
+  10. Widget: Panel (Team Member of the Day)
+  11. Widget: To Do (Dashboard Page)
+  12. Widget: My Tasks (Dashboard Page)
+  13. Feed
+  14. Dropdown: Notification Panel
+  15. Dropdown: Time Entry Panel
+  16. Typeahead for Primary Menu Search Bar
+  17. Modal: Standard
+  18. Modal: To Do
+  19. Modal: Task Details
+
+*/
+
 @mixin inline-input {
     .input {
         padding: 15px;
@@ -20,7 +44,7 @@
         @include font-size(14px);
     }
 }
-// Typeahead Standard
+
 @mixin typeahead-standard() {
     .twitter-typeahead {
         position: relative !important;
@@ -51,7 +75,7 @@
         background-color: $light-red;
     }
 }
-// Loader
+
 @mixin loader() {
     .loading-2 {
         top: 300px;
@@ -107,6 +131,7 @@
     }
 }
 // Source: https://codepen.io/lbebber/pen/xrwja
+
 @mixin fancytree() {
     #fancytree {
         padding: 0 15px 15px;
@@ -215,8 +240,7 @@
         }
     }
 }
-/* Dashboard Page Widgets */
-// 1. Widget - My Stats
+
 @mixin widget-mystats() {
     h2 {
         padding-top: 3px;
@@ -258,7 +282,7 @@
         }
     }
 }
-// 2. Widget - My Team
+
 @mixin widget-myteam() {
     .panel-body {
         padding: 30px 15px 0;
@@ -301,7 +325,7 @@
         }
     }
 }
-// 3. Bootstrap Standard Panel Overrides
+
 @mixin panel-standard {
     .panel {
         border-radius: 0;
@@ -336,7 +360,7 @@
         }
     }
 }
-// 4. Custom Skinned Panel
+
 @mixin panel-skinned {
     .panel {
         box-shadow: none;
@@ -375,7 +399,7 @@
         margin-bottom: 10px;
     }
 }
-// 5. Custom Employee Panel
+
 @mixin panel-employee {
     .panel {
         background-color: transparent !important;
@@ -440,7 +464,7 @@
         }
     }
 }
-// 6. To Do Tabs
+
 @mixin widget-todo {
     .nav-tabs {
         border: none;
@@ -547,7 +571,7 @@
         color: $medium-grey;
     }
 }
-// 7. Widget - My Tasks
+
 @mixin widget-mytasks {
     header {
         @include make-row();
@@ -640,7 +664,7 @@
         color: $medium-grey;
     }
 }
-// 8. Box Notifications
+
 @mixin widget-feed() {
     .list-group {
         li {
@@ -674,7 +698,7 @@
         }
     }
 }
-// 9. Notification Dropdown
+
 @mixin dropdown-notification() {
     .dropdown-notification {
         min-width: 340px;
@@ -791,7 +815,7 @@
         }
     }
 }
-// 10. Time entry Dropdown
+
 @mixin dropdown-time-entry() {
     .dropdown-time-entry {
         min-width: 560px;
@@ -928,7 +952,7 @@
         @include typeahead-standard();
     }
 }
-// 11. Typeahead styles
+
 @mixin typeahead-styles() {
     .twitter-typeahead {
         display: block!important;
@@ -975,7 +999,7 @@
         margin-bottom: 10px;
     }
 }
-// 12. Standard Modal
+
 @mixin modal-standard() {
     .modal {
         .modal-content {
@@ -1028,7 +1052,7 @@
         }
     }
 }
-// 13. Standard Modal Content - To Do.
+
 @mixin modal-content-todo() {
     #todo-modal {
         .modal-body {
@@ -1164,7 +1188,7 @@
         }
     }
 }
-// 14. Standard Modal Content - Task Details.
+
 @mixin modal-content-taskdetails() {
     #task-details-modal {
         .modal-body nav p {
