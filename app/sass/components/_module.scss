@@ -22,7 +22,6 @@
   19. Modal: Task Details
 
 */
-
 @mixin inline-input {
     .input {
         padding: 15px;
@@ -44,7 +43,6 @@
         @include font-size(14px);
     }
 }
-
 @mixin typeahead-standard() {
     .twitter-typeahead {
         position: relative !important;
@@ -75,7 +73,6 @@
         background-color: $light-red;
     }
 }
-
 @mixin loader() {
     .loading-2 {
         top: 300px;
@@ -131,7 +128,6 @@
     }
 }
 // Source: https://codepen.io/lbebber/pen/xrwja
-
 @mixin fancytree() {
     #fancytree {
         padding: 0 15px 15px;
@@ -143,26 +139,41 @@
         }
 
         .fancytree-container {
-          outline:none !important;
-        } // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
+            border: none;
+            padding: 10px;
+            outline: none !important;
+        }
+        // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
 
         .fancytree-icon {
             margin-top: 0;
         }
 
+        .fancytree-hover {
+          line-height: 2;
+        }
+
         .fancytree-title:hover {
-          background-color: transparent;
+            background-color: transparent;
+        }
+
+        .fancytree-expander {
+            border-bottom: 1px dashed $medium-grey;
         }
 
         .fancytree-has-children {
             .fancytree-expander {
-                @include icon-before( '\f0d7', $grey);
+                padding: 3px 0;
+                margin: 0 0 0 -5px;
+                @include icon-before( '\f0da', $medium-grey);
             }
         }
         // Any element that has children will have a caret before it
         .fancytree-expanded {
             .fancytree-expander {
-                @include icon-before( '\f0da', $grey);
+                margin: 0 0 0 -4px;
+                padding: 4px 0;
+                @include icon-before( '\f0d7', $medium-grey);
             }
         }
         // Any element that has children will have a caret before it changes on click
@@ -184,44 +195,55 @@
             }
         }
         // Folder Icon
-        .fancytree-node {
-            &:hover {
-                .fancytree-icon::before {
-                  transition: all 1s;
-                  color: $green !important;
-                }
-
-                .fancytree-title {
-                    color: inherit;
-                    border: 1px solid transparent;
-                    background-color: transparent;
-                }
-
-                .fancytree-hover {
-                    color: $green;
-                    border-radius: 4px;
-                    padding: 2px 4px 4px 0;
-                    background-color: $lightest-green;
-                }
+        .fancytree-node:hover {
+            .fancytree-icon::before {
+                transition: all 1s;
+                color: $green !important;
             }
 
-            &.fancytree-active {
-                .fancytree-icon::before {
-                  color: $green !important;
-                }
+            .fancytree-title {
+                color: inherit;
+                border: 1px solid transparent;
+                background-color: transparent;
+            }
 
-                .fancytree-title {
-                    color: inherit;
-                    border: 1px solid transparent;
-                    background-color: transparent;
-                }
+            .fancytree-hover {
+                color: $green;
+                border-radius: 4px;
+                padding: 2px 4px 4px 0;
+                background-color: $lightest-green;
+            }
+        }
 
-                .fancytree-hover {
-                    color: $green;
-                    border-radius: 4px;
-                    padding: 2px 4px 4px 0;
-                    background-color: $lightest-green;
-                }
+        .fancytree-node.fancytree-active {
+            .fancytree-icon::before {
+                color: $green !important;
+            }
+
+            .fancytree-title {
+                color: inherit;
+                border: 1px solid transparent;
+                background-color: transparent;
+            }
+
+            .fancytree-hover {
+                color: $green;
+                border-radius: 4px;
+                padding: 2px 4px 4px 0;
+                background-color: $lightest-green;
+            }
+        }
+
+        .fancytree-lastsib ul > li {
+            border-left: 1px dashed $medium-grey;
+
+            .fancytree-icon {
+                // margin-left: 0;
+                // margin-top: 5px;
+            }
+
+            .fancytree-expander {
+                border-bottom: 1px dashed $medium-grey;
             }
         }
 
@@ -230,13 +252,13 @@
                 color: $blue;
                 @include font-size(14px);
             }
+
             span.fancytree-icon::before {
-              color: $blue !important;
+                color: $blue !important;
             }
         }
     }
 }
-
 @mixin widget-mystats() {
     h2 {
         padding-top: 3px;
@@ -278,7 +300,6 @@
         }
     }
 }
-
 @mixin widget-myteam() {
     .panel-body {
         padding: 30px 15px 0;
@@ -321,7 +342,6 @@
         }
     }
 }
-
 @mixin panel-standard {
     .panel {
         border-radius: 0;
@@ -356,7 +376,6 @@
         }
     }
 }
-
 @mixin panel-skinned {
     .panel {
         box-shadow: none;
@@ -395,7 +414,6 @@
         margin-bottom: 10px;
     }
 }
-
 @mixin panel-employee {
     .panel {
         background-color: transparent !important;
@@ -460,7 +478,6 @@
         }
     }
 }
-
 @mixin widget-todo {
     .nav-tabs {
         border: none;
@@ -567,7 +584,6 @@
         color: $medium-grey;
     }
 }
-
 @mixin widget-mytasks {
     header {
         @include make-row();
@@ -660,7 +676,6 @@
         color: $medium-grey;
     }
 }
-
 @mixin widget-feed() {
     .list-group {
         li {
@@ -694,7 +709,6 @@
         }
     }
 }
-
 @mixin dropdown-notification() {
     .dropdown-notification {
         min-width: 340px;
@@ -801,6 +815,7 @@
         bottom: auto;
         left: auto;
         right: auto;
+
         a {
             padding: 0;
             display: block;
@@ -811,7 +826,6 @@
         }
     }
 }
-
 @mixin dropdown-time-entry() {
     .dropdown-time-entry {
         min-width: 560px;
@@ -948,7 +962,6 @@
         @include typeahead-standard();
     }
 }
-
 @mixin typeahead-styles() {
     .twitter-typeahead {
         display: block!important;
@@ -995,7 +1008,6 @@
         margin-bottom: 10px;
     }
 }
-
 @mixin modal-standard() {
     .modal {
         .modal-content {
@@ -1048,7 +1060,6 @@
         }
     }
 }
-
 @mixin modal-content-todo() {
     #todo-modal {
         .modal-body {
@@ -1184,7 +1195,6 @@
         }
     }
 }
-
 @mixin modal-content-taskdetails() {
     #task-details-modal {
         .modal-body nav p {
