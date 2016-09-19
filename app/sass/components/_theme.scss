@@ -260,13 +260,15 @@
 			background-color: transparent;
 			border-color: $extra-darkest-grey;
 			.input-group {
-				max-width: 250px;
+				max-width: 260px;
 				position: relative;
 				input {
-					position: relative;
 					color: $red;
+					height: 36px;
 					border-radius: 0;
 					padding-left: 35px;
+					position: relative;
+					@include font-size(16px);
 					text-transform: uppercase;
 					background-color: $extra-light-grey;
 					box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
@@ -286,7 +288,7 @@
 				.input-group-addon {
 					position: absolute;
 					color: $red;
-					top: 2px;
+					top: 3px;
 					left: 0;
 					bottom: 0;
 					z-index: 100;
@@ -295,6 +297,12 @@
 					border-color: transparent;
 					background-color: transparent;
 				}
+				button {
+					height: 36px;
+				}
+			}
+			.btn-group button {
+				@include font-size(16px);
 			}
 			> .headers {
 				margin-top: 15px;
