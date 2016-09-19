@@ -35,24 +35,37 @@ button {
 // Buttons
 .btn-default {
   border-radius: 0;
+  @include font-size(16px);
   text-transform: uppercase;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+  @media #{$tablet} {
+    @include font-size(14px);
+  }
 }
 .btn-primary {
   border-radius: 0;
+  @include font-size(16px);
   text-transform: uppercase;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+  @media #{$tablet} {
+    @include font-size(14px);
+  }
 }
 .btn-secondary {
   color: $red;
   border-radius: 0;
+  @include font-size(16px);
   text-transform: uppercase;
   background-color: $extra-light-grey;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+  @media #{$tablet} {
+    @include font-size(14px);
+  }
 }
 .btn-tertiary {
   color: $white;
   border-radius: 0;
+  @include font-size(16px);
   text-transform: uppercase;
   background-color: $green;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
@@ -65,6 +78,9 @@ button {
   }
   &:focus {
     color: $white;
+  }
+  @media #{$tablet} {
+    @include font-size(14px);
   }
 }
 
