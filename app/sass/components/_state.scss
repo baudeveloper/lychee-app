@@ -1,145 +1,161 @@
 // Links
-a {
-  transition: all .5s;
-  .fa {
-    margin-right: 5px;
-  }
-}
 
+a {
+    transition: all 0.5s;
+
+    .fa {
+        margin-right: 5px;
+    }
+}
 // Buttons
 button {
-  transition: all .5s;
+    transition: all 0.5s;
 }
-
 // Dropdows
 .dropdown-menu {
-  margin: 0;
-  border-radius: 0;
+    margin: 0;
+    border-radius: 0;
 }
-
 // Breadcrumb
 .breadcrumb {
     position: absolute;
     top: 0;
     padding: 8px 0;
     background-color: transparent;
+
     li + * {
         &::before {
-            content: '\f105';
-            color: $medium-grey;
-            font-family: "fontawesome";
+            content: '\f105' !important;
+            color: $medium-grey !important;
+            font-family: "fontawesome" !important;
+        }
+    }
+
+    a {
+        color: $red;
+
+        &:hover {
+            color: darken($red, 15%);
         }
     }
 }
-
 // Buttons
 .btn-default {
-  border-radius: 0;
-  @include font-size(16px);
-  text-transform: uppercase;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-  @media #{$tablet} {
-    @include font-size(14px);
-  }
-}
-.btn-primary {
-  border-radius: 0;
-  @include font-size(16px);
-  text-transform: uppercase;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-  @media #{$tablet} {
-    @include font-size(14px);
-  }
-}
-.btn-secondary {
-  color: $red;
-  border-radius: 0;
-  @include font-size(16px);
-  text-transform: uppercase;
-  background-color: $extra-light-grey;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-  @media #{$tablet} {
-    @include font-size(14px);
-  }
-}
-.btn-tertiary {
-  color: $white;
-  border-radius: 0;
-  @include font-size(16px);
-  text-transform: uppercase;
-  background-color: $green;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-  &:hover {
-    color: $white;
-    background-color: darken($green, 10%);
-  }
-  &:active {
-    color: $white;
-  }
-  &:focus {
-    color: $white;
-  }
-  @media #{$tablet} {
-    @include font-size(14px);
-  }
+    border-radius: 0;
+    @include font-size(16px);
+    text-transform: uppercase;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+    @media #{$tablet} {
+         @include font-size(14px);
+    }
 }
 
+.btn-primary {
+    border-radius: 0;
+    @include font-size(16px);
+    text-transform: uppercase;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+    @media #{$tablet} {
+         @include font-size(14px);
+    }
+}
+
+.btn-secondary {
+    color: $red;
+    border-radius: 0;
+    @include font-size(16px);
+    text-transform: uppercase;
+    background-color: $extra-light-grey;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+    @media #{$tablet} {
+         @include font-size(14px);
+    }
+}
+
+.btn-tertiary {
+    color: $white;
+    border-radius: 0;
+    @include font-size(16px);
+    text-transform: uppercase;
+    background-color: $green;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+
+    &:hover {
+        color: $white;
+        background-color: darken($green, 10%);
+    }
+
+    &:active {
+        color: $white;
+    }
+
+    &:focus {
+        color: $white;
+    }
+    @media #{$tablet} {
+         @include font-size(14px);
+    }
+}
 // Inputs
 input[type="text"] {
-  box-shadow: none;
-  border-radius: 0;
+    box-shadow: none;
+    border-radius: 0;
 }
-
 // Alert
 .alert-timesheet {
-  @include font-size(16px);
-  color: $dark-yellow;
-  border-color: $yellow;
-  background-color: $light-yellow;
+    @include font-size(16px);
+    color: $dark-yellow;
+    border-color: $yellow;
+    background-color: $light-yellow;
 }
-
 // Popover
 .popover {
-  max-width: 100%;
-  border-radius: 0;
-  background-color: $green;
-  .arrow {
-    &::after {
-      border-right-color: $green !important;
-    }
-  }
-  .btn-group {
-    button {
-      color: $green;
-      @include font-size(12px);
-      font-weight: $font-weight-bold;
-      &:first-of-type {
-        @include icon-before('\f017', $green);
-      }
-      &:first-of-type + button {
-        @include icon-before('\f144', $green);
-      }
-      &:last-of-type {
-        @include icon-before('\f022', $green);
-      }
-      &::before {
-        font-weight: $font-weight-regular;
-      }
-      &:active {
-        color: $green;
-      }
-    }
-  }
-}
+    max-width: 100%;
+    border-radius: 0;
+    background-color: $green;
 
+    .arrow {
+        &::after {
+            border-right-color: $green !important;
+        }
+    }
+
+    .btn-group {
+        button {
+            color: $green;
+            @include font-size(12px);
+            font-weight: $font-weight-bold;
+
+            &:first-of-type {
+                @include icon-before( '\f017', $green);
+            }
+
+            &:first-of-type + button {
+                @include icon-before( '\f144', $green);
+            }
+
+            &:last-of-type {
+                @include icon-before( '\f022', $green);
+            }
+
+            &::before {
+                font-weight: $font-weight-regular;
+            }
+
+            &:active {
+                color: $green;
+            }
+        }
+    }
+}
 // Custom Group Addon - Log Time
 .log-group {
-  @extend .input-group;
-}
-.log-addon {
-  @extend .input-group-addon;
+    @extend .input-group;
 }
 
+.log-addon {
+    @extend .input-group-addon;
+}
 // Lychee Loader
 // #loading {
 //   width: 100%;
@@ -160,15 +176,11 @@ input[type="text"] {
 //     text-transform: uppercase;
 //   }
 // }
-
 // Declare Mixins
-
 // Inline Input
 @include inline-input();
-
 // Loader
 // @include loader();
-
 // Modals State
 @include modal-standard();
 @include modal-content-todo();
