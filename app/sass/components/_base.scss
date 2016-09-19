@@ -80,8 +80,16 @@ $dark-yellow: #8a6d3b;
     border: none;
     background: none;
 }
+
 // Define Margin and Padding
 @mixin margin-and-padding($mar, $pad) {
     margin: $mar;
     padding: $pad;
+}
+
+// Darken Link Color on hover
+@mixin hyperlink-hover($color) {
+  &:hover, &:active, &:focus {
+    color: darken($color, 25%);
+  }
 }

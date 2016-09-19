@@ -335,9 +335,14 @@
 	}
 	.body input {
 		border-radius: 0;
+		box-shadow: none;
 	}
 	.body .icon-group {
 		padding-top: 0;
+		text-align: right;
+	}
+	.body .icon-group a, .btn-edit {
+		@include hyperlink-hover($medium-grey);
 	}
 	.foot {
 		padding: 20px 15px;
