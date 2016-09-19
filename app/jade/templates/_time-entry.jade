@@ -4,7 +4,7 @@ main(role="main")
         | Time Entry
     .alert.alert-warning.alert-timesheet(role='alert') The timesheet is open
     .page-row
-        aside#task-directory
+        aside#task-directory.hidden-sm
             .bg
                 .button.btn-group
                     button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
@@ -583,7 +583,7 @@ main(role="main")
                     a.btn.btn-tertiary.btn-add-task(href="#", title="Add New Task")
                       i.fa.fa-plus
                       | Add New Task
-                    a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(href="#", title="Show Task List")
+                    a.btn.btn-tertiary.btn-task-list.hidden-lg.hidden-md(title="Show Task List", data-toggle="modal", data-target="#tasks-list-modal")
                       i.fa.fa-list
                       | Show Task List
                     .form-group.pull-right

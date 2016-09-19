@@ -1039,6 +1039,7 @@
         }
 
         .modal-footer .btn {
+            min-width: 100px;
             border-radius: 0;
             text-transform: uppercase;
         }
@@ -1258,5 +1259,13 @@
         .modal-body img {
             width: 100%;
         }
+    }
+}
+@mixin modal-content-taskslist() {
+    #tasks-list-modal {
+        .dropdown-toggle {
+          color: $red;
+        }
+        @include typeahead-standard();
     }
 }
