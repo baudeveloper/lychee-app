@@ -1,6 +1,6 @@
 // Links
 a {
-  transition: all 1s;
+  transition: all .5s;
   &:link {
     text-decoration: none;
   }
@@ -8,7 +8,13 @@ a {
 
 // Buttons
 button {
-  transition: all 1s;
+  transition: all .5s;
+}
+
+// Dropdows
+.dropdown-menu {
+  margin: 0;
+  border-radius: 0;
 }
 
 // Breadcrumb
