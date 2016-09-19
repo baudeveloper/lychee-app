@@ -255,101 +255,101 @@
 	form {
 		margin: 0;
 		border-radius: 0;
-		.head {
-			padding: 15px;
+	}
+	.head {
+		padding: 15px;
+		background-color: transparent;
+		border-color: $extra-darkest-grey;
+	}
+	.head .input-group {
+		max-width: 260px;
+		position: relative;
+		input {
+			color: $red;
+			height: 36px;
+			border-radius: 0;
+			padding-left: 35px;
+			position: relative;
+			@include font-size(16px);
+			text-transform: uppercase;
+			background-color: $extra-light-grey;
+			box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+		}
+		input::-webkit-input-placeholder {
+			color: $red;
+		}
+		input:-moz-placeholder {
+			color: $red;
+		}
+		input::-moz-placeholder {
+			color: $red;
+		}
+		input:-ms-input-placeholder {
+			color: $red;
+		} // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
+		.input-group-addon {
+			position: absolute;
+			color: $red;
+			top: 3px;
+			left: 0;
+			bottom: 0;
+			z-index: 100;
+			border-radius: 0;
+			box-shadow: none;
+			border-color: transparent;
 			background-color: transparent;
-			border-color: $extra-darkest-grey;
-			.input-group {
-				max-width: 260px;
-				position: relative;
-				input {
-					color: $red;
-					height: 36px;
-					border-radius: 0;
-					padding-left: 35px;
-					position: relative;
-					@include font-size(16px);
-					text-transform: uppercase;
-					background-color: $extra-light-grey;
-					box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-				}
-				input::-webkit-input-placeholder {
-					color: $red;
-				}
-				input:-moz-placeholder {
-					color: $red;
-				}
-				input::-moz-placeholder {
-					color: $red;
-				}
-				input:-ms-input-placeholder {
-					color: $red;
-				} // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
-				.input-group-addon {
-					position: absolute;
-					color: $red;
-					top: 3px;
-					left: 0;
-					bottom: 0;
-					z-index: 100;
-					border-radius: 0;
-					box-shadow: none;
-					border-color: transparent;
-					background-color: transparent;
-				}
-				button {
-					height: 36px;
-				}
-			}
-			.btn-group button {
-				@include font-size(16px);
-			}
-			> .headers {
-				margin-top: 15px;
+		}
+		button {
+			height: 36px;
+		}
+	}
+	.head .btn-group button {
+		@include font-size(16px);
+	}
+	.head .headers {
+		margin-top: 15px;
+	}
+	.body {
+		padding: 0;
+	}
+	.body ul {
+		margin: 0;
+	}
+	.body li {
+		margin: 0;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1px solid $extra-darkest-grey;
+		&:last-of-type {
+			border: none;
+		}
+		&.sticky {
+			background-color: $light-blue !important;
+			.btn-pin {
+				color: $blue;
 			}
 		}
-		.body {
-			padding: 0;
-			ul {
-				margin: 0;
-				li {
-					margin: 0;
-					border-radius: 0;
-					border: none;
-					border-bottom: 1px solid $extra-darkest-grey;
-					&:last-of-type {
-						border: none;
-					}
-					&.sticky {
-						background-color: $light-blue !important;
-						.btn-pin {
-							color: $blue;
-						}
-					}
-					&:nth-child(odd) {
-						background-color: $extra-light-grey;
-					}
-				}
-			}
-			input {
-				border-radius: 0;
-			}
-			.icon-group {
-				padding-top: 0;
-			}
+		&:nth-child(odd) {
+			background-color: $extra-light-grey;
 		}
-		.foot {
-			padding: 20px 15px;
-			background-color: transparent;
-			border-color: $extra-darkest-grey;
-			> a {
-				&.btn-add-task {
-					@include icon-before('\f067', inherit);
-				}
-				&.btn-task-list {
-					@include icon-before('\f03a', inherit);
-				}
-			}
+	}
+	.body input {
+		border-radius: 0;
+	}
+	.body .icon-group {
+		padding-top: 0;
+	}
+	.foot {
+		padding: 20px 15px;
+		background-color: transparent;
+		border-color: $extra-darkest-grey;
+	}
+	.foot > a {
+		&.btn-add-task {
+			@include icon-before('\f067', inherit);
+		}
+		&.btn-task-list {
+			@include icon-before('\f03a', inherit);
 		}
 	}
 	table {
