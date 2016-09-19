@@ -263,8 +263,22 @@
 				max-width: 250px;
 				input {
 					border-radius: 0;
+					text-transform: uppercase;
 					background-color: $extra-light-grey;
+					box-shadow: 0 0 2px 0 rgba(0,0,0,0.15)
 				}
+				input::-webkit-input-placeholder {
+					color: $red;
+				}
+				input:-moz-placeholder {
+					color: $red;
+				}
+				input::-moz-placeholder {
+					color: $red;
+				}
+				input:-ms-input-placeholder {
+					color: $red;
+				} // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
 				.input-group-addon {
 					color: $red;
 					border-radius: 0;
