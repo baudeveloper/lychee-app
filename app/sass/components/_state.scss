@@ -8,15 +8,18 @@ a {
     }
 }
 // Buttons
+
 button {
     transition: all 0.5s;
 }
 // Dropdows
+
 .dropdown-menu {
     margin: 0;
     border-radius: 0;
 }
 // Breadcrumb
+
 .breadcrumb {
     position: absolute;
     top: 0;
@@ -40,6 +43,7 @@ button {
     }
 }
 // Buttons
+
 .btn-default {
     border-radius: 0;
     @include font-size(16px);
@@ -97,11 +101,14 @@ button {
     }
 }
 // Inputs
+
 input[type="text"] {
     box-shadow: none;
     border-radius: 0;
 }
+
 // Alert
+
 .alert-timesheet {
     @include font-size(16px);
     color: $dark-yellow;
@@ -109,6 +116,7 @@ input[type="text"] {
     background-color: $light-yellow;
 }
 // Popover
+
 .popover {
     max-width: 100%;
     border-radius: 0;
@@ -149,6 +157,7 @@ input[type="text"] {
     }
 }
 // Custom Group Addon - Log Time
+
 .log-group {
     @extend .input-group;
 }
@@ -178,8 +187,7 @@ input[type="text"] {
 // }
 // Declare Mixins
 // Inline Input
-@include inline-input();
-// Loader
+@include inline-input(); // Loader
 // @include loader();
 // Modals State
 @include modal-standard();

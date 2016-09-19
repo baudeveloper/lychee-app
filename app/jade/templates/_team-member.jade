@@ -41,209 +41,211 @@ main(role='main')
                 label
                   input(type="checkbox")
                   | Hide Past Assignments
-          table.table.table-condensed.table-bordered.table-striped
-            tr
-              th Project
-              th
-                | Roles
-                br
-              th
-                | Start Date
-                br
-              th
-                | End Date
-                br
-              th Allocation
-              th
-                | Invoice Item
-                br
-            tr
-              td
-                | EHVA-0780 (Enterprise Integration Discovery)
-                br
-              td
-                | Team Member, Team Lead
-                br
-              td 2016-07-25
-              td 2016-12-31
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0242 (Administration)
-                br
-              td
-                | Team Member
-                br
-              td
-                br
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0244 (Operations Management)
-                br
-              td
-                | Team Member 
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0247 (Systems Administration)
-                br
-              td
-                | Team Member 
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0248 (HR Administration)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0249 (Communications and Events)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0250 (Non-working Accruals)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0251 (Coaching)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0252 (Training)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0254 (Standards)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0255 (Marketing)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0288 (Research) 
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td 0.1
-              td
-            tr
-              td
-                | JONA-0644 (HTML5 PoCs)
-                br
-              td
-                | Team Member
-                br
-              td
-              td
-              td
-                | 5.0
-                br
-              td
-            tr
-              td
-                | RONE-0742 (CAMS 2016)
-                br
-              td
-                | Team Member, Team Lead
-                br
-              td 2016-07-25
-              td 2016-12-31
-              td
-                | 99.0
-                br
-              td
-                | US Tech Dev - Senior
-                br
-            tr
-              td
-                | RONE-00743 (CAMS 2016 Travel)
-                br
-              td
-                | Team Member, Team Lead
-                br
-              td 2016-07-25
-              td 2016-12-31
-              td 99.0
-              td
-                | US Tech Dev - Senior
-                br
-            tr
-              td
-                | RONE-0757 (Remote Document Delivery)
-                br
-              td
-                | Team Member, Team Lead
-                br
-              td 2016-07-25
-              td 2016-12-31
-              td 1.0
-              td
-                | US Tech Dev - Senior
-                br
+          table.tablesaw.tablesaw-swipe.table-condensed.table-striped.table-bordered(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+            thead
+              tr
+                th(data-tablesaw-priority="persist", scope="col") Project
+                th(data-tablesaw-priority="2")
+                  | Roles
+                  br
+                th(data-tablesaw-priority="3", scope="col")
+                  | Start Date
+                  br
+                th(data-tablesaw-priority="4", scope="col")
+                  | End Date
+                  br
+                th(data-tablesaw-priority="5", scope="col") Allocation
+                th(data-tablesaw-priority="6", scope="col")
+                  | Invoice Item
+                  br
+            tbody
+              tr
+                td.tablesaw-cell-persist
+                  | EHVA-0780 (Enterprise Integration Discovery)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member, Team Lead
+                  br
+                td.tablesaw-cell-hidden 2016-07-25
+                td.tablesaw-cell-hidden 2016-12-31
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0242 (Administration)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0244 (Operations Management)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member 
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0247 (Systems Administration)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member 
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0248 (HR Administration)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0249 (Communications and Events)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0250 (Non-working Accruals)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0251 (Coaching)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0252 (Training)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0254 (Standards)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0255 (Marketing)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0288 (Research) 
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden 0.1
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | JONA-0644 (HTML5 PoCs)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member
+                  br
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                td.tablesaw-cell-hidden
+                  | 5.0
+                  br
+                td.tablesaw-cell-hidden
+              tr
+                td.tablesaw-cell-persist
+                  | RONE-0742 (CAMS 2016)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member, Team Lead
+                  br
+                td.tablesaw-cell-hidden 2016-07-25
+                td.tablesaw-cell-hidden 2016-12-31
+                td.tablesaw-cell-hidden
+                  | 99.0
+                  br
+                td.tablesaw-cell-hidden
+                  | US Tech Dev - Senior
+                  br
+              tr
+                td.tablesaw-cell-persist
+                  | RONE-00743 (CAMS 2016 Travel)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member, Team Lead
+                  br
+                td.tablesaw-cell-hidden 2016-07-25
+                td.tablesaw-cell-hidden 2016-12-31
+                td.tablesaw-cell-hidden 99.0
+                td.tablesaw-cell-hidden
+                  | US Tech Dev - Senior
+                  br
+              tr
+                td.tablesaw-cell-persist
+                  | RONE-0757 (Remote Document Delivery)
+                  br
+                td.tablesaw-cell-hidden
+                  | Team Member, Team Lead
+                  br
+                td.tablesaw-cell-hidden 2016-07-25
+                td.tablesaw-cell-hidden 2016-12-31
+                td.tablesaw-cell-hidden 1.0
+                td.tablesaw-cell-hidden
+                  | US Tech Dev - Senior
+                  br
           h3 Recent Assignments Charts (hrs)
           .projects-map
       include feed.jade
