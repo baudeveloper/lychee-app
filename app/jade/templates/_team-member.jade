@@ -34,13 +34,11 @@ main(role='main')
       section#member-assignments
         .bg
           h2 Project Assignments
-          form.form-inline
-            .form-group
-              label Assignments Table 
-              .checkbox.pull-right
-                label
-                  input(type="checkbox")
-                  | Hide Past Assignments
+          label Assignments Table 
+          .checkbox
+            label
+              input(type="checkbox")
+              | Hide Past Assignments
           table.tablesaw.tablesaw-swipe.table-condensed.table-striped.table-bordered(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
             thead
               tr

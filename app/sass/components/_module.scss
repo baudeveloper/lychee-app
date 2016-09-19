@@ -1279,6 +1279,10 @@
     }
 }
 @mixin tablesaw-assignments() {
+    .tablesaw-bar {
+      display: inline;
+      clear: none !important;
+    }
     .tablesaw thead {
         border: none !important;
         background: none !important;
