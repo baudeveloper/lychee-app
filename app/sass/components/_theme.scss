@@ -357,57 +357,57 @@
 		padding: 15px;
 		line-height: 1;
 		@include font-size(14px);
-		th, td {
-			padding: 4px;
+	}
+	th, td {
+		padding: 4px;
+	}
+	th {
+		font-weight: 400;
+		text-align: center;
+		vertical-align: bottom;
+		&:first-child + th {
+			text-align: left;
 		}
-		th {
-			font-weight: 400;
+		&:last-child {
+			font-weight: 600;
+		}
+	}
+	td {
+		small {
+			display: block;
+			@include font-size(12px);
+		}
+		input {
+			border-radius: 0;
 			text-align: center;
-			vertical-align: bottom;
-			&:first-child + th {
+		}
+		&:first-child + td {
+			input {
 				text-align: left;
 			}
-			&:last-child {
-				font-weight: 600;
-			}
 		}
-		td {
-			small {
+		&:last-child {
+			span {
 				display: block;
-				@include font-size(12px);
-			}
-			input {
-				border-radius: 0;
+				font-weight: 600;
 				text-align: center;
-			}
-			&:first-child + td {
-				input {
-					text-align: left;
-				}
-			}
-			&:last-child {
-				span {
-					display: block;
-					font-weight: 600;
-					text-align: center;
-					color: $medium-grey;
-				}
+				color: $medium-grey;
 			}
 		}
-		.btn-edit {
-			margin-left: 10px;
-			color: $medium-grey;
-		}
-		.btn-pin {
-			color: $medium-grey;
-		}
-		.btn-timer {
-			@include icon-before('\f017', $white);
-		}
-		.icon-group a {
-			color: $medium-grey;
-			margin-left: 10px;
-		}
+	}
+	table .btn-edit {
+		margin-left: 10px;
+		color: $medium-grey;
+	}
+	table .btn-pin {
+		color: $medium-grey;
+	}
+	table .btn-timer {
+		@include icon-before('\f017', $white);
+	}
+	table .icon-group a {
+		color: $medium-grey;
+		margin-left: 10px;
 	}
 	// Hyperlink hover styles.
 	.body .sticky .btn-pin {
