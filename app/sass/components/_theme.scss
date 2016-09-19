@@ -416,7 +416,7 @@
 	.body .icon-group a {
 		@include hyperlink-hover($medium-grey);
 	}
-	.body.btn-edit {
+	.body .btn-edit {
 		@include hyperlink-hover($medium-grey);
 	}
 	.body .btn-pin {
