@@ -1266,6 +1266,12 @@
         .dropdown-toggle {
           color: $red;
         }
+        #fancytree {
+          padding: 0;
+        }
+        .input {
+          margin: 0 -15px;
+        }
         @include typeahead-standard();
     }
 }
