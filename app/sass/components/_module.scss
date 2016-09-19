@@ -146,10 +146,8 @@
             margin-top: 0;
         }
 
-        .fancytree-title {
-            &:hover {
-                background-color: transparent;
-            }
+        .fancytree-title:hover {
+          background-color: transparent;
         }
 
         .fancytree-has-children {
@@ -184,11 +182,9 @@
         // Folder Icon
         .fancytree-node {
             &:hover {
-                .fancytree-icon {
-                    &::before {
-                        transition: all 1s;
-                        color: $green !important;
-                    }
+                .fancytree-icon::before {
+                  transition: all 1s;
+                  color: $green !important;
                 }
 
                 .fancytree-title {
@@ -200,15 +196,14 @@
                 .fancytree-hover {
                     color: $green;
                     border-radius: 4px;
+                    padding: 2px 4px 4px 0;
                     background-color: $lightest-green;
                 }
             }
 
             &.fancytree-active {
-                .fancytree-icon {
-                    &::before {
-                        color: $green !important;
-                    }
+                .fancytree-icon::before {
+                  color: $green !important;
                 }
 
                 .fancytree-title {
@@ -230,12 +225,9 @@
             span {
                 color: $blue;
                 @include font-size(14px);
-
-                &.fancytree-icon {
-                    &::before {
-                        color: $blue !important;
-                    }
-                }
+            }
+            span.fancytree-icon::before {
+              color: $blue !important;
             }
         }
     }
