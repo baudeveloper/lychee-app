@@ -395,6 +395,9 @@
 			}
 		}
 	}
+	table .btn-tasks {
+		color: $red;
+	}
 	table .btn-edit {
 		margin-left: 10px;
 		color: $medium-grey;
@@ -415,6 +418,9 @@
 	}
 	.panel-body .icon-group a {
 		@include hyperlink-hover($medium-grey);
+	}
+	.panel-body .btn-tasks {
+		@include hyperlink-hover($red);
 	}
 	.panel-body .btn-edit {
 		@include hyperlink-hover($medium-grey);
