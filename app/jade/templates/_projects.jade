@@ -50,7 +50,7 @@ main(role='main')
 				i.fa.fa-list-alt
 			a.btn-team-gridview(href="#")
 				i.fa.fa-table
-			.checkbox
+			.checkbox.pull-right
 				label
 					input(type="checkbox")
 					| Hide Past Assignments
@@ -115,12 +115,12 @@ main(role='main')
 								a.btn-remove-member(href="#")
 									i.fa.fa-trash
 				.row
-					.col-sm-6
+					.col-sm-12.col-md-6
 						.input-group										
 							.input-group-btn
 								button.btn.btn-tertiary(href="#") Assign Project to User
 							input.form-control(type="text", placeholder="User")				
-					.col-sm-6				
+					.col-sm-12.col-md-6
 						.input-group										
 							.input-group-btn
 								button.btn.btn-tertiary(href="#") Copy Assignments from
@@ -128,6 +128,9 @@ main(role='main')
 				h3 Portal Users
 				.well
 					| No Portal Users Associated with This Project
+				a.btn.btn-tertiary.visible-sm.btn-add-user(href="#")
+					i.fa.fa-plus
+					| Add User
 		section#bookkeeping
 			.heading
 				h2 Bookkeeping
