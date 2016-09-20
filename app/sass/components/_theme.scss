@@ -556,6 +556,16 @@
 @include fancytree();
 
 // Project Page
+#project-dash {
+	position: relative;
+	background-color: $white;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+	@include margin-and-padding(15px, 15px);
+	.heading {
+		border-bottom: 1px solid $red;
+		@include margin-and-padding(0 0 30px 0, 0 0 10px);
+	}
+}
 #project-team {
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
