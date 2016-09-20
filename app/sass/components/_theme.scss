@@ -571,6 +571,9 @@
 			flex-grow: 1;
 			border-left: 1px solid $darkest-grey;
 		}
+		> div:first-child {
+			border-left: none;
+		}
 		.dash-nav {
 			width: 10%;
 			height: auto;
@@ -632,6 +635,34 @@
 		}
 		img {
 			width: 100%;
+		}
+	}
+	.dash-nav ul {
+		margin: 0;
+		padding: 0;
+		li {
+			padding: 5px 0;
+			list-style-type: none;
+			border-bottom: 1px solid $super-extra-light-grey;
+		}
+		li:last-child,
+		li:nth-last-child(2), {
+			border-bottom: none;
+		}
+		a {
+			display: block;
+			color: $super-extra-light-grey;
+			@include font-size(14px);
+			span {
+				color: $super-extra-light-grey;
+			}
+		}
+		.menu-toggle {
+			margin-top: 30px;
+			color: $medium-grey;
+			span {
+				color: $medium-grey;
+			}
 		}
 	}
 }

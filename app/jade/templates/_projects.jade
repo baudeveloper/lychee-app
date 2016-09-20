@@ -46,6 +46,55 @@ main(role='main')
 				h2 FFD-C2029 - UI Design
 			.dash-content
 				.dash-nav
+					ul.visible(role="navigation")
+						li
+							a(href="#", title="Log Time")
+								i.fa.fa-clock-o(aria-hidden='true')
+								span Log Time
+						li
+							a(href="#", title="Edit")
+								i.fa.fa-pencil(aria-hidden='true')
+								span Edit
+						li
+							a(href="#", title="Complete")
+								i.fa.fa-check-square-o(aria-hidden='true')
+								span Complete
+						li
+							a(href="#", title="Add Subtask")
+								i.fa.fa-briefcase(aria-hidden='true')
+								span Add Subtask
+						li
+							a(href="#", title="Cut")
+								i.fa.fa-users(aria-hidden='true')
+								span Cut
+						li
+							a(href="#", title="Paste")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span Paste
+						li
+							a(href="#", title="Split")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span Split
+						li
+							a(href="#", title="Import Plan")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span Iimport Plan
+						li
+							a(href="#", title="Delete")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span Delete
+						li
+							a(href="#", title="Make Obsolete")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span Make Obsolete
+						li
+							a(href="#", title="View in JIRA")
+								i.fa.fa-file-text-o(aria-hidden='true')
+								span View in JIRA
+						li
+							a.menu-toggle(href="#", title="Show/Hide Menu")
+								i.fa.fa-long-arrow-left(aria-hidden='true')
+								span Collapse
 				.all-tasks
 					.button.btn-group
 							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
