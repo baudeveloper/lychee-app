@@ -581,8 +581,33 @@
 			height: inherit;
 		}
 	}
-	.btn {
-		min-width: 200px;
+	.assigned-members-group {
+		display: inline;
+		float: left;
+			width: 40%;
+			@media #{$tablet__up} {
+				width: 40%;
+			}
+			h3 {
+				margin-top: 0;
+				margin-right: 15px;
+			}
+	}
+
+	.checkbox {
+		display: inline;
+		@include font-size(14px);
+		margin: 0;
+		float: left;
+		width: 30%;
+		@media #{$tablet__up} {
+			width: 40%;
+		}
+		text-align: right;
+
+		input {
+			margin-right: 5px;
+		}
 	}
 	.input-group {
 		@media #{$tablet} {
@@ -634,6 +659,7 @@
 	}
 	.tbl-assigned-members {
 		border: 1px solid $darkest-grey;
+		margin-bottom: 30px;
 		td {
 			text-align: center;
 		}
@@ -690,9 +716,9 @@
 			color: darken($red, 15%);
 		}
 	}
-	.btn {
-		min-width: 200px;
-	}
+	// .btn {
+	// 	min-width: 200px;
+	// }
 	th {
 		color: $grey;
 		text-align: center;

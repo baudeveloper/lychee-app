@@ -45,75 +45,76 @@ main(role='main')
 		section#project-team
 			.heading
 				h2 Project Team
-			h3 Assigned Members
-			a.btn-team-listview(href="#")
-				i.fa.fa-list-alt
-			a.btn-team-gridview(href="#")
-				i.fa.fa-table
-			.checkbox.pull-right
+			.assigned-members-group
+				h3 Assigned Members
+				a.btn-team-listview(href="#")
+					i.fa.fa-list-alt
+				a.btn-team-gridview(href="#")
+					i.fa.fa-table
+			.checkbox
 				label
 					input(type="checkbox")
 					| Hide Past Assignments
-			.list-view.container
-				table.table.table-condensed.tbl-assigned-members
-					thead
-						tr
-							th User Name
-							th Roles
-							th Start Date
-							th End Date
-							th Allocation
-							th Rate
-							th
-					tbody
-						tr
-							td Jeremy Chan
-							td Team Member, Team Lead
-							td 2016-07-25
-							td 2016-12-31
-							td 100.0
-							td $125.00
-							td
-								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-member(href="#")
-									i.fa.fa-trash
-						tr
-							td Abdikidar Kedi
-							td Team Member
-							td 2016-07-11
-							td 2016-12-31
-							td 100.0
-							td $119.00
-							td
-								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-member(href="#")
-									i.fa.fa-trash
-						tr
-							td Cindy Lopes
-							td Approver, Team Member, Project Manager, Project Director
-							td 2016-08-15
-							td 2017-03-31
-							td 100.0
-							td $125.00
-							td
-								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-member(href="#")
-									i.fa.fa-trash
-						tr
-							td Jacob Tseng
-							td Team Member
-							td 2016-04-16
-							td 2016-12-31
-							td 10.1
-							td $75.00
-							td
-								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-member(href="#")
-									i.fa.fa-trash
+			table.tablesaw.tablesaw-swipe.table-condensed.tbl-assigned-members(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+				thead
+					tr
+						th(data-tablesaw-priority="persist", scope="col") User Name
+						th(data-tablesaw-priority="2", scope="col") Roles
+						th(data-tablesaw-priority="3", scope="col") Start Date
+						th(data-tablesaw-priority="4", scope="col") End Date
+						th(data-tablesaw-priority="5", scope="col") Allocation
+						th(data-tablesaw-priority="6", scope="col") Rate
+						th(data-tablesaw-priority="7", scope="col")
+				tbody
+					tr
+						td.tablesaw-cell-persist Jeremy Chan
+						td.tablesaw-cell-hidden Team Member, Team Lead
+						td.tablesaw-cell-hidden 2016-07-25
+						td.tablesaw-cell-hidden 2016-12-31
+						td.tablesaw-cell-hidden 100.0
+						td.tablesaw-cell-hidden $125.00
+						td.tablesaw-cell-hidden
+							a.btn-edit-member(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-member(href="#")
+								i.fa.fa-trash
+					tr
+						td.tablesaw-cell-persist Abdikidar Kedi
+						td.tablesaw-cell-hidden Team Member
+						td.tablesaw-cell-hidden 2016-07-11
+						td.tablesaw-cell-hidden 2016-12-31
+						td.tablesaw-cell-hidden 100.0
+						td.tablesaw-cell-hidden $119.00
+						td.tablesaw-cell-hidden
+							a.btn-edit-member(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-member(href="#")
+								i.fa.fa-trash
+					tr
+						td.tablesaw-cell-persist Cindy Lopes
+						td.tablesaw-cell-hidden Approver, Team Member, Project Manager, Project Director
+						td.tablesaw-cell-hidden 2016-08-15
+						td.tablesaw-cell-hidden 2017-03-31
+						td.tablesaw-cell-hidden 100.0
+						td.tablesaw-cell-hidden $125.00
+						td.tablesaw-cell-hidden
+							a.btn-edit-member(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-member(href="#")
+								i.fa.fa-trash
+					tr
+						td.tablesaw-cell-persist Jacob Tseng
+						td.tablesaw-cell-hidden Team Member
+						td.tablesaw-cell-hidden 2016-04-16
+						td.tablesaw-cell-hidden 2016-12-31
+						td.tablesaw-cell-hidden 10.1
+						td.tablesaw-cell-hidden $75.00
+						td.tablesaw-cell-hidden
+							a.btn-edit-member(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-member(href="#")
+								i.fa.fa-trash
+			.container
 				.row
 					.col-sm-12.col-md-6
 						.input-group										
