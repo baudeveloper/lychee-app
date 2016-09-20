@@ -11,7 +11,11 @@
 	label {
 		color: $grey;
 		font-weight: 400;
+		margin-right: 10px;
 		@include font-size(20px);
+		@media #{$tablet} {
+			@include font-size(18px);
+		}
 	}
 
 	.bootstrap-select button {
@@ -26,11 +30,12 @@
 
 		a {
 			padding: 3px 12px;
+			@include font-size(16px);
 		}
 	}
 
 	.checkbox {
-		margin-left: 15px;
+		margin-left: 30px;
 	}
 
 	.checkbox label {
@@ -53,6 +58,9 @@
 		box-shadow: none;
 		padding: 0 5px;
 		@include font-size(20px);
+		@media #{$tablet} {
+			@include font-size(18px);
+		}
 
 		&:active,
 		&:focus,
@@ -97,7 +105,7 @@
 	}
 
 	.form-group:last-of-type {
-		@media (max-width: 1366px) {
+		@media (max-width: 1500px) {
 			float: none !important;
 			clear: both;
 			display: block;
@@ -249,10 +257,25 @@
 			@include font-size(16px);
 		}
 
+		.lbl-assignments {
+			float: left;
+			padding-left: 0;
+				width: 30%;
+				@media #{$tablet__up} {
+	        width: 40%;
+	      }
+		}
+
 		.checkbox {
 			display: inline;
 			@include font-size(14px);
 			margin: 0;
+			float: left;
+			width: 40%;
+			@media #{$tablet__up} {
+        width: 40%;
+      }
+			text-align: right;
 
 			input {
 				margin-right: 5px;

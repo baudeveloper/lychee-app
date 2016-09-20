@@ -1280,8 +1280,13 @@
 }
 @mixin tablesaw-assignments() {
     .tablesaw-bar {
+      float: left;
+      width: 30%;
       display: inline;
       clear: none !important;
+      @media #{$tablet__up} {
+        width: 20%;
+      }
     }
     .tablesaw thead {
         border: none !important;
