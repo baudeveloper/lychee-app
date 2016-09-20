@@ -561,77 +561,83 @@
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	@include margin-and-padding(15px, 15px);
-}
-#bookkeeping .heading {
-	border-bottom: 1px solid $red;
-	@include margin-and-padding(0 15px 30px 0, 0 0 10px);
-}
-#bookkeeping h2 {
-			color: $red;
-			display: inline-block;
-			text-transform: uppercase;
-			@include font-size(18px);
-}
-#bookkeeping h3 {
-			color: $grey;
-			@include font-size(16px);
-}
-#bookkeeping small {
-			color: $grey;
-			font-style: italic;
-			display: block;
-			@include font-size(12px);
-			margin-bottom: 15px;
-}
-#bookkeeping .btn-edit-bookkeeping {
-	margin-left: 10px;
-	color: $red;
-	&:hover {
-		color: darken($red, 15%);
+	.heading {
+		border-bottom: 1px solid $red;
+		@include margin-and-padding(0 15px 30px 0, 0 0 10px);
 	}
-}
-#bookkeeping .btn {
-	min-width: 200px;
-}
-#bookkeeping th {
-	color: $grey;
-	text-align: center;
-	font-weight: $font-weight-bold;
-	@include font-size(14px);
-	border: none;
-}
-#bookkeeping td {
-	@include font-size(14px);
-}
-#bookkeeping .tbl-invoice-contacts,
-#bookkeeping .tbl-invoice-milestones {
-	border: 1px solid $darkest-grey;
-	td {
-		text-align: center;
+	h2 {
+		color: $red;
+		display: inline-block;
+		text-transform: uppercase;
+		@include font-size(18px);
 	}
-	thead {
-		background-color: $extra-light-grey;
+	h3 {
+		color: $grey;
+		@include font-size(16px);
 	}
-	a {
+	small {
+		color: $grey;
+		font-style: italic;
+		display: block;
+		@include font-size(12px);
+		margin-bottom: 15px;
+	}
+	.btn-edit-bookkeeping {
+		margin-left: 10px;
 		color: $red;
 		&:hover {
 			color: darken($red, 15%);
 		}
 	}
-	.fa-file-pdf-o {
+	.btn-invoice {
 		color: $red;
-		margin-right: 5px;
+		&:hover {
+			color: darken($red, 15%);
+		}
 	}
-}
-#bookkeeping .tbl-invoice-milestones {
-	tbody tr td:first-of-type+td+td {
-			color: $red;
+	.btn {
+		min-width: 200px;
 	}
-	tfoot{
-		background-color: $lightest-red;
-	}
-	tfoot td {
+	th {
+		color: $grey;
+		text-align: center;
 		font-weight: $font-weight-bold;
+		@include font-size(14px);
+		border: none;
+	}
+	td {
+		@include font-size(14px);
+	}
+	.tbl-invoice-contacts,
+	.tbl-invoice-milestones {
+		border: 1px solid $darkest-grey;
+		td {
+			text-align: center;
+		}
+		thead {
+			background-color: $extra-light-grey;
+		}
+		a {
+			color: $red;
+			&:hover {
+				color: darken($red, 15%);
+			}
+		}
+		.fa-file-pdf-o {
+			color: $red;
+			margin-right: 5px;
+		}
+	}
+	.tbl-invoice-milestones {
+		tbody tr td:first-of-type+td+td {
+				color: $red;
+		}
+		tfoot{
+			background-color: $lightest-red;
+		}
+		tfoot td {
+			font-weight: $font-weight-bold;
+		}
 	}
 }
 .tbl-project {

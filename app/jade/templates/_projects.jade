@@ -42,7 +42,92 @@ main(role='main')
 				td Active
 	.page-row
 		section#project
-		section#project
+		section#project-team
+			.heading
+				h2 Project Team
+			h3 Assigned Members
+			a.btn-team-listview(href="#")
+				i.fa.fa-list-alt
+			a.btn-team-gridview(href="#")
+				i.fa.fa-table
+			.checkbox
+				label
+					input(type="checkbox")
+					| Hide Past Assignments
+			.list-view.container
+				table.table.table-condensed.tbl-assigned-members
+					thead
+						tr
+							th User Name
+							th Roles
+							th Start Date
+							th End Date
+							th Allocation
+							th Rate
+							th
+					tbody
+						tr
+							td Jeremy Chan
+							td Team Member, Team Lead
+							td 2016-07-25
+							td 2016-12-31
+							td 100.0
+							td $125.00
+							td
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td Abdikidar Kedi
+							td Team Member
+							td 2016-07-11
+							td 2016-12-31
+							td 100.0
+							td $119.00
+							td
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td Cindy Lopes
+							td Approver, Team Member, Project Manager, Project Director
+							td 2016-08-15
+							td 2017-03-31
+							td 100.0
+							td $125.00
+							td
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td Jacob Tseng
+							td Team Member
+							td 2016-04-16
+							td 2016-12-31
+							td 10.1
+							td $75.00
+							td
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+				.row
+					.col-sm-6
+						.input-group										
+							.input-group-btn
+								button.btn.btn-tertiary(href="#") Assign Project to User
+							input.form-control(type="text", placeholder="User")				
+					.col-sm-6				
+						.input-group										
+							.input-group-btn
+								button.btn.btn-tertiary(href="#") Copy Assignments from
+							input.form-control(type="text", placeholder="Project")				
+				h3 Portal Users
+				.well
+					| No Portal Users Associated with This Project
 		section#bookkeeping
 			.heading
 				h2 Bookkeeping
@@ -120,7 +205,8 @@ main(role='main')
 						td Not Created
 						td 
 						td
-							i.fa.fa-file-pdf-o
+							a.btn-invoice(href="#")
+								i.fa.fa-file-pdf-o
 							| 123456789
 						td
 							a.btn-edit-milestone(href="#")
@@ -134,7 +220,8 @@ main(role='main')
 						td Not Created
 						td 
 						td
-							i.fa.fa-file-pdf-o
+							a.btn-invoice(href="#")
+								i.fa.fa-file-pdf-o
 							| 123456789
 						td
 							a.btn-edit-milestone(href="#")
@@ -148,7 +235,8 @@ main(role='main')
 						td Not Created
 						td 
 						td
-							i.fa.fa-file-pdf-o
+							a.btn-invoice(href="#")
+								i.fa.fa-file-pdf-o
 							| 123456789
 						td
 							a.btn-edit-milestone(href="#")
