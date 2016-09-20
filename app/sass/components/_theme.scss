@@ -4,6 +4,7 @@
 	1. Team List
 	2. Team Member
 	3. Time Entry
+	4. Project
 
 */
 // Team List Page
@@ -553,3 +554,22 @@
 	}
 }
 @include fancytree();
+
+// Project Page
+.tbl-project {
+	margin: 37px 30px 0 0;
+	max-width: 350px;
+	@include font-size(14px);
+	@media #{$desktop} {
+		margin: 0;
+		max-width: 100%;
+	}
+}
+.tbl-project td {
+	color: $black;
+	padding: 2px !important;
+	border: none !important;
+}
+.tbl-project .title  {
+	color: $super-grey;
+}
