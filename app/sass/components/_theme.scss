@@ -654,7 +654,7 @@
 			color: $super-extra-light-grey;
 			@include font-size(14px);
 			span {
-				transition: all 1s;
+				transition: all .4s;
 				color: $super-extra-light-grey;
 			}
 		}
@@ -662,6 +662,7 @@
 			color: $red;
 			span {
 				color: $red;
+				transition: all .4s;
 			}
 		}
 		a:focus {
@@ -670,12 +671,18 @@
 				color: $red;
 			}
 		}
-		.menu-toggle {
+		.tasks-toggle {
 			margin-top: 30px;
 			color: $medium-grey;
 			span {
 				color: $medium-grey;
 			}
+		}
+	}
+	.dash-nav.switch {
+		width: 1%;
+		.tasks-toggle .fa::before {
+			content: '\f178';
 		}
 	}
 }

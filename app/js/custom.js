@@ -14,6 +14,12 @@
 
 $(document).ready(function() {
 
+    /* Project Page */
+    $(".tasks-toggle").click(function() {
+        $(".dash-nav").toggleClass("switch");
+        $(".dash-nav span").toggle();
+    });
+
     /* Time Entry Page */
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
