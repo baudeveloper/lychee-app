@@ -117,11 +117,14 @@
 		margin: 50px 0;
 	}
 
-	.team-member {
-		@include make-sm-column(4);
-		@include make-md-column(3);
-		@include make-lg-column(2);
-	}
+	// .team-member {
+	// 	@include make-sm-column(4);
+	// 	@include make-md-column(15);
+	// 	@include make-lg-column(15);
+	// 	@media #{$tablet__up} {
+	// 		@extend .col-15;
+	// 	}
+	// }
 
 	.team-member img {
 		transition: border 0.5s;
