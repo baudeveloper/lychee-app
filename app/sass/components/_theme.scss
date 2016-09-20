@@ -567,6 +567,14 @@
 		float: none !important;
 	}
 }
+.btn-edit-project {
+	color: $red;
+	margin-left: 10px;
+	@include font-size(20px);
+	&:hover {
+		color: darken($red, 15%);
+	}
+}
 .tbl-project td {
 	color: $black;
 	padding: 2px !important;
