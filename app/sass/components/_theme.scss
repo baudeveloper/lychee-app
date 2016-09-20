@@ -654,7 +654,20 @@
 			color: $super-extra-light-grey;
 			@include font-size(14px);
 			span {
+				transition: all 1s;
 				color: $super-extra-light-grey;
+			}
+		}
+		a:hover {
+			color: $red;
+			span {
+				color: $red;
+			}
+		}
+		a:focus {
+			color: $red;
+			span {
+				color: $red;
 			}
 		}
 		.menu-toggle {
