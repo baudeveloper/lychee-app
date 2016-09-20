@@ -749,7 +749,10 @@
 			margin-right: 5px;
 		}
 	}
-	.tbl-invoice-milestones {
+	.tbl-invoice-contacts {
+		margin-bottom: 30px;
+	}
+	.tbl-invoice-milestones {margin-bottom: 30px;
 		tbody tr td:first-of-type+td+td {
 				color: $red;
 		}
