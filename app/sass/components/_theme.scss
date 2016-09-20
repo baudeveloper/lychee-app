@@ -209,10 +209,6 @@
 			padding: 0;
 		}
 
-		.value {
-			@include font-size(44px);
-		}
-
 		.member-card {
 			@include make-sm-column(8);
 			@include make-md-column(8);
