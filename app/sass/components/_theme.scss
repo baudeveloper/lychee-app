@@ -562,13 +562,18 @@
 	@include font-size(14px);
 	@media #{$desktop} {
 		margin: 0;
-		max-width: 100%;
+		display: block;
+		max-width: 350px;
+		float: none !important;
 	}
 }
 .tbl-project td {
 	color: $black;
 	padding: 2px !important;
 	border: none !important;
+}
+.tbl-project td:first-child+td+td+td {
+	border-left: 1px solid $super-grey !important;
 }
 .tbl-project .title  {
 	color: $super-grey;
