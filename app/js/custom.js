@@ -18,7 +18,7 @@ $(document).ready(function() {
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
     });
-    $("#fancytree").fancytree();
+    $("#fancytree, .all-tasks").fancytree();
     $('.fancytree-icon').each(function(){
         $(this).next('span').andSelf().wrapAll('<a class="fancytree-hover" data-toggle="popover" data-content="<div class=\'btn-group\'><button class=\'btn btn-default\'>Log Time</button><button class=\'btn btn-default\'>Start Timer</button><button class=\'btn btn-default\'>Details</button></div>">');
     });

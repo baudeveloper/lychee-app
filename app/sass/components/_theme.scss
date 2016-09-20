@@ -553,17 +553,77 @@
 		@include hyperlink-hover($medium-grey);
 	}
 }
-@include fancytree();
 
 // Project Page
 #project-dash {
 	position: relative;
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-	@include margin-and-padding(15px, 15px);
+	@include margin-and-padding(15px, 15px 15px 0);
 	.heading {
 		border-bottom: 1px solid $red;
-		@include margin-and-padding(0 0 30px 0, 0 0 10px);
+		@include margin-and-padding(0, 0);
+	}
+	.dash-content {
+		display: flex;
+		flex-wrap: wrap;
+		> div {
+			flex-grow: 1;
+			border-left: 1px solid $darkest-grey;
+		}
+		.dash-nav {
+			width: 10%;
+			height: auto;
+		}
+		.all-tasks {
+			width: 30%;
+			height: auto;
+			.btn-group {
+				width: 100%;
+				margin-top: 15px;
+				.btn {
+					width: 100%;
+					text-align: left;
+					@include font-size(16px);
+				}
+				span {
+					float: right;
+					display: block;
+					margin-top: -14px;
+				}
+				.dropdown-menu {
+					width: 100%;
+				}
+				.dropdown-menu a {
+					@include font-size(14px);
+				}
+			}
+		}
+		.task-category {
+			width: 60%;
+			height: auto;
+			display: flex;
+			flex-wrap: wrap;
+			.task-effort {
+				flex-grow: 1;
+				width: 100%;
+				border-left: none;
+				flex-direction: row;
+				border-bottom: 1px solid $darkest-grey;
+			}
+			.task-breakdown {
+				flex-grow: 1;
+				width: 50%;
+				border-left: none;
+				flex-direction: column;
+			}
+			.task-performance {
+				flex-grow: 1;
+				width: 50%;
+				flex-direction: column;
+				border-left: 1px solid $darkest-grey;
+			}
+		}
 	}
 }
 #project-team {
@@ -854,3 +914,4 @@
 		color: darken($red, 15%);
 	}
 }
+@include fancytree();

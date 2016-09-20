@@ -130,7 +130,7 @@
 }
 // Source: https://codepen.io/lbebber/pen/xrwja
 @mixin fancytree() {
-    #fancytree {
+    #fancytree, .all-tasks {
         padding: 0 15px 15px;
 
         * {
