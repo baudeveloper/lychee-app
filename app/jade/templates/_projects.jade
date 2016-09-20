@@ -42,5 +42,124 @@ main(role='main')
 				td Active
 	.page-row
 		section#project
+		section#project
+		section#bookkeeping
+			.heading
+				h2 Bookkeeping
+				a.btn-edit-bookkeeping(href="#")
+					i.fa.fa-pencil
+			table.table.table-condensed.tbl-bookkeeping
+				colgroup
+					col
+					col
+					col
+					col
+				tbody
+					tr
+						td.title Invoicing Type:
+						td Fixed Price
+						td.title Payment Terms:
+						td Net 30 Days
+					tr
+						td.title PO Number:
+						td 23425235235223
+						td.title SVN PM Folder:
+						td
+					tr
+						td.title Notes:
+						td No Notes
+						td.title
+						td
+			h3 Invoicing Contacts
+			table.table.table-condensed.tbl-invoice-contacts
+				colgroup
+					col
+					col
+				thead
+					tr
+						th Name
+						th Email
+				tbody
+					tr
+						td Prasanna Kugananthan
+						td
+							a(href="mailto:test@test.com") test@test.com
+			a.btn.btn-tertiary(href="#")
+				i.fa.fa-plus
+				| Add Contact
+			h3 Invoicing Milestones
+			small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
+			table.table.table-condensed.tbl-invoice-milestones
+				colgroup
+					col
+					col
+					col
+					col
+					col
+					col
+					col
+				thead
+					tr
+						th Milestones
+						th Date
+						th Fixed Amount
+						th Invoice Status
+						th Accounting System
+						th Invoice
+						th
+					tr
+						td Analysis & Design Complete
+						td 2016-07-25
+						td $1,010.00
+						td Not Created
+						td 
+						td
+							i.fa.fa-file-pdf-o
+							| 123456789
+						td
+							a.btn-edit-milestone(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-mileston(href="#")
+								i.fa.fa-trash
+					tr
+						td Sprint 1 Delivery to UAT
+						td 2016-07-11
+						td $2,000.00
+						td Not Created
+						td 
+						td
+							i.fa.fa-file-pdf-o
+							| 123456789
+						td
+							a.btn-edit-milestone(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-mileston(href="#")
+								i.fa.fa-trash
+					tr
+						td Sprint 2 Delivery to UAT
+						td 2016-07-11
+						td $3,000.00
+						td Not Created
+						td 
+						td
+							i.fa.fa-file-pdf-o
+							| 123456789
+						td
+							a.btn-edit-milestone(href="#")
+								i.fa.fa-pencil
+							a.btn-remove-mileston(href="#")
+								i.fa.fa-trash
+				tfoot
+					tr
+						td Total
+						td
+						td $6,010.00
+						td
+						td
+						td
+						td
+			a.btn.btn-tertiary(href="#")
+				i.fa.fa-plus
+				| Add Milestone
 		include feed.jade
 	footer Lychee 2.0.0a
