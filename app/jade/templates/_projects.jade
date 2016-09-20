@@ -183,7 +183,7 @@ main(role='main')
 				| Add Contact
 			h3 Invoicing Milestones
 			small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
-			table.table.table-condensed.tbl-invoice-milestones
+			table.tablesaw.tablesaw-swipe.table-condensed.tbl-invoice-milestones(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
 				colgroup
 					col
 					col
@@ -194,68 +194,68 @@ main(role='main')
 					col
 				thead
 					tr
-						th Milestones
-						th Date
-						th Fixed Amount
-						th Invoice Status
-						th Accounting System
-						th Invoice
-						th
+						th(data-tablesaw-priority="persist", scope="col") Milestones
+						th(data-tablesaw-priority="2", scope="col") Date
+						th(data-tablesaw-priority="3", scope="col") Fixed Amount
+						th(data-tablesaw-priority="4", scope="col") Invoice Status
+						th(data-tablesaw-priority="5", scope="col") Accounting System
+						th(data-tablesaw-priority="6", scope="col") Invoice
+						th(data-tablesaw-priority="7", scope="col")
 				tbody
 					tr
-						td Analysis & Design Complete
-						td 2016-07-25
-						td $1,010.00
-						td Not Created
-						td 
-						td
+						td.tablesaw-cell-persist Analysis & Design Complete
+						td.tablesaw-cell-hidden 2016-07-25
+						td.tablesaw-cell-hidden $1,010.00
+						td.tablesaw-cell-hidden Not Created
+						td.tablesaw-cell-hidden 
+						td.tablesaw-cell-hidden
 							a.btn-invoice(href="#")
 								i.fa.fa-file-pdf-o
 							| 123456789
-						td
+						td.tablesaw-cell-hidden
 							a.btn-edit-milestone(href="#")
 								i.fa.fa-pencil
 							a.btn-remove-mileston(href="#")
 								i.fa.fa-trash
 					tr
-						td Sprint 1 Delivery to UAT
-						td 2016-07-11
-						td $2,000.00
-						td Not Created
-						td 
-						td
+						td.tablesaw-cell-persist Sprint 1 Delivery to UAT
+						td.tablesaw-cell-hidden 2016-07-11
+						td.tablesaw-cell-hidden $2,000.00
+						td.tablesaw-cell-hidden Not Created
+						td.tablesaw-cell-hidden 
+						td.tablesaw-cell-hidden
 							a.btn-invoice(href="#")
 								i.fa.fa-file-pdf-o
 							| 123456789
-						td
+						td.tablesaw-cell-hidden
 							a.btn-edit-milestone(href="#")
 								i.fa.fa-pencil
 							a.btn-remove-mileston(href="#")
 								i.fa.fa-trash
 					tr
-						td Sprint 2 Delivery to UAT
-						td 2016-07-11
-						td $3,000.00
-						td Not Created
-						td 
-						td
+						td.tablesaw-cell-persist Sprint 2 Delivery to UAT
+						td.tablesaw-cell-hidden 2016-07-11
+						td.tablesaw-cell-hidden $3,000.00
+						td.tablesaw-cell-hidden Not Created
+						td.tablesaw-cell-persist 
+						td.tablesaw-cell-hidden
 							a.btn-invoice(href="#")
 								i.fa.fa-file-pdf-o
 							| 123456789
-						td
+						td.tablesaw-cell-hidden
 							a.btn-edit-milestone(href="#")
 								i.fa.fa-pencil
 							a.btn-remove-mileston(href="#")
 								i.fa.fa-trash					
 				tfoot
 					tr
-						td Total
-						td
-						td $6,010.00
-						td
-						td
-						td
-						td
+						td.tablesaw-cell-persist Total
+						td.tablesaw-cell-hidden
+						td.tablesaw-cell-hidden $6,010.00
+						td.tablesaw-cell-hidden
+						td.tablesaw-cell-hidden
+						td.tablesaw-cell-hidden
+						td.tablesaw-cell-hidden
 			a.btn.btn-tertiary(href="#")
 				i.fa.fa-plus
 				| Add Milestone
