@@ -116,18 +116,13 @@
 
 	.team-row {
 		margin: 50px 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
-	// .team-member {
-	// 	@include make-sm-column(4);
-	// 	@include make-md-column(15);
-	// 	@include make-lg-column(15);
-	// 	@media #{$tablet__up} {
-	// 		@extend .col-15;
-	// 	}
-	// }
-
 	.team-member img {
+		width: auto;
 		transition: border 0.5s;
 		border: 5px solid transparent;
 
