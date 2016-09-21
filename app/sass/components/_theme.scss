@@ -126,6 +126,14 @@
 		}
 	}
 
+	.team-member a {
+		display: inline-block;
+	}
+
+	.team-member figure {
+		display: inline-block;
+	}
+
 	.team-member img {
 		width: auto;
 		transition: border 0.5s;
