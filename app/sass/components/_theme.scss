@@ -761,21 +761,34 @@
 		display: inline-block;
 		@include font-size(16px);
 	}
+	td, th {
+		font-size: 14px !important;
+		@media #{$tablet} {
+			font-size: 12px !important;
+		}
+	}
 	.tbl-assigned-members {
 		margin-bottom: 15px;
 		border: 1px solid $darkest-grey;
+		.tablesaw-cell-persist {
+			border: none;
+		}
+		tr {
+			border-bottom: 1px solid $darkest-grey;
+		}
 		th {
 			color: $grey;
 			border: none;
 			text-align: center;
-			@include font-size(14px);
 			font-weight: $font-weight-bold;
 		}
 		td {
 			text-align: center;
-			@include font-size(14px);
 		}
 		thead {
+			background-color: $extra-light-grey;
+		}
+		tbody tr:nth-child(even) {
 			background-color: $extra-light-grey;
 		}
 		a {
@@ -794,13 +807,16 @@
 		width: 100%;
 	}
 	.well {
-		padding: 10px;
 		border-radius: 0;
 		box-shadow: none;
 		border-color: #ccc;
 		text-align: center;
 		@include font-size(14px);
 		background-color: #fafafa;
+		@include margin-and-padding(0, 10px);
+		@media #{$tablet} {
+			@include margin-and-padding(0 0 15px, 10px);
+		}
 	}
 	.btn-add-user {
 		@media #{$tablet} {
