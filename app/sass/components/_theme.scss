@@ -556,7 +556,14 @@
 	@include margin-and-padding(15px, 15px 15px 0);
 	.heading {
 		border-bottom: 1px solid $red;
-		@include margin-and-padding(0, 0);
+		@include margin-and-padding(0 0 20px 0, 0 0 10px);
+		h2 {
+			color: $red;
+			display: inline-block;
+			@include font-size(18px);
+			text-transform: uppercase;
+			@include margin-and-padding(10px 0 0, 0);
+		}
 	}
 	.dash-content {
 		display: flex;
@@ -686,12 +693,13 @@
 	@include margin-and-padding(15px, 15px);
 	.heading {
 		border-bottom: 1px solid $red;
-		@include margin-and-padding(0 0 30px 0, 0 0 10px);
+		@include margin-and-padding(0 0 20px 0, 0 0 10px);
 		h2 {
 			color: $red;
 			display: inline-block;
 			@include font-size(18px);
 			text-transform: uppercase;
+			@include margin-and-padding(10px 0 0, 0);
 		}
 	}
 	h3 {
