@@ -982,6 +982,10 @@
 			td {
 				font-weight: $font-weight-bold;
 			}
+			a {
+				color: $grey;
+				@include hyperlink-hover($grey);
+			}
 		}
 		a {
 			color: $red;
