@@ -20,6 +20,15 @@ button {
 .dropdown-menu {
     margin: 0;
     border-radius: 0;
+    a:hover {
+      border-radius: 0;
+    }
+    a:active {
+      border-radius: 0;
+    }
+    a:focus {
+      border-radius: 0;
+    }
 }
 // Breadcrumb
 

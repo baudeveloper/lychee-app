@@ -48,12 +48,12 @@
 		}
 	}
 
-	ul {
+	.pagination {
 		margin: 0;
 		padding: 0;
 	}
 
-	li a {
+	.pagination li a {
 		color: $grey;
 		border: none;
 		background: none;
@@ -73,7 +73,7 @@
 		}
 	}
 
-	li:first-of-type a {
+	.pagination li:first-of-type a {
 		padding-left: 0;
 		margin-right: 10px;
 		padding-right: 10px;
@@ -88,7 +88,7 @@
 		}
 	}
 
-	li.disabled a {
+	.pagination li.disabled a {
 		color: $darkest-grey;
 		border: none;
 		background: none;
@@ -620,7 +620,7 @@
 		td {
 			color: $black;
 			padding: 2px !important;
-			border: none !important;			
+			border: none !important;
 			text-align: left !important;
 			&:first-child+td+td+td {
 				border-left: 1px solid $super-grey !important;
