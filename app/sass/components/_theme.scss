@@ -597,6 +597,57 @@
 			}
 		}
 	}
+	.tbl-portal-users {
+		margin-bottom: 15px;
+		border: 1px solid $darkest-grey;
+		td {
+			text-align: center;
+		}
+		td:first-child {
+			text-align: left;
+		}
+		td:last-child {
+			text-align: right;
+		}
+		tr {
+			border-color: $darkest-grey;
+		}
+		thead {
+			background-color: $extra-light-grey;
+		}
+		tbody td:first-of-type + td + td {
+			color: $red;
+		}
+		tbody tr:nth-child(even) {
+			background-color: $extra-light-grey;
+		}
+		tfoot {
+			background-color: $lightest-red;
+			td {
+				font-weight: $font-weight-bold;
+			}
+			a {
+				color: $grey;
+				@include hyperlink-hover($grey);
+			}
+		}
+		a {
+			color: $red;
+			&:hover {
+				color: darken($red, 15%);
+			}
+		}
+		.btn-invoice {
+			color: $red;
+			&:hover {
+				color: darken($red, 15%);
+			}
+		}
+		.fa-file-pdf-o {
+			color: $red;
+			margin-right: 5px;
+		}
+	}
 	@include fancytree();
 }
 #project-dash {
@@ -897,29 +948,26 @@
 		display: block;
 		min-width: 500px;
 		col {
+			width: auto;
 			// Odd
 			&:first-child {
-				width: auto;
 				min-width: 125px;
 			}
 			&:first-child+col+col {
-				width: auto;
 				min-width: 125px;
 			}
 			// Even
 			&:first-child+col {
-				width: auto;
 				min-width: 150px;
 			}
 			&:last-child {
-				width: auto;
 				min-width: 150px;
 			}
 		}
 		td {
+			padding: 2px;
+			border: none;
 			color: $black;
-			padding: 2px !important;
-			border: none !important;
 			&.title {
 				color: $super-grey;
 			}
@@ -928,80 +976,51 @@
 	.tbl-invoice-contacts {
 		margin-bottom: 15px;
 		border: 1px solid $darkest-grey;
-		.tablesaw-cell-persist {
-			border: none;
-		}
-		thead {
-			background-color: $extra-light-grey;
-		}
-		tbody tr:nth-child(even) {
-			background-color: $extra-light-grey;
-		}
-		tr {
-			border-bottom: 1px solid $darkest-grey;
-		}
 		td {
 			text-align: center;
+			border-color: $darkest-grey;
+		}
+		tr {
+			border-color: $darkest-grey;
+		}
+		thead, tbody tr:nth-child(even) {
+			background-color: $extra-light-grey;
 		}
 		a {
 			color: $red;
-			&:hover {
-				color: darken($red, 15%);
-			}
-		}
-		.fa-file-pdf-o {
-			color: $red;
-			margin-right: 5px;
+			@include hyperlink-hover($red);
 		}
 	}
 	.tbl-invoice-milestones {
 		margin-bottom: 15px;
 		border: 1px solid $darkest-grey;
 		.tablesaw-cell-persist {
-			border: none;
-		}
-		tr {
-			border-bottom: 1px solid $darkest-grey;
+			border-right: none;
 		}
 		td {
 			text-align: center;
+			border-color: $darkest-grey;
 		}
-		thead {
-			background-color: $extra-light-grey;
+		tr {
+			border-color: $darkest-grey;
 		}
-		tbody {
-			td:first-of-type + td + td {
-				color: $red;
-			}
+		thead tr {
+			border-bottom: 1px solid $darkest-grey;
 		}
-		tbody tr:nth-child(even) {
+		thead, tbody tr:nth-child(even) {
 			background-color: $extra-light-grey;
 		}
 		tfoot {
+			font-weight: $font-weight-bold;
 			background-color: $lightest-red;
-			td {
-				font-weight: $font-weight-bold;
-			}
 			a {
 				color: $grey;
 				@include hyperlink-hover($grey);
 			}
 		}
-		a {
+		a, .btn-invoice {
 			color: $red;
-			&:hover {
-				color: darken($red, 15%);
-			}
-		}
-		.btn-invoice {
-			color: $red;
-			&:hover {
-				color: darken($red, 15%);
-			}
-		}
-		.fa-file-pdf-o {
-			color: $red;
-			margin-right: 5px;
+			@include hyperlink-hover($red);
 		}
 	}
 }
