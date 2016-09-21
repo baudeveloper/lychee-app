@@ -649,6 +649,26 @@
 		}
 	}
 	@include fancytree();
+	table {
+		color: $grey;
+		font-size: 14px !important;
+		@media #{$tablet} {
+			font-size: 12px !important;
+		}
+		td, th {
+			text-align: center;
+		}
+		tr, td, th {
+			border-color: $darkest-grey !important;
+		}
+		thead th {
+			background-color: $extra-light-grey !important;
+			border-bottom: 1px solid $darkest-grey !important;
+		}
+		tbody tr:nth-child(even) {
+			background-color: $extra-light-grey !important;
+		}
+	}
 }
 #project-dash {
 	@include margin-and-padding(15px, 15px 15px 0);
@@ -927,21 +947,7 @@
 	.btn-edit-bookkeeping {
 		color: $red;
 		margin-left: 10px;
-		&:hover {
-			color: darken($red, 15%);
-		}
-	}
-	th {
-		color: $grey;
-		border: none;
-		text-align: center;
-		font-weight: $font-weight-bold;
-	}
-	td, th {
-		font-size: 14px !important;
-		@media #{$tablet} {
-			font-size: 12px !important;
-		}
+		@include hyperlink-hover($red);
 	}
 	.tbl-bookkeeping {
 		width: auto;
@@ -949,14 +955,12 @@
 		min-width: 500px;
 		col {
 			width: auto;
-			// Odd
 			&:first-child {
 				min-width: 125px;
 			}
 			&:first-child+col+col {
 				min-width: 125px;
 			}
-			// Even
 			&:first-child+col {
 				min-width: 150px;
 			}
@@ -964,10 +968,14 @@
 				min-width: 150px;
 			}
 		}
+		tr {
+			background: none !important;
+		}
 		td {
 			padding: 2px;
 			border: none;
 			color: $black;
+			text-align: left;
 			&.title {
 				color: $super-grey;
 			}
@@ -976,16 +984,6 @@
 	.tbl-invoice-contacts {
 		margin-bottom: 15px;
 		border: 1px solid $darkest-grey;
-		td {
-			text-align: center;
-			border-color: $darkest-grey;
-		}
-		tr {
-			border-color: $darkest-grey;
-		}
-		thead, tbody tr:nth-child(even) {
-			background-color: $extra-light-grey;
-		}
 		a {
 			color: $red;
 			@include hyperlink-hover($red);
@@ -997,18 +995,13 @@
 		.tablesaw-cell-persist {
 			border-right: none;
 		}
-		td {
-			text-align: center;
-			border-color: $darkest-grey;
+		a, .btn-invoice {
+			color: $red;
+			@include hyperlink-hover($red);
 		}
-		tr {
-			border-color: $darkest-grey;
-		}
-		thead tr {
-			border-bottom: 1px solid $darkest-grey;
-		}
-		thead, tbody tr:nth-child(even) {
-			background-color: $extra-light-grey;
+		th {
+			border-left: none;
+			border-right: none;
 		}
 		tfoot {
 			font-weight: $font-weight-bold;
@@ -1017,10 +1010,12 @@
 				color: $grey;
 				@include hyperlink-hover($grey);
 			}
-		}
-		a, .btn-invoice {
-			color: $red;
-			@include hyperlink-hover($red);
+			td {
+				font-size: 14px !important;
+				@media #{$tablet} {
+					font-size: 12px !important;
+				}
+			}
 		}
 	}
 }
