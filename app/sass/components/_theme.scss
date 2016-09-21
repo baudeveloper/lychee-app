@@ -579,126 +579,126 @@
 }
 #project-dash {
 	@include margin-and-padding(15px, 15px 15px 0);
-	.dash-content {
+}
+.dash-content {
+	display: flex;
+	flex-wrap: wrap;
+	> div {
+		flex-grow: 1;
+		border-left: 1px solid $darkest-grey;
+	}
+	> div:first-child {
+		border-left: none;
+	}
+	.dash-nav {
+		width: 10%;
+		height: auto;
+	}
+	.all-tasks {
+		width: 30%;
+		height: auto;
+		.btn-group {
+			width: 100%;
+			margin-top: 15px;
+			.btn {
+				width: 100%;
+				text-align: left;
+				@include font-size(16px);
+			}
+			span {
+				position: absolute;
+				top: 14px;
+				right: 10px;
+			}
+			.dropdown-menu {
+				width: 100%;
+			}
+			.dropdown-menu a {
+				@include font-size(14px);
+			}
+		}
+	}
+	.task-category {
+		width: 60%;
+		height: auto;
 		display: flex;
 		flex-wrap: wrap;
-		> div {
+		.task-effort {
 			flex-grow: 1;
+			width: 100%;
+			border-left: none;
+			flex-direction: row;
+			border-bottom: 1px solid $darkest-grey;
+		}
+		.task-breakdown {
+			flex-grow: 1;
+			width: 50%;
+			border-left: none;
+			flex-direction: column;
+		}
+		.task-performance {
+			flex-grow: 1;
+			width: 50%;
+			flex-direction: column;
 			border-left: 1px solid $darkest-grey;
 		}
-		> div:first-child {
-			border-left: none;
-		}
-		.dash-nav {
-			width: 10%;
-			height: auto;
-		}
-		.all-tasks {
-			width: 30%;
-			height: auto;
-			.btn-group {
-				width: 100%;
-				margin-top: 15px;
-				.btn {
-					width: 100%;
-					text-align: left;
-					@include font-size(16px);
-				}
-				span {
-					position: absolute;
-					top: 14px;
-					right: 10px;
-				}
-				.dropdown-menu {
-					width: 100%;
-				}
-				.dropdown-menu a {
-					@include font-size(14px);
-				}
-			}
-		}
-		.task-category {
-			width: 60%;
-			height: auto;
-			display: flex;
-			flex-wrap: wrap;
-			.task-effort {
-				flex-grow: 1;
-				width: 100%;
-				border-left: none;
-				flex-direction: row;
-				border-bottom: 1px solid $darkest-grey;
-			}
-			.task-breakdown {
-				flex-grow: 1;
-				width: 50%;
-				border-left: none;
-				flex-direction: column;
-			}
-			.task-performance {
-				flex-grow: 1;
-				width: 50%;
-				flex-direction: column;
-				border-left: 1px solid $darkest-grey;
-			}
-		}
-		h3 {
-			color: $red;
-			text-align: center;
-			@include font-size(16px);
-			text-transform: uppercase;
-		}
-		img {
-			width: 100%;
-		}
 	}
-	.dash-nav ul {
-		margin: 0;
-		padding: 0;
-		li {
-			padding: 5px 0;
-			list-style-type: none;
-			border-bottom: 1px solid $super-extra-light-grey;
-		}
-		li:last-child,
-		li:nth-last-child(2), {
-			border-bottom: none;
-		}
-		a {
-			display: block;
+	h3 {
+		color: $red;
+		text-align: center;
+		@include font-size(16px);
+		text-transform: uppercase;
+	}
+	img {
+		width: 100%;
+	}
+}
+.dash-nav ul {
+	margin: 0;
+	padding: 0;
+	li {
+		padding: 5px 0;
+		list-style-type: none;
+		border-bottom: 1px solid $super-extra-light-grey;
+	}
+	li:last-child,
+	li:nth-last-child(2), {
+		border-bottom: none;
+	}
+	a {
+		display: block;
+		color: $super-extra-light-grey;
+		@include font-size(14px);
+		span {
+			transition: all .4s;
 			color: $super-extra-light-grey;
-			@include font-size(14px);
-			span {
-				transition: all .4s;
-				color: $super-extra-light-grey;
-			}
-		}
-		a:hover {
-			color: $red;
-			span {
-				color: $red;
-				transition: all .4s;
-			}
-		}
-		a:focus {
-			color: $red;
-			span {
-				color: $red;
-			}
-		}
-		.tasks-toggle {
-			margin-top: 30px;
-			color: $medium-grey;
-			span {
-				color: $medium-grey;
-			}
 		}
 	}
-	.dash-nav.switch {
-		width: 1%;
-		.tasks-toggle .fa::before {
-			content: '\f178';
+	a:hover {
+		color: $red;
+		span {
+			color: $red;
+			transition: all .4s;
 		}
+	}
+	a:focus {
+		color: $red;
+		span {
+			color: $red;
+		}
+	}
+	.tasks-toggle {
+		margin-top: 30px;
+		color: $medium-grey;
+		span {
+			color: $medium-grey;
+		}
+	}
+}
+.dash-nav.switch {
+	width: 1%;
+	.tasks-toggle .fa::before {
+		content: '\f178';
 	}
 }
 #project-team {
