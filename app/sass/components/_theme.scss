@@ -575,6 +575,28 @@
 			color: darken($red, 15%);
 		}
 	}
+	.tbl-project-info {
+		max-width: 350px;
+		margin: 37px 30px 0 0;
+		@include font-size(14px);
+		@media #{$desktop} {
+			margin: 0;
+			display: block;
+			max-width: 350px;
+			float: none !important;
+		}
+		td {
+			color: $black;
+			padding: 2px !important;
+			border: none !important;
+			&:first-child+td+td+td {
+				border-left: 1px solid $super-grey !important;
+			}
+			&.title {
+				color: $super-grey;
+			}
+		}
+	}
 	@include fancytree();
 }
 #project-dash {
@@ -703,7 +725,10 @@
 }
 #project-team {
 	h3 {
+		color: $grey;
+		display: inline-block;
 		margin: 0 15px 15px 0;
+		@include font-size(16px);
 	}
 	.assigned-members-group {
 		float: left;
@@ -755,11 +780,6 @@
 		@media #{$tablet} {
 			margin-bottom: 15px;
 		}
-	}
-	h3 {
-		color: $grey;
-		display: inline-block;
-		@include font-size(16px);
 	}
 	td, th {
 		font-size: 14px !important;
@@ -825,6 +845,25 @@
 	}
 }
 #bookkeeping {
+	h3 {
+		color: $grey;
+		@include font-size(16px);
+	}
+	small {
+		float: left;
+		width: 70%;
+		color: $grey;
+		display: inline;
+		font-style: italic;
+		margin-bottom: 15px;
+		@include font-size(12px);
+		@media #{$tablet__up} {
+			width: 80%;
+		}
+	}
+	.btn-add-contact {
+		margin-bottom: 15px;
+	}
 	.btn-edit-bookkeeping {
 		color: $red;
 		margin-left: 10px;
@@ -952,45 +991,4 @@
 			margin-right: 5px;
 		}
 	}
-	h3 {
-		color: $grey;
-		@include font-size(16px);
-	}
-	small {
-		float: left;
-		width: 70%;
-		color: $grey;
-		display: inline;
-		font-style: italic;
-		margin-bottom: 15px;
-		@include font-size(12px);
-		@media #{$tablet__up} {
-			width: 80%;
-		}
-	}
-	.btn-add-contact {
-		margin-bottom: 15px;
-	}
 }
-.tbl-project-info {
-	max-width: 350px;
-	margin: 37px 30px 0 0;
-	@include font-size(14px);
-	@media #{$desktop} {
-		margin: 0;
-		display: block;
-		max-width: 350px;
-		float: none !important;
-	}
-	td {
-		color: $black;
-		padding: 2px !important;
-		border: none !important;
-		&:first-child+td+td+td {
-			border-left: 1px solid $super-grey !important;
-		}
-		&.title {
-			color: $super-grey;
-		}
-	}
-} // Small table in Projects page.
