@@ -733,6 +733,9 @@
 		margin: 0 15px 15px 0;
 		@include font-size(16px);
 	}
+	.btn {
+		min-width: 200px;
+	}
 	.assigned-members-group {
 		float: left;
 		width: 40%;
@@ -863,6 +866,9 @@
 		@media #{$tablet__up} {
 			width: 80%;
 		}
+	}
+	.btn {
+		min-width: 200px;
 	}
 	.btn-add-contact {
 		margin-bottom: 15px;
