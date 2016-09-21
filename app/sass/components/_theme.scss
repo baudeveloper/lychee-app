@@ -620,8 +620,8 @@
 		td {
 			color: $black;
 			padding: 2px !important;
-			border: none !important;
-
+			border: none !important;			
+			text-align: left !important;
 			&:first-child+td+td+td {
 				border-left: 1px solid $super-grey !important;
 			}
