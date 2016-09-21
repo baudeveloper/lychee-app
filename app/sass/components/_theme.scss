@@ -551,7 +551,6 @@
 
 // Project Page
 #project-dash {
-	position: relative;
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	@include margin-and-padding(15px, 15px 15px 0);
@@ -585,9 +584,9 @@
 					@include font-size(16px);
 				}
 				span {
-					float: right;
-					display: block;
-					margin-top: -14px;
+					position: absolute;
+					top: 15px;
+					right: 10px;
 				}
 				.dropdown-menu {
 					width: 100%;
