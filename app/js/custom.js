@@ -18,7 +18,7 @@ $(document).ready(function() {
     var $container = $('.team-row');
     $container.isotope({
       itemSelector: '.team-member'
-    });
+    });cellsByRow
     $('#select-usertype').change( function() {
       $container.isotope({
         filter: this.value
