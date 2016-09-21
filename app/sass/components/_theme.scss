@@ -550,10 +550,7 @@
 }
 
 // Project Page
-#project-dash {
-	background-color: $white;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-	@include margin-and-padding(15px, 15px 15px 0);
+.page-project {
 	.heading {
 		border-bottom: 1px solid $red;
 		@include margin-and-padding(0 0 20px 0, 0 0 10px);
@@ -565,6 +562,11 @@
 			@include margin-and-padding(10px 0 0, 0);
 		}
 	}
+}
+#project-dash {
+	background-color: $white;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+	@include margin-and-padding(15px, 15px 15px 0);
 	.dash-content {
 		display: flex;
 		flex-wrap: wrap;
@@ -691,17 +693,6 @@
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	@include margin-and-padding(15px, 15px);
-	.heading {
-		border-bottom: 1px solid $red;
-		@include margin-and-padding(0 0 20px 0, 0 0 10px);
-		h2 {
-			color: $red;
-			display: inline-block;
-			@include font-size(18px);
-			text-transform: uppercase;
-			@include margin-and-padding(10px 0 0, 0);
-		}
-	}
 	h3 {
 		margin: 0 15px 15px 0;
 	}
@@ -828,22 +819,11 @@
 	background-color: $white;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	@include margin-and-padding(15px, 15px);
-	.heading {
-		border-bottom: 1px solid $red;
-		@include margin-and-padding(0 0 20px 0, 0 0 10px);
-		h2 {
-			color: $red;
-			display: inline-block;
-			@include font-size(18px);
-			text-transform: uppercase;
-			@include margin-and-padding(10px 0 0, 0);
-		}
-		.btn-edit-bookkeeping {
-			color: $red;
-			margin-left: 10px;
-			&:hover {
-				color: darken($red, 15%);
-			}
+	.btn-edit-bookkeeping {
+		color: $red;
+		margin-left: 10px;
+		&:hover {
+			color: darken($red, 15%);
 		}
 	}
 	th {
