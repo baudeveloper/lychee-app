@@ -567,6 +567,15 @@
 		box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 		@include margin-and-padding(15px, 15px);
 	}
+	.btn-edit-project {
+		color: $red;
+		margin-left: 10px;
+		@include font-size(20px);
+		&:hover {
+			color: darken($red, 15%);
+		}
+	}
+	@include fancytree();
 }
 #project-dash {
 	@include margin-and-padding(15px, 15px 15px 0);
@@ -985,12 +994,3 @@
 		}
 	}
 } // Small table in Projects page.
-.btn-edit-project {
-	color: $red;
-	margin-left: 10px;
-	@include font-size(20px);
-	&:hover {
-		color: darken($red, 15%);
-	}
-}
-@include fancytree();
