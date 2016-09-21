@@ -15,9 +15,9 @@
 $(document).ready(function() {
 
     /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically */
-    var $container = $('.team-row');
+    var $container = $('#team-list .team-row');
     $container.isotope({
-      itemSelector: '.team-member'
+      itemSelector: '#team-list .team-member'
     });
     $('#select-usertype').change( function() {
       $container.isotope({
