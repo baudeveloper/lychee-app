@@ -12,18 +12,20 @@
 //   }
 // }
 
-$(document).ready(function() {
-
-    /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically */
-    var $container = $('#team-list .team-row');
+$(window).load(function() {
+  /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically | http://stackoverflow.com/questions/10163699/jquery-isotope-option-for-auto-height-on-element */
+  var $container = $('#team-list .team-row');
+  $container.isotope({
+    itemSelector: '#team-list .team-member'
+  });
+  $('#select-usertype').change( function() {
     $container.isotope({
-      itemSelector: '#team-list .team-member'
+      filter: this.value
     });
-    $('#select-usertype').change( function() {
-      $container.isotope({
-        filter: this.value
-      });
-    });
+  });
+});
+
+$(document).ready(function() {
 
     /* Project Page */
     $(".tasks-toggle").click(function() {
