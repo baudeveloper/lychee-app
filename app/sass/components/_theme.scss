@@ -562,10 +562,13 @@
 			@include margin-and-padding(10px 0 0, 0);
 		}
 	}
+	.page-row > section {
+		background-color: $white;
+		box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+		@include margin-and-padding(15px, 15px);
+	}
 }
 #project-dash {
-	background-color: $white;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	@include margin-and-padding(15px, 15px 15px 0);
 	.dash-content {
 		display: flex;
@@ -690,9 +693,6 @@
 	}
 }
 #project-team {
-	background-color: $white;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-	@include margin-and-padding(15px, 15px);
 	h3 {
 		margin: 0 15px 15px 0;
 	}
@@ -816,9 +816,6 @@
 	}
 }
 #bookkeeping {
-	background-color: $white;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-	@include margin-and-padding(15px, 15px);
 	.btn-edit-bookkeeping {
 		color: $red;
 		margin-left: 10px;
