@@ -14,6 +14,15 @@
 
 $(document).ready(function() {
 
+    /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ */
+    var $container = $('.team-row');
+    $container.isotope({})
+    $('#select-usertype').change( function() {
+      $container.isotope({
+        filter: this.value
+      });
+    });
+
     /* Project Page */
     $(".tasks-toggle").click(function() {
         $(".dash-nav").toggleClass("switch");

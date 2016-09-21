@@ -8,9 +8,9 @@ main(role="main")
 				.form-group
 					label(for="select-usertype") User Type:
 					select.selectpicker(id="select-usertype")
-						option All
-						option Employees
-						option Contractors
+						option(value="*") All
+						option(value=".employees") Employees
+						option(value=".contractors") Contractors
 				.form-group
 					.checkbox
 						label
@@ -74,97 +74,98 @@ main(role="main")
 							li.disabled
 								a(href='#') Z
 			.team-row
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Dallas Richardson's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson")
 					.info
 						span Dallas Richardson
 						span Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Dan Sarbu's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dan-sarbu.png", alt="Dan Sarbu")
 					.info
 						span Dan Sarbu
 						span Director - Software Development
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Daniel Christo's Assignments")
 						figure
 							img.img-circle(src="images/team-member-daniel-christo.png", alt="Daniel Christo")
 					.info
 						span Daniel Christo
 						span Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Daniel Maugeri's Assignments")
 						figure
 							img.img-circle(src="images/team-member-daniel-maugeri.png", alt="Daniel Maugeri")
 					.info
 						span Daniel Maugeri
 						span Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Dave Olsen's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dave-olsen.png", alt="Dave Olsen")
 					.info
 						span Dave Olsen (C)
 						span Data Warehouse Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Devin Ebersbach's Assignments")
 						figure
 							img.img-circle(src="images/team-member-devin-ebersbach.png", alt="Devin Ebersbach")
 					.info
 						span Devin Ebersbach
 						span Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Dilip Raghavan's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dilip-raghavan.png", alt="Dilip Raghavan")
 					.info
 						span Dilip Raghavan
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+						span Undefined
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Divyank Katira's Assignments")
 						figure
 							img.img-circle(src="images/team-member-divyank-katira.png", alt="Divyank Katira")
 					.info
 						span Divyank Katira
 						span Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Dmitry Kouxenko's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dmitry-kouxenko.png", alt="Dmitry Kouxenko")
 					.info
 						span Dmitry Kouxenko (C)
 						span Sr. Technical Developer
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Dmitry Kozhushkin's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dmitry-kozhushkin.png", alt="Dmitry Kozhushkin")
 					.info
 						span Dmitry Kozhushkin
 						span Technical Architect
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Dmitry Rogozhkin's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dmitry-rogozhkin.png", alt="Dmitry Rogozhkin")
 					.info
 						span Dmitry Rogozhkin
 						span Technical Architect
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Donghui Li's Assignments")
 						figure
 							img.img-circle(src="images/team-member-donghui-li.png", alt="Donghui Li")
 					.info
 						span Donghui Li
 						span Project Director
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.employees
 					a(href="team-member.html", title="Check Drew Atkins's Assignments")
 						figure
 							img.img-circle(src="images/team-member-drew-atkins.png", alt="Drew Atkins")
 					.info
 						span Drew Atkins
 						span Principal
-				.team-member.text-center.col-sm-4.col-md-3.col-lg-15
+				.team-member.text-center.col-sm-4.col-md-3.col-lg-15.contractors
 					a(href="team-member.html", title="Check Dustin Gadal's Assignments")
 						figure
 							img.img-circle(src="images/team-member-dustin-gadal.png", alt="Dustin Gadal")
