@@ -650,7 +650,6 @@
 			@include hyperlink-hover($red);
 		}
 	}
-	@include fancytree();
 }
 
 #project-dash {
@@ -1032,3 +1031,5 @@
 		}
 	}
 }
+
+@include fancytree();
