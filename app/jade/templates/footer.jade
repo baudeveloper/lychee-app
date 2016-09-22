@@ -20,17 +20,17 @@
 										i.fa.fa-search(aria-hidden='true')
 								ul
 									li.team-member
-											figure
-													img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-											.info
-													span Abdikadir Kedie
-													span Technical Architect
+										figure
+											img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+										.info
+											span Abdikadir Kedie
+											span Technical Architect
 									li.team-member
-											figure
-													img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-											.info
-													span Cindy Lopes
-													span Technical Developer
+										figure
+											img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+										.info
+											span Cindy Lopes
+											span Technical Developer
 							.col-sm-6
 								.bg-color
 									p
@@ -61,48 +61,119 @@
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 .modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-					h4.modal-title FFD-C2029 - UI Design
-				.modal-body
-					nav
-						p #[span Project:] RONE-0757 (Remote Document Delivery)
-						a.modal-details.pull-right(href="#") Details
-							i.fa.fa-caret-down(aria-hidden='true')
-						.modal-info
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
-					.container
-						.row
-							.col-sm-6
-								img(src="http://placehold.it/1000x1000", alt="Graph")
-							.col-sm-6
-								ul
-									li
-										.title Estimated                    
-										.description 750 hrs
-									li
-										.title Spent
-											span (33% of Estimate)                    
-										.description 250 hrs
-									li
-										.title Remaining 
-											span (66% of Estimate)                    
-										.description 500 hrs
-				.modal-footer
-					.right
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Log Time
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4.modal-title FFD-C2029 - UI Design
+			.modal-body
+				nav
+					p #[span Project:] RONE-0757 (Remote Document Delivery)
+					a.modal-details.pull-right(href="#") Details
+						i.fa.fa-caret-down(aria-hidden='true')
+					.modal-info
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
+				.container
+					.row
+						.col-sm-6
+							img(src="http://placehold.it/1000x1000", alt="Graph")
+						.col-sm-6
+							ul
+								li
+									.title Estimated                    
+									.description 750 hrs
+								li
+									.title Spent
+										span (33% of Estimate)                    
+									.description 250 hrs
+								li
+									.title Remaining 
+										span (66% of Estimate)                    
+									.description 500 hrs
+			.modal-footer
+				.right
+					button.btn.btn-default(type='button', data-dismiss='modal') Close
+					button.btn.btn-primary(type='button') Log Time
 .modal.fade(id='tasks-list-modal', tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-					//- h4.modal-title FFD-C2029 - UI Design
-				.modal-body					
-				.modal-footer
-					.right
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-tertiary(type='button') Add
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				//- h4.modal-title FFD-C2029 - UI Design
+			.modal-body					
+			.modal-footer
+				.right
+					button.btn.btn-default(type='button', data-dismiss='modal') Close
+					button.btn.btn-tertiary(type='button') Add
+.modal.fade(id='assignment-modal', tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4.modal-title Assignment
+			.modal-body
+				form.form-horizontal
+					.form-group
+						label.col-sm-4 Project:
+						label.col-sm-8 RONE-0757 (Remote Document Delivery)
+					.form-group
+						label.col-sm-4 User:
+						label.col-sm-8 Prasanna Kugananthan
+					.bg
+						.form-group
+							label.col-sm-4.control-label Start Date:
+							.col-sm-8								
+								.input-group
+									input.input-startdate.form-control(type="text", placeholder="2016-07-08")
+									span.input-group-btn
+										button.btn.btn-default.btn-startdate(type='button')
+											i.fa.fa-calendar
+						.form-group
+							label.col-sm-4.control-label End Date:
+							.col-sm-8
+								.input-group
+									input.input-enddate.form-control(type="text", placeholder="2017-04-27")
+									span.input-group-btn
+										button.btn.btn-default.btn-enddate(type='button')
+											i.fa.fa-calendar
+						.form-group
+							label.col-sm-4.control-label Rate($/hr)
+							.col-sm-8
+								input.form-control(type="text", placeholder="75.00")
+						.form-group
+							label.col-sm-4.control-label Allocation(%)
+							.col-sm-8
+								input.form-control(type="text", placeholder="100.0")
+						.form-group.contributions
+							label.col-sm-4 Contributions to Accural
+							.col-sm-8
+								input(type='checkbox')
+					.bg
+						.form-group
+							label Project Roles
+							.checkbox
+								label
+									input(type='checkbox')
+									| Project Director
+							.checkbox
+								label
+									input(type='checkbox')
+									| Project Manager
+							.checkbox
+								label
+									input(type='checkbox')
+									| Team Lead
+							.checkbox
+								label
+									input(type='checkbox')
+									| Approver
+							.checkbox
+								label
+									input(type='checkbox')
+									| Team Member
+			.modal-footer
+				.right
+					button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+					button.btn.btn-tertiary(type='button') Ok

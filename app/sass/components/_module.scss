@@ -20,7 +20,8 @@
   17. Modal: Standard
   18. Modal: To Do
   19. Modal: Task Details
-  20. Tablesaw Styles
+  20. Modal: Assignments
+  21. Tablesaw Styles
 
 */
 @mixin inline-input {
@@ -1278,6 +1279,56 @@
         }
         @include typeahead-standard();
     }
+}
+@mixin modal-content-assignment() {
+  #assignment-modal {
+    @include font-size(14px);
+    .bg {
+      padding: 20px 0 5px;
+      background-color: $super-extra-light-grey;
+      &:last-of-type {
+        margin-top: 15px;
+        padding: 15px;
+      }
+    }
+    form {
+      padding: 30px 0 0;
+    }
+    .form-group {
+      margin: 0 0 15px;
+    }
+    .contributions {
+      padding-top: 10px;
+    }
+    label {
+      font-weight: $font-weight-regular;
+    }
+    .control-label {
+      text-align: left;
+      padding-top: 10px;
+    }
+    input[type="text"] {
+      color: $grey;
+      &::-webkit-input-placeholder {
+  			color: $grey;
+  		}
+
+  		&:-moz-placeholder {
+  			color: $grey;
+  		}
+
+  		&::-moz-placeholder {
+  			color: $grey;
+  		}
+
+  		&:-ms-input-placeholder {
+  			color: $grey;
+  		}
+    }
+    div > input[type="checkbox"] {
+      margin: 0;
+    }
+  }
 }
 @mixin tablesaw-assignments() {
     .tablesaw-bar {

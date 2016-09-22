@@ -14,14 +14,12 @@
 
 $(window).load(function() {
   /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically | http://stackoverflow.com/questions/10163699/jquery-isotope-option-for-auto-height-on-element */
-  var $container = $('#team-list .team-row');
-  $container.isotope({
-    itemSelector: '#team-list .team-member'
+  var $grid = $('#team-list .team-row').isotope({
+    itemSelector: '.team-member'
   });
-  $('#select-usertype').change( function() {
-    $container.isotope({
-      filter: this.value
-    });
+  $('#select-usertype').on( 'change', function() {
+    var filterValue = this.value;
+    $grid.isotope({ filter: filterValue });
   });
 });
 
@@ -36,6 +34,19 @@ $(document).ready(function() {
     /* Time Entry Page */
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
+    });
+    $(".input-startdate, .input-enddate").datepicker({
+      format: "dd MM, yyyy"
+    });
+    $(".btn-startdate").click(function() {
+      $(".input-startdate").datepicker({
+        format: "dd MM, yyyy"
+      });
+    });
+    $(".btn-enddate").click(function() {
+      $(".input-enddate").datepicker({
+        format: "dd MM, yyyy"
+      });
     });
     $("#fancytree, .all-tasks").fancytree();
     $('.fancytree-icon').each(function(){
