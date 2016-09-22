@@ -33,63 +33,34 @@ button {
     @include icon-before('\f105' !important, $medium-grey !important);
   }
 }
+
 // Buttons
-
-.btn-default {
-    border-radius: 0;
-    @include font-size(16px);
-    text-transform: uppercase;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-    @media #{$tablet} {
-         @include font-size(14px);
-    }
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+  @include font-size(16px);
+  @media #{$tablet} {
+    @include font-size(14px);
+  }
 }
-
-.btn-primary {
-    border-radius: 0;
-    @include font-size(16px);
-    text-transform: uppercase;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-    @media #{$tablet} {
-         @include font-size(14px);
-    }
-}
-
 .btn-secondary {
-    color: $red;
-    border-radius: 0;
-    @include font-size(16px);
-    text-transform: uppercase;
-    background-color: $extra-light-grey;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-    @media #{$tablet} {
-         @include font-size(14px);
-    }
+  color: $red;
+  background-color: $extra-light-grey;
 }
-
 .btn-tertiary {
+  color: $white;
+  background-color: $green;
+  &:hover {
     color: $white;
-    border-radius: 0;
-    @include font-size(16px);
-    text-transform: uppercase;
-    background-color: $green;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-
-    &:hover {
-        color: $white;
-        background-color: darken($green, 10%);
-    }
-
-    &:active {
-        color: $white;
-    }
-
-    &:focus {
-        color: $white;
-    }
-    @media #{$tablet} {
-         @include font-size(14px);
-    }
+    background-color: darken($green, 10%);
+  }
+  &:active {
+    color: $white;
+  }
+  &:focus {
+    color: $white;
+  }
 }
 // Inputs
 
