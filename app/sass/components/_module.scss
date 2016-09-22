@@ -1323,8 +1323,10 @@
         bottom: 0;
         right: 5px;
         a {
-          cursor: auto;
           @include hyperlink-hover($grey);
+          &:hover {
+              cursor: default;
+          }
         }
       }
     }
