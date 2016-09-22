@@ -35,6 +35,17 @@ $(document).ready(function() {
         $(".project-standard").hide();
         $(".project" + test).show();
     }); // Source: http://jsfiddle.net/VgAgu/3/
+    $(".timeline").hide();
+    $('.btn-team-listview').click(function(){
+        $(".tbl-assigned-members").show();
+        $(".tbl-assigned-members").siblings(".tablesaw-bar").show();
+        $(".timeline").hide();
+    });
+    $('.btn-team-gridview').click(function(){
+        $(".timeline").show();
+        $(".tbl-assigned-members").hide();
+        $(".tbl-assigned-members").siblings(".tablesaw-bar").hide();
+    }); // Source: http://jsfiddle.net/j3PFE/
 
     /* Time Entry Page */
     $(".input-datepicker").datepicker({
