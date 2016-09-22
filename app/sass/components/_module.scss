@@ -663,37 +663,33 @@
     }
 }
 @mixin widget-feed() {
-    .list-group {
-        li {
-            color: $white;
-            padding: 20px 0;
-            border: none;
-            border-radius: 0;
-            line-height: 1.8;
-            @include font-size(16px);
-            background-color: transparent;
-            font-weight: $font-weight-bold;
-            border-bottom: 1px solid $extra-dark-grey;
-
-            &:last-of-type {
-                margin-bottom: 60px;
-            }
-        }
-
-        .badge {
-            border-radius: inherit;
-            color: $medium-grey;
-            @include font-size(12px);
-            background-color: transparent;
-        }
-
-        .description {
-            display: block;
-            line-height: 1.4;
-            color: $dark-grey;
-            @include font-size(14px);
-        }
+  .list-group {
+    li {
+      color: $white;
+      padding: 20px 0;
+      border-radius: 0;
+      line-height: 1.8;
+      @include font-size(16px);
+      font-weight: $font-weight-bold;
+      @include border-and-background();
+      border-bottom: 1px solid $extra-dark-grey;
+      &:last-of-type {
+        margin-bottom: 60px;
+      }
     }
+    .badge {
+      border-radius: inherit;
+      color: $medium-grey;
+      @include font-size(12px);
+      background-color: transparent;
+    }
+    .description {
+      display: block;
+      line-height: 1.4;
+      color: $dark-grey;
+      @include font-size(14px);
+    }
+  }
 }
 @mixin dropdown-notification() {
   .dropdown-notification {
