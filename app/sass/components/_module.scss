@@ -465,202 +465,168 @@
     }
 }
 @mixin widget-todo {
-    .nav-tabs {
-        border: none;
-        display: flex;
-
-        li {
-            flex: 1 1 0;
-            overflow-x: hidden;
-            text-align: center;
-        }
-
-        li a {
-            margin: 0;
-            color: $medium-grey;
-            border-radius: 0;
-            border: 1px solid $lightest-grey;
-            border-top: none;
-            background-color: $white;
-
-            &:active,
-            &:focus,
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        li.active a {
-            color: $red;
-            border-bottom-color: transparent;
-            background-color: transparent;
-        }
-
-        li:first-child a {
-            border-left: none;
-        }
-
-        li:first-child + li {
-            a {
-                border-left: none;
-                border-right: none;
-            }
-        }
-
-        li:last-child a {
-            border-right: none;
-        }
+  .nav-tabs {
+    border: none;
+    display: flex;
+    li {
+      flex: 1 1 0;
+      overflow-x: hidden;
+      text-align: center;
     }
-
-    .list-group {
-        margin: 10px 0;
-
-        li {
-            display: none;
-            border-radius: 0;
-            @include border-and-background();
-        }
-
-        li .droppable {
-            float: right;
-            min-width: 60px;
-            min-height: 20px;
-            width: auto;
-            height: auto;
-        }
-
-        li .fa {
-            float: right;
-            margin-left: 10px;
-            color: $medium-grey;
-            display: inline-block;
-            vertical-align: middle;
-            line-height: 20px;
-        }
-
-        li img {
-            float: right;
-            width: 20px;
-            margin-right: 10px;
-        }
-
-        li a {
-            color: $grey;
-
-            &:active,
-            &:hover {
-                color: $red;
-            }
-        }
-
-        .over {
-            background-color: darken($extra-light-grey, 5%);
-        }
+    li a {
+      margin: 0;
+      border-radius: 0;
+      border-top: none;
+      color: $medium-grey;
+      background-color: $white;
+      border: 1px solid $lightest-grey;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: transparent;
+      }
     }
-
-    #task-complete,
-    #task-deferred {
-        @include margin-and-padding(10px 0, 15px);
+    li.active a {
+      color: $red;
+      background-color: transparent;
+      border-bottom-color: transparent;
     }
-
-    .view-more {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-        color: $medium-grey;
+    li:first-child a {
+      border-left: none;
     }
+    li:first-child + li {
+      a {
+        border-left: none;
+        border-right: none;
+      }
+    }
+    li:last-child a {
+      border-right: none;
+    }
+  }
+  .list-group {
+    margin: 10px 0;
+    li {
+      display: none;
+      border-radius: 0;
+      @include border-and-background();
+    }
+    li .droppable {
+      float: right;
+      width: auto;
+      height: auto;
+      min-width: 60px;
+      min-height: 20px;
+    }
+    li .fa {
+      float: right;
+      margin-left: 10px;
+      line-height: 20px;
+      color: $medium-grey;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    li img {
+      float: right;
+      width: 20px;
+      margin-right: 10px;
+    }
+    li a {
+      color: $grey;
+      @include hyperlink-hover($grey);
+    }
+    .over {
+      background-color: darken($extra-light-grey, 5%);
+    }
+  }
+  #task-complete,
+  #task-deferred {
+    @include margin-and-padding(10px 0, 15px);
+  }
+  .view-more {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    color: $medium-grey;
+  }
 }
 @mixin widget-mytasks {
-    header {
-        @include make-row();
-
-        > div {
-            @include make-sm-column(6);
-        }
-
-        .tasks {
-            text-align: left;
-
-            .value {
-                color: $medium-grey;
-            }
-        }
-
-        .status {
-            text-align: right;
-            padding-right: 85px;
-            @media #{$tablet} {
-                padding-right: 65px;
-            }
-        }
+  header {
+    @include make-row();
+    > div {
+      @include make-sm-column(6);
     }
-
-    .list-group {
-        margin: 10px 0;
-
-        li {
-            display: none;
-            margin-bottom: 15px;
-            color: $grey;
-            @include font-size(12px);
-            border-radius: 0;
-            background-color: transparent;
-        }
-
-        li span {
-            display: block;
-            @include font-size(14px);
-        }
-
-        li span:first-of-type {
-            float: right;
-            color: $grey;
-            line-height: 1;
-            @include font-size(12px);
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-
-        li a {
-            float: right;
-            margin-left: 10px;
-
-            &:active,
-            &:hover {
-                .fa {
-                    color: $red;
-                }
-            }
-        }
-
-        li a .fa {
-            color: $medium-grey;
-            @include font-size(14px);
-        }
-    }
-
-    .progress {
-        position: absolute;
-        bottom: 0;
-        height: 3px;
-        width: 100%;
-        left: 0;
-        margin-bottom: 0;
-        border-radius: 0;
-        background-color: transparent;
-        box-shadow: none;
-    }
-
-    .progress-bar {
-        background-color: $green;
-    }
-
-    .view-more {
-        display: block;
-        margin: 20px 0 10px;
-        text-align: center;
+    .tasks {
+      text-align: left;
+      .value {
         color: $medium-grey;
+      }
     }
+    .status {
+      text-align: right;
+      padding-right: 85px;
+      @media #{$tablet} {
+        padding-right: 65px;
+      }
+    }
+  }
+  .list-group {
+    margin: 10px 0;
+    li {
+      color: $grey;
+      display: none;
+      border-radius: 0;
+      margin-bottom: 15px;
+      @include font-size(12px);
+      background-color: transparent;
+    }
+    li span {
+      display: block;
+      @include font-size(14px);
+    }
+    li span:first-of-type {
+      float: right;
+      color: $grey;
+      line-height: 1;
+      margin-right: 10px;
+      margin-left: 10px;
+      @include font-size(12px);
+    }
+    li a {
+      float: right;
+      margin-left: 10px;
+      &:active,
+      &:hover {
+        .fa {
+          color: $red;
+        }
+      }
+    }
+    li a .fa {
+      color: $medium-grey;
+      @include font-size(14px);
+    }
+  }
+  .progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .progress-bar {
+    background-color: $green;
+  }
+  .view-more {
+    display: block;
+    margin: 20px 0 10px;
+    text-align: center;
+    color: $medium-grey;
+  }
 }
 @mixin widget-feed() {
   .list-group {
