@@ -1387,6 +1387,10 @@
     label {
       font-weight: $font-weight-regular;
     }
+    .bootstrap-select,
+    .dropdown-menu {
+      width: 100%;
+    }
     .bootstrap-select .btn,
     .selectpicker {
       text-transform: none;
