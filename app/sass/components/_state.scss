@@ -1,34 +1,23 @@
-// Links
-
+// Hyperlinks
 a {
-    transition: all 0.5s;
-
-    .fa {
-        margin-right: 5px;
-    }
+  transition: all 0.5s;
+  .fa {
+    margin-right: 5px;
+  }
 }
 a:hover {
   cursor: pointer;
 }
+
 // Buttons
-
 button {
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
-// Dropdows
 
+// Dropdowns
 .dropdown-menu {
-    margin: 0;
-    border-radius: 0;
-    a:hover {
-      border-radius: 0;
-    }
-    a:active {
-      border-radius: 0;
-    }
-    a:focus {
-      border-radius: 0;
-    }
+  margin: 0;
+  border-radius: 0;
 }
 // Breadcrumb
 
