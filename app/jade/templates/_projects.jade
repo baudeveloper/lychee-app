@@ -97,54 +97,54 @@ main.page-project(role='main')
 								span Collapse
 				.all-tasks
 					.button.btn-group
-							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-									| All Tasks 
-									span.caret
-							ul.dropdown-menu
-									li
-											a(href='#') Action
-									li
-											a(href='#') Another action
-									li
-											a(href='#') Something else here
-									li.divider(role='separator')
-									li
-											a(href='#') Separated link
+						button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| All Tasks 
+							span.caret
+						ul.dropdown-menu
+							li
+								a(href='#') Action
+							li
+								a(href='#') Another action
+							li
+								a(href='#') Something else here
+							li.divider(role='separator')
+							li
+								a(href='#') Separated link
 					ul#treeData(style='display: none;')
-							li#id1.folder.expanded(title='RouteOne')
-									| RouteOne
+						li#id1.folder.expanded(title='RouteOne')
+							| RouteOne
+							ul
+								li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
+									| Credit Aggregation Platform
 									ul
-											li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
-													| Credit Aggregation Platform
-													ul
-															li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
-																	| RONE-0757 (Remote Document Delivery)
-																	ul
-																			li(id='id1.1.1.1')
-																					| FFD-C2029 - Analysis
-																			li(id='id1.1.1.1')
-																					| FFD-C2029 - Testing
-																			li(id='id1.1.1.1')
-																					| FFD-C2029 - Development
-																			li(id='id1.1.1.1')
-																					| FFD-C2029 - UI Design
-															li.folder.expanded(id='id1.1.2', title='Release 16.9')
-																	| Release 16.9
-																	ul
-																			li(id='id1.1.1.1')
-																					| CORE-7696 Remove Authy
-																			li(id='id1.1.1.1')
-																					| CORE-8758 Black list document to not delivery
-																			li(id='id1.1.1.1')
-																					| CORE-8758 Privacy Policy implementation
-																			li(id='id1.1.1.1')
-																					| CORE-8758 Capturing billing information
-											li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
-													| RONE-0743 (CAMS 2016 Travel)
-											li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
-													| RONE-0749 (R1 Mobile App 2016)
-											li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
-													| RONE-0749 (CAMS 2016)
+										li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
+											| RONE-0757 (Remote Document Delivery)
+											ul
+												li(id='id1.1.1.1')
+													| FFD-C2029 - Analysis
+												li(id='id1.1.1.1')
+													| FFD-C2029 - Testing
+												li(id='id1.1.1.1')
+													| FFD-C2029 - Development
+												li(id='id1.1.1.1')
+													| FFD-C2029 - UI Design
+										li.folder.expanded(id='id1.1.2', title='Release 16.9')
+											| Release 16.9
+											ul
+												li(id='id1.1.1.1')
+													| CORE-7696 Remove Authy
+												li(id='id1.1.1.1')
+													| CORE-8758 Black list document to not delivery
+												li(id='id1.1.1.1')
+													| CORE-8758 Privacy Policy implementation
+												li(id='id1.1.1.1')
+													| CORE-8758 Capturing billing information
+								li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
+									| RONE-0743 (CAMS 2016 Travel)
+								li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
+									| RONE-0749 (R1 Mobile App 2016)
+								li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
+									| RONE-0749 (CAMS 2016)
 				.task-category
 					.task-effort
 						h3 Task Effort & Completion

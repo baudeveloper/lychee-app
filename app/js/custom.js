@@ -79,7 +79,6 @@ $(document).ready(function() {
     $('#tasks-list-modal .modal-body').append($tasksListContent);
 
     /* Dashboard Page */
-
     // Task Details Modal
     $("#task-details-modal .modal-info").hide();
     $("#task-details-modal .modal-details").click(function () {
@@ -88,7 +87,6 @@ $(document).ready(function() {
       $(this).parents(".modal-body").find(".row").toggleClass("toggled");
       // $("#task-details-modal .modal-info").toggleClass("toggled");
     });
-
     // Notifications Toggle
     $(".feed-toggle").on('click', function(e) {
         e.preventDefault();
