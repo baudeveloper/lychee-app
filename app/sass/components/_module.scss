@@ -25,25 +25,23 @@
 
 */
 @mixin inline-input {
-    .input {
-        padding: 15px;
-        position: relative;
-    }
-
-    .input input {
-        height: 40px;
-        border-radius: 0;
-        padding-left: 35px;
-    }
-
-    .input span {
-        position: absolute;
-        display: block;
-        top: 25px;
-        left: 25px;
-        color: $red;
-        @include font-size(14px);
-    }
+  .input {
+    padding: 15px;
+    position: relative;
+  }
+  .input input {
+    height: 40px;
+    border-radius: 0;
+    padding-left: 35px;
+  }
+  .input span {
+    position: absolute;
+    display: block;
+    top: 25px;
+    left: 25px;
+    color: $red;
+    @include font-size(14px);
+  }
 }
 @mixin typeahead-standard() {
     .twitter-typeahead {
@@ -76,393 +74,341 @@
     }
 }
 @mixin loader() {
-    .loading-2 {
-        top: 300px;
-        width: 161px;
-        height: 162px;
-        font-size: 0;
-        background: rgba(255,255,255,0.06);
-        margin: 0 auto;
-    }
-
-    .loading-2-text {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        background-image: url('../images/loading.png');
-        width: 161px;
-        height: 162px;
-        display: inline-block;
-    }
-    @keyframes wave-animation {
-        0% {
-            background-position: 0 bottom;
-        };
-
-        100% {
-            background-position: 200px bottom;
-        };
-    }
-    @keyframes loading-animation {
-        0% {
-            background-size: 200px 0;
-        };
-
-        100% {
-            background-size: 200px 200px;
-        };
-    }
-
-    .wave {
-        background-image: url('http://i.imgur.com/uFpLbYt.png');
-        background-clip: text;
-        color: rgba(0,0,0,0);
-        text-shadow: 0 0 rgba(255,255,255,0.06);
-        animation: wave-animation 2.5s infinite linear, loading-animation 2.5s infinite linear alternate;
-        background-size: 200px 200px;
-        background-repeat: repeat-x;
-        opacity: 1;
-    }
-
-    .wave-2 {
-        background-clip: initial;
-        display: inline-block;
-    }
+  .loading-2 {
+    top: 300px;
+    width: 161px;
+    height: 162px;
+    font-size: 0;
+    background: rgba(255,255,255,0.06);
+    margin: 0 auto;
+  }
+  .loading-2-text {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url('../images/loading.png');
+    width: 161px;
+    height: 162px;
+    display: inline-block;
+  }
+  @keyframes wave-animation {
+    0% {
+      background-position: 0 bottom;
+    };
+    100% {
+      background-position: 200px bottom;
+    };
+  }
+  @keyframes loading-animation {
+    0% {
+      background-size: 200px 0;
+    };
+    100% {
+      background-size: 200px 200px;
+    };
+  }
+  .wave {
+    background-image: url('http://i.imgur.com/uFpLbYt.png');
+    background-clip: text;
+    color: rgba(0,0,0,0);
+    text-shadow: 0 0 rgba(255,255,255,0.06);
+    animation: wave-animation 2.5s infinite linear, loading-animation 2.5s infinite linear alternate;
+    background-size: 200px 200px;
+    background-repeat: repeat-x;
+    opacity: 1;
+  }
+  .wave-2 {
+    background-clip: initial;
+    display: inline-block;
+  }
 }
 // Source: https://codepen.io/lbebber/pen/xrwja
 @mixin fancytree() {
-    #fancytree, .all-tasks {
-        padding: 0 15px 15px;
-
-        * {
-            font-weight: 400;
-            @include font-size(12px);
-            font-family: "Roboto Condensed";
-        }
-
-        .fancytree-container {
-            border: none;
-            padding: 10px;
-            outline: none !important;
-        }
-        // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
-        .fancytree-hover {
-            line-height: 2;
-        }
-
-        .fancytree-icon {
-            margin-top: 0;
-        }
-
-        .fancytree-title:hover {
-            background-color: transparent;
-        }
-
-        .fancytree-expander {
-            border-bottom: 1px dashed $medium-grey;
-        }
-
-        .fancytree-has-children .fancytree-expander {
-            padding: 3px 0;
-            margin: 0 0 0 -5px;
-            @include icon-before( '\f0da', $medium-grey);
-        }
-        // Any element that has children will have a caret before it
-        .fancytree-expanded .fancytree-expander {
-            margin: 0 0 0 -4px;
-            padding: 4px 0;
-            @include icon-before( '\f0d7', $medium-grey);
-        }
-        // Any element that has children will have a caret before it changes on click
-        .fancytree-ico-c .fancytree-icon {
-            @include icon-before( '\f1b3', $red);
-        }
-        // Cube Icon
-        .fancytree-ico-ef .fancytree-icon {
-            @include icon-before( '\f115', $grey);
-        }
-        // Expanded Folder Icon
-        .fancytree-ico-cf .fancytree-icon {
-            @include icon-before( '\f07b', $grey);
-        }
-        // Folder Icon
-        .fancytree-node:hover {
-            .fancytree-icon::before {
-                transition: all 1s;
-                color: $green !important;
-            }
-
-            .fancytree-title {
-                color: inherit !important;
-                border: 1px solid transparent !important;
-                background-color: transparent !important;
-            }
-
-            .fancytree-hover {
-                color: $green;
-                border-radius: 4px;
-                padding: 2px 4px 4px 0;
-                background-color: $lightest-green;
-            }
-        }
-
-        .fancytree-node.fancytree-active {
-            .fancytree-icon::before {
-                color: $green !important;
-            }
-
-            .fancytree-title {
-                color: inherit !important;
-                border: 1px solid transparent !important;
-                background-color: transparent !important;
-            }
-
-            .fancytree-hover {
-                color: $green;
-                border-radius: 4px;
-                padding: 2px 4px 4px 0;
-                background-color: $lightest-green;
-            }
-        }
-
-        .fancytree-lastsib ul > li {
-            border-left: 1px dashed $medium-grey;
-
-            .fancytree-expander {
-                border-bottom: 1px dashed $medium-grey;
-            }
-        }
-
-        > ul > li > span > a {
-            span {
-                color: $blue;
-                @include font-size(14px);
-            }
-
-            span.fancytree-icon::before {
-                color: $blue !important;
-            }
-        }
+  #fancytree, .all-tasks {
+    padding: 0 15px 15px;
+    * {
+      font-weight: 400;
+      @include font-size(12px);
+      font-family: "Roboto Condensed";
     }
+    .fancytree-container {
+      border: none;
+      padding: 10px;
+      outline: none !important;
+    }
+    // Source: http://stackoverflow.com/questions/26024818/fancytree-remove-blue-border-when-selected.
+    .fancytree-hover {
+      line-height: 2;
+    }
+    .fancytree-icon {
+      margin-top: 0;
+    }
+    .fancytree-title:hover {
+      background-color: transparent;
+    }
+    .fancytree-expander {
+      border-bottom: 1px dashed $medium-grey;
+    }
+    .fancytree-has-children .fancytree-expander {
+      padding: 3px 0;
+      margin: 0 0 0 -5px;
+      @include icon-before( '\f0da', $medium-grey);
+    }
+    // Any element that has children will have a caret before it
+    .fancytree-expanded .fancytree-expander {
+      margin: 0 0 0 -4px;
+      padding: 4px 0;
+      @include icon-before( '\f0d7', $medium-grey);
+    }
+    // Any element that has children will have a caret before it changes on click
+    .fancytree-ico-c .fancytree-icon {
+      @include icon-before( '\f1b3', $red);
+    }
+    // Cube Icon
+    .fancytree-ico-ef .fancytree-icon {
+      @include icon-before( '\f115', $grey);
+    }
+    // Expanded Folder Icon
+    .fancytree-ico-cf .fancytree-icon {
+      @include icon-before( '\f07b', $grey);
+    }
+    // Folder Icon
+    .fancytree-node:hover {
+      .fancytree-icon::before {
+        transition: all 1s;
+        color: $green !important;
+      }
+      .fancytree-title {
+        color: inherit !important;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+      }
+      .fancytree-hover {
+        color: $green;
+        border-radius: 4px;
+        padding: 2px 4px 4px 0;
+        background-color: $lightest-green;
+      }
+    }
+    .fancytree-node.fancytree-active {
+      .fancytree-icon::before {
+        color: $green !important;
+      }
+      .fancytree-title {
+        color: inherit !important;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+      }
+      .fancytree-hover {
+        color: $green;
+        border-radius: 4px;
+        padding: 2px 4px 4px 0;
+        background-color: $lightest-green;
+      }
+    }
+    .fancytree-lastsib ul > li {
+      border-left: 1px dashed $medium-grey;
+      .fancytree-expander {
+        border-bottom: 1px dashed $medium-grey;
+      }
+    }
+    > ul > li > span > a {
+      span {
+        color: $blue;
+        @include font-size(14px);
+      }
+      span.fancytree-icon::before {
+        color: $blue !important;
+      }
+    }
+  }
 }
 @mixin widget-mystats() {
-    h2 {
-        padding-top: 3px;
+  h2 {
+    padding-top: 3px;
+  }
+  li {
+    color: $grey;
+    @include font-size(14px);
+    @include border-and-background();
+    @include margin-and-padding(0 0 30px, 0);
+  }
+  .badge {
+    color: $red;
+    float: none;
+    display: block;
+    text-align: left;
+    @include font-size(33px);
+    @include margin-and-padding(0, 0);
+    @include border-and-background();
+    font-weight: $font-weight-light;
+  }
+  .value {
+    @include font-size(66px);
+  }
+  @media #{$desktop} {
+    ul {
+      @include make-row();
     }
-
     li {
-        color: $grey;
-        @include font-size(14px);
-        @include border-and-background();
-        @include margin-and-padding(0 0 30px, 0);
+      @include make-sm-column(3);
+      @include make-md-column(3);
     }
-
-    .badge {
-        float: none;
-        display: block;
-        text-align: left;
-        color: $red;
-        font-weight: $font-weight-light;
-        @include font-size(33px);
-        @include margin-and-padding(0, 0);
-        @include border-and-background();
-    }
-
     .value {
-        @include font-size(66px);
+      @include font-size(44px);
     }
-    @media #{$desktop} {
-        ul {
-            @include make-row();
-        }
-
-        li {
-            @include make-sm-column(3);
-            @include make-md-column(3);
-        }
-
-        .value {
-            @include font-size(44px);
-        }
-    }
+  }
 }
 @mixin widget-myteam() {
-    .panel-body {
-        padding: 30px 15px 0;
+  .panel-body {
+    padding: 30px 15px 0;
+  }
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
+  }
+  figure {
+    margin-right: 10px;
+  }
+  .container {
+    width: auto;
+  }
+  .team-row {
+    @include make-row();
+  }
+  img:hover {
+    cursor: move;
+  }
+  span {
+    display: block;
+    &:first-child {
+      @include font-size(14px);
     }
-
-    .team-member {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        @include make-sm-column(4);
-        @include make-md-column(4);
-        @include make-lg-column(4);
+    &:last-child {
+      @include font-size(12px);
     }
-
-    figure {
-        margin-right: 10px;
-    }
-
-    .container {
-        width: auto;
-    }
-
-    .team-row {
-        @include make-row();
-    }
-
-    img:hover {
-        cursor: move;
-    }
-
-    span {
-        display: block;
-
-        &:first-child {
-            @include font-size(14px);
-        }
-
-        &:last-child {
-            @include font-size(12px);
-        }
-    }
+  }
 }
 @mixin panel-standard {
-    .panel {
-        border-radius: 0;
+  .panel {
+    border-radius: 0;
+  }
+  .panel-heading {
+    background: none;
+    border-bottom: 1px solid $red;
+    @include margin-and-padding(20px 15px 0, 0);
+    h2 {
+      color: $red;
+      display: inline-block;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      @include font-size(18px);
     }
-
-    .panel-heading {
-        background: none;
-        border-bottom: 1px solid $red;
-        @include margin-and-padding(20px 15px 0, 0);
-
-        h2 {
-            color: $red;
-            display: inline-block;
-            padding-bottom: 10px;
-            text-transform: uppercase;
-            @include font-size(18px);
-        }
-
-        a {
-            color: $green;
-        }
+    a {
+      color: $green;
     }
-
-    .panel-body {
-        @include font-size(14px);
+  }
+  .panel-body {
+    @include font-size(14px);
+  }
+  @media #{$tablet} {
+    .panel-heading a {
+      color: $red;
+      margin-left: 10px;
+      float: none !important;
     }
-    @media #{$tablet} {
-        .panel-heading a {
-            color: $red;
-            margin-left: 10px;
-            float: none !important;
-        }
-    }
+  }
 }
 @mixin panel-skinned {
-    .panel {
-        box-shadow: none;
-        background-color: transparent;
-        border: 1px solid $darker-grey;
-    }
-
-    .panel-heading {
-        margin: 0;
-        border-bottom-color: $darker-grey;
-    }
-
-    .panel-title {
-        padding: 20px 15px 10px;
-    }
-
-    figure {
-        margin-bottom: 15px;
-    }
-
-    img {
-        margin: 0 auto;
-    }
-
-    .full img {
-        width: 100%;
-    }
-
-    p {
-        color: $grey;
-        @include font-size(16px);
-    }
-
-    .lead {
-        color: $red;
-        margin-bottom: 10px;
-    }
+  .panel {
+    box-shadow: none;
+    background-color: transparent;
+    border: 1px solid $darker-grey;
+  }
+  .panel-heading {
+    margin: 0;
+    border-bottom-color: $darker-grey;
+  }
+  .panel-title {
+    padding: 20px 15px 10px;
+  }
+  figure {
+    margin-bottom: 15px;
+  }
+  img {
+    margin: 0 auto;
+  }
+  .full img {
+    width: 100%;
+  }
+  p {
+    color: $grey;
+    @include font-size(16px);
+  }
+  .lead {
+    color: $red;
+    margin-bottom: 10px;
+  }
 }
 @mixin panel-employee {
-    .panel {
-        background-color: transparent !important;
-    }
-
-    .panel-heading {
-        border-bottom: none!important;
-    }
-
-    .panel-title {
-        padding: 20px 15px 0 !important;
-    }
-
-    figure {
-        margin-bottom: 60px;
-        position: relative;
-    }
-
-    figure::before {
-        position: absolute;
-        bottom: -52.5px;
-        content: '';
-        width: 132px;
-        height: 105px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        background-size: 132px 105px;
-        background-image: url('../images/badge-employee.svg');
-        @media #{$tablet} {
-            left: -15px;
-            bottom: -32px;
-            width: 80px;
-            height: 64px;
-            background-size: 80px 64px;
-            background-image: url('../images/badge-employee.svg');
-        }
-    }
-
-    p {
-        @include font-size(20px);
-    }
-
-    .lead {
-        margin-bottom: 0 !important;
-        @include font-size(18px);
-
-        & + p {
-            @include font-size(14px);
-        }
-
-        & + p + p {
-            @include font-size(12px);
-        }
-    }
+  .panel {
+    background-color: transparent !important;
+  }
+  .panel-heading {
+    border-bottom: none!important;
+  }
+  .panel-title {
+    padding: 20px 15px 0 !important;
+  }
+  figure {
+    margin-bottom: 60px;
+    position: relative;
+  }
+  figure::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -52.5px;
+    width: 132px;
+    height: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 132px 105px;
+    background-image: url('../images/badge-employee.svg');
     @media #{$tablet} {
-        figure {
-            @include make-sm-column(4);
-            @include make-md-column(4);
-            padding-left: 0;
-        }
+      left: -15px;
+      bottom: -32px;
+      width: 80px;
+      height: 64px;
+      background-size: 80px 64px;
+      background-image: url('../images/badge-employee.svg');
     }
+  }
+  p {
+    @include font-size(20px);
+  }
+  .lead {
+    @include font-size(18px);
+    margin-bottom: 0 !important;
+    & + p {
+      @include font-size(14px);
+    }
+    & + p + p {
+      @include font-size(12px);
+    }
+  }
+  @media #{$tablet} {
+    figure {
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      padding-left: 0;
+    }
+  }
 }
 @mixin widget-todo {
   .nav-tabs {
