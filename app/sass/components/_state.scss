@@ -81,55 +81,44 @@ input[type="text"] {
   background-color: $light-yellow;
 }
 
-// Popover
+// Popover - has three child buttons.
 .popover {
-    max-width: 100%;
-    border-radius: 0;
-    background-color: $green;
-
-    .arrow {
-        &::after {
-            border-right-color: $green !important;
-        }
+  max-width: 100%;
+  border-radius: 0;
+  background-color: $green;
+  .arrow::after {
+    border-right-color: $green !important;
+  }
+  .btn-group button {
+    color: $green;
+    @include font-size(12px);
+    font-weight: $font-weight-bold;
+    &::before {
+      font-weight: $font-weight-regular;
     }
-
-    .btn-group {
-        button {
-            color: $green;
-            @include font-size(12px);
-            font-weight: $font-weight-bold;
-
-            &:first-of-type {
-                @include icon-before( '\f017', $green);
-            }
-
-            &:first-of-type + button {
-                @include icon-before( '\f144', $green);
-            }
-
-            &:last-of-type {
-                @include icon-before( '\f022', $green);
-            }
-
-            &::before {
-                font-weight: $font-weight-regular;
-            }
-
-            &:active {
-                color: $green;
-            }
-        }
+    &:active {
+      color: $green;
     }
+    &:first-of-type {
+      @include icon-before( '\f017', $green);
+    }
+    &:first-of-type + button {
+      @include icon-before( '\f144', $green);
+    }
+    &:last-of-type {
+      @include icon-before( '\f022', $green);
+    }
+  }
 }
-// Custom Group Addon - Log Time
 
+// Custom Group Addon - Log Time for Time Entry page
 .log-group {
-    @extend .input-group;
+  @extend .input-group;
+}
+.log-addon {
+  @extend .input-group-addon;
 }
 
-.log-addon {
-    @extend .input-group-addon;
-}
 // Lychee Loader
 // #loading {
 //   width: 100%;
@@ -150,43 +139,48 @@ input[type="text"] {
 //     text-transform: uppercase;
 //   }
 // }
+
 // Declare Mixins
+
 // Inline Input
-@include inline-input(); // Loader
+@include inline-input();
+
+// Loader
 // @include loader();
+
 // Columns
-// Source: http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
 .col-lg-15 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .col-xs-15 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 @media (min-width: 768px) {
-.col-sm-15 {
-        width: 20%;
-        float: left;
-    }
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
 }
 @media (min-width: 992px) {
-    .col-md-15 {
-        width: 20%;
-        float: left;
-    }
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
 }
 @media (min-width: 1200px) {
-    .col-lg-15 {
-        width: 20%;
-        float: left;
-    }
-}
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+} // Source: http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/
+
 // Modals State
 @include modal-standard();
 @include modal-content-todo();
