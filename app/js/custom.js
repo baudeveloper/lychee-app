@@ -30,6 +30,11 @@ $(document).ready(function() {
         $(".dash-nav").toggleClass("switch");
         $(".dash-nav span").toggle();
     });
+    $("input[name$='project']").click(function() {
+        var test = $(this).val();
+        $(".project-standard").hide();
+        $(".project" + test).show();
+    }); // Source: http://jsfiddle.net/VgAgu/3/
 
     /* Time Entry Page */
     $(".input-datepicker").datepicker({
