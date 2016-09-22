@@ -1,9 +1,8 @@
 // Media Queries
-$tablet: "only screen and (max-width: $screen-sm-max)";
-$tablet__up: "only screen and (min-width: $screen-sm-max)";
-$desktop: "only screen and (max-width: $screen-md-max)";
-$desktop__up: "only screen and (min-width: $screen-md-max)";
-
+$tablet: "only screen and (max-width: $screen-sm-max)"; // Up to Tablet size ~ <768px
+$tablet__up: "only screen and (min-width: $screen-sm-max)"; // From Table size up to Infinity ~ >768px
+$desktop: "only screen and (max-width: $screen-md-max)"; // Up to Desktop size ~ <992px
+$desktop__up: "only screen and (min-width: $screen-md-max)"; // From Desktop size up to Infinity ~ >992px
 
 // REM Font Sizes
 @function calculateRem($size) {
