@@ -1283,7 +1283,7 @@
 @mixin modal-content-assignment() {
   #assignment-modal {
     @include font-size(14px);
-    .bg {
+    fieldset {
       padding: 20px 0 5px;
       background-color: $super-extra-light-grey;
       &:last-of-type {
@@ -1359,7 +1359,7 @@
 @mixin modal-content-editproject() {
   #edit-project-modal {
     @include font-size(14px);
-    .bg {
+    fieldset {
       padding: 15px;
       background-color: $super-extra-light-grey;
       &:last-of-type {
