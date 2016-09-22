@@ -1403,6 +1403,9 @@
       margin-bottom: 15px;
       text-transform: uppercase;
     }
+    textarea {
+      resize: none;
+    }
     .input-icon {
       position: relative;
       span {
