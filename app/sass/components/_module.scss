@@ -696,121 +696,104 @@
     }
 }
 @mixin dropdown-notification() {
-    .dropdown-notification {
-        min-width: 340px;
-        padding: 0;
-        border-radius: 0;
+  .dropdown-notification {
+    min-width: 340px;
+    padding: 0;
+    border-radius: 0;
+  }
+  .dropdown-notification.dropdown-menu {
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+  .dropdown-notification.dropdown-menu::before {
+    position: absolute;
+    content: '';
+    top: -7px;
+    left: 48%;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+  }
+  .dropdown-notification.dropdown-menu::after {
+    position: absolute;
+    content: '';
+    top: -6px;
+    left: 48%;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+  }
+  .dropdown-notification header {
+    padding: 15px;
+    border-bottom: 1px solid $medium-grey-dark;
+    h2 {
+      color: $grey;
+      text-align: center;
+      @include font-size(12px);
+      text-transform: uppercase;
+      @include margin-and-padding(0, 0);
     }
-
-    .dropdown-notification.dropdown-menu {
-        left: 50%;
-        right: auto;
-        text-align: center;
-        transform: translate(-50%, 0);
+  }
+  .dropdown-notification section {
+    padding: 15px;
+    max-height: 180px;
+    overflow-y: scroll;
+    ul {
+      margin: 0;
     }
-
-    .dropdown-notification.dropdown-menu::before {
-        position: absolute;
-        top: -7px;
-        left: 48%;
-        display: inline-block;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid #ccc;
-        border-left: 7px solid transparent;
-        border-bottom-color: rgba(0, 0, 0, 0.15);
-        content: '';
+    li {
+      color: $grey;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      text-align: left;
+      margin: 0 0 20px;
+      @include font-size(14px);
     }
-
-    .dropdown-notification.dropdown-menu::after {
-        position: absolute;
-        top: -6px;
-        left: 48%;
-        display: inline-block;
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #ffffff;
-        border-left: 6px solid transparent;
-        content: '';
+    .fa-red {
+        color: #ff0000;
     }
-
-    .dropdown-notification header {
-        padding: 15px;
-        border-bottom: 1px solid $medium-grey-dark;
-
-        h2 {
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            color: $grey;
-            @include font-size(12px);
-            text-transform: uppercase;
-        }
+    .fa-yellow {
+        color: #fbaf5d;
     }
-
-    .dropdown-notification section {
-        padding: 15px;
-        max-height: 180px;
-        overflow-y: scroll;
-
-        ul {
-            margin: 0;
-        }
-
-        li {
-            padding: 0;
-            margin: 0 0 20px;
-            border: none;
-            border-radius: 0;
-            color: $grey;
-            text-align: left;
-            @include font-size(14px);
-        }
-
-        .fa-red {
-            color: #ff0000;
-        }
-
-        .fa-yellow {
-            color: #fbaf5d;
-        }
-
-        .fa-blue {
-            color: #2e3192;
-        }
-
-        .badge {
-            font-weight: 400;
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-            color: $grey;
-            @include font-size(14px);
-        }
-
-        .description {
-            display: block;
-            color: $medium-grey;
-            @include font-size(12px);
-        }
+    .fa-blue {
+        color: #2e3192;
     }
-
-    .dropdown-notification footer {
-        border-top: 1px solid $medium-grey-dark;
-        padding: 15px;
-        position: relative;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-
-        a {
-            padding: 0;
-            display: block;
-            text-align: center;
-            @include font-size(14px);
-            color: $red;
-            text-transform: capitalize;
-        }
+    .badge {
+      color: $grey;
+      border-radius: 0;
+      @include font-size(14px);
+      font-weight: $font-weight-regular;
+      @include border-and-background();
     }
+    .description {
+      display: block;
+      color: $medium-grey;
+      @include font-size(12px);
+    }
+  }
+  .dropdown-notification footer {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 15px;
+    border-top: 1px solid $medium-grey-dark;
+    a {
+      color: $red;
+      padding: 0;
+      display: block;
+      text-align: center;
+      @include font-size(14px);
+      text-transform: capitalize;
+    }
+  }
 }
 @mixin dropdown-time-entry() {
   .dropdown-time-entry {
