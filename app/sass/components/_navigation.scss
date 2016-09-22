@@ -250,6 +250,9 @@
   }
   .submenu {
     @include margin-and-padding(0, 0);
+    @media #{$tablet} {
+      display: none!important;
+    }
     a {
       padding-left: 56px;
       line-height: normal;
@@ -316,5 +319,8 @@
     .menu-toggle i::before {
       content: "\f178";
     }
+  }
+  .submenu {
+    display: none!important;
   }
 }
