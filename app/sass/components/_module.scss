@@ -1293,9 +1293,10 @@
     }
     legend {
       margin: 0;
-      padding:0;
+      padding: 0;
       border: none;
       @include font-size(14px);
+      text-transform: uppercase;
     }
     .checkbox {
       margin: 0 15px;
@@ -1322,9 +1323,6 @@
     .control-label {
       text-align: left;
       padding-top: 10px;
-    }
-    .lbl-heading {
-      text-transform: uppercase;
     }
     .input-icon {
       position: relative;
