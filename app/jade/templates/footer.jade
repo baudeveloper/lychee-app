@@ -177,3 +177,91 @@
 				.right
 					button.btn.btn-default(type='button', data-dismiss='modal') Cancel
 					button.btn.btn-tertiary(type='button') Ok
+.modal.fade(id='edit-project-modal', tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4.modal-title Edit Project
+			.modal-body
+				form.form-horizontal
+					.form-group
+						label.col-sm-4 Program
+						.col-sm-8
+							select.selectpicker(id="select-program-name")
+								option Some Program Name
+								option Web Design
+								option Web Development
+					.form-group
+						label.col-sm-4 Familiar Name
+						.col-sm-8
+							select.selectpicker(id="select-familiar-name")
+								option ProgramName
+								option WebDesign
+								option WebDevelopment
+					.form-group
+						label.col-sm-4 This project is currently
+						.col-sm-8
+							select.selectpicker(id="select-status")
+								option Active
+								option Inactive
+								option Full
+					.form-group
+						label.col-sm-4 Associate JIRA project
+						.col-sm-8
+							select.selectpicker(id="select-associates")
+								option Search JIRA Projects
+								option Search Lychee Projects
+								option Search Baustein Projects
+					.bg
+						label Project Type
+						br
+						input(type='radio', name='project', value='standard')
+						|  A Standard Project						
+						.form-group
+							label.col-sm-4 Stage
+							.col-sm-8
+								select.selectpicker(id="select-associates")
+									option Closed Won (100%)
+									option Closed Won (90%)
+									option Closed Won (80%)
+						.form-group
+							label.col-sm-4 Closing Date
+							.col-sm-8
+								.input-icon
+									input.input-startdate.form-control(type="text", placeholder="2016-07-08")
+									span
+										a.btn-startdate(href="#")
+											i.fa.fa-calendar
+						.form-group
+							label.col-sm-4 Starting Date
+							.col-sm-8
+								.input-icon
+									input.input-startdate.form-control(type="text", placeholder="2016-07-08")
+									span
+										a.btn-startdate(href="#")
+											i.fa.fa-calendar
+						.form-group
+							label.col-sm-4 Ending Date
+							.col-sm-8
+								.input-icon
+									input.input-startdate.form-control(type="text", placeholder="2016-07-08")
+									span
+										a.btn-startdate(href="#")
+											i.fa.fa-calendar
+						br
+						input(type='radio', name='project', value='ongoing')
+						|  An Ongoing Project
+						br				
+						.form-group
+							label.col-sm-4 Invoicing Type
+							.col-sm-8
+								select.selectpicker(id="select-associates")
+									option Closed Won (100%)
+									option Closed Won (90%)
+									option Closed Won (80%)
+			.modal-footer
+				.right
+					button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+					button.btn.btn-tertiary(type='button') Ok
