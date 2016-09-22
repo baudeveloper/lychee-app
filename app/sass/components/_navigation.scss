@@ -200,6 +200,7 @@
     }
   }
   > li.active > a {
+    color: $red;
     &::after {
       position: absolute;
       content: '';
