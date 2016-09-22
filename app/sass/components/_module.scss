@@ -24,6 +24,7 @@
   21. Tablesaw Styles
 
 */
+
 @mixin inline-input {
   .input {
     padding: 15px;
@@ -43,6 +44,7 @@
     @include font-size(14px);
   }
 }
+
 @mixin typeahead-standard() {
     .twitter-typeahead {
         position: relative !important;
@@ -73,6 +75,7 @@
         background-color: $light-red;
     }
 }
+
 @mixin loader() {
   .loading-2 {
     top: 300px;
@@ -122,6 +125,7 @@
     display: inline-block;
   }
 }
+
 // Source: https://codepen.io/lbebber/pen/xrwja
 @mixin fancytree() {
   #fancytree, .all-tasks {
@@ -223,6 +227,7 @@
     }
   }
 }
+
 @mixin widget-mystats() {
   h2 {
     padding-top: 3px;
@@ -259,6 +264,7 @@
     }
   }
 }
+
 @mixin widget-myteam() {
   .panel-body {
     padding: 30px 15px 0;
@@ -293,6 +299,7 @@
     }
   }
 }
+
 @mixin panel-standard {
   .panel {
     border-radius: 0;
@@ -323,6 +330,7 @@
     }
   }
 }
+
 @mixin panel-skinned {
   .panel {
     box-shadow: none;
@@ -354,6 +362,7 @@
     margin-bottom: 10px;
   }
 }
+
 @mixin panel-employee {
   .panel {
     background-color: transparent !important;
@@ -410,6 +419,7 @@
     }
   }
 }
+
 @mixin widget-todo {
   .nav-tabs {
     border: none;
@@ -496,6 +506,7 @@
     color: $medium-grey;
   }
 }
+
 @mixin widget-mytasks {
   header {
     @include make-row();
@@ -574,6 +585,7 @@
     color: $medium-grey;
   }
 }
+
 @mixin widget-feed() {
   .list-group {
     li {
@@ -603,6 +615,7 @@
     }
   }
 }
+
 @mixin dropdown-notification() {
   .dropdown-notification {
     min-width: 340px;
@@ -703,6 +716,7 @@
     }
   }
 }
+
 @mixin dropdown-time-entry() {
   .dropdown-time-entry {
     min-width: 560px;
@@ -805,6 +819,7 @@
     @include typeahead-standard();
   }
 }
+
 @mixin typeahead-styles() {
   .twitter-typeahead {
     display: block!important;
@@ -845,6 +860,7 @@
       margin-bottom: 10px;
     }
 }
+
 @mixin modal-standard() {
   .modal-content {
     box-shadow: none;
@@ -889,6 +905,7 @@
     }
   }
 }
+
 @mixin modal-content-todo() {
   #todo-modal {
     .modal-body {
@@ -999,6 +1016,7 @@
     }
   }
 }
+
 @mixin modal-content-taskdetails() {
   #task-details-modal {
     .modal-body {
@@ -1067,6 +1085,7 @@
     }
   }
 }
+
 @mixin modal-content-taskslist() {
   #tasks-list-modal {
     .dropdown-toggle {
@@ -1081,6 +1100,7 @@
     @include typeahead-standard();
   }
 }
+
 @mixin modal-content-assignment() {
   #assignment-modal {
     @include font-size(14px);
@@ -1149,6 +1169,7 @@
     }
   }
 }
+
 @mixin modal-content-editproject() {
   #edit-project-modal {
     @include font-size(14px);
@@ -1244,6 +1265,7 @@
     }
   }
 }
+
 @mixin tablesaw-assignments() {
   .tablesaw-bar {
     float: left;
