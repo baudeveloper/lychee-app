@@ -1340,7 +1340,7 @@
       }
     }
     input[type="text"] {
-      color: $grey;      
+      color: $grey;
       border-radius: 0;
       border-color: $lightest-grey;
       &::-webkit-input-placeholder {
@@ -1394,6 +1394,9 @@
     }
     textarea {
       resize: none;
+      color: $grey;
+      border-radius: 0;
+      border-color: $lightest-grey;
     }
     .contributions {
       padding-top: 10px;
