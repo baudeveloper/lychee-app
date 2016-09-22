@@ -1360,11 +1360,10 @@
   #edit-project-modal {
     @include font-size(14px);
     .bg {
-      padding: 20px 0 5px;
+      padding: 15px;
       background-color: $super-extra-light-grey;
       &:last-of-type {
         margin-top: 15px;
-        padding: 15px;
       }
     }
     form {
