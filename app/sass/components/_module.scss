@@ -1396,6 +1396,12 @@
     .contributions {
       padding-top: 10px;
     }
+    .bootstrap-select {
+      width: 100%;
+    }
+    .span-half .bootstrap-select {
+      width: inherit;
+    }
     .bootstrap-select .btn,
     .selectpicker {
       text-transform: none;
