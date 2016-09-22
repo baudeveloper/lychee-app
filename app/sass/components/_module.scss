@@ -1040,220 +1040,183 @@
   }
 }
 @mixin modal-content-todo() {
-    #todo-modal {
-        .modal-body {
-            padding-bottom: 0;
+  #todo-modal {
+    .modal-body {
+      padding-bottom: 0;
+      section p {
+        margin: 15px -15px 0;
+        padding: 0 15px 15px;
+        border-bottom: 1px solid $darkest-grey;
+      }
+      .container {
+        width: auto;
+        padding: 0;
+      }
+      .row {
+        display: flex;
+      }
+      .col-sm-6 {
+        @include typeahead-standard();
+      }
+      .bg-color {
+        padding: 15px;
+        margin: 0 -15px;
+        background-color: $white;
+        border-bottom: 1px solid $darkest-grey;
+      }
+      .bg-color p {
+        margin-top: 0;
+      }
+      .input {
+        padding: 15px 0;
+        span {
+          left: 10px;
         }
-
-        .modal-body section p {
-            margin: 15px -15px 0;
-            padding: 0 15px 15px;
-            border-bottom: 1px solid $darkest-grey;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      .team-member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      figure {
+        margin-right: 10px;
+      }
+      .team-member span {
+        display: block;
+        &:first-child {
+          @include font-size(14px);
         }
-
-        .modal-body .container {
-            width: auto;
-            padding: 0;
+        &:last-child {
+          @include font-size(12px);
         }
-
-        .modal-body .row {
-            display: flex;
-        }
-
-        .modal-body .col-sm-6 {
-            @include typeahead-standard();
-        }
-
-        .modal-body .bg-color {
-            padding: 15px;
-            margin: 0 -15px;
-            background-color: $white;
-            border-bottom: 1px solid $darkest-grey;
-        }
-
-        .modal-body .bg-color p {
-            margin-top: 0;
-        }
-
-        .modal-body .input {
-            padding: 15px 0;
-
-            span {
-                left: 10px;
-            }
-        }
-
-        .modal-body ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        .modal-body .team-member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .modal-body figure {
-            margin-right: 10px;
-        }
-
-        .modal-body .team-member span {
-            display: block;
-
-            &:first-child {
-                @include font-size(14px);
-            }
-
-            &:last-child {
-                @include font-size(12px);
-            }
-        }
-
-        .modal-body p {
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .modal-body form {
-            margin: 0 -15px;
-            padding: 0 15px;
-        }
-
-        .modal-body .form-group {
-            margin-bottom: 0;
-        }
-
-        .modal-body .column {
-            @include make-sm-column(12);
-        }
-
-        .modal-body label {
-            padding: 0;
-            margin: 15px 0;
-            text-align: left !important;
-        }
-
-        .modal-body textarea {
-            resize: none;
-            border-radius: 0;
-        }
-
-        .col-sm-6:last-of-type {
-            border-left: 1px solid $lightest-grey;
-            background-color: $super-light-grey;
-        }
-
-        .modal-footer .pull-left {
-            .fa {
-                margin-right: 5px;
-            }
-        }
-
-        .modal-footer .pull-right .form-group {
-            margin-right: 5px;
-        }
-
-        .modal-footer .pull-right label {
-            color: $grey;
-            @include font-size(14px);
-        }
-
-        .modal-footer .pull-right .input-group-addon {
-            padding: 0;
-            border: none;
-            border-radius: 0;
-            background: none;
-        }
-
-        .modal-footer .pull-right input {
-            width: 36px;
-            height: 34px;
-            padding-left: 5px;
-            line-height: normal;
-        }
+      }
+      p {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      form {
+        margin: 0 -15px;
+        padding: 0 15px;
+      }
+      .form-group {
+        margin-bottom: 0;
+      }
+      .column {
+        @include make-sm-column(12);
+      }
+      label {
+        padding: 0;
+        margin: 15px 0;
+        text-align: left !important;
+      }
+      textarea {
+        resize: none;
+        border-radius: 0;
+      }
     }
+    .col-sm-6:last-of-type {
+      border-left: 1px solid $lightest-grey;
+      background-color: $super-light-grey;
+    }
+    .modal-footer {
+      .pull-left {
+        .fa {
+          margin-right: 5px;
+        }
+      }
+      .pull-right .form-group {
+        margin-right: 5px;
+      }
+      .pull-right label {
+        color: $grey;
+        @include font-size(14px);
+      }
+      .pull-right .input-group-addon {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background: none;
+      }
+      .pull-right input {
+        width: 36px;
+        height: 34px;
+        padding-left: 5px;
+        line-height: normal;
+      }
+    }
+  }
 }
 @mixin modal-content-taskdetails() {
-    #task-details-modal {
-        .modal-body nav p {
-            display: inline-block;
-
-            span {
-                color: $super-dark-grey;
-            }
+  #task-details-modal {
+    .modal-body {
+      nav p {
+        display: inline-block;
+        span {
+          color: $super-dark-grey;
         }
-
-        .modal-body nav .modal-info {
-            margin-top: 10px;
-            @include font-size(14px);
+      }
+      nav .modal-info {
+        margin-top: 10px;
+        @include font-size(14px);
+      }
+      nav a {
+        color: $white;
+        @include font-size(12px);
+        text-transform: uppercase;
+      }
+      .toggled {
+        display: block !important;
+      }
+      .container {
+        width: auto;
+        padding: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 15px;
+        list-style-type: none;
+        &:first-of-type {
+          .title {
+            @include icon-before( '\f0d7', $purple);
+          }
         }
-
-        .modal-body nav a {
-            color: $white;
-            @include font-size(12px);
-            text-transform: uppercase;
+        &:first-of-type + li {
+          .title {
+            @include icon-before( '\f0d7', $dark-green);
+          }
         }
-
-        .modal-body .toggled {
-            display: block !important;
+        &:last-of-type {
+          margin-bottom: 0;
+          .title {
+            @include icon-before( '\f017', $light-green);
+          }
         }
-
-        .modal-body .container {
-            width: auto;
-            padding: 0;
+      }
+      .title {
+        color: $grey;
+        @include font-size(14px);
+        text-transform: uppercase;
+        span {
+          text-transform: none;
         }
-
-        .modal-body ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        .modal-body li {
-            margin-bottom: 15px;
-            list-style-type: none;
-
-            &:first-of-type {
-                .title {
-                    @include icon-before( '\f0d7', $purple);
-                }
-            }
-
-            &:first-of-type + li {
-                .title {
-                    @include icon-before( '\f0d7', $dark-green);
-                }
-            }
-
-            &:last-of-type {
-                margin-bottom: 0;
-
-                .title {
-                    @include icon-before( '\f017', $light-green);
-                }
-            }
-        }
-
-        .modal-body .title {
-            color: $grey;
-            @include font-size(14px);
-            text-transform: uppercase;
-
-            span {
-                text-transform: none;
-            }
-        }
-
-        .modal-body .description {
-            font-weight: 200;
-            padding: 5px 12px;
-            @include font-size(38px);
-        }
-
-        .modal-body img {
-            width: 100%;
-        }
+      }
+      .description {
+        font-weight: 200;
+        padding: 5px 0;
+        @include font-size(38px);
+      }
+      img {
+        width: 100%;
+      }
     }
+  }
 }
 @mixin modal-content-taskslist() {
     #tasks-list-modal {
