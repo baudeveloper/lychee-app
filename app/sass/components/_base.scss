@@ -4,7 +4,7 @@ $tablet__up: "only screen and (min-width: $screen-sm-max)"; // From Table size u
 $desktop: "only screen and (max-width: $screen-md-max)"; // Up to Desktop size ~ <992px
 $desktop__up: "only screen and (min-width: $screen-md-max)"; // From Desktop size up to Infinity ~ >992px
 
-// REM Font Sizes
+// REM Font Size along with Pixel size
 @function calculateRem($size) {
     $remSize: $size / 16px;
     @return $remSize * 1rem;
@@ -12,7 +12,7 @@ $desktop__up: "only screen and (min-width: $screen-md-max)"; // From Desktop siz
 @mixin font-size($size) {
     font-size: $size;
     font-size: calculateRem($size);
-}
+} // Source: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 
 // Font-weights
 $font-weight-light: 200;
