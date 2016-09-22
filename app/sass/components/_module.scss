@@ -1285,7 +1285,7 @@
     @include font-size(14px);
     fieldset {
       padding: 15px;
-      margin: 15px 0;
+      margin: 15px 0 0;
       background-color: $super-extra-light-grey;
     }
     form {
@@ -1293,9 +1293,12 @@
     }
     legend {
       margin: 0;
-      padding: 0;
+      padding:0;
       border: none;
       @include font-size(14px);
+    }
+    .checkbox {
+      margin: 0 15px;
     }
     .form-group {
       &:first-child {
@@ -1355,9 +1358,6 @@
   		&:-ms-input-placeholder {
   			color: $grey;
   		}
-    }
-    div > input[type="checkbox"] {
-      margin: 0;
     }
   }
 }
