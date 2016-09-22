@@ -1,326 +1,288 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 80px;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 0;
-    background-color: $white;
-    box-shadow: 0 2px 2px rgba(0,0,0,.05), 0 1px 0 rgba(0,0,0,.05);
-    @media #{$tablet__up} {
-        overflow: visible;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 80px;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: $white;
+  box-shadow: 0 2px 2px rgba(0,0,0,.05), 0 1px 0 rgba(0,0,0,.05);
+  @media #{$tablet__up} {
+    overflow: visible;
+  }
 }
 
 .navbar-inner {
-    min-height: 80px;
-    width: 100%;
-    position: relative;
-    left: 0;
+  min-height: 80px;
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .navbar-header {
-    position: relative;
-    padding: 0;
-    width: 100%;
-    height: 80px;
-    transition: width 0.5s;
-    width: 247px;
-    z-index: 10;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  transition: width 0.5s;
+  width: 247px;
+  z-index: 10;
 }
 
 .navbar-brand {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    background: $white no-repeat center center/cover url("../images/logo-background.png");
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background: $white no-repeat center center/cover url("../images/logo-background.png");
 }
 
 .navbar-logo {
-    width: 133px;
-    height: 40px;
-    background: transparent no-repeat center center/cover url("../images/logo-shape.png");
+  width: 133px;
+  height: 40px;
+  background: transparent no-repeat center center/cover url("../images/logo-shape.png");
 }
 
 #primary-nav-collapse {
+  position: relative;
+  .input-group {
     position: relative;
-
-    .input-group {
-        position: relative;
-        z-index: 5;
-        margin-bottom: 0;
-
-        #search {
-            padding-left: 15px;
-            @include font-size(18px);
-            color: $red;
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-        }
-
-        .input-search {
-            height: 80px;
-            font-weight: 200;
-            @include font-size(20px);
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            padding-right: 300px;
-        }
-        // Typeahead.js styles
-        @include typeahead-styles();
+    z-index: 5;
+    margin-bottom: 0;
+    #search {
+      padding-left: 15px;
+      @include font-size(18px);
+      color: $red;
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
     }
+    .input-search {
+      height: 80px;
+      font-weight: 200;
+      @include font-size(20px);
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding-right: 300px;
+    }
+    // Typeahead.js styles
+    @include typeahead-styles();
+  }
 }
 
 .navbar-right {
-    background-color: $white;
+  background-color: $white;
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-right: 15px;
+  img {
+    width: 14px;
+  }
+  a {
+    color: $grey;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      color: $red;
+      background-color: transparent !important;
+      .fa {
+        color: inherit;
+      }
+    }
+  }
+  li:last-child .feed-toggle {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: $grey;
+    &:active,
+    &:focus,
+    &:hover {
+      .fa {
+        color: $red;
+      }
+    }
+  }
+  .badge-notify {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    z-index: 15;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding-right: 15px;
-
-    img {
-        width: 14px;
-    }
-
-    a {
-        color: $grey;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:active,
-        &:focus,
-        &:hover {
-            color: $red;
-            background-color: transparent !important;
-
-            .fa {
-                color: inherit;
-            }
-        }
-    }
-
-    li:last-child .feed-toggle {
-        padding-left: 30px;
-        padding-right: 30px;
-        color: $grey;
-
-        &:active,
-        &:focus,
-        &:hover {
-            .fa {
-                color: $red;
-            }
-        }
-    }
-
-    .badge-notify {
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 22px;
-        right: 2px;
-        @include font-size(12px);
-        background-color: $red;
-    }
-    @include dropdown-notification();
-    @include dropdown-time-entry();
+    top: 22px;
+    right: 2px;
+    @include font-size(12px);
+    background-color: $red;
+  }
+  @include dropdown-notification();
+  @include dropdown-time-entry();
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 247px;
-    width: 247px;
-    height: 100%;
-    margin-left: -247px;
-    overflow-y: auto;
-    background: $white;
-    transition: all 0.5s ease;
+  z-index: 1000;
+  position: fixed;
+  left: 247px;
+  width: 247px;
+  height: 100%;
+  margin-left: -247px;
+  overflow-y: auto;
+  background: $white;
+  transition: all 0.5s ease;
 }
 
 #secondary-nav {
-    display: block;
-    margin: 0;
-    background-color: transparent;
-    width: 247px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0;
+  display: block;
+  margin: 0;
+  background-color: transparent;
+  width: 247px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  transition: all 0.5s;
+  z-index: 1;
+  > li {
+    list-style-type: none;
+  }
+  a {
+    position: relative;
     transition: all 0.5s;
-    z-index: 1;
-
-    > li {
-        list-style-type: none;
-    }
-
-    a {
-        position: relative;
+    text-align: left;
+    display: block;
+    @include font-size(16px);
+    line-height: 2;
+    padding: 10px;
+    outline: 0 !important;
+    color: $grey;
+    border-bottom: 1px solid $lightest-grey;
+    &:hover {
+      color: $red;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: red;
         transition: all 0.5s;
-        text-align: left;
-        display: block;
-        @include font-size(16px);
-        line-height: 2;
-        padding: 10px;
-        outline: 0 !important;
-        color: $grey;
-        border-bottom: 1px solid $lightest-grey;
-
-        &:hover {
-            color: $red;
-
-            &::after {
-                position: absolute;
-                content: '';
-                width: 5px;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                background-color: red;
-                transition: all 0.5s;
-            }
-        }
-
-        &:focus {
-            color: $red;
-        }
-
-        .fa {
-            display: inline;
-            margin: 0 10px;
-            line-height: 20px;
-            height: 20px;
-            width: 20px;
-            text-align: center;
-            @include font-size(20px);
-            @media #{$tablet} {
-                 @include font-size(14px);
-            }
-        }
-
-        span {
-            display: inline;
-        }
+      }
     }
-
-    .menu-toggle {
-        margin-top: 15px;
-        color: $medium-grey;
-        border: none;
-        @include font-size(14px);
-
-        .fa {
-            color: inherit;
-            @include font-size(14px);
-        }
-
-        &:focus,
-        &:hover {
-            color: $red;
-
-            &::after {
-                background-color: transparent;
-            }
-        }
+    &:focus {
+      color: $red;
     }
-
-    .site-user {
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        background: $grey;
+    .fa {
+      display: inline;
+      margin: 0 10px;
+      line-height: 20px;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      @include font-size(20px);
+      @media #{$tablet} {
+         @include font-size(14px);
+      }
     }
-
-    .info {
-        margin-left: 20px;
-        @include font-size(16px);
-
-        span {
-            display: block;
-        }
-
-        span:first-child {
-            color: $darkest-grey;
-        }
-
-        span:last-child {
-            color: $white;
-        }
+    span {
+      display: inline;
     }
+  }
+  .menu-toggle {
+    margin-top: 15px;
+    color: $medium-grey;
+    border: none;
+    @include font-size(14px);
+    .fa {
+      color: inherit;
+      @include font-size(14px);
+    }
+    &:focus,
+    &:hover {
+      color: $red;
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+  .site-user {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: $grey;
+  }
+  .info {
+    margin-left: 20px;
+    @include font-size(16px);
+    span {
+      display: block;
+    }
+    span:first-child {
+      color: $darkest-grey;
+    }
+    span:last-child {
+      color: $white;
+    }
+  }
 }
 
 #wrapper {
-    padding-left: 247px;
-    transition: all 0.5s;
+  padding-left: 247px;
+  transition: all 0.5s;
 }
 
 #wrapper.toggled {
-    padding-left: 49px;
-    transition: all 0.5s;
-
-    #sidebar-wrapper {
-        width: 49px;
+  padding-left: 49px;
+  transition: all 0.5s;
+  #sidebar-wrapper {
+    width: 49px;
+  }
+  main {
+    position: relative;
+    margin-right: 0;
+  }
+  .page-title {
+    margin-top: 36px !important;
+  }
+  .navbar-header {
+    width: 49px;
+  }
+  .navbar-brand {
+    background: $white no-repeat center center/cover url("../images/logo-background-small.png");
+  }
+  .navbar-logo {
+    width: 22px;
+    height: 22px;
+    background: transparent no-repeat center center/cover url("../images/logo-shape-small.png");
+  }
+  #secondary-nav {
+    .site-user > *,
+    span {
+      display: none;
     }
-
-    main {
-        position: relative;
-        margin-right: 0;
+    .site-user {
+      height: 60px;
+      background: $light-grey no-repeat left/contain url('../images/site-user.png');
+      transition: background 0.5s;
     }
-
-    .page-title {
-        margin-top: 36px !important;
+    a {
+      padding: 7px;
     }
-
-    .navbar-header {
-        width: 49px;
+    .fa {
+      @include font-size(14px);
     }
-
-    .navbar-brand {
-        background: $white no-repeat center center/cover url("../images/logo-background-small.png");
+    .menu-toggle i::before {
+      content: "\f178";
     }
-
-    .navbar-logo {
-        width: 22px;
-        height: 22px;
-        background: transparent no-repeat center center/cover url("../images/logo-shape-small.png");
-    }
-
-    #secondary-nav {
-        .site-user > *,
-        span {
-            display: none;
-        }
-
-        .site-user {
-            height: 60px;
-            background: $light-grey no-repeat left/contain url('../images/site-user.png');
-            transition: background 0.5s;
-        }
-
-        a {
-            padding: 7px;
-        }
-
-        .fa {
-            @include font-size(14px);
-        }
-
-        .menu-toggle i::before {
-            content: "\f178";
-        }
-    }
+  }
 }
