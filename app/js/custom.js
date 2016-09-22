@@ -36,17 +36,7 @@ $(document).ready(function() {
       format: "dd MM, yyyy"
     });
     $(".input-startdate, .input-enddate").datepicker({
-      format: "dd MM, yyyy"
-    });
-    $(".btn-startdate").click(function() {
-      $(".input-startdate").datepicker({
-        format: "dd MM, yyyy"
-      });
-    });
-    $(".btn-enddate").click(function() {
-      $(".input-enddate").datepicker({
-        format: "dd MM, yyyy"
-      });
+      format: "yyyy-mm-dd"
     });
     $("#fancytree, .all-tasks").fancytree();
     $('.fancytree-icon').each(function(){
