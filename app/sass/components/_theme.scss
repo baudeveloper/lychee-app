@@ -19,40 +19,32 @@
 			 @include font-size(18px);
 		}
 	}
-
 	.bootstrap-select button {
 		color: $red;
 		border-radius: 0;
 		@include font-size(16px);
 		box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 	}
-
 	.bootstrap-select .dropdown-menu {
 		@include font-size(16px);
-
 		a {
 			padding: 3px 12px;
 			@include font-size(16px);
 		}
 	}
-
 	.checkbox {
 		margin-left: 30px;
 	}
-
 	.checkbox label {
 		@include font-size(14px);
-
 		input {
 			margin-right: 5px;
 		}
 	}
-
 	.pagination {
 		margin: 0;
 		padding: 0;
 	}
-
 	.pagination li a {
 		color: $grey;
 		border: none;
@@ -63,7 +55,6 @@
 		@media #{$tablet} {
 			 @include font-size(18px);
 		}
-
 		&:active,
 		&:focus,
 		&:hover {
@@ -72,13 +63,11 @@
 			background-color: $red;
 		}
 	}
-
 	.pagination li:first-of-type a {
 		padding-left: 0;
 		margin-right: 10px;
 		padding-right: 10px;
 		border-right: 1px solid $darkest-grey;
-
 		&:active,
 		&:focus,
 		&:hover {
@@ -87,13 +76,11 @@
 			background-color: transparent;
 		}
 	}
-
 	.pagination li.disabled a {
 		color: $darkest-grey;
 		border: none;
 		background: none;
 		box-shadow: none;
-
 		&:active,
 		&:focus,
 		&:hover {
@@ -101,11 +88,9 @@
 			background-color: lighten($red, 15%);
 		}
 	}
-
 	.form-group:first-of-type + div {
 		margin-top: -4px;
 	}
-
 	.form-group:last-of-type {
 		@media (max-width: 1500px) {
 			float: none !important;
@@ -114,7 +99,6 @@
 			margin-top: 20px;
 		}
 	}
-
 	.team-row {
 		margin: 50px 0;
 		display: flex;
@@ -125,36 +109,28 @@
 			margin: 30px 0;
 		}
 	}
-
 	.team-member a {
 		display: inline-block;
 	}
-
 	.team-member figure {
 		display: inline-block;
 	}
-
 	.team-member img {
 		width: auto;
 		transition: border 0.5s;
 		border: 5px solid transparent;
-
 		&:hover {
 			border: 5px solid $red;
 		}
 	}
-
 	.info {
 		margin: 15px 0 30px;
-
 		span {
 			display: block;
 		}
-
 		span:first-of-type {
 			@include font-size(14px);
 		}
-
 		span:last-of-type {
 			@include font-size(12px);
 		}
@@ -166,39 +142,32 @@
 	h2 {
 		margin: 35px 0 20px;
 	}
-
 	p {
 		margin: 0;
 		padding: 0;
 		@include font-size(16px);
-
 		span {
 			width: 70px;
 			display: inline-block;
 		}
-
 		&:first-of-type {
 			margin-top: 30px;
 		}
 	}
-
 	.member-mail {
 		color: $red;
 		display: block;
 		margin-bottom: 60px;
-
 		&:hover {
 			color: darken($red, 15%);
 		}
 	}
-
 	li {
 		color: $grey;
 		@include font-size(14px);
 		@include border-and-background();
 		@include margin-and-padding(0 0 30px, 0);
 	}
-
 	.badge {
 		float: none;
 		display: block;
@@ -209,7 +178,6 @@
 		@include margin-and-padding(0, 0);
 		@include border-and-background();
 	}
-
 	.value {
 		@include font-size(66px);
 	}
@@ -219,23 +187,19 @@
 			@include make-md-column(4);
 			padding: 0;
 		}
-
 		.member-card {
 			@include make-sm-column(8);
 			@include make-md-column(8);
 			padding: 0;
 			margin-bottom: 30px;
 		}
-
 		figure {
 			margin: 0 15px 0 0;
 			display: inline-block;
 		}
-
 		.description {
 			display: inline-block;
 		}
-
 		.description p:first-of-type {
 			margin: 0;
 		}
@@ -247,18 +211,15 @@
 		padding: 15px;
 		background-color: $white;
 	}
-
 	h2 {
 		margin-bottom: 15px;
 		padding-bottom: 15px;
 		border-bottom: 1px solid $red;
 	}
-
 	h3 {
 		font-weight: 400;
 		@include font-size(16px);
 	}
-
 	label {
 		display: inline;
 		font-weight: 400;
@@ -273,7 +234,6 @@
 			width: 40%;
 		}
 	}
-
 	.checkbox {
 		display: inline;
 		@include font-size(14px);
@@ -284,30 +244,24 @@
 			width: 40%;
 		}
 		text-align: right;
-
 		input {
 			margin-right: 5px;
 		}
 	}
-
 	table {
 		margin-bottom: 50px;
 		border-color: $darkest-grey;
 	}
-
 	tbody tr * {
 		text-align: center;
 		@include font-size(14px);
 	}
-
 	tbody th {
 		color: $grey;
 	}
-
 	tbody td:first-of-type {
 		color: $red;
 	}
-
 	.table-striped tr:nth-of-type(2n+1) {
 		background-color: $extra-light-grey !important;
 	}
@@ -324,11 +278,9 @@
 		}
 		@include inline-input();
 		@include typeahead-standard();
-
 		.button {
 			padding: 15px 0 0 15px;
 		}
-
 		.dropdown-menu {
 			left: auto;
 		}
@@ -344,23 +296,19 @@
 		margin: 0;
 		border-radius: 0;
 	}
-
 	.panel-heading {
 		padding: 15px;
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
-
 	.panel-heading thead {
 		@media #{$tablet} {
 			 @include font-size(12px);
 		}
 	}
-
 	.panel-heading .input-group {
 		max-width: 260px;
 		position: relative;
-
 		input {
 			color: $red;
 			height: 36px;
@@ -373,22 +321,7 @@
 				 @include font-size(14px);
 			}
 		}
-
-		input::-webkit-input-placeholder {
-			color: $red;
-		}
-
-		input:-moz-placeholder {
-			color: $red;
-		}
-
-		input::-moz-placeholder {
-			color: $red;
-		}
-
-		input:-ms-input-placeholder {
-			color: $red;
-		}
+		@include input-placeholder-color($red);
 		// Source: https://css-tricks.com/snippets/css/style-placeholder-text/
 		.input-group-addon {
 			position: absolute;
@@ -404,109 +337,87 @@
 				top: 2px;
 			}
 		}
-
 		button {
 			height: 36px;
 		}
 	}
-
 	.panel-heading .headers {
 		margin-top: 15px;
 	}
-
 	.panel-body {
 		padding: 0;
 	}
-
 	.panel-body ul {
 		margin: 0;
 	}
-
 	.panel-body li {
 		margin: 0;
 		border-radius: 0;
 		border: none;
 		border-bottom: 1px solid $extra-darkest-grey;
-
 		&:last-of-type {
 			border: none;
 		}
-
 		&.sticky {
 			background-color: $light-blue !important;
-
 			.btn-pin {
 				color: $blue;
 			}
 		}
-
 		&:nth-child(odd) {
 			background-color: $extra-light-grey;
 		}
 	}
-
 	.panel-body .icon-group {
 		padding-top: 0;
 		text-align: right;
 	}
-
 	.panel-body .icon-group a:hover {
 		cursor: pointer;
 	}
-
 	.panel-footer {
 		padding: 20px 15px;
 		background-color: transparent;
 		border-color: $extra-darkest-grey;
 	}
-
 	.panel-footer .btn {
 		min-width: 100px;
 	}
-
 	table {
 		width: 100%;
 		padding: 15px;
 		line-height: 1;
 		@include font-size(14px);
 	}
-
 	td,
 	th {
 		padding: 4px;
 	}
-
 	th {
 		font-weight: 400;
 		text-align: center;
 		vertical-align: bottom;
-
 		&:first-child + th {
 			text-align: left;
 		}
-
 		&:last-child {
 			font-weight: 600;
 		}
 	}
-
 	td {
 		small {
 			display: block;
 			@include font-size(12px);
 		}
-
 		input {
 			height: 37px;
 			text-align: center;
 		}
-
 		&:first-child + td {
 			input {
 				text-align: left;
 			}
 		}
-
 		&:last-child {
 			span {
 				display: block;
@@ -516,20 +427,16 @@
 			}
 		}
 	}
-
 	table .btn-tasks {
 		color: $red;
 	}
-
 	table .btn-edit {
 		margin-left: 10px;
 		color: $medium-grey;
 	}
-
 	table .btn-pin {
 		color: $medium-grey;
 	}
-
 	table .icon-group a {
 		color: $medium-grey;
 		margin-left: 10px;
@@ -538,19 +445,15 @@
 	.panel-body .sticky .btn-pin {
 		@include hyperlink-hover($blue);
 	}
-
 	.panel-body .icon-group a {
 		@include hyperlink-hover($medium-grey);
 	}
-
 	.panel-body .btn-tasks {
 		@include hyperlink-hover($red);
 	}
-
 	.panel-body .btn-edit {
 		@include hyperlink-hover($medium-grey);
 	}
-
 	.panel-body .btn-pin {
 		@include hyperlink-hover($medium-grey);
 	}
@@ -558,11 +461,9 @@
 // Project Page
 .page-project {
 	color: $grey;
-
 	.heading {
 		border-bottom: 1px solid $red;
 		@include margin-and-padding(0 0 20px 0, 0 0 10px);
-
 		h2 {
 			color: $red;
 			display: inline-block;
@@ -571,13 +472,11 @@
 			@include margin-and-padding(10px 0 0, 0);
 		}
 	}
-
 	.page-row > section {
 		background-color: $white;
 		box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
 		@include margin-and-padding(15px, 15px);
 	}
-
 	table {
 		color: $grey;
 		border: 1px solid $darkest-grey;
@@ -585,35 +484,29 @@
 		@media #{$tablet} {
 			font-size: 12px !important;
 		}
-
 		td,
 		th {
 			text-align: center;
 		}
-
 		td,
 		th,
 		tr {
 			border-color: $darkest-grey !important;
 		}
-
 		thead th {
 			background-color: $extra-light-grey !important;
 			border-bottom: 1px solid $darkest-grey !important;
 		}
-
 		tbody tr:nth-child(even) {
 			background-color: $extra-light-grey;
 		}
 	}
-
 	.btn-edit-project {
 		color: $red;
 		margin-left: 10px;
 		@include font-size(20px);
 		@include hyperlink-hover($red);
 	}
-
 	.tbl-project-info {
 		border: none;
 		max-width: 350px;
@@ -624,7 +517,6 @@
 			max-width: 350px;
 			float: none !important;
 		}
-
 		td {
 			color: $black;
 			padding: 2px !important;
@@ -633,25 +525,20 @@
 			&:first-child+td+td+td {
 				border-left: 1px solid $super-grey !important;
 			}
-
 			&.title {
 				color: $super-grey;
 			}
 		}
-
 		tr {
 			background-color: transparent !important;
 		}
 	}
-
 	.tbl-portal-users {
 		margin-bottom: 15px;
-
 		td:first-child,
 		th:first-child {
 			text-align: left;
 		}
-
 		.btn-invoice,
 		a {
 			color: $red;
@@ -662,66 +549,53 @@
 
 #project-dash {
 	@include margin-and-padding(15px, 15px 15px 0);
-
 	.heading {
 		margin-bottom: 0;
 	}
 }
-
 .dash-content {
 	display: flex;
 	flex-wrap: wrap;
-
 	> div {
 		flex-grow: 1;
 		border-left: 1px solid $darkest-grey;
 	}
-
 	> div:first-child {
 		border-left: none;
 	}
-
 	.dash-nav {
 		width: 10%;
 		height: auto;
 	}
-
 	.all-tasks {
 		width: 30%;
 		height: auto;
-
 		.btn-group {
 			width: 100%;
 			margin-top: 15px;
-
 			.btn {
 				width: 100%;
 				text-align: left;
 				@include font-size(16px);
 			}
-
 			span {
 				position: absolute;
 				top: 14px;
 				right: 10px;
 			}
-
 			.dropdown-menu {
 				width: 100%;
 			}
-
 			.dropdown-menu a {
 				@include font-size(14px);
 			}
 		}
 	}
-
 	.task-category {
 		width: 60%;
 		height: auto;
 		display: flex;
 		flex-wrap: wrap;
-
 		.task-effort {
 			flex-grow: 1;
 			width: 100%;
@@ -729,14 +603,12 @@
 			flex-direction: row;
 			border-bottom: 1px solid $darkest-grey;
 		}
-
 		.task-breakdown {
 			flex-grow: 1;
 			width: 50%;
 			border-left: none;
 			flex-direction: column;
 		}
-
 		.task-performance {
 			flex-grow: 1;
 			width: 50%;
@@ -744,81 +616,64 @@
 			border-left: 1px solid $darkest-grey;
 		}
 	}
-
 	h3 {
 		color: $red;
 		text-align: center;
 		@include font-size(16px);
 		text-transform: uppercase;
 	}
-
 	img {
 		width: 100%;
 	}
 }
-
 .dash-nav ul {
 	margin: 0;
 	padding: 0;
-
 	li {
 		padding: 5px 0;
 		list-style-type: none;
 		border-bottom: 1px solid $super-extra-light-grey;
 	}
-
-	,
 	li:last-child,
 	li:nth-last-child(2) {
 		border-bottom: none;
 	}
-
 	a {
 		display: block;
 		color: $super-extra-light-grey;
 		@include font-size(14px);
-
 		span {
 			transition: all 0.4s;
 			color: $super-extra-light-grey;
 		}
 	}
-
 	a:hover {
 		color: $red;
-
 		span {
 			color: $red;
 			transition: all 0.4s;
 		}
 	}
-
 	a:focus {
 		color: $red;
-
 		span {
 			color: $red;
 		}
 	}
-
 	.tasks-toggle {
 		margin-top: 30px;
 		color: $medium-grey;
-
 		span {
 			color: $medium-grey;
 		}
 	}
 }
-
 .dash-nav.switch {
 	width: 1%;
-
 	.tasks-toggle .fa::before {
 		content: '\f178';
 	}
 }
-
 #project-team {
 	.timeline {
 		margin-bottom: 15px;
@@ -831,11 +686,9 @@
 		margin: 0 15px 15px 0;
 		@include font-size(16px);
 	}
-
 	.btn-tertiary {
 		min-width: 200px;
 	}
-
 	.assigned-members-group {
 		width: 40%;
 		float: left;
@@ -843,23 +696,19 @@
 		@media #{$tablet__up} {
 			width: 40%;
 		}
-
 		h3 {
 			margin-top: 0;
 			margin-right: 15px;
 		}
-
 		.btn-team-gridview {
 			color: $red;
 			@include hyperlink-hover($red);
 		}
-
 		.btn-team-listview {
 			color: $red;
 			@include hyperlink-hover($red);
 		}
 	}
-
 	.checkbox {
 		margin: 0;
 		width: 30%;
@@ -870,42 +719,34 @@
 		@media #{$tablet__up} {
 			width: 40%;
 		}
-
 		input[type="checkbox"] {
 			margin-right: 5px;
 		}
 	}
-
 	.input-group {
 		margin-bottom: 30px;
 		@media #{$tablet} {
 			margin-bottom: 15px;
 		}
-
 		input[type="text"] {
 			border-color: $darker-grey;
 		}
 	}
-
 	.tbl-assigned-members {
 		margin-bottom: 15px;
-
 		.tablesaw-cell-persist,
 		th {
 			border: none;
 		}
-
 		a {
 			color: $red;
 			@include hyperlink-hover($red);
 		}
 	}
-
 	.container {
 		padding: 0;
 		width: 100%;
 	}
-
 	.well {
 		border-radius: 0;
 		box-shadow: none;
@@ -918,7 +759,6 @@
 			 @include margin-and-padding(0 0 15px, 10px);
 		}
 	}
-
 	.btn-add-user {
 		@media #{$tablet} {
 			display: inline-block !important;
@@ -931,7 +771,6 @@
 		color: $grey;
 		@include font-size(16px);
 	}
-
 	small {
 		float: left;
 		width: 70%;
@@ -943,99 +782,78 @@
 			width: 80%;
 		}
 	}
-
 	.btn-tertiary {
 		min-width: 200px;
 	}
-
 	.btn-add-contact {
 		margin-bottom: 15px;
 	}
-
 	.btn-edit-bookkeeping {
 		color: $red;
 		margin-left: 10px;
 		@include hyperlink-hover($red);
 	}
-
 	.tbl-bookkeeping {
 		width: auto;
 		display: block;
 		min-width: 500px;
 		border: none;
-
 		col {
 			width: auto;
-
 			&:first-child {
 				min-width: 125px;
 			}
-
 			&:first-child+col+col {
 				min-width: 125px;
 			}
-
 			&:first-child+col {
 				min-width: 150px;
 			}
-
 			&:last-child {
 				min-width: 150px;
 			}
 		}
-
 		tr {
 			background: none !important;
 		}
-
 		td {
 			padding: 2px;
 			border: none;
 			color: $black;
 			text-align: left;
-
 			&.title {
 				color: $super-grey;
 			}
 		}
 	}
-
 	.tbl-invoice-contacts {
 		margin-bottom: 15px;
-
 		a {
 			color: $red;
 			@include hyperlink-hover($red);
 		}
 	}
-
 	.tbl-invoice-milestones {
 		margin-bottom: 15px;
-
 		.tablesaw-cell-persist {
 			border-right: none;
 		}
-
 		.btn-invoice,
 		a {
 			color: $red;
 			@include hyperlink-hover($red);
 		}
-
 		th {
 			border-left: none;
 			border-right: none;
 		}
-
 		tfoot {
 			font-weight: $font-weight-bold;
 			background-color: $lightest-red;
-
 			a {
 				color: $grey;
 				@include hyperlink-hover($grey);
 			}
-
 			td {
 				font-size: 14px !important;
 				@media #{$tablet} {
@@ -1045,5 +863,4 @@
 		}
 	}
 }
-
 @include fancytree();
