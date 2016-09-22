@@ -43,19 +43,22 @@ $medium-grey-light: #949494;
 $medium-grey: #999999;
 $medium-grey-dark: #d7d7d7;
 $transparent-grey: rgba(61, 61, 61, 0.95);
+// RBGSs
 $red: #ef4036;
 $blue: #0000ff;
-$light-blue: #f7f7ff;
-$light-red: #fde6e5;
-$lightest-red: #fef4f3;
-$light-green: #bdc9c8;
-$lightest-green: #ebf8f7;
 $green: #00a99d;
 $dark-green: #1da99e;
-$purple: #400099;
-$light-yellow: #fcf8e4;
+$light-red: #fde6e5;
+$light-blue: #f7f7ff;
+$light-green: #bdc9c8;
+$lightest-red: #fef4f3;
+$lightest-green: #ebf8f7;
+// Yellows
 $yellow: #dfd477;
 $dark-yellow: #8a6d3b;
+$light-yellow: #fcf8e4;
+// Additionals
+$purple: #400099;
 
 // Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
 *::-moz-selection {
