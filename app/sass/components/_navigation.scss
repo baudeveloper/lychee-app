@@ -199,7 +199,7 @@
       margin-left: 10px;
     }
   }
-  > li.active > a {
+  > li.active > a:not(.menu-toggle) {
     color: $red;
     &::after {
       position: absolute;
