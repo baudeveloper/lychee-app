@@ -1398,6 +1398,14 @@
       border-radius: 0;
       border-color: $lightest-grey;
     }
+    .radio {
+      margin: 0;
+      padding: 0;
+      line-height: normal;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
     .contributions {
       padding-top: 10px;
     }
