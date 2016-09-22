@@ -3,12 +3,12 @@ main.page-project(role='main')
 		li
 			a(href='#') Project List
 		li
-			a(href='#', data-toggle="modal", data-target="#edit-project-modal") RouteOne
+			a(href='#') RouteOne
 		li.active Credit Aggregation Platforms
 	h1.page-title
 		i.fa.fa-briefcase(aria-hidden='true')
 		| RONE-0757 (Remoted Document Delivery)
-		a.btn-edit-project(data-toggle="modal", data-target="#assignment-modal")
+		a.btn-edit-project(, data-toggle="modal", data-target="#edit-project-modal")
 			i.fa.fa-pencil
 	table.table.table-condensed.tbl-project-info.pull-right
 		colgroup
@@ -52,7 +52,7 @@ main.page-project(role='main')
 								i.fa.fa-clock-o(aria-hidden='true')
 								span Log Time
 						li
-							a(href="#", title="Edit")
+							a(data-toggle="modal", data-target="#assignment-modal", title="Edit")
 								i.fa.fa-pencil(aria-hidden='true')
 								span Edit
 						li
