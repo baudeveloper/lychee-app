@@ -19,25 +19,19 @@ button {
   margin: 0;
   border-radius: 0;
 }
+
 // Breadcrumb
-
 .breadcrumb {
-    position: absolute;
-    top: 0;
-    padding: 8px 0;
-    background-color: transparent;
-
-    li + * {
-        &::before {
-            content: '\f105' !important;
-            color: $medium-grey !important;
-            font-family: "fontawesome" !important;
-        }
-    }
-
-    a {
-      @include hyperlink-hover($red);
-    }
+  position: absolute;
+  top: 0;
+  padding: 8px 0;
+  background-color: transparent;
+  a {
+    @include hyperlink-hover($red);
+  }
+  li + * {
+    @include icon-before('\f105' !important, $medium-grey !important);
+  }
 }
 // Buttons
 
