@@ -1284,15 +1284,12 @@
   #assignment-modal {
     @include font-size(14px);
     fieldset {
-      padding: 20px 0 5px;
+      padding: 15px;
+      margin: 15px 0;
       background-color: $super-extra-light-grey;
-      &:last-of-type {
-        margin-top: 15px;
-        padding: 15px;
-      }
     }
     form {
-      padding: 30px 0 0;
+      margin: 30px 0 0;
     }
     legend {
       margin: 0;
@@ -1301,7 +1298,6 @@
       @include font-size(14px);
     }
     .form-group {
-      // margin: 0 0 15px;
       &:first-child {
         padding-left: 0;
         padding-right: 0;
@@ -1309,6 +1305,9 @@
       &:first-child + div {
         padding-left: 0;
         padding-right: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
     .contributions {
