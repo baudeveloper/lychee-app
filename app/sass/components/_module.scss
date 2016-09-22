@@ -1396,14 +1396,19 @@
     .contributions {
       padding-top: 10px;
     }
-    .bootstrap-select,
-    .dropdown-menu {
-      // width: 100%;
-    }
     .bootstrap-select .btn,
     .selectpicker {
       text-transform: none;
       @include font-size(14px);
+    }
+    .btn-group {
+      // display: inline-table;
+    }
+    .input-group {
+      display: inline-block;
+      .input-group-btn {
+        display: inline-block;
+      }
     }
     .input-icon {
       position: relative;
