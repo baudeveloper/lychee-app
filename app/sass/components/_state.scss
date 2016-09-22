@@ -62,27 +62,26 @@ button {
     color: $white;
   }
 }
-// Inputs
 
+// Inputs
 input[type="text"] {
-    box-shadow: none;
-    border-radius: 0;
-    min-height: 36px;
-    @media #{$tablet} {
-      min-height: 34px;
-    }
+  box-shadow: none;
+  border-radius: 0;
+  min-height: 36px;
+  @media #{$tablet} {
+    min-height: 34px;
+  }
 }
 
 // Alert
-
 .alert-timesheet {
-    @include font-size(16px);
-    color: $dark-yellow;
-    border-color: $yellow;
-    background-color: $light-yellow;
+  @include font-size(16px);
+  color: $dark-yellow;
+  border-color: $yellow;
+  background-color: $light-yellow;
 }
-// Popover
 
+// Popover
 .popover {
     max-width: 100%;
     border-radius: 0;
