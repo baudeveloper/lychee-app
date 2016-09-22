@@ -1359,24 +1359,10 @@
 @mixin modal-content-editproject() {
   #edit-project-modal {
     @include font-size(14px);
-    fieldset {
-      padding: 15px;
-      background-color: $super-extra-light-grey;
-      &:last-of-type {
-        margin-top: 15px;
-      }
-    }
-    legend {
-      margin: 0;
-      padding: 0;
-      border: none;
-      @include font-size(14px);
-    }
     form {
-      padding: 30px 0 0;
+      margin: 30px 0 0;
     }
     .form-group {
-      // margin: 0 0 15px;
       &:first-child {
         padding-left: 0;
         padding-right: 0;
@@ -1386,31 +1372,38 @@
         padding-right: 0;
       }
     }
-    .contributions {
-      padding-top: 10px;
-    }
     label {
       font-weight: $font-weight-regular;
-    }
-    .bootstrap-select,
-    .dropdown-menu {
-      width: 100%;
-    }
-    .bootstrap-select .btn,
-    .selectpicker {
-      text-transform: none;
-      @include font-size(14px);
     }
     .control-label {
       text-align: left;
       padding-top: 10px;
     }
-    .lbl-heading {
-      margin-bottom: 15px;
+    fieldset {
+      padding: 15px;
+      background-color: $super-extra-light-grey;
+    }
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+      @include font-size(14px);
       text-transform: uppercase;
     }
     textarea {
       resize: none;
+    }
+    .contributions {
+      padding-top: 10px;
+    }
+    .bootstrap-select,
+    .dropdown-menu {
+      // width: 100%;
+    }
+    .bootstrap-select .btn,
+    .selectpicker {
+      text-transform: none;
+      @include font-size(14px);
     }
     .input-icon {
       position: relative;
@@ -1419,12 +1412,12 @@
         top: 7px;
         bottom: 0;
         right: 5px;
-        a {
-          @include hyperlink-hover($grey);
-          &:hover {
-              cursor: default;
-          }
-        }
+      }
+      a {
+        @include hyperlink-hover($grey);
+      }
+      a:hover {
+        cursor: default;
       }
     }
     input[type="text"] {
@@ -1432,22 +1425,16 @@
       &::-webkit-input-placeholder {
   			color: $grey;
   		}
-
   		&:-moz-placeholder {
   			color: $grey;
   		}
-
   		&::-moz-placeholder {
   			color: $grey;
   		}
-
   		&:-ms-input-placeholder {
   			color: $grey;
   		}
-    }
-    div > input[type="checkbox"] {
-      margin: 0;
-    }
+    }    
   }
 }
 @mixin tablesaw-assignments() {
