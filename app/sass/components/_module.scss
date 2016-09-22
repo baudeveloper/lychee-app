@@ -1324,15 +1324,15 @@
       padding-top: 10px;
     }
     fieldset {
-      margin: 0 0 15px;
       padding: 15px;
+      margin: 0 0 15px;
       background-color: $super-extra-lightest-grey;
     }
     legend {
-      margin: 0 0 15px;
       padding: 0;
       float: left;
       border: none;
+      margin: 0 0 15px;
       @include font-size(14px);
       text-transform: uppercase;
     }
@@ -1383,27 +1383,16 @@
       }
       a {
         @include hyperlink-hover($grey);
-      }
-      a:hover {
-        cursor: default;
+        &:hover {
+          cursor: default;
+        }
       }
     }
     input[type="text"] {
       color: $grey;
       border-radius: 0;
       border-color: $lightest-grey;
-      &::-webkit-input-placeholder {
-  			color: $grey;
-  		}
-  		&:-moz-placeholder {
-  			color: $grey;
-  		}
-  		&::-moz-placeholder {
-  			color: $grey;
-  		}
-  		&:-ms-input-placeholder {
-  			color: $grey;
-  		}
+      @include input-placeholder-color($grey);
     }
   }
 }
