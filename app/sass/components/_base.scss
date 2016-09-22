@@ -61,37 +61,36 @@ $light-yellow: #fcf8e4;
 // Additionals
 $purple: #400099;
 
-// Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
+// Selection Color in Browser
 *::-moz-selection {
-    color: $white;
-    background-color: $red;
+  color: $white;
+  background-color: $red;
 }
-
 *::selection {
-    color: $white;
-    background-color: $red;
-}
+  color: $white;
+  background-color: $red;
+} // Source: https://css-tricks.com/almanac/selectors/s/selection/
 
 // Font Awesome Icon Insertion
 @mixin icon-before($content, $color) {
-    &::before {
-        color: $color;
-        margin-right: 5px;
-        content: $content;
-        font-family: "fontawesome";
-    }
+  &::before {
+    color: $color;
+    margin-right: 5px;
+    content: $content;
+    font-family: "fontawesome";
+  }
 }
 
 // Disable Border and Background
 @mixin border-and-background() {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 // Define Margin and Padding
 @mixin margin-and-padding($mar, $pad) {
-    margin: $mar;
-    padding: $pad;
+  margin: $mar;
+  padding: $pad;
 }
 
 // Darken Link Color on hover
