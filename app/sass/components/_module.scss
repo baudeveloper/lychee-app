@@ -1005,38 +1005,38 @@
     border-bottom: none;
     background-color: $red;
     @include font-size(18px);
-  }
-  .modal-header button {
-    opacity: 1;
-    color: inherit;
+    button {
+      opacity: 1;
+      color: inherit;
+    }
   }
   .modal-body {
     position: relative;
     padding: 0 15px 15px;
-  }
-  .modal-body nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    color: $white;
-    padding: 15px;
-    min-height: 50px;
-    margin: 0 -15px 30px;
-    @include font-size(16px);
-    background-color: $grey;
-    p {
-      margin: 0;
+    nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      color: $white;
+      padding: 15px;
+      min-height: 50px;
+      margin: 0 -15px 30px;
+      @include font-size(16px);
+      background-color: $grey;
+      p {
+        margin: 0;
+      }
     }
   }
   .modal-footer {
     border-top-color: $lightest-grey;
-  }
-  .modal-footer .btn {
-    min-width: 100px;
-    border-radius: 0;
-    text-transform: uppercase;
+    .btn {
+      min-width: 100px;
+      border-radius: 0;
+      text-transform: uppercase;
+    }
   }
 }
 @mixin modal-content-todo() {
