@@ -996,57 +996,48 @@
     }
 }
 @mixin modal-standard() {
-    .modal {
-        .modal-content {
-            box-shadow: none;
-            border-radius: 0;
-        }
-
-        .modal-header {
-            color: $white;
-            @include font-size(18px);
-            background-color: $red;
-            border-bottom: none;
-        }
-
-        .modal-header button {
-            opacity: 1;
-            color: inherit;
-        }
-
-        .modal-body {
-            position: relative;
-            padding: 0 15px 15px;
-        }
-
-        .modal-body nav {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: auto;
-            min-height: 50px;
-            color: $white;
-            margin: 0 -15px 30px;
-            padding: 15px;
-            @include font-size(16px);
-            background-color: $grey;
-
-            p {
-                margin: 0;
-            }
-        }
-
-        .modal-footer {
-            border-top-color: $lightest-grey;
-        }
-
-        .modal-footer .btn {
-            min-width: 100px;
-            border-radius: 0;
-            text-transform: uppercase;
-        }
+  .modal-content {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .modal-header {
+    color: $white;
+    border-bottom: none;
+    background-color: $red;
+    @include font-size(18px);
+  }
+  .modal-header button {
+    opacity: 1;
+    color: inherit;
+  }
+  .modal-body {
+    position: relative;
+    padding: 0 15px 15px;
+  }
+  .modal-body nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    color: $white;
+    padding: 15px;
+    min-height: 50px;
+    margin: 0 -15px 30px;
+    @include font-size(16px);
+    background-color: $grey;
+    p {
+      margin: 0;
     }
+  }
+  .modal-footer {
+    border-top-color: $lightest-grey;
+  }
+  .modal-footer .btn {
+    min-width: 100px;
+    border-radius: 0;
+    text-transform: uppercase;
+  }
 }
 @mixin modal-content-todo() {
     #todo-modal {
@@ -1153,29 +1144,29 @@
             background-color: $super-light-grey;
         }
 
-        .modal-footer .left {
+        .modal-footer .pull-left {
             .fa {
                 margin-right: 5px;
             }
         }
 
-        .modal-footer .right .form-group {
+        .modal-footer .pull-right .form-group {
             margin-right: 5px;
         }
 
-        .modal-footer .right label {
+        .modal-footer .pull-right label {
             color: $grey;
             @include font-size(14px);
         }
 
-        .modal-footer .right .input-group-addon {
+        .modal-footer .pull-right .input-group-addon {
             padding: 0;
             border: none;
             border-radius: 0;
             background: none;
         }
 
-        .modal-footer .right input {
+        .modal-footer .pull-right input {
             width: 36px;
             height: 34px;
             padding-left: 5px;
