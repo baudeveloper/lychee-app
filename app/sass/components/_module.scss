@@ -1283,23 +1283,8 @@
 @mixin modal-content-assignment() {
   #assignment-modal {
     @include font-size(14px);
-    fieldset {
-      padding: 15px;
-      margin: 15px 0 0;
-      background-color: $super-extra-light-grey;
-    }
     form {
       margin: 30px 0 0;
-    }
-    legend {
-      margin: 0;
-      padding: 0;
-      border: none;
-      @include font-size(14px);
-      text-transform: uppercase;
-    }
-    .checkbox {
-      margin: 0 15px;
     }
     .form-group {
       &:first-child {
@@ -1314,14 +1299,29 @@
         margin-bottom: 0;
       }
     }
-    .contributions {
-      padding-top: 10px;
-    }
     label {
       font-weight: $font-weight-regular;
     }
     .control-label {
       text-align: left;
+      padding-top: 10px;
+    }
+    fieldset {
+      padding: 15px;
+      margin: 15px 0 0;
+      background-color: $super-extra-light-grey;
+    }
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+      @include font-size(14px);
+      text-transform: uppercase;
+    }
+    .checkbox {
+      margin: 0 15px;
+    }
+    .contributions {
       padding-top: 10px;
     }
     .input-icon {
@@ -1331,7 +1331,7 @@
         top: 7px;
         bottom: 0;
         right: 5px;
-      }      
+      }
       a {
         @include hyperlink-hover($grey);
       }
