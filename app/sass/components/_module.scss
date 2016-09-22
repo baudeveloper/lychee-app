@@ -813,141 +813,107 @@
     }
 }
 @mixin dropdown-time-entry() {
-    .dropdown-time-entry {
-        min-width: 560px;
-        padding: 0;
-        border-radius: 0;
+  .dropdown-time-entry {
+    min-width: 560px;
+    padding: 0;
+    border-radius: 0;
+  }
+  .dropdown-time-entry.dropdown-menu::before {
+    position: absolute;
+    content: '';
+    top: -7px;
+    right: 20px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+  }
+  .dropdown-time-entry.dropdown-menu::after {
+    position: absolute;
+    content: '';
+    top: -6px;
+    right: 20px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+  }
+  table {
+    width: 100%;
+  }
+  col:first-of-type {
+    width: 50%;
+  }
+  col:first-of-type + col {
+    width: 30%;
+  }
+  col:last-of-type {
+    width: 20%;
+  }
+  thead {
+    border-bottom: 1px solid $medium-grey-dark;
+    td {
+      color: $grey;
+      padding: 15px;
+      vertical-align: top;
+      @include font-size(12px);
+      text-transform: uppercase;
     }
-
-    .dropdown-time-entry.dropdown-menu::before {
-        position: absolute;
-        top: -7px;
-        right: 20px;
-        display: inline-block;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid #ccc;
-        border-left: 7px solid transparent;
-        border-bottom-color: rgba(0, 0, 0, 0.15);
-        content: '';
+    td:last-of-type {
+      text-align: right;
     }
-
-    .dropdown-time-entry.dropdown-menu::after {
-        position: absolute;
-        top: -6px;
-        right: 20px;
-        display: inline-block;
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #ffffff;
-        border-left: 6px solid transparent;
-        content: '';
+    span {
+      display: block;
+      text-transform: none;
     }
-
-    table {
-        width: 100%;
+  }
+  tbody {
+    td {
+      color: $grey;
+      padding: 10px 15px;
+      @include font-size(14px);
     }
-
-    col:first-of-type {
-        width: 50%;
+    td:last-of-type {
+      text-align: right;
     }
-
-    col:first-of-type + col {
-        width: 30%;
+    td:last-of-type .fa {
+      color: $red;
+      &:first-of-type {
+        margin-right: 15px;
+      }
     }
-
-    col:last-of-type {
-        width: 20%;
+    td .input-group-addon {
+      color: $white;
+      border-color: $dark-green;
+      background-color: $dark-green;
+      @include hyperlink-hover($dark-green);
     }
-
-    thead {
-        border-bottom: 1px solid $medium-grey-dark;
+    td .fa {
+      margin: 0;
+      color: $white;
     }
-
-    thead td {
-        color: $grey;
-        padding: 15px;
-        vertical-align: top;
-        @include font-size(12px);
-        text-transform: uppercase;
+    span .btn {
+      height: 36px;
+      border-radius: 4px;
+      @media #{$tablet} {
+        height: 34px;
+      }
     }
-
-    thead span {
-        display: block;
-        text-transform: none;
+    .form-control {
+      // height: 28px;
+      text-align: right;
+      color: $dark-green;
+      border-radius: 4px;
+      border-color: $dark-green;
+      @include input-placeholder-color($dark-green);
     }
-
-    thead td:last-of-type {
-        text-align: right;
-    }
-
-    tbody td {
-        color: $grey;
-        padding: 10px 15px;
-        @include font-size(14px);
-    }
-
-    tbody span {
-        display: block;
-        @include font-size(12px);
-    }
-
-    tbody td:last-of-type .fa {
-        color: $red;
-
-        &:first-of-type {
-            margin-right: 15px;
-        }
-    }
-
-    tbody td:last-of-type {
-        text-align: right;
-    }
-
-    tbody td .input-group-addon {
-        color: $white;
-        border-color: $dark-green;
-        background-color: $dark-green;
-
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: darken($dark-green, 5%) !important;
-        }
-    }
-
-    tbody td .fa {
-        margin: 0;
-        color: $white;
-    }
-
-    tbody .form-control {
-        height: 28px;
-        text-align: right;
-        color: $dark-green;
-        border-color: $dark-green;
-        border-radius: 4px;
-
-        &::-webkit-input-placeholder {
-            color: $dark-green;
-        }
-
-        &:-moz-placeholder {
-            color: $dark-green;
-        }
-
-        &::-moz-placeholder {
-            color: $dark-green;
-        }
-
-        &:-ms-input-placeholder {
-            color: $dark-green;
-        }
-    }
-
-    tfoot {
-        background-color: $medium-light-grey;
-        @include inline-input();
-        @include typeahead-standard();
-    }
+  }
+  tfoot {
+    background-color: $medium-light-grey;
+    @include inline-input();
+    @include typeahead-standard();
+  }
 }
 @mixin typeahead-styles() {
   .twitter-typeahead {
