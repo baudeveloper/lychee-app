@@ -73,6 +73,11 @@ input[type="text"] {
   }
 }
 
+// Textarea
+textarea {
+  resize: none;
+}
+
 // Alert
 .alert-timesheet {
   @include font-size(16px);
