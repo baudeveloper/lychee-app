@@ -25,6 +25,16 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
+    /* Navigation */
+    // $('#secondary-nav > li > ul').hide();
+    $('#secondary-nav').find('> li').click(function() {
+        $('#secondary-nav > li').not(this).find('ul').slideUp();
+        $(this).find('ul').stop(true, true).slideToggle(400);
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        return false;
+    });// Source: http://jsfiddle.net/sushanth009/ZpeLG/ | http://jsfiddle.net/Ssu32/ | http://stackoverflow.com/questions/13364183/open-and-close-submenus-on-click-jquery
+
     /* Project Page */
     $(".tasks-toggle").click(function() {
         $(".dash-nav").toggleClass("switch");

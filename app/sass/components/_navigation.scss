@@ -183,12 +183,12 @@
       color: $red;
     }
     .fa {
-      display: inline;
-      margin: 0 10px;
-      line-height: 20px;
+      margin: 0 6px;
       height: 20px;
       width: 20px;
+      line-height: 20px;
       text-align: center;
+      display: inline-block;
       @include font-size(20px);
       @media #{$tablet} {
          @include font-size(14px);
@@ -196,6 +196,20 @@
     }
     span {
       display: inline;
+      margin-left: 10px;
+    }
+  }
+  > li.active > a {
+    &::after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: red;
+      transition: all 0.5s;
     }
   }
   .menu-toggle {
@@ -232,6 +246,24 @@
     }
     span:last-child {
       color: $white;
+    }
+  }
+  .submenu {
+    @include margin-and-padding(0, 0);
+    a {
+      padding-left: 56px;
+      line-height: normal;
+      @include font-size(14px);
+      @include icon-before('\f105', $grey);
+    }
+    a::before {
+      transition: all .5s;
+    }
+    a:hover {
+      &::before {
+        color: $red;
+        transition: all .5s;
+      }
     }
   }
 }
