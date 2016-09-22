@@ -1331,12 +1331,12 @@
         top: 7px;
         bottom: 0;
         right: 5px;
-        a {
-          @include hyperlink-hover($grey);
-          &:hover {
-              cursor: default;
-          }
-        }
+      }      
+      a {
+        @include hyperlink-hover($grey);
+      }
+      a:hover {
+        cursor: default;
       }
     }
     input[type="text"] {
@@ -1344,15 +1344,12 @@
       &::-webkit-input-placeholder {
   			color: $grey;
   		}
-
   		&:-moz-placeholder {
   			color: $grey;
   		}
-
   		&::-moz-placeholder {
   			color: $grey;
   		}
-
   		&:-ms-input-placeholder {
   			color: $grey;
   		}
