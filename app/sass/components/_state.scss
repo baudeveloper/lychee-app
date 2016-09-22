@@ -162,19 +162,19 @@ input[type="text"] {
   width: 20%;
   float: left;
 }
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
   .col-sm-15 {
     width: 20%;
     float: left;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $screen-md-min) {
   .col-md-15 {
     width: 20%;
     float: left;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: $screen-lg-min) {
   .col-lg-15 {
     width: 20%;
     float: left;
