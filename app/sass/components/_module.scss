@@ -1387,11 +1387,17 @@
     label {
       font-weight: $font-weight-regular;
     }
+    .bootstrap-select .btn,
+    .selectpicker {
+      text-transform: none;
+      @include font-size(14px);
+    }
     .control-label {
       text-align: left;
       padding-top: 10px;
     }
     .lbl-heading {
+      margin-bottom: 15px;
       text-transform: uppercase;
     }
     .input-icon {
