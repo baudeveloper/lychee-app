@@ -1296,6 +1296,14 @@
     }
     .form-group {
       margin: 0 0 15px;
+      &:first-child {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &:first-child + div {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     .contributions {
       padding-top: 10px;
@@ -1306,6 +1314,18 @@
     .control-label {
       text-align: left;
       padding-top: 10px;
+    }
+    .input-icon {
+      position: relative;
+      span {
+        position: absolute;
+        top: 7px;
+        bottom: 0;
+        right: 5px;
+        a {
+          @include hyperlink-hover($grey);
+        }
+      }
     }
     input[type="text"] {
       color: $grey;
