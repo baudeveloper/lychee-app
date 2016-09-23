@@ -942,8 +942,7 @@
         }
       }
       ul {
-        margin: 0;
-        padding: 0;
+        @include margin-and-padding(0, 0);
       }
       .team-member {
         display: flex;
@@ -1044,8 +1043,7 @@
         padding: 0;
       }
       ul {
-        margin: 0;
-        padding: 0;
+        @include margin-and-padding(0, 0);
       }
       li {
         margin-bottom: 15px;
@@ -1213,8 +1211,7 @@
       border-color: $lightest-grey;
     }
     .radio {
-      margin: 0;
-      padding: 0;
+      @include margin-and-padding(0, 0);
       line-height: normal;
     }
     input[type="radio"] {
