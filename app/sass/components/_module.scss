@@ -718,12 +718,12 @@
 }
 
 @mixin dropdown-time-entry() {
-  .dropdown-time-entry {
+  .dd-time-entry {
     min-width: 560px;
     padding: 0;
     border-radius: 0;
   }
-  .dropdown-time-entry.dropdown-menu::before {
+  .dd-time-entry.dropdown-menu::before {
     position: absolute;
     content: '';
     top: -7px;
@@ -734,7 +734,7 @@
     border-left: 7px solid transparent;
     border-bottom-color: rgba(0, 0, 0, 0.15);
   }
-  .dropdown-time-entry.dropdown-menu::after {
+  .dd-time-entry.dropdown-menu::after {
     position: absolute;
     content: '';
     top: -6px;
