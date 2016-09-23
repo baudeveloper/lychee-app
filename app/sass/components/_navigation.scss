@@ -144,16 +144,15 @@
 
 #sidenav ul {
   display: block;
-  margin: 0;
   background-color: transparent;
   width: 247px;
   position: relative;
   top: 0;
   bottom: 0;
   left: 0;
-  padding: 0;
   transition: all 0.5s;
   z-index: 1;
+  @include margin-and-padding(0, 0);
   > li {
     list-style-type: none;
   }
