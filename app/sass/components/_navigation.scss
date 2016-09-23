@@ -165,9 +165,6 @@
     outline: 0 !important;
     color: $grey;
     border-bottom: 1px solid $lightest-grey;
-    @media #{$tablet} {
-       font-size: 0;
-    }
     &:hover {
       color: $red;
       &::after {
