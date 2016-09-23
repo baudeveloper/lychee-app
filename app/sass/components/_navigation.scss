@@ -196,7 +196,7 @@
       }
     }
   }
-  #secondary-nav-toggle {
+  .toggle a {
     margin-top: 15px;
     color: $medium-grey;
     border: none;
@@ -281,7 +281,7 @@
     .fa {
       @include font-size(14px);
     }
-    #secondary-nav-toggle i::before {
+    .toggle a i::before {
       content: "\f178";
     }
   }
