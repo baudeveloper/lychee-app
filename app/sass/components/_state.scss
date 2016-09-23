@@ -68,6 +68,9 @@ label {
   color: $grey;
   text-align: left;
   font-weight: $font-weight-regular;
+  &.control-label {
+    text-align: left !important; // Bootstrap Default Value Override
+  }
 }
 
 // Inputs
