@@ -976,7 +976,6 @@
         @include make-sm-column(12);
       }
       label {
-        text-align: left !important;
         @include margin-and-padding(15px 0, 0);
       }
       textarea {
@@ -1118,7 +1117,6 @@
       }
     }
     .control-label {
-      text-align: left;
       padding-top: 10px;
     }
     fieldset {
@@ -1181,7 +1179,6 @@
       }
     }
     .control-label {
-      text-align: left;
       padding-top: 10px;
     }
     fieldset {
