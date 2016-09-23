@@ -976,9 +976,8 @@
         @include make-sm-column(12);
       }
       label {
-        padding: 0;
-        margin: 15px 0;
         text-align: left !important;
+        @include margin-and-padding(15px 0, 0);
       }
       textarea {
         border-radius: 0;
@@ -998,7 +997,6 @@
         margin-right: 5px;
       }
       .pull-right label {
-        color: $grey;
         @include font-size(14px);
       }
       .pull-right .input-group-addon {
@@ -1119,9 +1117,6 @@
         margin-bottom: 0;
       }
     }
-    label {
-      font-weight: $font-weight-regular;
-    }
     .control-label {
       text-align: left;
       padding-top: 10px;
@@ -1184,9 +1179,6 @@
         padding-left: 0;
         padding-right: 0;
       }
-    }
-    label {
-      font-weight: $font-weight-regular;
     }
     .control-label {
       text-align: left;

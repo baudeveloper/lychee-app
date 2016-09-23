@@ -11,8 +11,6 @@
 // Team List Page
 #team-list {
   label {
-    color: $grey;
-    font-weight: $font-weight-regular;
     margin-right: 10px;
     @include font-size(20px);
     @media #{$tablet} {
@@ -222,7 +220,6 @@
   }
   label {
     display: inline;
-    font-weight: $font-weight-regular;
     @include font-size(16px);
   }
 

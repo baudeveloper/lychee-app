@@ -63,6 +63,12 @@ button {
   }
 }
 
+// Labels
+label {
+  color: $grey;
+  font-weight: $font-weight-regular;
+}
+
 // Inputs
 input[type="text"] {
   box-shadow: none;
