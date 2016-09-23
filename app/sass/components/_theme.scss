@@ -12,7 +12,7 @@
 #team-list {
   label {
     color: $grey;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     margin-right: 10px;
     @include font-size(20px);
     @media #{$tablet} {
@@ -219,12 +219,12 @@
     border-bottom: 1px solid $red;
   }
   h3 {
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     @include font-size(16px);
   }
   label {
     display: inline;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     @include font-size(16px);
   }
 
@@ -397,14 +397,14 @@
     padding: 4px;
   }
   th {
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     text-align: center;
     vertical-align: bottom;
     &:first-child + th {
       text-align: left;
     }
     &:last-child {
-      font-weight: 600;
+      font-weight: $font-weight-bold;
     }
   }
   td {
@@ -424,7 +424,7 @@
     &:last-child {
       span {
         display: block;
-        font-weight: 600;
+        font-weight: $font-weight-bold;
         text-align: center;
         color: $medium-grey;
       }

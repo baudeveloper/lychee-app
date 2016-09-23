@@ -63,7 +63,7 @@
     }
     .input-search {
       height: 80px;
-      font-weight: 200;
+      font-weight: $font-weight-light;
       @include font-size(20px);
       border: none;
       border-radius: 0;
@@ -88,7 +88,7 @@
   }
   a {
     color: $grey;
-    .fa {      
+    .fa {
       margin-right: 0;
     }
     &:hover {
