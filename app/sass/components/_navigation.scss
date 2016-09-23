@@ -127,7 +127,7 @@
   @include dropdown-time-entry();
 }
 
-.sidenav {
+#sidenav {
   z-index: 1000;
   position: fixed;
   left: 247px;
@@ -139,7 +139,7 @@
   transition: all 0.5s ease;
 }
 
-#secondary-nav {
+#sidenav ul {
   display: block;
   margin: 0;
   background-color: transparent;
@@ -243,7 +243,7 @@
 #wrapper.toggled {
   padding-left: 49px;
   transition: all 0.5s;
-  .sidenav {
+  #sidenav {
     width: 49px;
   }
   main {
@@ -264,7 +264,7 @@
     height: 22px;
     background: transparent no-repeat center center/cover url("../images/logo-shape-small.png");
   }
-  #secondary-nav {
+  #sidenav ul {
     .user > *,
     span {
       display: none;
