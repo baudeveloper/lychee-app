@@ -805,6 +805,11 @@
         height: 34px;
       }
     }
+    .description {
+      display: block;
+      @include font-size(12px);
+      text-transform: none;
+    }
     .form-control {
       text-align: right;
       color: $dark-green;
