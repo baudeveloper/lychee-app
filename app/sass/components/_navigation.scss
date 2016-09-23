@@ -196,7 +196,7 @@
       }
     }
   }
-  .menu-toggle {
+  #secondary-nav-toggle {
     margin-top: 15px;
     color: $medium-grey;
     border: none;
@@ -214,13 +214,13 @@
       }
     }
   }
-  .site-user {
+  .user {
     display: flex;
     align-items: center;
     padding: 15px;
     background: $grey;
   }
-  .info {
+  .user-details {
     margin-left: 20px;
     @include font-size(16px);
     span {
@@ -265,11 +265,11 @@
     background: transparent no-repeat center center/cover url("../images/logo-shape-small.png");
   }
   #secondary-nav {
-    .site-user > *,
+    .user > *,
     span {
       display: none;
     }
-    .site-user {
+    .user {
       height: 60px;
       background: $light-grey no-repeat left/contain url('../images/site-user.png');
       transition: background 0.5s;
@@ -281,7 +281,7 @@
     .fa {
       @include font-size(14px);
     }
-    .menu-toggle i::before {
+    #secondary-nav-toggle i::before {
       content: "\f178";
     }
   }

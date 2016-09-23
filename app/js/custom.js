@@ -104,7 +104,7 @@ $(document).ready(function() {
     // Source: http://stackoverflow.com/questions/2868582/click-outside-menu-to-close-in-jquery
 
     // Sidebar Toggle
-    $(".menu-toggle").click(function(e) {
+    $("#secondary-nav-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
