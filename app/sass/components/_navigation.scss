@@ -144,7 +144,7 @@
   margin: 0;
   background-color: transparent;
   width: 247px;
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
@@ -165,6 +165,9 @@
     outline: 0 !important;
     color: $grey;
     border-bottom: 1px solid $lightest-grey;
+    @media #{$tablet} {
+       font-size: 0;
+    }
     &:hover {
       color: $red;
       &::after {
@@ -183,34 +186,17 @@
       color: $red;
     }
     .fa {
-      margin: 0 6px;
+      margin: 6px;
       height: 20px;
       width: 20px;
       line-height: 20px;
+      margin-right: 20px;
       text-align: center;
       display: inline-block;
       @include font-size(20px);
       @media #{$tablet} {
          @include font-size(14px);
       }
-    }
-    span {
-      display: inline;
-      margin-left: 10px;
-    }
-  }
-  > li.active > a:not(.menu-toggle) {
-    color: $red;
-    &::after {
-      position: absolute;
-      content: '';
-      width: 5px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      background-color: red;
-      transition: all 0.5s;
     }
   }
   .menu-toggle {
@@ -220,6 +206,7 @@
     @include font-size(14px);
     .fa {
       color: inherit;
+      margin-right: 5px;
       @include font-size(14px);
     }
     &:focus,
@@ -247,27 +234,6 @@
     }
     span:last-child {
       color: $white;
-    }
-  }
-  .submenu {
-    @include margin-and-padding(0, 0);
-    @media #{$tablet} {
-      display: none!important;
-    }
-    a {
-      padding-left: 56px;
-      line-height: normal;
-      @include font-size(14px);
-      @include icon-before('\f105', $grey);
-    }
-    a::before {
-      transition: all .5s;
-    }
-    a:hover {
-      &::before {
-        color: $red;
-        transition: all .5s;
-      }
     }
   }
 }
@@ -313,6 +279,7 @@
     }
     a {
       padding: 7px;
+      font-size: 0;
     }
     .fa {
       @include font-size(14px);
@@ -320,8 +287,5 @@
     .menu-toggle i::before {
       content: "\f178";
     }
-  }
-  .submenu {
-    display: none!important;
   }
 }
