@@ -47,13 +47,13 @@
   background: transparent no-repeat center center/cover url("../images/logo-shape.png");
 }
 
-#primary-nav-collapse {
+#topnav-collapse {
   position: relative;
   .input-group {
     position: relative;
     z-index: 5;
     margin-bottom: 0;
-    #search {
+    .input-group-addon {
       padding-left: 15px;
       @include font-size(18px);
       color: $red;
