@@ -88,6 +88,9 @@
   }
   a {
     color: $grey;
+    .fa {      
+      margin-right: 0;
+    }
     &:hover {
       cursor: pointer;
     }
