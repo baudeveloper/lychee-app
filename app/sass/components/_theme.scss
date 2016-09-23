@@ -211,6 +211,7 @@
     padding: 15px;
     background-color: $white;
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    border: 1px solid $extra-super-dark-grey;
   }
   h2 {
     margin-bottom: 15px;
@@ -551,7 +552,10 @@
 }
 
 #project-dash {
-  @include margin-and-padding(15px, 15px 15px 0);
+  background-color: $white;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  border: 1px solid $extra-super-dark-grey;
+  @include margin-and-padding(0 0 15px, 15px);
   .heading {
     margin-bottom: 0;
   }
@@ -678,6 +682,10 @@
   }
 }
 #project-team {
+  background-color: $white;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  border: 1px solid $extra-super-dark-grey;
+  @include margin-and-padding(0 0 15px, 15px);
   .timeline {
     margin-bottom: 15px;
     img {
@@ -769,6 +777,10 @@
   }
 }
 #bookkeeping {
+  background-color: $white;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  border: 1px solid $extra-super-dark-grey;
+  @include margin-and-padding(0 0 15px, 15px);
   h3 {
     color: $grey;
     @include font-size(16px);

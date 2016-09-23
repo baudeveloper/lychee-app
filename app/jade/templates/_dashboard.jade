@@ -3,7 +3,7 @@ main.container-fluid.page-dashboard(role='main')
 		i.fa.fa-dashboard(aria-hidden='true')
 		| Dashboard
 	.row
-		section#my-stats
+		section#my-stats.col-sm-12.col-md-12.col-lg-3
 			h2 My Stats (12 Months)
 			ul.list-group
 				li.list-group-item
@@ -41,8 +41,8 @@ main.container-fluid.page-dashboard(role='main')
 						span.value 0
 						| hrs
 					| Working Group Time
-		ul
-			li#my-todo
+		ul.col-sm-12.col-md-12.col-lg-9
+			li#my-todo.col-sm-12.col-md-6.col-lg-4
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title My To-Do's
@@ -147,7 +147,7 @@ main.container-fluid.page-dashboard(role='main')
 									//- 		| Do Something Much
 							a.view-more(href="#", title="View More Tasks")
 								i.fa.fa-angle-double-down(aria-hidden='true')
-			li#my-tasks
+			li#my-tasks.col-sm-12.col-md-6.col-lg-5
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title My Current Tasks
@@ -227,7 +227,7 @@ main.container-fluid.page-dashboard(role='main')
 									span.sr-only 60% Complete
 						a.view-more(href="#", title="View More Tasks")
 							i.fa.fa-angle-double-down(aria-hidden='true')
-			li#did-you-know.skinned
+			li#did-you-know.skinned.col-sm-4.col-md-4.col-lg-3
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title Did you know?
@@ -236,7 +236,7 @@ main.container-fluid.page-dashboard(role='main')
 							img.img-responsive(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
 						p.lead Why does the timesheet week start on a Saturday?
 						p That is to match payroll which is based on Saturday to Friday periods.
-			li#my-team
+			li#my-team.col-sm-12.col-md-12.col-lg-9
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title My Team
@@ -290,7 +290,7 @@ main.container-fluid.page-dashboard(role='main')
 								.info
 									span Tim Wilson
 									span Senior Business Analyst
-			li#team-member.skinned.employee-of-the-month
+			li#team-member.skinned.employee-of-the-month.col-sm-8.col-md-8.col-lg-3
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title Team Member of the Day
@@ -300,7 +300,7 @@ main.container-fluid.page-dashboard(role='main')
 						p.lead Abdul Basit
 						p Technical Architect
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis posuere urna. Integer quam augue, porta ut efficitur id, aliquet faucibus eros. Proin quis odio non arcu iaculis vulputate non sed justo. Duis pellentesque leo vel turpis fringilla, ut volutpat nibh placerat. Aenean egestas blandit nibh, tristique tempor lorem vehicula ac.
-			li#my-projects
+			li#my-projects.col-sm-12.col-md-12.col-lg-9
 				.panel.panel-default
 					.panel-heading
 						h2.panel-title My Projects

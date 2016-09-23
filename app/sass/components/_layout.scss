@@ -25,6 +25,11 @@ main {
   transition: all 0.5s;
   min-height: 100vh;
   background: $light-grey no-repeat bottom right url('../images/pattern.png');
+  h2 {
+    color: $red;
+    @include font-size(18px);
+    text-transform: uppercase;
+  }
 }
 
 .breadcrumb {
@@ -59,8 +64,8 @@ main {
 .page-dashboard {
   h2 {
     color: $red;
-    text-transform: uppercase;
     @include font-size(18px);
+    text-transform: uppercase;
   }
   li {
     @include panel-standard();
@@ -74,9 +79,6 @@ main {
   .row > ul {
     padding-left: 0;
     padding-right: 0;
-    @include make-sm-column(12);
-    @include make-md-column(12);
-    @include make-lg-column(9);
     @include margin-and-padding(0, 0);
     @include border-and-background();
     .panel-heading:hover {
@@ -99,28 +101,7 @@ main {
 }
 
 #my-stats {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(3);
   @include widget-mystats();
-}
-
-#team-list {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(12);
-}
-
-#member-profile {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(3);
-}
-
-#member-assignments {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(9);
 }
 
 // Time Entry Page Layout.
@@ -130,22 +111,7 @@ main {
   display: inline-block;
 }
 
-#task-directory {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(4);
-}
-
-#task-list {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(8);
-}
-
 #my-todo {
-  @include make-sm-column(12);
-  @include make-md-column(6);
-  @include make-lg-column(4);
   .tab {
     border: 1px solid $lightest-grey;
     background-color: $extra-light-grey;
@@ -154,36 +120,15 @@ main {
 }
 
 #my-tasks {
-  @include make-sm-column(12);
-  @include make-md-column(6);
-  @include make-lg-column(5);
   @include widget-mytasks();
 }
 
-#did-you-know {
-  @include make-sm-column(4);
-  @include make-md-column(4);
-  @include make-lg-column(3);
-}
-
 #my-team {
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(9);
   @include widget-myteam();
-}
-
-#team-member {
-  @include make-sm-column(8);
-  @include make-md-column(8);
-  @include make-lg-column(3);
 }
 
 #my-projects {
   overflow: hidden !important;
-  @include make-sm-column(12);
-  @include make-md-column(12);
-  @include make-lg-column(9);
   h3 {
     color: $grey;
     @include font-size(16px);

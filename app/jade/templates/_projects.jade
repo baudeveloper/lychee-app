@@ -41,375 +41,378 @@ main.container-fluid.page-project(role='main')
 				td.title Status:
 				td Active
 	.row
-		section#project-dash
-			.heading
-				h2 FFD-C2029 - UI Design
-			.dash-content
-				.dash-nav
-					ul.visible(role="navigation")
-						li
-							a(href="#", title="Log Time")
-								i.fa.fa-clock-o(aria-hidden='true')
-								span Log Time
-						li
-							a(data-toggle="modal", data-target="#assignment-modal", title="Edit")
-								i.fa.fa-pencil(aria-hidden='true')
-								span Edit
-						li
-							a(href="#", title="Complete")
-								i.fa.fa-check-square-o(aria-hidden='true')
-								span Complete
-						li
-							a(href="#", title="Add Subtask")
-								i.fa.fa-cube(aria-hidden='true')
-								span Add Subtask
-						li
-							a(href="#", title="Cut")
-								i.fa.fa-scissors(aria-hidden='true')
-								span Cut
-						li
-							a(href="#", title="Paste")
-								i.fa.fa-clipboard(aria-hidden='true')
-								span Paste
-						li
-							a(href="#", title="Split")
-								i.fa.fa-code-fork(aria-hidden='true')
-								span Split
-						li
-							a(href="#", title="Import Plan")
-								i.fa.fa-sign-in(aria-hidden='true')
-								span Iimport Plan
-						li
-							a(href="#", title="Delete")
-								i.fa.fa-trash(aria-hidden='true')
-								span Delete
-						li
-							a(href="#", title="Make Obsolete")
-								i.fa.fa-minus-circle(aria-hidden='true')
-								span Make Obsolete
-						li
-							a(href="#", title="View in JIRA")
-								i.fa.fa-bars(aria-hidden='true')
-								span View in JIRA
-						li
-							a.tasks-toggle(href="#", title="Show/Hide Menu")
-								i.fa.fa-long-arrow-left(aria-hidden='true')
-								span Collapse
-				.all-tasks
-					.button.btn-group
-						button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							| All Tasks 
-							span.caret
-						ul.dropdown-menu
+		.col-sm-12.col-lg-12.col-md-12
+			section#project-dash
+				.heading
+					h2 FFD-C2029 - UI Design
+				.dash-content
+					.dash-nav
+						ul.visible(role="navigation")
 							li
-								a(href='#') Action
+								a(href="#", title="Log Time")
+									i.fa.fa-clock-o(aria-hidden='true')
+									span Log Time
 							li
-								a(href='#') Another action
+								a(data-toggle="modal", data-target="#assignment-modal", title="Edit")
+									i.fa.fa-pencil(aria-hidden='true')
+									span Edit
 							li
-								a(href='#') Something else here
-							li.divider(role='separator')
+								a(href="#", title="Complete")
+									i.fa.fa-check-square-o(aria-hidden='true')
+									span Complete
 							li
-								a(href='#') Separated link
-					ul#treeData(style='display: none;')
-						li#id1.folder.expanded(title='RouteOne')
-							| RouteOne
-							ul
-								li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
-									| Credit Aggregation Platform
-									ul
-										li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
-											| RONE-0757 (Remote Document Delivery)
-											ul
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Analysis
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Testing
-												li(id='id1.1.1.1')
-													| FFD-C2029 - Development
-												li(id='id1.1.1.1')
-													| FFD-C2029 - UI Design
-										li.folder.expanded(id='id1.1.2', title='Release 16.9')
-											| Release 16.9
-											ul
-												li(id='id1.1.1.1')
-													| CORE-7696 Remove Authy
-												li(id='id1.1.1.1')
-													| CORE-8758 Black list document to not delivery
-												li(id='id1.1.1.1')
-													| CORE-8758 Privacy Policy implementation
-												li(id='id1.1.1.1')
-													| CORE-8758 Capturing billing information
-								li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
-									| RONE-0743 (CAMS 2016 Travel)
-								li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
-									| RONE-0749 (R1 Mobile App 2016)
-								li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
-									| RONE-0749 (CAMS 2016)
-				.task-category
-					.task-effort
-						h3 Task Effort & Completion
-						img(src="http://placehold.it/1600x500/00ff00/ffffff", alt="Graph")
-					.task-breakdown
-						h3 Task Breakdown
-						img(src="http://placehold.it/400x200/0000ff/ffffff", alt="Graph")
-					.task-performance
-						h3 Task Performance
-						img(src="http://placehold.it/400x200/ff0000/ffffff", alt="Graph")
-		section#project-team
-			.heading
-				h2 Project Team
-			.assigned-members-group
-				h3 Assigned Members
-				a.btn-team-listview
-					i.fa.fa-th-list
-				a.btn-team-gridview
-					i.fa.fa-table
-			.checkbox
-				label
-					input(type="checkbox")
-					| Hide Past Assignments
-			table.tablesaw.tablesaw-swipe.table-condensed.tbl-assigned-members(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
-				thead
-					tr
-						th(data-tablesaw-priority="persist", scope="col") User Name
-						th(data-tablesaw-priority="2", scope="col") Roles
-						th(data-tablesaw-priority="3", scope="col") Start Date
-						th(data-tablesaw-priority="4", scope="col") End Date
-						th(data-tablesaw-priority="5", scope="col") Allocation
-						th(data-tablesaw-priority="6", scope="col") Rate
-						th(data-tablesaw-priority="7", scope="col")
-				tbody
-					tr
-						td.tablesaw-cell-persist Jeremy Chan
-						td.tablesaw-cell-hidden Team Member, Team Lead
-						td.tablesaw-cell-hidden 2016-07-25
-						td.tablesaw-cell-hidden 2016-12-31
-						td.tablesaw-cell-hidden 100.0
-						td.tablesaw-cell-hidden $125.00
-						td.tablesaw-cell-hidden
-							a.btn-edit-member(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-member(href="#")
-								i.fa.fa-trash
-					tr
-						td.tablesaw-cell-persist Abdikidar Kedi
-						td.tablesaw-cell-hidden Team Member
-						td.tablesaw-cell-hidden 2016-07-11
-						td.tablesaw-cell-hidden 2016-12-31
-						td.tablesaw-cell-hidden 100.0
-						td.tablesaw-cell-hidden $119.00
-						td.tablesaw-cell-hidden
-							a.btn-edit-member(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-member(href="#")
-								i.fa.fa-trash
-					tr
-						td.tablesaw-cell-persist Cindy Lopes
-						td.tablesaw-cell-hidden Approver, Team Member, Project Manager, Project Director
-						td.tablesaw-cell-hidden 2016-08-15
-						td.tablesaw-cell-hidden 2017-03-31
-						td.tablesaw-cell-hidden 100.0
-						td.tablesaw-cell-hidden $125.00
-						td.tablesaw-cell-hidden
-							a.btn-edit-member(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-member(href="#")
-								i.fa.fa-trash
-					tr
-						td.tablesaw-cell-persist Jacob Tseng
-						td.tablesaw-cell-hidden Team Member
-						td.tablesaw-cell-hidden 2016-04-16
-						td.tablesaw-cell-hidden 2016-12-31
-						td.tablesaw-cell-hidden 10.1
-						td.tablesaw-cell-hidden $75.00
-						td.tablesaw-cell-hidden
-							a.btn-edit-member(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-member(href="#")
-								i.fa.fa-trash
-			.timeline
-				img(src="http://placehold.it/1600x200", alt="Timeline")
-			.container
-				.row
-					.col-sm-12.col-md-6
-						.input-group										
-							.input-group-btn
-								button.btn.btn-tertiary(href="#") Assign Project to User
-							input.form-control(type="text", placeholder="User")				
-					.col-sm-12.col-md-6
-						.input-group										
-							.input-group-btn
-								button.btn.btn-tertiary(href="#") Copy Assignments from
-							input.form-control(type="text", placeholder="Project")				
-				h3 Portal Users
-				table.table.table-condensed.tbl-portal-users
+								a(href="#", title="Add Subtask")
+									i.fa.fa-cube(aria-hidden='true')
+									span Add Subtask
+							li
+								a(href="#", title="Cut")
+									i.fa.fa-scissors(aria-hidden='true')
+									span Cut
+							li
+								a(href="#", title="Paste")
+									i.fa.fa-clipboard(aria-hidden='true')
+									span Paste
+							li
+								a(href="#", title="Split")
+									i.fa.fa-code-fork(aria-hidden='true')
+									span Split
+							li
+								a(href="#", title="Import Plan")
+									i.fa.fa-sign-in(aria-hidden='true')
+									span Iimport Plan
+							li
+								a(href="#", title="Delete")
+									i.fa.fa-trash(aria-hidden='true')
+									span Delete
+							li
+								a(href="#", title="Make Obsolete")
+									i.fa.fa-minus-circle(aria-hidden='true')
+									span Make Obsolete
+							li
+								a(href="#", title="View in JIRA")
+									i.fa.fa-bars(aria-hidden='true')
+									span View in JIRA
+							li
+								a.tasks-toggle(href="#", title="Show/Hide Menu")
+									i.fa.fa-long-arrow-left(aria-hidden='true')
+									span Collapse
+					.all-tasks
+						.button.btn-group
+							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								| All Tasks 
+								span.caret
+							ul.dropdown-menu
+								li
+									a(href='#') Action
+								li
+									a(href='#') Another action
+								li
+									a(href='#') Something else here
+								li.divider(role='separator')
+								li
+									a(href='#') Separated link
+						ul#treeData(style='display: none;')
+							li#id1.folder.expanded(title='RouteOne')
+								| RouteOne
+								ul
+									li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
+										| Credit Aggregation Platform
+										ul
+											li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
+												| RONE-0757 (Remote Document Delivery)
+												ul
+													li(id='id1.1.1.1')
+														| FFD-C2029 - Analysis
+													li(id='id1.1.1.1')
+														| FFD-C2029 - Testing
+													li(id='id1.1.1.1')
+														| FFD-C2029 - Development
+													li(id='id1.1.1.1')
+														| FFD-C2029 - UI Design
+											li.folder.expanded(id='id1.1.2', title='Release 16.9')
+												| Release 16.9
+												ul
+													li(id='id1.1.1.1')
+														| CORE-7696 Remove Authy
+													li(id='id1.1.1.1')
+														| CORE-8758 Black list document to not delivery
+													li(id='id1.1.1.1')
+														| CORE-8758 Privacy Policy implementation
+													li(id='id1.1.1.1')
+														| CORE-8758 Capturing billing information
+									li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
+										| RONE-0743 (CAMS 2016 Travel)
+									li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
+										| RONE-0749 (R1 Mobile App 2016)
+									li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
+										| RONE-0749 (CAMS 2016)
+					.task-category
+						.task-effort
+							h3 Task Effort & Completion
+							img(src="http://placehold.it/1600x500/00ff00/ffffff", alt="Graph")
+						.task-breakdown
+							h3 Task Breakdown
+							img(src="http://placehold.it/400x200/0000ff/ffffff", alt="Graph")
+						.task-performance
+							h3 Task Performance
+							img(src="http://placehold.it/400x200/ff0000/ffffff", alt="Graph")
+		.col-sm-12.col-lg-12.col-md-12
+			section#project-team
+				.heading
+					h2 Project Team
+				.assigned-members-group
+					h3 Assigned Members
+					a.btn-team-listview
+						i.fa.fa-th-list
+					a.btn-team-gridview
+						i.fa.fa-table
+				.checkbox
+					label
+						input(type="checkbox")
+						| Hide Past Assignments
+				table.tablesaw.tablesaw-swipe.table-condensed.tbl-assigned-members(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+					thead
+						tr
+							th(data-tablesaw-priority="persist", scope="col") User Name
+							th(data-tablesaw-priority="2", scope="col") Roles
+							th(data-tablesaw-priority="3", scope="col") Start Date
+							th(data-tablesaw-priority="4", scope="col") End Date
+							th(data-tablesaw-priority="5", scope="col") Allocation
+							th(data-tablesaw-priority="6", scope="col") Rate
+							th(data-tablesaw-priority="7", scope="col")
+					tbody
+						tr
+							td.tablesaw-cell-persist Jeremy Chan
+							td.tablesaw-cell-hidden Team Member, Team Lead
+							td.tablesaw-cell-hidden 2016-07-25
+							td.tablesaw-cell-hidden 2016-12-31
+							td.tablesaw-cell-hidden 100.0
+							td.tablesaw-cell-hidden $125.00
+							td.tablesaw-cell-hidden
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td.tablesaw-cell-persist Abdikidar Kedi
+							td.tablesaw-cell-hidden Team Member
+							td.tablesaw-cell-hidden 2016-07-11
+							td.tablesaw-cell-hidden 2016-12-31
+							td.tablesaw-cell-hidden 100.0
+							td.tablesaw-cell-hidden $119.00
+							td.tablesaw-cell-hidden
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td.tablesaw-cell-persist Cindy Lopes
+							td.tablesaw-cell-hidden Approver, Team Member, Project Manager, Project Director
+							td.tablesaw-cell-hidden 2016-08-15
+							td.tablesaw-cell-hidden 2017-03-31
+							td.tablesaw-cell-hidden 100.0
+							td.tablesaw-cell-hidden $125.00
+							td.tablesaw-cell-hidden
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+						tr
+							td.tablesaw-cell-persist Jacob Tseng
+							td.tablesaw-cell-hidden Team Member
+							td.tablesaw-cell-hidden 2016-04-16
+							td.tablesaw-cell-hidden 2016-12-31
+							td.tablesaw-cell-hidden 10.1
+							td.tablesaw-cell-hidden $75.00
+							td.tablesaw-cell-hidden
+								a.btn-edit-member(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-member(href="#")
+									i.fa.fa-trash
+				.timeline
+					img(src="http://placehold.it/1600x200", alt="Timeline")
+				.container
+					.row
+						.col-sm-12.col-md-6
+							.input-group										
+								.input-group-btn
+									button.btn.btn-tertiary(href="#") Assign Project to User
+								input.form-control(type="text", placeholder="User")				
+						.col-sm-12.col-md-6
+							.input-group										
+								.input-group-btn
+									button.btn.btn-tertiary(href="#") Copy Assignments from
+								input.form-control(type="text", placeholder="Project")				
+					h3 Portal Users
+					table.table.table-condensed.tbl-portal-users
+						colgroup
+							col
+							col
+							col
+							col
+						thead
+							tr
+								th User Name
+								th Start Date
+								th End Date
+								th 
+						tbody
+							tr
+								td Prasanna Kugananthan
+									span (Last logged in: 08/09/2016)
+								td 2016-07-25
+								td 2016-12-31
+								td
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil
+									a.btn-remove-mileston(href="#")
+										i.fa.fa-trash
+							tr
+								td Walter Drexl
+									span (Last logged in: 08/09/2016)
+								td 2016-07-11
+								td 2016-12-31
+								td
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil
+									a.btn-remove-mileston(href="#")
+										i.fa.fa-trash
+					.well
+						| No Portal Users Associated with This Project
+					a.btn.btn-tertiary.visible-sm.btn-add-user(href="#")
+						i.fa.fa-plus
+						| Add User
+		.col-sm-12.col-lg-12.col-md-12
+			section#bookkeeping
+				.heading
+					h2 Bookkeeping
+					a.btn-edit-bookkeeping(href="#")
+						i.fa.fa-pencil
+				table.table.table-condensed.tbl-bookkeeping
 					colgroup
+						col
+						col
+						col
+						col
+					tbody
+						tr
+							td.title Invoicing Type:
+							td Fixed Price
+							td.title Payment Terms:
+							td Net 30 Days
+						tr
+							td.title PO Number:
+							td 23425235235223
+							td.title SVN PM Folder:
+							td
+						tr
+							td.title Budget:
+							td $12,000.00
+							td.title
+							td
+						tr
+							td.title Notes:
+							td No Notes
+							td.title
+							td
+				h3 Invoicing Contacts
+				table.table.table-condensed.tbl-invoice-contacts
+					colgroup
+						col
+						col
+					thead
+						tr
+							th Name
+							th Email
+					tbody
+						tr
+							td Prasanna Kugananthan
+							td
+								a(href="mailto:test@test.com") test@test.com
+				a.btn.btn-tertiary.btn-add-contact(href="#")
+					i.fa.fa-plus
+					| Add Contact
+				h3 Invoicing Milestones
+				small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
+				table.tablesaw.tablesaw-swipe.table-condensed.tbl-invoice-milestones(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+					colgroup
+						col
+						col
+						col
 						col
 						col
 						col
 						col
 					thead
 						tr
-							th User Name
-							th Start Date
-							th End Date
-							th 
+							th(data-tablesaw-priority="persist", scope="col") Milestones
+							th(data-tablesaw-priority="2", scope="col") Date
+							th(data-tablesaw-priority="3", scope="col") Fixed Amount
+							th(data-tablesaw-priority="4", scope="col") Invoice Status
+							th(data-tablesaw-priority="5", scope="col") Accounting System
+							th(data-tablesaw-priority="6", scope="col") Invoice
+							th(data-tablesaw-priority="7", scope="col")
 					tbody
 						tr
-							td Prasanna Kugananthan
-								span (Last logged in: 08/09/2016)
-							td 2016-07-25
-							td 2016-12-31
-							td
+							td.tablesaw-cell-persist Analysis & Design Complete
+							td.tablesaw-cell-hidden 2016-07-25
+							td.tablesaw-cell-hidden
+								a(href="#") $1,010.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
 									i.fa.fa-pencil
 								a.btn-remove-mileston(href="#")
 									i.fa.fa-trash
 						tr
-							td Walter Drexl
-								span (Last logged in: 08/09/2016)
-							td 2016-07-11
-							td 2016-12-31
-							td
+							td.tablesaw-cell-persist Sprint 1 Delivery to UAT
+							td.tablesaw-cell-hidden 2016-07-11
+							td.tablesaw-cell-hidden
+								a(href="#") $2,000.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
 									i.fa.fa-pencil
 								a.btn-remove-mileston(href="#")
 									i.fa.fa-trash
-				.well
-					| No Portal Users Associated with This Project
-				a.btn.btn-tertiary.visible-sm.btn-add-user(href="#")
+						tr
+							td.tablesaw-cell-persist Sprint 2 Delivery to UAT
+							td.tablesaw-cell-hidden 2016-07-11
+							td.tablesaw-cell-hidden
+								a(href="#") $3,000.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
+								a.btn-edit-milestone(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-mileston(href="#")
+									i.fa.fa-trash					
+					tfoot
+						tr
+							td.tablesaw-cell-persist Total
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+								a(href="#") $6,010.00
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+				a.btn.btn-tertiary(href="#")
 					i.fa.fa-plus
-					| Add User
-		section#bookkeeping
-			.heading
-				h2 Bookkeeping
-				a.btn-edit-bookkeeping(href="#")
-					i.fa.fa-pencil
-			table.table.table-condensed.tbl-bookkeeping
-				colgroup
-					col
-					col
-					col
-					col
-				tbody
-					tr
-						td.title Invoicing Type:
-						td Fixed Price
-						td.title Payment Terms:
-						td Net 30 Days
-					tr
-						td.title PO Number:
-						td 23425235235223
-						td.title SVN PM Folder:
-						td
-					tr
-						td.title Budget:
-						td $12,000.00
-						td.title
-						td
-					tr
-						td.title Notes:
-						td No Notes
-						td.title
-						td
-			h3 Invoicing Contacts
-			table.table.table-condensed.tbl-invoice-contacts
-				colgroup
-					col
-					col
-				thead
-					tr
-						th Name
-						th Email
-				tbody
-					tr
-						td Prasanna Kugananthan
-						td
-							a(href="mailto:test@test.com") test@test.com
-			a.btn.btn-tertiary.btn-add-contact(href="#")
-				i.fa.fa-plus
-				| Add Contact
-			h3 Invoicing Milestones
-			small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
-			table.tablesaw.tablesaw-swipe.table-condensed.tbl-invoice-milestones(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
-				colgroup
-					col
-					col
-					col
-					col
-					col
-					col
-					col
-				thead
-					tr
-						th(data-tablesaw-priority="persist", scope="col") Milestones
-						th(data-tablesaw-priority="2", scope="col") Date
-						th(data-tablesaw-priority="3", scope="col") Fixed Amount
-						th(data-tablesaw-priority="4", scope="col") Invoice Status
-						th(data-tablesaw-priority="5", scope="col") Accounting System
-						th(data-tablesaw-priority="6", scope="col") Invoice
-						th(data-tablesaw-priority="7", scope="col")
-				tbody
-					tr
-						td.tablesaw-cell-persist Analysis & Design Complete
-						td.tablesaw-cell-hidden 2016-07-25
-						td.tablesaw-cell-hidden
-							a(href="#") $1,010.00
-						td.tablesaw-cell-hidden Not Created
-						td.tablesaw-cell-hidden 
-						td.tablesaw-cell-hidden
-							a.btn-invoice(href="#")
-								i.fa.fa-file-pdf-o
-								| 123456789
-						td.tablesaw-cell-hidden
-							a.btn-edit-milestone(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-mileston(href="#")
-								i.fa.fa-trash
-					tr
-						td.tablesaw-cell-persist Sprint 1 Delivery to UAT
-						td.tablesaw-cell-hidden 2016-07-11
-						td.tablesaw-cell-hidden
-							a(href="#") $2,000.00
-						td.tablesaw-cell-hidden Not Created
-						td.tablesaw-cell-hidden 
-						td.tablesaw-cell-hidden
-							a.btn-invoice(href="#")
-								i.fa.fa-file-pdf-o
-								| 123456789
-						td.tablesaw-cell-hidden
-							a.btn-edit-milestone(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-mileston(href="#")
-								i.fa.fa-trash
-					tr
-						td.tablesaw-cell-persist Sprint 2 Delivery to UAT
-						td.tablesaw-cell-hidden 2016-07-11
-						td.tablesaw-cell-hidden
-							a(href="#") $3,000.00
-						td.tablesaw-cell-hidden Not Created
-						td.tablesaw-cell-hidden 
-						td.tablesaw-cell-hidden
-							a.btn-invoice(href="#")
-								i.fa.fa-file-pdf-o
-								| 123456789
-						td.tablesaw-cell-hidden
-							a.btn-edit-milestone(href="#")
-								i.fa.fa-pencil
-							a.btn-remove-mileston(href="#")
-								i.fa.fa-trash					
-				tfoot
-					tr
-						td.tablesaw-cell-persist Total
-						td.tablesaw-cell-hidden
-						td.tablesaw-cell-hidden
-							a(href="#") $6,010.00
-						td.tablesaw-cell-hidden
-						td.tablesaw-cell-hidden
-						td.tablesaw-cell-hidden
-						td.tablesaw-cell-hidden
-			a.btn.btn-tertiary(href="#")
-				i.fa.fa-plus
-				| Add Milestone
+					| Add Milestone
 		include feed.jade
 	footer Lychee 2.0.0a
