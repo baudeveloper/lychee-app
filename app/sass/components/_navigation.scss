@@ -127,7 +127,7 @@
   @include dropdown-time-entry();
 }
 
-#sidebar-wrapper {
+.sidenav {
   z-index: 1000;
   position: fixed;
   left: 247px;
@@ -243,7 +243,7 @@
 #wrapper.toggled {
   padding-left: 49px;
   transition: all 0.5s;
-  #sidebar-wrapper {
+  .sidenav {
     width: 49px;
   }
   main {
