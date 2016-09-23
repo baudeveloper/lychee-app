@@ -45,24 +45,21 @@ button {
   }
 }
 .btn-secondary {
-  color: $red;
-  background-color: $extra-light-grey;
+  color: $red !important;
+  background-color: $extra-light-grey !important;
+  &:hover, &:active, &:focus, &:visited {
+    color: $red !important;
+  }
 }
 .btn-tertiary {
-  color: $white;
-  background-color: $green;
+  color: $white !important;
+  background-color: $green !important;
   &:hover {
-    color: $white;
-    background-color: darken($green, 10%);
+    color: $white !important;
+    background-color: darken($green, 10%) !important;
   }
-  &:active {
-    color: $white;
-  }
-  &:focus {
-    color: $white;
-  }
-  &:visited {
-    color: $white;
+  &:active, &:focus, &:visited {
+    color: $white !important;
   }
 }
 
