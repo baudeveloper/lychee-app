@@ -9,6 +9,11 @@ a:hover {
   cursor: pointer;
 }
 
+// Lists
+ul li {
+  list-style-type: none;
+}
+
 // Buttons
 button {
   transition: all 0.5s;
