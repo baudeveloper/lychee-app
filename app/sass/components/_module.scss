@@ -1057,6 +1057,15 @@
         padding: 5px 0;
         @include font-size(38px);
         font-weight: $font-weight-light;
+        width: 100%;
+        box-shadow: none;
+        border-color: transparent;
+        display: inline-block;
+        color: $grey;
+        @include input-placeholder-color($grey);
+        &:active, &:focus {
+          border: 1px solid $green;
+        }
       }
       img {
         width: 100%;
