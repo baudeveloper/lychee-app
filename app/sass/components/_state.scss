@@ -80,10 +80,24 @@ label {
 }
 
 // Inputs
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"], {
   box-shadow: none;
-  border-radius: 0;
   min-height: 36px;
+  border-radius: 0 !important;
   @media #{$tablet} {
     min-height: 34px;
   }
