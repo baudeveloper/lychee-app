@@ -899,33 +899,31 @@
     .modal-body {
       padding-bottom: 0;
       section p {
-        margin: 15px -15px 0;
-        padding: 0 15px 15px;
         border-bottom: 1px solid $darkest-grey;
+        @include margin-and-padding(15px -15px 0, 0 15px 15px);
       }
       .container {
         width: auto;
         padding: 0;
-      }
-      .row {
-        display: flex;
+        .row {
+          display: flex;
+        }
       }
       .col-sm-6 {
         @include typeahead-standard();
-      }
-      .bg-color {
-        padding: 15px;
-        margin: 0 -15px;
-        background-color: $white;
-        border-bottom: 1px solid $darkest-grey;
-      }
-      .bg-color p {
-        margin-top: 0;
-      }
-      .input {
-        padding: 15px 0;
-        span {
-          left: 10px;
+        .bg-color {
+          background-color: $white;
+          border-bottom: 1px solid $darkest-grey;
+          @include margin-and-padding(0 -15px, 15px);
+          p {
+            margin-top: 0;
+          }
+          .input {
+            padding: 15px 0;
+            span {
+              left: 10px;
+            }
+          }
         }
       }
       ul {
@@ -935,17 +933,17 @@
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-      }
-      figure {
-        margin-right: 10px;
-      }
-      .team-member span {
-        display: block;
-        &:first-child {
-          @include font-size(14px);
+        figure {
+          margin-right: 10px;
         }
-        &:last-child {
-          @include font-size(12px);
+        span {
+          display: block;
+          &:first-child {
+            @include font-size(14px);
+          }
+          &:last-child {
+            @include font-size(12px);
+          }
         }
       }
       p {
@@ -953,20 +951,13 @@
         border-bottom: none;
       }
       form {
-        margin: 0 -15px;
-        padding: 0 15px;
-      }
-      .form-group {
-        margin-bottom: 0;
-      }
-      .column {
-        @include make-sm-column(12);
-      }
-      label {
-        @include margin-and-padding(15px 0, 0);
-      }
-      textarea {
-        border-radius: 0;
+        @include margin-and-padding(0 -15px, 0 15px);
+        .form-group {
+          margin-bottom: 0;
+        }
+        label {
+          @include margin-and-padding(15px 0, 0);
+        }
       }
     }
     .col-sm-6:last-of-type {
@@ -979,23 +970,24 @@
           margin-right: 5px;
         }
       }
-      .pull-right .form-group {
-        margin-right: 5px;
-      }
-      .pull-right label {
-        @include font-size(14px);
-      }
-      .pull-right .input-group-addon {
-        padding: 0;
-        border: none;
-        border-radius: 0;
-        background: none;
-      }
-      .pull-right input {
-        width: 36px;
-        height: 34px;
-        padding-left: 5px;
-        line-height: normal;
+      .pull-right {
+        .form-group {
+          margin-right: 5px;
+        }
+        label {
+          @include font-size(14px);
+        }
+        .input-group-addon {
+          padding: 0;
+          border-radius: 0;
+          @include border-and-background();
+        }
+        input {
+          width: 36px;
+          height: 34px;
+          padding-left: 5px;
+          line-height: normal;
+        }
       }
     }
   }
