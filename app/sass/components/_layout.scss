@@ -19,11 +19,10 @@ html {
 
 main {
   position: relative;
-  width: 100%;
   margin-top: 80px;
-  padding-bottom: 80px;
-  transition: all 0.5s;
   min-height: 100vh;
+  transition: all 0.5s;
+  padding-bottom: 80px;
   background: $light-grey no-repeat bottom right url('../images/pattern.png');
   h2 {
     color: $red;
@@ -32,30 +31,11 @@ main {
   }
 }
 
-.breadcrumb {
-  position: absolute;
-  top: 0;
-  padding: 8px 0;
-  background-color: transparent;
-  li + * {
-    &::before {
-      content: '\f105';
-      color: $medium-grey;
-      font-family: "fontawesome";
-      margin-right: 0 !important;
-    }
-  }
-  a {
-    color: $red;
-  }
-}
-
 .page-title {
-  padding: 0;
   color: $grey;
   display: inline-block;
-  margin: 80px 0 30px !important;
   @include font-size(24px);
+  @include margin-and-padding(80px 0 30px !important, 0);
   .fa {
     margin-right: 10px;
   }
@@ -79,11 +59,8 @@ main {
   .row > ul {
     padding-left: 0;
     padding-right: 0;
-    @include margin-and-padding(0, 0);
     @include border-and-background();
-    .panel-heading:hover {
-      cursor: move;
-    }
+    @include margin-and-padding(0, 0);
     > li {
       list-style-type: none;
       &.placeholder {
@@ -97,6 +74,9 @@ main {
         height: 350px;
       }
     }
+    .panel-heading:hover {
+      cursor: move;
+    }
   }
 }
 
@@ -106,8 +86,8 @@ main {
 
 // Time Entry Page Layout.
 .alert-timesheet {
-  padding: 20px 25px;
   margin-left: 10px;
+  padding: 20px 25px;
   display: inline-block;
 }
 
@@ -159,9 +139,9 @@ footer {
   @include widget-feed();
   h2 {
     color: $medium-grey;
+    font-weight: $font-weight-light;
     @include font-size(28px);
     @include margin-and-padding(0, 0);
-    font-weight: $font-weight-light;
     &:last-of-type {
       margin-top: 60px;
     }

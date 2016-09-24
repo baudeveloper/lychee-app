@@ -27,10 +27,14 @@ button {
   padding: 8px 0;
   background-color: transparent;
   a {
+    color: $red;
     @include hyperlink-hover($red);
   }
   li + * {
     @include icon-before('\f105' !important, $medium-grey !important);
+    &::before {
+      margin-right: 0;
+    }
   }
 }
 
