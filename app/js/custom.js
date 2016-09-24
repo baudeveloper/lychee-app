@@ -14,7 +14,7 @@
 
 $(window).load(function() {
   /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically | http://stackoverflow.com/questions/10163699/jquery-isotope-option-for-auto-height-on-element */
-  var $grid = $('#team-list .team-row').isotope({
+  var $grid = $('#team-list .row').isotope({
     itemSelector: '.team-member'
   });
   $('#select-usertype').on( 'change', function() {
