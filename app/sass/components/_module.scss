@@ -796,8 +796,10 @@
         .form-control {
           text-align: right;
           color: $dark-green;
-          border-radius: 4px !important;
           border-color: $dark-green;
+          border-radius: 4px !important;
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
           @include input-placeholder-color($dark-green);
         }
       }
