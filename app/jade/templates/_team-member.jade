@@ -11,26 +11,27 @@ main.container-fluid.page-team-member(role='main')
 			.member-card
 				h2 Profile
 				figure
-					img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson")        
-				.description
-					p
-						span Title:
-						| Technical Architect
-					p
-						span Role:
-						| Employee
-					p
-						span Phone:
-						| x131
-					a.member-mail(href="mailto:test@test.com") first.last@company.com
-			.stats
-				h2 Team Member Stats 
-				ul.list-group
-					li.list-group-item
-						span.badge
-							span.value 92
-							| %
-						| Billable (avg 75%)
+					img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson")  
+				.row      
+					.description.col-sm-8
+						p
+							span Title:
+							| Technical Architect
+						p
+							span Role:
+							| Employee
+						p
+							span Phone:
+							| x131
+						a.member-mail(href="mailto:test@test.com") first.last@company.com
+				.stats.col-sm-4
+					h2 Team Member Stats 
+					ul.list-group
+						li.list-group-item
+							span.badge
+								span.value 92
+								| %
+							| Billable (avg 75%)
 		section#member-assignments.col-sm-12.col-md-12.col-lg-9
 			.bg
 				h2 Project Assignments

@@ -7,119 +7,123 @@
        @include font-size(18px);
     }
   }
-  .bootstrap-select button {
-    color: $red;
-    border-radius: 0;
-    @include font-size(16px);
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-  }
-  .bootstrap-select .dropdown-menu {
-    @include font-size(16px);
-    a {
-      padding: 3px 12px;
+  .bootstrap-select {
+    button {
+      color: $red;
+      border-radius: 0;
       @include font-size(16px);
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+    }
+    .dropdown-menu {
+      @include font-size(16px);
+      a {
+        padding: 3px 12px;
+        @include font-size(16px);
+      }
     }
   }
   .checkbox {
     margin-left: 30px;
-  }
-  .checkbox label {
-    @include font-size(14px);
-    input {
-      margin-right: 5px;
+    label {
+      @include font-size(14px);
+      input {
+        margin-right: 5px;
+      }
     }
   }
   .pagination {
     @include margin-and-padding(0, 0);
-  }
-  .pagination li a {
-    color: $grey;
-    border: none;
-    background: none;
-    box-shadow: none;
-    padding: 0 5px;
-    @include font-size(20px);
-    @media #{$tablet} {
-       @include font-size(18px);
+    li:first-of-type a {
+      padding-left: 0;
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 1px solid $darkest-grey;
+      &:active,
+      &:focus,
+      &:hover {
+        color: $red;
+        border-radius: 0;
+        background-color: transparent;
+      }
     }
-    &:active,
-    &:focus,
-    &:hover {
-      color: $white;
-      border-radius: 4px;
-      background-color: $red;
+    li a {
+      color: $grey;
+      padding: 0 5px;
+      box-shadow: none;
+      @include font-size(20px);
+      @include border-and-background();
+      @media #{$tablet} {
+         @include font-size(18px);
+      }
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+        border-radius: 4px;
+        background-color: $red;
+      }
     }
-  }
-  .pagination li:first-of-type a {
-    padding-left: 0;
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid $darkest-grey;
-    &:active,
-    &:focus,
-    &:hover {
-      color: $red;
-      border-radius: 0;
-      background-color: transparent;
-    }
-  }
-  .pagination li.disabled a {
-    color: $darkest-grey;
-    border: none;
-    background: none;
-    box-shadow: none;
-    &:active,
-    &:focus,
-    &:hover {
-      color: $white;
-      background-color: lighten($red, 15%);
+    li.disabled a {
+      color: $darkest-grey;
+      box-shadow: none;
+      @include border-and-background();
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+        background-color: lighten($red, 15%);
+      }
     }
   }
-  .form-group:first-of-type + div {
-    margin-top: -4px;
-  }
-  .form-group:last-of-type {
-    @media (max-width: 1500px) {
-      float: none !important;
-      clear: both;
-      display: block;
-      margin-top: 20px;
+  .form-group {
+    &:first-of-type + div {
+      margin-top: -4px;
+    }
+    &:last-of-type {
+      @media (max-width: 1500px) {
+        float: none !important;
+        clear: both;
+        display: block;
+        margin-top: 20px;
+      }
     }
   }
-  .team-row {
+  .row {
     margin: 50px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    @include make-row();
     @media #{$tablet} {
       margin: 30px 0;
     }
   }
-  .team-member a {
+  .team-member {
     display: inline-block;
-  }
-  .team-member figure {
-    display: inline-block;
-  }
-  .team-member img {
-    width: auto;
-    transition: border 0.5s;
-    border: 5px solid transparent;
-    &:hover {
-      border: 5px solid $red;
+    a {
+      display: inline-block;
     }
-  }
-  .info {
-    margin: 15px 0 30px;
-    span {
-      display: block;
+    figure {
+      display: inline-block;
+      img {
+        width: auto;
+        transition: border 0.5s;
+        border: 5px solid transparent;
+        &:hover {
+          border: 5px solid $red;
+        }
+      }
     }
-    span:first-of-type {
-      @include font-size(14px);
-    }
-    span:last-of-type {
-      @include font-size(12px);
+    .info {
+      margin: 15px 0 30px;
+      span {
+        display: block;
+      }
+      span:first-of-type {
+        @include font-size(14px);
+      }
+      span:last-of-type {
+        @include font-size(12px);
+      }
     }
   }
 }
@@ -130,8 +134,8 @@
     margin: 35px 0 20px;
   }
   p {
-    @include margin-and-padding(0, 0);
     @include font-size(16px);
+    @include margin-and-padding(0, 0);
     span {
       width: 70px;
       display: inline-block;
@@ -155,12 +159,12 @@
     @include margin-and-padding(0 0 30px, 0);
   }
   .badge {
+    color: $red;
     float: none;
     display: block;
     text-align: left;
-    color: $red;
-    font-weight: $font-weight-light;
     @include font-size(33px);
+    font-weight: $font-weight-light;
     @include margin-and-padding(0, 0);
     @include border-and-background();
   }
@@ -169,13 +173,9 @@
   }
   @media #{$desktop} {
     .stats {
-      @include make-sm-column(4);
-      @include make-md-column(4);
       padding: 0;
     }
     .member-card {
-      @include make-sm-column(8);
-      @include make-md-column(8);
       padding: 0;
       margin-bottom: 30px;
     }
@@ -185,13 +185,12 @@
     }
     .description {
       display: inline-block;
-    }
-    .description p:first-of-type {
-      margin: 0;
+      p:first-of-type {
+        margin: 0;
+      }
     }
   }
 }
-
 #member-assignments {
   .bg {
     padding: 15px;
@@ -205,32 +204,31 @@
     border-bottom: 1px solid $red;
   }
   h3 {
-    font-weight: $font-weight-regular;
     @include font-size(16px);
+    font-weight: $font-weight-regular;
   }
   label {
     display: inline;
     @include font-size(16px);
   }
-
   .lbl-assignments {
+    width: 30%;
     float: left;
     padding-left: 0;
-    width: 30%;
     @media #{$tablet__up} {
       width: 40%;
     }
   }
   .checkbox {
-    display: inline;
-    @include font-size(14px);
     margin: 0;
-    float: left;
     width: 40%;
+    float: left;
+    display: inline;
+    text-align: right;
+    @include font-size(14px);
     @media #{$tablet__up} {
       width: 40%;
     }
-    text-align: right;
     input {
       margin-right: 5px;
     }
@@ -238,19 +236,21 @@
   table {
     margin-bottom: 50px;
     border-color: $darkest-grey;
-  }
-  tbody tr * {
-    text-align: center;
-    @include font-size(14px);
-  }
-  tbody th {
-    color: $grey;
-  }
-  tbody td:first-of-type {
-    color: $red;
-  }
-  .table-striped tr:nth-of-type(2n+1) {
-    background-color: $extra-light-grey !important;
+    tbody {
+      th {
+        color: $grey;
+      }
+      tr * {
+        text-align: center;
+        @include font-size(14px);
+      }
+      td:first-of-type {
+        color: $red;
+      }
+    }
+    &.table-striped tr:nth-of-type(2n+1) {
+      background-color: $extra-light-grey !important;
+    }
   }
 }
 @include tablesaw-assignments();
@@ -278,7 +278,6 @@
     }
   }
 }
-
 #task-list {
   form {
     margin: 0;
@@ -288,162 +287,148 @@
     padding: 15px;
     background-color: transparent;
     border-color: $extra-darkest-grey;
-  }
-  .panel-heading thead {
     @media #{$tablet} {
-       @include font-size(12px);
+      thead {
+         @include font-size(12px);
+      }
     }
-  }
-  .panel-heading .input-group {
-    max-width: 260px;
-    position: relative;
-    input {
-      color: $red;
-      height: 36px;
-      padding-left: 35px;
+    .input-group {
+      max-width: 260px;
       position: relative;
-      @include font-size(16px);
-      text-transform: uppercase;
-      background-color: $extra-light-grey;
-      @media #{$tablet} {
-         @include font-size(14px);
+      input {
+        color: $red;
+        height: 36px;
+        padding-left: 35px;
+        position: relative;
+        @include font-size(16px);
+        text-transform: uppercase;
+        background-color: $extra-light-grey;
+        @media #{$tablet} {
+           @include font-size(14px);
+        }
+      }
+      @include input-placeholder-color($red);
+      // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
+      .input-group-addon {
+        position: absolute;
+        color: $red;
+        top: 3px;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        border-radius: 0;
+        border-color: transparent;
+        background-color: transparent;
+        @media #{$tablet} {
+          top: 2px;
+        }
+      }
+      button {
+        height: 36px;
       }
     }
-    @include input-placeholder-color($red);
-    // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
-    .input-group-addon {
-      position: absolute;
-      color: $red;
-      top: 3px;
-      left: 0;
-      bottom: 0;
-      z-index: 100;
-      border-radius: 0;
-      border-color: transparent;
-      background-color: transparent;
-      @media #{$tablet} {
-        top: 2px;
-      }
+    .headers {
+      margin-top: 15px;
     }
-    button {
-      height: 36px;
-    }
-  }
-  .panel-heading .headers {
-    margin-top: 15px;
   }
   .panel-body {
     padding: 0;
-  }
-  .panel-body ul {
-    margin: 0;
-  }
-  .panel-body li {
-    margin: 0;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid $extra-darkest-grey;
-    &:last-of-type {
-      border: none;
-    }
-    &.sticky {
-      background-color: $light-blue !important;
-      .btn-pin {
-        color: $blue;
+    ul {
+      margin: 0;
+      li {
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $extra-darkest-grey;
+        &:last-of-type {
+          border: none;
+        }
+        &.sticky {
+          background-color: $light-blue !important;
+          .btn-pin {
+            color: $blue;
+          }
+        }
+        &:nth-child(odd) {
+          background-color: $extra-light-grey;
+        }
       }
     }
-    &:nth-child(odd) {
-      background-color: $extra-light-grey;
+    .icon-group {
+      padding-top: 0;
+      text-align: right;
+      a {
+        color: $medium-grey;
+        margin-left: 10px;
+        @include hyperlink-hover($medium-grey);
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
-  }
-  .panel-body .icon-group {
-    padding-top: 0;
-    text-align: right;
-  }
-  .panel-body .icon-group a:hover {
-    cursor: pointer;
+    .sticky .btn-pin {
+      @include hyperlink-hover($blue);
+    }
+    .btn-tasks {
+      color: $red;
+      @include hyperlink-hover($red);
+    }
+    .btn-edit, .btn-pin {
+      color: $medium-grey;
+      @include hyperlink-hover($medium-grey);
+    }
   }
   .panel-footer {
     padding: 20px 15px;
     background-color: transparent;
     border-color: $extra-darkest-grey;
-  }
-  .panel-footer .btn {
-    min-width: 100px;
+    .btn {
+      min-width: 100px;
+    }
   }
   table {
     width: 100%;
     padding: 15px;
     line-height: 1;
     @include font-size(14px);
-  }
-  td,
-  th {
-    padding: 4px;
-  }
-  th {
-    font-weight: $font-weight-regular;
-    text-align: center;
-    vertical-align: bottom;
-    &:first-child + th {
-      text-align: left;
-    }
-    &:last-child {
-      font-weight: $font-weight-bold;
-    }
-  }
-  td {
-    small {
-      display: block;
-      @include font-size(12px);
-    }
-    input {
-      height: 37px;
+    th {
+      padding: 4px;
       text-align: center;
-    }
-    &:first-child + td {
-      input {
+      vertical-align: bottom;
+      font-weight: $font-weight-regular;
+      &:first-child + th {
         text-align: left;
       }
-    }
-    &:last-child {
-      span {
-        display: block;
+      &:last-child {
         font-weight: $font-weight-bold;
-        text-align: center;
-        color: $medium-grey;
       }
     }
-  }
-  table .btn-tasks {
-    color: $red;
-  }
-  table .btn-edit {
-    margin-left: 10px;
-    color: $medium-grey;
-  }
-  table .btn-pin {
-    color: $medium-grey;
-  }
-  table .icon-group a {
-    color: $medium-grey;
-    margin-left: 10px;
-  }
-  // Hyperlink hover styles.
-  .panel-body .sticky .btn-pin {
-    @include hyperlink-hover($blue);
-  }
-  .panel-body .icon-group a {
-    @include hyperlink-hover($medium-grey);
-  }
-  .panel-body .btn-tasks {
-    @include hyperlink-hover($red);
-  }
-  .panel-body .btn-edit {
-    @include hyperlink-hover($medium-grey);
-  }
-  .panel-body .btn-pin {
-    @include hyperlink-hover($medium-grey);
+    td {
+      padding: 4px;
+      small {
+        display: block;
+        @include font-size(12px);
+      }
+      input[type="text"] {
+        text-align: center;
+      }
+      &:first-child + td {
+        input {
+          text-align: left;
+        }
+      }
+      &:last-child {
+        span {
+          display: block;
+          text-align: center;
+          color: $medium-grey;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+    .btn-edit {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -544,7 +529,6 @@
     }
   }
 }
-
 #project-dash {
   padding-bottom: 0;
   .heading {
@@ -625,34 +609,34 @@
   height: auto;
   ul {
     @include margin-and-padding(0, 0);
-  }
-  li {
-    padding: 5px 0;
-    list-style-type: none;
-    border-bottom: 1px solid $super-extra-light-grey;
-    &:last-child,
-    &:nth-last-child(2) {
-      border-bottom: none;
-    }
-  }
-  .tasks-toggle {
-    margin-top: 30px;
-    color: $medium-grey;
-  }
-  a {
-    display: block;
-    @include font-size(14px);
-    color: $super-extra-light-grey;
-    span {
-      color: inherit;
-      transition: all 0.4s;
-    }
-    @include hyperlink-hover($red);
-  }
-  &.switch {
-    width: 1%;
-    .tasks-toggle .fa::before {
-      content: '\f178';
+    li {
+      padding: 5px 0;
+      list-style-type: none;
+      border-bottom: 1px solid $super-extra-light-grey;
+      &:last-child,
+      &:nth-last-child(2) {
+        border-bottom: none;
+      }
+      a {
+        display: block;
+        @include font-size(14px);
+        color: $super-extra-light-grey;
+        @include hyperlink-hover($red);
+        &.tasks-toggle {
+          margin-top: 30px;
+          color: $medium-grey;
+        }
+        span {
+          color: inherit;
+          transition: all 0.4s;
+        }
+      }
+      &.switch {
+        width: 1%;
+        .tasks-toggle .fa::before {
+          content: '\f178';
+        }
+      }
     }
   }
 }
