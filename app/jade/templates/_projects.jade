@@ -8,7 +8,7 @@ main.container-fluid.page-project(role='main')
 	h1.page-title
 		i.fa.fa-briefcase(aria-hidden='true')
 		| RONE-0757 (Remoted Document Delivery)
-		a.btn-edit-project(, data-toggle="modal", data-target="#edit-project-modal")
+		a.btn-edit-project(data-toggle="modal", data-target="#edit-project-modal")
 			i.fa.fa-pencil
 	table.table.table-condensed.tbl-project-info.pull-right
 		colgroup
@@ -41,8 +41,8 @@ main.container-fluid.page-project(role='main')
 				td.title Status:
 				td Active
 	.row
-		.col-sm-12.col-lg-12.col-md-12
-			section#project-dash
+		.col-sm-12
+			section#project-dash.widget
 				.heading
 					h2 FFD-C2029 - UI Design
 				.dash-content
@@ -156,8 +156,8 @@ main.container-fluid.page-project(role='main')
 						.task-performance
 							h3 Task Performance
 							img(src="http://placehold.it/400x200/ff0000/ffffff", alt="Graph")
-		.col-sm-12.col-lg-12.col-md-12
-			section#project-team
+		.col-sm-12
+			section#project-team.widget
 				.heading
 					h2 Project Team
 				.assigned-members-group
@@ -282,8 +282,8 @@ main.container-fluid.page-project(role='main')
 					a.btn.btn-tertiary.visible-sm.btn-add-user(href="#")
 						i.fa.fa-plus
 						| Add User
-		.col-sm-12.col-lg-12.col-md-12
-			section#bookkeeping
+		.col-sm-12
+			section#bookkeeping.widget
 				.heading
 					h2 Bookkeeping
 					a.btn-edit-bookkeeping(href="#")

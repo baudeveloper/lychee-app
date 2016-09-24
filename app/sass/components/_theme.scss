@@ -450,6 +450,12 @@
 // Project Page
 .page-project {
   color: $grey;
+  .widget {
+    background-color: $white;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    border: 1px solid $extra-super-dark-grey;
+    @include margin-and-padding(0 0 15px, 15px);
+  }
   .heading {
     border-bottom: 1px solid $red;
     @include margin-and-padding(0 0 20px 0, 0 0 10px);
@@ -460,6 +466,9 @@
       text-transform: uppercase;
       @include margin-and-padding(10px 0 0, 0);
     }
+  }
+  .btn-tertiary {
+    min-width: 200px;
   }
   .page-row > section {
     background-color: $white;
@@ -537,10 +546,7 @@
 }
 
 #project-dash {
-  background-color: $white;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-  border: 1px solid $extra-super-dark-grey;
-  @include margin-and-padding(0 0 15px, 15px);
+  padding-bottom: 0;
   .heading {
     margin-bottom: 0;
   }
@@ -551,13 +557,18 @@
   > div {
     flex-grow: 1;
     border-left: 1px solid $darkest-grey;
+    &:first-child {
+      border-left: none;
+    }
   }
-  > div:first-child {
-    border-left: none;
+  h3 {
+    color: $red;
+    text-align: center;
+    @include font-size(16px);
+    text-transform: uppercase;
   }
-  .dash-nav {
-    width: 10%;
-    height: auto;
+  img {
+    width: 100%;
   }
   .all-tasks {
     width: 30%;
@@ -577,9 +588,9 @@
       }
       .dropdown-menu {
         width: 100%;
-      }
-      .dropdown-menu a {
-        @include font-size(14px);
+        a {
+          @include font-size(14px);
+        }
       }
     }
   }
@@ -608,99 +619,76 @@
       border-left: 1px solid $darkest-grey;
     }
   }
-  h3 {
-    color: $red;
-    text-align: center;
-    @include font-size(16px);
-    text-transform: uppercase;
-  }
-  img {
-    width: 100%;
-  }
 }
-.dash-nav ul {
-  margin: 0;
-  padding: 0;
+.dash-nav {
+  width: 10%;
+  height: auto;
+  ul {
+    @include margin-and-padding(0, 0);
+  }
   li {
     padding: 5px 0;
     list-style-type: none;
     border-bottom: 1px solid $super-extra-light-grey;
-  }
-  li:last-child,
-  li:nth-last-child(2) {
-    border-bottom: none;
-  }
-  a {
-    display: block;
-    color: $super-extra-light-grey;
-    @include font-size(14px);
-    span {
-      transition: all 0.4s;
-      color: $super-extra-light-grey;
-    }
-  }
-  a:hover {
-    color: $red;
-    span {
-      color: $red;
-      transition: all 0.4s;
-    }
-  }
-  a:focus {
-    color: $red;
-    span {
-      color: $red;
+    &:last-child,
+    &:nth-last-child(2) {
+      border-bottom: none;
     }
   }
   .tasks-toggle {
     margin-top: 30px;
     color: $medium-grey;
+  }
+  a {
+    display: block;
+    @include font-size(14px);
+    color: $super-extra-light-grey;
     span {
-      color: $medium-grey;
+      color: inherit;
+      transition: all 0.4s;
+    }
+    @include hyperlink-hover($red);
+  }
+  &.switch {
+    width: 1%;
+    .tasks-toggle .fa::before {
+      content: '\f178';
     }
   }
 }
-.dash-nav.switch {
-  width: 1%;
-  .tasks-toggle .fa::before {
-    content: '\f178';
-  }
-}
 #project-team {
-  background-color: $white;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-  border: 1px solid $extra-super-dark-grey;
-  @include margin-and-padding(0 0 15px, 15px);
+  h3 {
+    display: inline-block;
+    margin: 0 15px 15px 0;
+    @include font-size(16px);
+  }
   .timeline {
     margin-bottom: 15px;
     img {
       width: 100%;
     }
   }
-  h3 {
-    display: inline-block;
-    margin: 0 15px 15px 0;
-    @include font-size(16px);
+  .container {
+    padding: 0;
+    width: 100%;
   }
-  .btn-tertiary {
-    min-width: 200px;
+  .well {
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+    @include font-size(14px);
+    border-color: $darkest-grey;
+    background-color: $extra-light-grey;
+    @include margin-and-padding(0, 10px);
+    @media #{$tablet} {
+       @include margin-and-padding(0 0 15px, 10px);
+    }
   }
   .assigned-members-group {
     width: 40%;
     float: left;
     display: inline;
-    @media #{$tablet__up} {
-      width: 40%;
-    }
-    h3 {
-      margin-top: 0;
-      margin-right: 15px;
-    }
-    .btn-team-gridview {
-      color: $red;
-      @include hyperlink-hover($red);
-    }
-    .btn-team-listview {
+    .btn-team-gridview, .btn-team-listview {
       color: $red;
       @include hyperlink-hover($red);
     }
@@ -725,7 +713,7 @@
       margin-bottom: 15px;
     }
     input[type="text"] {
-      border-color: $darker-grey;
+      border-color: $darkest-grey;
     }
   }
   .tbl-assigned-members {
@@ -739,33 +727,13 @@
       @include hyperlink-hover($red);
     }
   }
-  .container {
-    padding: 0;
-    width: 100%;
-  }
-  .well {
-    border-radius: 0;
-    box-shadow: none;
-    text-align: center;
-    @include font-size(14px);
-    border-color: $darkest-grey;
-    background-color: $extra-light-grey;
-    @include margin-and-padding(0, 10px);
-    @media #{$tablet} {
-       @include margin-and-padding(0 0 15px, 10px);
-    }
-  }
-  .btn-add-user {
-    @media #{$tablet} {
+  @media #{$tablet} {
+    .btn-add-user {
       display: inline-block !important;
     }
   }
 }
 #bookkeeping {
-  background-color: $white;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-  border: 1px solid $extra-super-dark-grey;
-  @include margin-and-padding(0 0 15px, 15px);
   h3 {
     color: $grey;
     @include font-size(16px);
@@ -781,9 +749,6 @@
       width: 80%;
     }
   }
-  .btn-tertiary {
-    min-width: 200px;
-  }
   .btn-add-contact {
     margin-bottom: 15px;
   }
@@ -792,11 +757,15 @@
     margin-left: 10px;
     @include hyperlink-hover($red);
   }
+  td a {
+    color: $red;
+    @include hyperlink-hover($red);
+  }
   .tbl-bookkeeping {
     width: auto;
+    border: none;
     display: block;
     min-width: 500px;
-    border: none;
     col {
       width: auto;
       &:first-child {
@@ -814,33 +783,24 @@
     }
     tr {
       background: none !important;
-    }
-    td {
-      padding: 2px;
-      border: none;
-      color: $black;
-      text-align: left;
-      &.title {
-        color: $super-grey;
+      td {
+        padding: 2px;
+        border: none;
+        color: $black;
+        text-align: left;
+        &.title {
+          color: $super-grey;
+        }
       }
     }
   }
   .tbl-invoice-contacts {
     margin-bottom: 15px;
-    a {
-      color: $red;
-      @include hyperlink-hover($red);
-    }
   }
   .tbl-invoice-milestones {
     margin-bottom: 15px;
     .tablesaw-cell-persist {
       border-right: none;
-    }
-    .btn-invoice,
-    a {
-      color: $red;
-      @include hyperlink-hover($red);
     }
     th {
       border-left: none;
@@ -849,10 +809,6 @@
     tfoot {
       font-weight: $font-weight-bold;
       background-color: $lightest-red;
-      a {
-        color: $grey;
-        @include hyperlink-hover($grey);
-      }
       td {
         font-size: 14px !important;
         @media #{$tablet} {
