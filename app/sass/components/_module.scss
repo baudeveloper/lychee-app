@@ -815,12 +815,11 @@
     display: block!important;
   }
   .tt-menu {
-    padding: 30px 0 10px;
+    padding: 30px 0 10px -44px;
     top: 81px!important;
     left: -44px!important;
-    padding-left: -44px;
-    background-color: $white;
     width: calc(100% + 44px);
+    background-color: $white;
     box-shadow: 1px 2px 2px 1px rgba(204,204,204,0.5);
   }
   h3 {
@@ -830,11 +829,10 @@
     font-weight: $font-weight-light;
   }
   .tt-suggestion {
-    line-height: 2;
-    margin: 0 30px;
-    padding: 0 0 0 28px;
     color: $grey;
+    line-height: 2;
     @include font-size(16px);
+    @include margin-and-padding(0 30px, 0 0 0 28px);
     strong {
       font-weight: $font-weight-bold;
     }
@@ -847,8 +845,8 @@
     background-color: $light-red;
   }
   .tt-suggestion:last-child {
-      margin-bottom: 10px;
-    }
+    margin-bottom: 10px;
+  }
 }
 
 @mixin modal-standard() {
