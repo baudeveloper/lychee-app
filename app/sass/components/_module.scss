@@ -389,15 +389,14 @@
       content: '';
       left: 0;
       right: 0;
-      bottom: -52.5px;
-      width: 132px;
-      height: 105px;
+      bottom: -40px;
+      width: 100px;
+      height: 80px;
       margin-left: auto;
       margin-right: auto;
-      background-size: 132px 105px;
+      background-size: 100px 80px;
       background-image: url('../images/badge-employee.svg');
       @media #{$tablet} {
-        left: -15px;
         bottom: -32px;
         width: 80px;
         height: 64px;
@@ -429,36 +428,36 @@
       flex: 1 1 0;
       overflow-x: hidden;
       text-align: center;
-    }
-    li a {
-      margin: 0;
-      border-radius: 0;
-      color: $medium-grey;
-      background-color: $white;
-      border: 1px solid $lightest-grey;
-      border-top: none;
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: transparent;
-      }
-    }
-    li.active a {
-      color: $red;
-      background-color: transparent;
-      border-bottom-color: transparent;
-    }
-    li:first-child a {
-      border-left: none;
-    }
-    li:first-child + li {
       a {
+        margin: 0;
+        border-radius: 0;
+        color: $medium-grey;
+        background-color: $white;
+        border: 1px solid $lightest-grey;
+        border-top: none;
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      &.active a {
+        color: $red;
+        background-color: transparent;
+        border-bottom-color: transparent;
+      }
+      &:first-child a {
         border-left: none;
+      }
+      &:first-child + li {
+        a {
+          border-left: none;
+          border-right: none;
+        }
+      }
+      &:last-child a {
         border-right: none;
       }
-    }
-    li:last-child a {
-      border-right: none;
     }
   }
   .list-group {
@@ -467,30 +466,30 @@
       display: none;
       border-radius: 0;
       @include border-and-background();
-    }
-    li .droppable {
-      float: right;
-      width: auto;
-      height: auto;
-      min-width: 60px;
-      min-height: 20px;
-    }
-    li .fa {
-      float: right;
-      margin-left: 10px;
-      line-height: 20px;
-      color: $medium-grey;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    li img {
-      float: right;
-      width: 20px;
-      margin-right: 10px;
-    }
-    li a {
-      color: $grey;
-      @include hyperlink-hover($grey);
+      .droppable {
+        float: right;
+        width: auto;
+        height: auto;
+        min-width: 60px;
+        min-height: 20px;
+      }
+      .fa {
+        float: right;
+        margin-left: 10px;
+        line-height: 20px;
+        color: $medium-grey;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      img {
+        float: right;
+        width: 20px;
+        margin-right: 10px;
+      }
+      a {
+        color: $grey;
+        @include hyperlink-hover($grey);
+      }
     }
     .over {
       background-color: darken($extra-light-grey, 5%);
