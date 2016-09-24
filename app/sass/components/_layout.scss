@@ -42,40 +42,23 @@ main {
 }
 
 .page-dashboard {
-  h2 {
-    color: $red;
-    @include font-size(18px);
-    text-transform: uppercase;
-  }
-  li {
-    @include panel-standard();
-    &.skinned {
-      @include panel-skinned();
-    }
-    &.employee-of-the-month {
-      @include panel-employee();
-    }
-  }
   .row > ul {
     padding-left: 0;
     padding-right: 0;
     @include border-and-background();
     @include margin-and-padding(0, 0);
-    > li {
-      list-style-type: none;
-      &.placeholder {
-        margin: 0 15px 15px;
-        border: 1px solid darken($light-grey, 5%);
-        background-color: darken($light-grey, 2.5%);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-      }
-      &.tile {
-        height: 350px;
-      }
-    }
     .panel-heading:hover {
       cursor: move;
+    }
+    li {
+      list-style-type: none;
+      @include panel-standard();
+      &.skinned {
+        @include panel-skinned();
+      }
+      &.employee-of-the-month {
+        @include panel-employee();
+      }
     }
   }
 }
