@@ -614,206 +614,199 @@
 
 @mixin dropdown-notification() {
   .dd-notification {
-    min-width: 340px;
     padding: 0;
+    min-width: 340px;
     border-radius: 0;
-  }
-  .dd-notification.dropdown-menu {
-    left: 50%;
-    right: auto;
-    text-align: center;
-    transform: translate(-50%, 0);
-  }
-  .dd-notification.dropdown-menu::before {
-    position: absolute;
-    content: '';
-    top: -7px;
-    left: 48%;
-    display: inline-block;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-left: 7px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
-  }
-  .dd-notification.dropdown-menu::after {
-    position: absolute;
-    content: '';
-    top: -6px;
-    left: 48%;
-    display: inline-block;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #ffffff;
-    border-left: 6px solid transparent;
-  }
-  .dd-notification header {
-    padding: 15px;
-    border-bottom: 1px solid $medium-grey-dark;
-    h2 {
-      color: $grey;
+    &.dropdown-menu {
+      left: 50%;
+      right: auto;
       text-align: center;
-      @include font-size(12px);
-      text-transform: uppercase;
-      @include margin-and-padding(0, 0);
+      transform: translate(-50%, 0);
     }
-  }
-  .dd-notification section {
-    padding: 15px;
-    max-height: 180px;
-    overflow-y: scroll;
-    ul {
-      margin: 0;
+    &.dropdown-menu::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      left: 48%;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
     }
-    li {
-      color: $grey;
-      padding: 0;
-      border: none;
-      border-radius: 0;
-      text-align: left;
-      margin: 0 0 20px;
-      @include font-size(14px);
+    &.dropdown-menu::after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      left: 48%;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
     }
-    .fa-red {
-        color: #ff0000;
+    header {
+      padding: 15px;
+      border-bottom: 1px solid $medium-grey-dark;
+      h2 {
+        color: $grey;
+        text-align: center;
+        @include font-size(12px);
+        text-transform: uppercase;
+        @include margin-and-padding(0, 0);
+      }
     }
-    .fa-yellow {
-        color: #fbaf5d;
+    section {
+      padding: 15px;
+      max-height: 180px;
+      overflow-y: scroll;
+      ul {
+        margin: 0;
+      }
+      li {
+        color: $grey;
+        border: none;
+        border-radius: 0;
+        text-align: left;
+        @include font-size(14px);
+        @include margin-and-padding(0 0 20px, 0);
+      }
+      .fa-red {
+          color: #ff0000;
+      }
+      .fa-yellow {
+          color: #fbaf5d;
+      }
+      .fa-blue {
+          color: #2e3192;
+      }
+      .badge {
+        color: $grey;
+        border-radius: 0;
+        @include font-size(14px);
+        font-weight: $font-weight-regular;
+        @include border-and-background();
+      }
+      .description {
+        display: block;
+        color: $medium-grey;
+        @include font-size(12px);
+      }
     }
-    .fa-blue {
-        color: #2e3192;
-    }
-    .badge {
-      color: $grey;
-      border-radius: 0;
-      @include font-size(14px);
-      font-weight: $font-weight-regular;
-      @include border-and-background();
-    }
-    .description {
-      display: block;
-      color: $medium-grey;
-      @include font-size(12px);
-    }
-  }
-  .dd-notification footer {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    padding: 15px;
-    border-top: 1px solid $medium-grey-dark;
-    a {
-      color: $red;
-      padding: 0;
-      display: block;
-      text-align: center;
-      @include font-size(14px);
-      text-transform: capitalize;
+    footer {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      padding: 15px;
+      border-top: 1px solid $medium-grey-dark;
+      a {
+        color: $red;
+        padding: 0;
+        display: block;
+        text-align: center;
+        @include font-size(14px);
+        text-transform: capitalize;
+      }
     }
   }
 }
 
 @mixin dropdown-time-entry() {
   .dd-time-entry {
-    min-width: 560px;
     padding: 0;
+    min-width: 560px;
     border-radius: 0;
-  }
-  .dd-time-entry.dropdown-menu::before {
-    position: absolute;
-    content: '';
-    top: -7px;
-    right: 15px;
-    display: inline-block;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-left: 7px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
-  }
-  .dd-time-entry.dropdown-menu::after {
-    position: absolute;
-    content: '';
-    top: -6px;
-    right: 15px;
-    display: inline-block;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #ffffff;
-    border-left: 6px solid transparent;
+    &.dropdown-menu::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      right: 15px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+    }
+    &.dropdown-menu::after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      right: 15px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+    }
   }
   table {
     width: 100%;
-  }
-  col:first-of-type {
-    width: 50%;
-  }
-  col:first-of-type + col {
-    width: 30%;
-  }
-  col:last-of-type {
-    width: 20%;
-  }
-  thead {
-    border-bottom: 1px solid $medium-grey-dark;
-    td {
-      color: $grey;
-      padding: 15px;
-      vertical-align: top;
-      @include font-size(12px);
-      text-transform: uppercase;
+    col:first-of-type {
+      width: 50%;
     }
-    td:last-of-type {
-      text-align: right;
+    col:first-of-type + col {
+      width: 30%;
     }
-    span {
-      display: block;
-      text-transform: none;
+    col:last-of-type {
+      width: 20%;
     }
-  }
-  tbody {
-    td {
-      color: $grey;
-      padding: 10px 15px;
-      @include font-size(14px);
-    }
-    td:last-of-type {
-      text-align: right;
-    }
-    td:last-of-type .fa {
-      color: $red;
-      &:first-of-type {
-        margin-right: 15px;
+    thead {
+      border-bottom: 1px solid $medium-grey-dark;
+      td {
+        color: $grey;
+        padding: 15px;
+        vertical-align: top;
+        @include font-size(12px);
+        text-transform: uppercase;
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+      span {
+        display: block;
+        text-transform: none;
       }
     }
-    // td .input-group-btn {
-    //   color: $white;
-    //   border-color: $dark-green;
-    //   background-color: $dark-green;
-    //   @include hyperlink-hover($dark-green);
-    // }
-    td .fa {
-      margin: 0;
-      color: $white;
+    tbody {
+      td {
+        color: $grey;
+        padding: 10px 15px;
+        @include font-size(14px);
+        &:last-of-type {
+          text-align: right;
+        }
+        &:last-of-type .fa {
+          color: $red;
+          &:first-of-type {
+            margin-right: 15px;
+          }
+        }
+        .fa {
+          margin: 0;
+          color: $white;
+        }
+        span .btn {
+          border-radius: 4px;
+        }
+        .description {
+          display: block;
+          text-transform: none;
+          @include font-size(12px);
+        }
+        .form-control {
+          text-align: right;
+          color: $dark-green;
+          border-radius: 4px;
+          border-color: $dark-green;
+          @include input-placeholder-color($dark-green);
+        }
+      }
     }
-    span .btn {
-      border-radius: 4px;
+    tfoot {
+      background-color: $medium-light-grey;
+      @include inline-input();
+      @include typeahead-standard();
     }
-    .description {
-      display: block;
-      @include font-size(12px);
-      text-transform: none;
-    }
-    .form-control {
-      text-align: right;
-      color: $dark-green;
-      border-radius: 4px;
-      border-color: $dark-green;
-      @include input-placeholder-color($dark-green);
-    }
-  }
-  tfoot {
-    background-color: $medium-light-grey;
-    @include inline-input();
-    @include typeahead-standard();
   }
 }
 
