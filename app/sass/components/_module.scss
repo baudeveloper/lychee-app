@@ -508,23 +508,20 @@
 }
 
 @mixin widget-mytasks {
-  header {
-    @include make-row();
-    > div {
-      @include make-sm-column(6);
+  .container {
+    width: 100%;
+  }
+  .tasks {
+    text-align: left;
+    .value {
+      color: $medium-grey;
     }
-    .tasks {
-      text-align: left;
-      .value {
-        color: $medium-grey;
-      }
-    }
-    .status {
-      text-align: right;
-      padding-right: 85px;
-      @media #{$tablet} {
-        padding-right: 65px;
-      }
+  }
+  .status {
+    text-align: right;
+    padding-right: 85px;
+    @media #{$tablet} {
+      padding-right: 65px;
     }
   }
   .list-group {
@@ -536,32 +533,32 @@
       margin-bottom: 15px;
       @include font-size(12px);
       background-color: transparent;
-    }
-    li span {
-      display: block;
-      @include font-size(14px);
-    }
-    li span:first-of-type {
-      float: right;
-      color: $grey;
-      line-height: 1;
-      margin-right: 10px;
-      margin-left: 10px;
-      @include font-size(12px);
-    }
-    li a {
-      float: right;
-      margin-left: 10px;
-      &:active,
-      &:hover {
-        .fa {
-          color: $red;
+      span {
+        display: block;
+        @include font-size(14px);
+      }
+      span:first-of-type {
+        float: right;
+        color: $grey;
+        line-height: 1;
+        margin-right: 10px;
+        margin-left: 10px;
+        @include font-size(12px);
+      }
+      a {
+        float: right;
+        margin-left: 10px;
+        &:active,
+        &:hover {
+          .fa {
+            color: $red;
+          }
         }
       }
-    }
-    li a .fa {
-      color: $medium-grey;
-      @include font-size(14px);
+      a .fa {
+        color: $medium-grey;
+        @include font-size(14px);
+      }
     }
   }
   .progress {
