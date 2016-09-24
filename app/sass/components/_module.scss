@@ -536,28 +536,29 @@
       span {
         display: block;
         @include font-size(14px);
-      }
-      span:first-of-type {
-        float: right;
-        color: $grey;
-        line-height: 1;
-        margin-right: 10px;
-        margin-left: 10px;
-        @include font-size(12px);
+        &:first-of-type {
+          float: right;
+          color: $grey;
+          line-height: 1;
+          margin-right: 10px;
+          margin-left: 10px;
+          @include font-size(12px);
+        }
       }
       a {
         float: right;
         margin-left: 10px;
+        .fa {
+          color: $medium-grey;
+          @include font-size(14px);
+        }
         &:active,
+        &:focus,
         &:hover {
           .fa {
             color: $red;
           }
         }
-      }
-      a .fa {
-        color: $medium-grey;
-        @include font-size(14px);
       }
     }
   }
