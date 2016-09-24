@@ -29,8 +29,6 @@ button {
 .breadcrumb {
   position: absolute;
   top: 0;
-  padding: 8px 0;
-  background-color: transparent;
   a {
     color: $red;
     @include hyperlink-hover($red);
