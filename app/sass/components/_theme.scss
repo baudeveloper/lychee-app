@@ -608,6 +608,7 @@
       @media #{$tablet} {
         width: 90%;
         height: 250px;
+        border-right: none;
         border-bottom: 1px solid $darkest-grey;
       }
     }
@@ -621,7 +622,7 @@
         height: 250px;
         margin-left: 10%;
         border-left: 1px solid $darkest-grey;
-        border-bottom: 1px solid $darkest-grey;
+        border-bottom: none;
       }
     }
     &.task-breakdown {
@@ -632,7 +633,7 @@
         width: 90%;
         height: 250px;
         display: none;
-        border-bottom: 1px solid $darkest-grey;
+        border-bottom: none;
       }
     }
     &.task-performance {
@@ -642,7 +643,7 @@
         width: 90%;
         height: 250px;
         display: none;
-        border-bottom: 1px solid $darkest-grey;
+        border-bottom: none;
       }
     }
   }
