@@ -535,7 +535,7 @@
   &.toggled {
     .dash-nav {
       transition: all .5s;
-      width: 2% !important;
+      width: 3% !important;
       .dash-toggle .fa::before {
         content: '\f178';
       }
@@ -546,8 +546,8 @@
     }
     .all-tasks {
       transition: all .5s;
-      width: 38% !important;
-      margin-left: 2% !important;
+      width: 37% !important;
+      margin-left: 3% !important;
     }
   }
   .block {
