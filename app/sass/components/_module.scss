@@ -273,13 +273,20 @@
   ul {
     @include margin-and-padding(0, 0);
     li {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      align-items: center;
+      display: table;
       margin-bottom: 15px;
       padding-left: 0;
       padding-right: 0;
+      > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      figure {
+        width: 75px;
+      }
+      .info {
+        padding-left: 10px;
+      }
       span {
         display: block;
         &:first-child {
@@ -913,6 +920,9 @@
       }
       .col-sm-6 {
         @include typeahead-standard();
+        > .input {
+          margin: 0 -15px;
+        }
         .bg-color {
           background-color: $white;
           border-bottom: 1px solid $darkest-grey;
@@ -932,11 +942,19 @@
         @include margin-and-padding(0, 0);
       }
       .team-member {
-        display: flex;
-        align-items: center;
+        display: table;
         margin-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        > * {
+          display: table-cell;
+          vertical-align: middle;
+        }
         figure {
-          margin-right: 10px;
+          width: 75px;
+        }
+        .info {
+          padding-left: 10px;
         }
         span {
           display: block;
