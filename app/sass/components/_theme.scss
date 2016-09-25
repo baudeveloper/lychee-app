@@ -127,9 +127,22 @@
 }
 
 // Team Member Page
-#member-profile {
+.page-team-member {
   h2 {
-    margin: 35px 0 20px;
+    color: $red;
+    @include font-size(18px);
+    text-transform: uppercase;
+  }
+  .bg {
+    padding: 15px;
+    background-color: $white;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    border: 1px solid $extra-super-dark-grey;
+  }
+}
+#user-profile {
+  h2 {
+    @include margin-and-padding(30px 0 15px, 0);
   }
   p {
     @include font-size(16px);
@@ -142,13 +155,11 @@
       margin-top: 30px;
     }
   }
-  .member-mail {
+  .user-mail {
     color: $red;
     display: block;
-    margin-bottom: 60px;
-    &:hover {
-      color: darken($red, 15%);
-    }
+    margin-bottom: 30px;
+    @include hyperlink-hover($red);
   }
   li {
     color: $grey;
@@ -170,16 +181,11 @@
     @include font-size(66px);
   }
   @media #{$desktop} {
+    img {
+      margin: 0 0 20px 0;
+    }
     .stats {
       padding: 0;
-    }
-    .member-card {
-      padding: 0;
-      margin-bottom: 30px;
-    }
-    figure {
-      margin: 0 15px 0 0;
-      display: inline-block;
     }
     .description {
       display: inline-block;
@@ -189,30 +195,18 @@
     }
   }
 }
-#member-assignments {
-  .bg {
-    padding: 15px;
-    background-color: $white;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-    border: 1px solid $extra-super-dark-grey;
-  }
+#user-assignments {
   h2 {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
     border-bottom: 1px solid $red;
+    @include margin-and-padding(15px 0, 0 0 15px);
   }
   h3 {
-    @include font-size(16px);
-    font-weight: $font-weight-regular;
-  }
-  label {
-    display: inline;
-    @include font-size(16px);
-  }
-  .lbl-assignments {
     width: 30%;
     float: left;
-    padding-left: 0;
+    display: inline;
+    @include font-size(16px);
+    font-weight: $font-weight-regular;
+    @include margin-and-padding(0, 0);
     @media #{$tablet__up} {
       width: 40%;
     }
@@ -224,11 +218,11 @@
     display: inline;
     text-align: right;
     @include font-size(14px);
-    @media #{$tablet__up} {
-      width: 40%;
-    }
     input {
       margin-right: 5px;
+    }
+    @media #{$tablet__up} {
+      width: 40%;
     }
   }
   table {
@@ -238,16 +232,13 @@
       th {
         color: $grey;
       }
-      tr * {
+      td {
         text-align: center;
         @include font-size(14px);
+        &:first-of-type {
+          color: $red;
+        }
       }
-      td:first-of-type {
-        color: $red;
-      }
-    }
-    &.table-striped tr:nth-of-type(2n+1) {
-      background-color: $extra-light-grey !important;
     }
   }
 }

@@ -7,24 +7,22 @@ main.container-fluid.page-team-member(role='main')
 		i.fa.fa-users(aria-hidden='true')
 		| Dallas Richardson
 	.row
-		aside#member-profile.col-sm-12.col-md-12.col-lg-3
-			.member-card
-				h2 Profile
-				figure
-					img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson")  
-				.row      
-					.description.col-sm-8
-						p
-							span Title:
-							| Technical Architect
-						p
-							span Role:
-							| Employee
-						p
-							span Phone:
-							| x131
-						a.member-mail(href="mailto:test@test.com") first.last@company.com
-				.stats.col-sm-4
+		aside#user-profile.col-sm-12.col-md-12.col-lg-3
+			.row      
+				.description.col-sm-8.col-md-8.col-lg-12
+					h2 Profile 
+					img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson") 
+					p
+						span Title:
+						| Technical Architect
+					p
+						span Role:
+						| Employee
+					p
+						span Phone:
+						| x131
+					a.user-mail(href="mailto:test@test.com") first.last@company.com
+				.stats.col-sm-4.col-md-4.col-lg-12
 					h2 Team Member Stats 
 					ul.list-group
 						li.list-group-item
@@ -32,10 +30,10 @@ main.container-fluid.page-team-member(role='main')
 								span.value 92
 								| %
 							| Billable (avg 75%)
-		section#member-assignments.col-sm-12.col-md-12.col-lg-9
+		section#user-assignments.col-sm-12.col-md-12.col-lg-9
 			.bg
 				h2 Project Assignments
-				label.lbl-assignments Assignments Table 
+				h3 Assignments Table 
 				.checkbox
 					label
 						input(type="checkbox")
