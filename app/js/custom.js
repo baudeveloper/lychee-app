@@ -26,10 +26,13 @@ $(window).load(function() {
 $(document).ready(function() {
 
     /* Project Page */
-    $(".tasks-toggle").click(function() {
-        $(".dash-nav").toggleClass("switch");
-        $(".dash-nav span").toggle();
+    $('.dash-toggle').click(function() {
+      $('.dash-content').toggleClass('toggled');
     });
+    // $(".tasks-toggle").click(function() {
+    //     $(".dash-nav").toggleClass("switch");
+    //     $(".dash-nav span").toggle();
+    // });
     $("input[name$='project']").click(function() {
         var test = $(this).val();
         $(".project-standard").hide();

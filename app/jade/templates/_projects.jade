@@ -46,7 +46,7 @@ main.container-fluid.page-project(role='main')
 				.heading
 					h2 FFD-C2029 - UI Design
 				.dash-content
-					.dash-nav
+					.dash-nav.block
 						ul.visible(role="navigation")
 							li
 								a(href="#", title="Log Time")
@@ -93,10 +93,10 @@ main.container-fluid.page-project(role='main')
 									i.fa.fa-bars(aria-hidden='true')
 									span View in JIRA
 							li
-								a.tasks-toggle(href="#", title="Show/Hide Menu")
+								a.dash-toggle(href="#", title="Show/Hide Menu")
 									i.fa.fa-long-arrow-left(aria-hidden='true')
 									span Collapse
-					.all-tasks
+					.all-tasks.block
 						.button.btn-group
 							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 								| All Tasks 
@@ -146,16 +146,15 @@ main.container-fluid.page-project(role='main')
 										| RONE-0749 (R1 Mobile App 2016)
 									li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
 										| RONE-0749 (CAMS 2016)
-					.task-category
-						.task-effort
-							h3 Task Effort & Completion
-							img(src="http://placehold.it/1600x500/00ff00/ffffff", alt="Graph")
-						.task-breakdown
-							h3 Task Breakdown
-							img(src="http://placehold.it/400x200/0000ff/ffffff", alt="Graph")
-						.task-performance
-							h3 Task Performance
-							img(src="http://placehold.it/400x200/ff0000/ffffff", alt="Graph")
+					.task-effort.block
+						h3 Task Effort & Completion
+						img(src="http://placehold.it/1600x500/00ff00/ffffff", alt="Graph")
+					.task-breakdown.block
+						h3 Task Breakdown
+						img(src="http://placehold.it/400x200/0000ff/ffffff", alt="Graph")
+					.task-performance.block
+						h3 Task Performance
+						img(src="http://placehold.it/400x200/ff0000/ffffff", alt="Graph")
 		.col-sm-12
 			section#project-team.widget
 				.heading
