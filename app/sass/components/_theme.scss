@@ -532,24 +532,6 @@
   max-height: 500px;
   border: none;
   @include margin-and-padding(0, 0);
-  &.toggled {
-    .dash-nav {
-      transition: all .5s;
-      width: 3% !important;
-      .dash-toggle .fa::before {
-        content: '\f178';
-      }
-      span {
-        font-size: 0;
-        transition: all .4s;
-      }
-    }
-    .all-tasks {
-      transition: all .5s;
-      width: 37% !important;
-      margin-left: 3% !important;
-    }
-  }
   .block {
     border: none;
     float: left;
@@ -600,6 +582,9 @@
             @include font-size(14px);
             color: $super-extra-light-grey;
             @include hyperlink-hover($red);
+            @media #{$tablet} {
+              @include font-size(12px);
+            }
             &.dash-toggle {
               margin-top: 30px;
               color: $medium-grey;
@@ -620,21 +605,88 @@
       padding: 15px;
       border-left: 1px solid $darkest-grey;
       border-right: 1px solid $darkest-grey;
+      @media #{$tablet} {
+        width: 90%;
+        height: 250px;
+        border-bottom: 1px solid $darkest-grey;
+      }
     }
     &.task-effort {
       width: 60%;
       height: 250px;
       border-left: none;
       border-bottom: 1px solid $darkest-grey;
+      @media #{$tablet} {
+        width: 90%;
+        height: 250px;
+        margin-left: 10%;
+        border-left: 1px solid $darkest-grey;
+        border-bottom: 1px solid $darkest-grey;
+      }
     }
     &.task-breakdown {
       width: 30%;
       height: 250px;
       border-right: 1px solid $darkest-grey;
+      @media #{$tablet} {
+        width: 90%;
+        height: 250px;
+        display: none;
+        border-bottom: 1px solid $darkest-grey;
+      }
     }
     &.task-performance {
       width: 30%;
       height: 250px;
+      @media #{$tablet} {
+        width: 90%;
+        height: 250px;
+        display: none;
+        border-bottom: 1px solid $darkest-grey;
+      }
+    }
+  }
+  &.toggled {
+    .dash-nav {
+      transition: all .5s;
+      width: 5% !important;
+      .dash-toggle .fa::before {
+        content: '\f178';
+      }
+      span {
+        font-size: 0;
+        transition: all .4s;
+      }
+    }
+    .all-tasks {
+      transition: all .5s;
+      width: 35%;
+      margin-left: 5%;
+    }
+    @media #{$tablet} {
+      .all-tasks {
+        transition: all .5s;
+        width: 95%;
+        margin-left: 5%;
+      }
+      .task-performance {
+        width: 95%;
+        margin-left: 5%;
+        border-left: 1px solid $darkest-grey;
+        border-bottom: none;
+      }
+      .task-effort {
+        width: 95%;
+        margin-left: 5%;
+        border-left: 1px solid $darkest-grey;
+        border-bottom: none;
+      }
+      .task-breakdown {
+        width: 95%;
+        margin-left: 5%;
+        border-left: 1px solid $darkest-grey;
+        border-bottom: none;
+      }
     }
   }
   h3 {
