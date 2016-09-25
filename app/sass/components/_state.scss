@@ -152,6 +152,9 @@ textarea {
 .log-addon {
   @extend .input-group-addon;
 }
+.log-btns-addon {
+  @extend .input-group-btn;
+}
 
 // Lychee Loader
 // #loading {

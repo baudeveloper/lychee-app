@@ -93,18 +93,6 @@
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Close
 				button.btn.btn-primary(type='button') Log Time
-.modal.fade(id='tasks-list-modal', tabindex='-1', role='dialog')
-	.modal-dialog(role='document')
-		.modal-content
-			.modal-header
-				button.close(type='button', data-dismiss='modal', aria-label='Close')
-					span(aria-hidden='true') ×
-				//- h4.modal-title FFD-C2029 - UI Design
-			.modal-body					
-			.modal-footer
-				.right
-					button.btn.btn-default(type='button', data-dismiss='modal') Close
-					button.btn.btn-tertiary(type='button') Add
 .modal.fade(id='assignment-modal', tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
@@ -151,7 +139,7 @@
 								input(type='checkbox')
 					fieldset
 						legend.lbl-heading Project Roles
-						.form-group							
+						.form-group
 							.checkbox
 								label
 									input(type='checkbox')
@@ -226,8 +214,8 @@
 										option Closed Won (100%)
 										option Closed Won (90%)
 										option Closed Won (80%)
-									.input-group
-										.input-group-btn
+									.log-group
+										.log-btns-addon
 											button.btn.btn-default.btn-secondary Won
 											button.btn.btn-default.btn-secondary Lost
 							.form-group
@@ -253,7 +241,7 @@
 										input.input-endingdate.form-control(type="text", placeholder="2016-07-08")
 										span
 											a.btn-endingdate(href="#")
-												i.fa.fa-calendar			
+												i.fa.fa-calendar
 						.radio
 							label
 								input(type='radio', name='project', value="101")
