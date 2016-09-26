@@ -540,12 +540,11 @@
     overflow: hidden;
     @include margin-and-padding(0, 0);
     &.dash-nav {
-      transition: all .5s;
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
-      width: 10%;
+      width: 100px;
       height: 500px;
       .btn-group {
         width: 100%;
@@ -591,100 +590,139 @@
             }
             span {
               color: inherit;
-              transition: all 0.4s;
             }
           }
         }
       }
     }
     &.all-tasks {
-      transition: all .5s;
       width: 30%;
       height: 500px;
-      margin-left: 10%;
+      margin-left: 100px;
       padding: 15px;
       border-left: 1px solid $darkest-grey;
       border-right: 1px solid $darkest-grey;
       @media #{$tablet} {
-        width: 90%;
+        width: calc(100% - 100px);
         height: 250px;
         border-right: none;
         border-bottom: 1px solid $darkest-grey;
       }
     }
-    &.task-effort {
-      width: 60%;
-      height: 250px;
+    &.dash-widgets {
+      width: calc(70% - 30px);
+      // height: 250px;
       border-left: none;
+
       border-bottom: 1px solid $darkest-grey;
+      li a {
+        border: none;
+        background: none;
+        color: lighten($red, 20%);
+        text-align: center;
+        @include font-size(16px);
+        text-transform: uppercase;
+        @include hyperlink-hover($red);
+      }
+      li.active a {
+        color: $red;
+      }
       @media #{$tablet} {
-        width: 90%;
-        height: 250px;
-        margin-left: 10%;
+        width: calc(100% - 100px);
+        height: 50px;
+        margin-left: 100px;
+        border-left: 1px solid $darkest-grey;
+        border-bottom: 1px solid $darkest-grey;
+      }
+      @media #{$tablet__up} {
+        display: none;
+      }
+    }
+    &.tab-content {
+      position: relative;
+      width: calc(70% - 100px);
+      height: 500px;
+        padding: 0;
+      @media #{$tablet} {
+        width: calc(100% - 100px);
+        height: 200px;
+        border-right: none;
         border-left: 1px solid $darkest-grey;
         border-bottom: none;
+        margin-left: 100px;
       }
-    }
-    &.task-breakdown {
-      width: 30%;
-      height: 250px;
-      border-right: 1px solid $darkest-grey;
-      @media #{$tablet} {
-        width: 90%;
-        height: 250px;
-        display: none;
-        border-bottom: none;
+      @media #{$tablet__up} {
+        display: block;
+
+        > div {
+          float: left;
+        }
+        & > .tab-pane {
+                display: block;
+            }
       }
-    }
-    &.task-performance {
-      width: 30%;
-      height: 250px;
-      @media #{$tablet} {
-        width: 90%;
+      #tab-taskeffort {
         height: 250px;
-        display: none;
-        border-bottom: none;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid $darkest-grey;
+        @media #{$tablet} {
+
+          border: none;
+        }
+      }
+      #tab-taskbreakdown {
+        height: 250px;
+        width: 50%;
+        padding: 15px;
+        @media #{$tablet} {
+          width: 100%;        }
+      }
+      #tab-taskperformance {
+        height: 250px;
+        width: 50%;
+        padding: 15px;
+        border-left: 1px solid $darkest-grey;
+        @media #{$tablet} {
+          width: 100%;
+          border: none;
+        }
       }
     }
   }
   &.toggled {
     .dash-nav {
-      transition: all .5s;
-      width: 5% !important;
+      width: 30px !important;
       .dash-toggle .fa::before {
         content: '\f178';
       }
       span {
         font-size: 0;
-        transition: all .4s;
       }
     }
     .all-tasks {
-      transition: all .5s;
-      width: 35%;
-      margin-left: 5%;
+      width: 40%;
+      margin-left: 30px;
+    }
+    .tab-content {
+      width: calc(60% - 30px);
     }
     @media #{$tablet} {
       .all-tasks {
-        transition: all .5s;
-        width: 95%;
-        margin-left: 5%;
+        width: calc(100% - 30px);
+        margin-left: 30px;
       }
-      .task-performance {
-        width: 95%;
-        margin-left: 5%;
+
+      .dash-widgets {
+
+        width: calc(100% - 30px);
+        margin-left:30px;
         border-left: 1px solid $darkest-grey;
-        border-bottom: none;
+        // border-bottom: none;
       }
-      .task-effort {
-        width: 95%;
-        margin-left: 5%;
-        border-left: 1px solid $darkest-grey;
-        border-bottom: none;
-      }
-      .task-breakdown {
-        width: 95%;
-        margin-left: 5%;
+      .tab-content {
+        width: calc(100% - 30px);
+        margin-left: 30px;
         border-left: 1px solid $darkest-grey;
         border-bottom: none;
       }
@@ -695,9 +733,6 @@
     text-align: center;
     @include font-size(16px);
     text-transform: uppercase;
-  }
-  img {
-    width: 100%;
   }
 }
 #project-team {
