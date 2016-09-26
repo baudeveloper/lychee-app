@@ -235,6 +235,15 @@
       color: $white;
     }
   }
+  .user-authorization {
+    padding: 15px;
+    background-color: $extra-super-darkest-grey;
+    span {
+      color: $white;
+      @include font-size(12px);
+      text-transform: uppercase;
+    }
+  }
 }
 
 #wrapper {
