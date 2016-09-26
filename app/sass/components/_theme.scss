@@ -161,7 +161,7 @@
   .user-mail {
     color: $red;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     @include hyperlink-hover($red);
   }
   ul {
@@ -171,6 +171,9 @@
     color: $grey;
     @include font-size(14px);
     @include border-and-background();
+    @include margin-and-padding(0 0 20px, 0);
+  }
+  figure {
     @include margin-and-padding(0 0 20px, 0);
   }
   .badge {
