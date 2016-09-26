@@ -200,6 +200,14 @@
       }
     }
   }
+  @media #{$tablet} {
+    .description {
+      > img, .user-contacts, figure {
+        float: left;
+        margin-left: 15px;
+      }
+    }
+  }
 }
 #user-assignments {
   h2 {
