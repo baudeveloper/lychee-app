@@ -390,9 +390,6 @@
       &:first-child + th {
         text-align: left;
       }
-      &:last-child {
-        font-weight: $font-weight-bold;
-      }
     }
     td {
       padding: 4px;
