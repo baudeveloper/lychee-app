@@ -38,7 +38,7 @@ module.exports = function() {
             './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
 						'./bower_components/filament-tablesaw/dist/tablesaw.css',
             './bower_components/jquery.fancytree/dist/skin-bootstrap/ui.fancytree.min.css',
-            './bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datepicker.min.css',
+            './bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datepicker.min.css',
         ],
         // ./app Locations
         css: './dist/css',
