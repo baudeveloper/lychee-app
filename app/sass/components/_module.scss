@@ -170,7 +170,7 @@
     }
     // Any element that has children will have a caret before it changes on click
     .fancytree-ico-c .fancytree-icon {
-      @include icon-before( '\f1b3', $red);
+      @include icon-before( '\f24a', $grey);
     }
     // Cube Icon
     .fancytree-ico-ef .fancytree-icon {
