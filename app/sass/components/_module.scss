@@ -227,6 +227,7 @@
       }
       span.fancytree-icon::before {
         color: $blue !important;
+        content: '\f007' !important;
       }
     }
   }

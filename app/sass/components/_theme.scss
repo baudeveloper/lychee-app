@@ -292,11 +292,11 @@
         @include font-size(16px);
         text-transform: uppercase;
         background-color: $extra-light-grey;
+        @include input-placeholder-color($red);
         @media #{$tablet} {
            @include font-size(14px);
         }
       }
-      @include input-placeholder-color($red);
       // Source: https://css-tricks.com/snippets/css/style-placeholder-text/
       .input-group-addon {
         position: absolute;
@@ -359,8 +359,8 @@
       @include hyperlink-hover($blue);
     }
     .btn-tasks {
-      color: $red;
-      @include hyperlink-hover($red);
+      color: $grey;
+      @include hyperlink-hover($grey);
     }
     .btn-edit, .btn-pin {
       color: $medium-grey;
@@ -712,11 +712,9 @@
         width: calc(100% - 30px);
         margin-left: 30px;
       }
-
       .dash-widgets {
-
         width: calc(100% - 30px);
-        margin-left:30px;
+        margin-left: 30px;
         border-left: 1px solid $darkest-grey;
         // border-bottom: none;
       }
