@@ -243,6 +243,9 @@
       @include font-size(12px);
       text-transform: uppercase;
     }
+    @media #{$tablet} {
+      display: none;
+    }
   }
 }
 
@@ -284,6 +287,9 @@
       height: 60px;
       background: $light-grey no-repeat left/contain url('../images/site-user.png');
       transition: background 0.5s;
+    }
+    .user-authorization {
+      display: none;
     }
     a {
       padding: 7px;
