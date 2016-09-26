@@ -9,7 +9,7 @@ main.container-fluid.page-team-member(role='main')
 	.row
 		aside#user-profile.col-sm-12.col-lg-3
 			.row      
-				.description.col-sm-8.col-lg-12
+				.description.col-sm-12.col-lg-12
 					h2 Profile 
 					img(src="images/team-member-dallas-richardson.png", alt="Dallas Richardson") 
 					p
@@ -22,18 +22,51 @@ main.container-fluid.page-team-member(role='main')
 						span Phone:
 						| x131
 					a.user-mail(href="mailto:test@test.com") first.last@company.com
-				.stats.col-sm-4.col-lg-12
-					h2 Team Member Stats 
+			.row
+				.stats.col-sm-12.col-lg-12
+					h2 My Stats (12 Months)
 					ul.list-group
-						li.list-group-item
+						li.col-sm-3.col-lg-12
 							span.badge
-								span.value 92
+								span.value 100
 								| %
 							| Billable (avg 75%)
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 0
+								| %
+							| Under-Estimating (avg 43% over)
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 96
+								| %
+							| Timesheets On-time (avg 91%)
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 0.0
+								| days
+							| Vacation Taken
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 0
+								| hrs
+							| Overtime Accrued
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 0
+								| hrs
+							| Training Time
+						li.col-sm-3.col-lg-12
+							span.badge
+								span.value 0
+								| hrs
+							| Working Group Time
 		section#user-assignments.col-sm-12.col-lg-9
 			.bg
 				h2 Project Assignments
-				h3 Assignments Table 
+				h3 Recent Assignments Charts (hrs)
+				.projects-map
+				h3 Client Assignments 
 				.checkbox
 					label
 						input(type="checkbox")
@@ -242,8 +275,52 @@ main.container-fluid.page-team-member(role='main')
 							td.tablesaw-cell-hidden 1.0
 							td.tablesaw-cell-hidden
 								| US Tech Dev - Senior
-								br
-				h3 Recent Assignments Charts (hrs)
-				.projects-map
+								br				
+				h3 Jonah Assignments
+				table.table.table-condensed.table-bordered.tbl-jonah-assignments
+					colgroup
+						col
+						col
+					thead
+						tr
+							th Projects
+							th Roles
+					tbody 
+						tr
+							td JONA-0242 (Administration)
+							td Team Member
+						tr
+							td JONA-0244 (Operations Management)
+							td Team Member
+						tr
+							td JONA-0247 (Systems Administration)
+							td Team Member
+						tr
+							td JONA-0248 (HR Administration)
+							td Team Member
+						tr
+							td JONA-0249 (Communications and Events)
+							td Team Member
+						tr
+							td JONA-0250 (Non-working Accruals)
+							td Team Member
+						tr
+							td JONA-0251 (Coaching)
+							td Team Member
+						tr
+							td JONA-0252 (Training)
+							td Team Member
+						tr
+							td JONA-0254 (Standards)
+							td Team Member
+						tr
+							td JONA-0255 (Marketing)
+							td Team Member
+						tr
+							td JONA-0288 (Research)
+							td Team Member
+						tr
+							td JONA-0644 (HTML5 PoCs)
+							td Team Member
 	include feed.jade
 	footer.page-footer Lychee 2.0.0a

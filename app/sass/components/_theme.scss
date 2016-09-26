@@ -143,8 +143,9 @@
   }
 }
 #user-profile {
+  margin-bottom: 30px;
   h2 {
-    @include margin-and-padding(30px 0 15px, 0);
+    @include margin-and-padding(30px 0, 0);
   }
   p {
     @include font-size(16px);
@@ -163,31 +164,31 @@
     margin-bottom: 30px;
     @include hyperlink-hover($red);
   }
+  ul {
+    @include margin-and-padding(0, 0);
+  }
   li {
     color: $grey;
     @include font-size(14px);
     @include border-and-background();
-    @include margin-and-padding(0 0 30px, 0);
+    @include margin-and-padding(0 0 20px, 0);
   }
   .badge {
     color: $red;
     float: none;
     display: block;
     text-align: left;
-    @include font-size(33px);
+    @include font-size(24px);
     font-weight: $font-weight-light;
     @include margin-and-padding(0, 0);
     @include border-and-background();
   }
   .value {
-    @include font-size(66px);
+    @include font-size(34px);
   }
   @media #{$desktop} {
     img {
       margin: 0 0 20px 0;
-    }
-    .stats {
-      padding: 0;
     }
     .description {
       display: inline-block;
@@ -208,7 +209,7 @@
     display: inline;
     @include font-size(16px);
     font-weight: $font-weight-regular;
-    @include margin-and-padding(0, 0);
+    @include margin-and-padding(0 0 20px, 0);
     @media #{$tablet__up} {
       width: 40%;
     }
@@ -228,7 +229,7 @@
     }
   }
   table {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-color: $darkest-grey;
     tbody {
       th {
@@ -241,6 +242,22 @@
           color: $red;
         }
       }
+    }
+  }
+  .projects-map {
+    margin: 30px 0;
+  }
+  .tbl-jonah-assignments {
+    margin-bottom: 0;
+    th {
+      color: $grey;
+      text-align: center;
+      border-bottom: none;
+      @include font-size(14px);
+      background-color: $extra-light-grey;
+    }
+    tr:nth-of-type(2n) {
+      background-color: $extra-light-grey;
     }
   }
 }
