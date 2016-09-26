@@ -17,7 +17,7 @@ $(window).load(function() {
   var $grid = $('#team-list .row').isotope({
     itemSelector: '.team-member'
   });
-  $('#select-usertype').on( 'change', function() {
+  $('#select-usertype, #select-userrole').on( 'change', function() {
     var filterValue = this.value;
     $grid.isotope({ filter: filterValue });
   });
@@ -29,10 +29,6 @@ $(document).ready(function() {
     $('.dash-toggle').click(function() {
       $('.dash-content').toggleClass('toggled');
     });
-    // $(".tasks-toggle").click(function() {
-    //     $(".dash-nav").toggleClass("switch");
-    //     $(".dash-nav span").toggle();
-    // });
     $("input[name$='project']").click(function() {
         var test = $(this).val();
         $(".project-standard").hide();
