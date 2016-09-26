@@ -21,6 +21,9 @@
         @include font-size(16px);
       }
     }
+    @media #{$tablet} {
+      max-width: 100px;
+    }
   }
   .checkbox {
     margin-left: 30px;
@@ -76,16 +79,15 @@
     }
   }
   .form-group {
+    &:first-of-type {
+      display: block;
+      margin-bottom: 20px;
+    }
     &:first-of-type + div {
       margin-top: -4px;
     }
-    &:last-of-type {
-      @media (max-width: 1500px) {
-        float: none !important;
-        clear: both;
-        display: block;
-        margin-top: 20px;
-      }
+    &:first-of-type + div + div {
+      margin-left: 30px;
     }
   }
   .row {
