@@ -25,7 +25,6 @@ module.exports = function() {
 						'./bower_components/filament-tablesaw/dist/tablesaw.js',
 						'./bower_components/filament-tablesaw/dist/tablesaw-init.js',
             './bower_components/jquery.fancytree/dist/jquery.fancytree-all.min.js',
-            './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js',
             './app/datepicker/js/bootstrap-datepicker.js',
             './app/js/custom.js'
         ],
@@ -39,8 +38,7 @@ module.exports = function() {
             './bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
 						'./bower_components/filament-tablesaw/dist/tablesaw.css',
             './bower_components/jquery.fancytree/dist/skin-bootstrap/ui.fancytree.min.css',
-            './app/datepicker/css/bootstrap-datepicker.css',
-            './bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
+            './app/datepicker/css/bootstrap-datepicker.css'
         ],
         // ./app Locations
         css: './dist/css',

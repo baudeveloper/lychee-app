@@ -30,7 +30,6 @@
     "isotope": "^3.0.1",
     "filament-tablesaw": "tablesaw#^2.0.3",
     "jquery.fancytree": "fancytree#^2.19.0",
-    "bootstrap-switch": "^3.3.2",
     "eonasdan-bootstrap-datetimepicker": "^4.17.42"
   }
 }
