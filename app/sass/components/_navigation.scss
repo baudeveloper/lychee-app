@@ -128,8 +128,15 @@
     @include font-size(12px);
     background-color: $red;
   }
-  @include dropdown-notification();
-  @include dropdown-time-entry();
+  .dd-notification {
+    @include dropdown-notification();
+  }
+  .dd-time-entry {
+    @include dropdown-time-entry();
+  }
+  .dd-keyboard-shortcuts {
+    @include dropdown-keyboard-shortcuts();
+  }
 }
 
 #sidenav {

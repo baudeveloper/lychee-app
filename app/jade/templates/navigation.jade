@@ -50,8 +50,6 @@ nav#topnav.navbar.navbar-fixed-top(role="navigation")
 									span.badge 20 min
 									| Update your timesheet
 									span.description Please Enter your Time for this week
-						footer
-							a(href="#") See All Notifications
 				li.dropdown
 					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
 						i.fa.fa-clock-o(aria-hidden='true')
@@ -78,8 +76,10 @@ nav#topnav.navbar.navbar-fixed-top(role="navigation")
 													i.fa.fa-play(aria-hidden='true')
 											input.form-control(type='text', placeholder='00:55:00', maxlength="8")
 									td
-										i.fa.fa-share(aria-hidden='true')
-										i.fa.fa-close(aria-hidden='true')
+										a(href="#")
+											i.fa.fa-share(aria-hidden='true')
+										a(href="#")
+											i.fa.fa-close(aria-hidden='true')
 								tr
 									td FFD-C2029 - Development
 										span.description RONE-0757 (Remote Document Delivery)
@@ -97,9 +97,40 @@ nav#topnav.navbar.navbar-fixed-top(role="navigation")
 											input.form-control(id="input-time-entry", type='text', placeholder='Add a Task')
 											span
 												i.fa.fa-search(aria-hidden='true')
-				li
-					a(data-toggle="modal", data-target="#todo-modal")
+											a.btn-sitemap
+												i.fa.fa-sitemap(aria-hidden='true')
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
 						i.fa.fa-keyboard-o(aria-hidden='true')
+					.dropdown-menu.dd-keyboard-shortcuts
+						table
+							colgroup
+								col
+								col
+							thead
+								tr
+									th(colspan="2") Keyboard Shortcuts
+							tbody
+								tr
+									td $
+									td
+										span Time Tracking
+										small Set's focus to time entry widget
+								tr
+									td *
+									td
+										span Global Search
+										small Set's focus to Global Search Bar
+								tr
+									td #
+									td
+										span Notification Feed
+										small Toggles Notification Feed sidebar
+								tr
+									td &
+									td
+										span Demo
+										small Demo...
 				li
 					a(href="#") Log out
 				li
