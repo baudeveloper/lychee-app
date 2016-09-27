@@ -26,16 +26,7 @@ $(window).load(function() {
 $(document).ready(function() {
 
     /* Sidenav */
-    $("#input-authorization").bootstrapSwitch({
-      size: 'mini',
-      onColor: 'primary',
-      offColor: 'primary',
-      onText: '✓',
-      offText: 'x',
-      animate: false,
-      state: false
-    });
-    $('#input-authorization').on('switchChange.bootstrapSwitch', function (event, state) {
+    $(".slider").click(function() {
       $("#sidenav").toggleClass("is-admin");
     });
 
