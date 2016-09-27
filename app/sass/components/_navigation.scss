@@ -201,10 +201,14 @@
     }
   }
   .user {
-    display: flex;
+    width: 100%;
+    display: table;
     padding: 15px;
-    align-items: center;
     background-color: $grey;
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
   .user-details {
     margin-left: 20px;
