@@ -328,11 +328,11 @@
 // User Authorization Switch
 .switch {
   float: right;
-  margin-top: 5px;
+  margin-top: 7.5px;
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 15px;
+  height: 10px;
   color: $white;
   input {
     display: none;
@@ -373,7 +373,7 @@
       width: 30px;
       left: 5px;
       right: 0;
-      bottom: -7.5px;
+      bottom: -10px;
       background-color: $red;
       -webkit-transition: .4s;
       transition: .4s;
