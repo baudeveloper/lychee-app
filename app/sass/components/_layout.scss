@@ -47,13 +47,25 @@ main {
 
 // Widget styles in Dashboard page
 .page-dashboard {
-  li {
-    @include panel-standard();
+  ul {
+    @include margin-and-padding(0, 0);
+    li {
+      list-style-type: none;
+      &.placeholder {
+        margin: 0 15px 15px;
+        border: 1px solid darken($light-grey, 5%);
+        background-color: darken($light-grey, 2.5%);
+      }
+      &.tile {
+        height: 350px;
+      }
+    }
   }
-  li.skinned {
+  @include panel-standard();
+  .skinned {
     @include panel-skinned();
   }
-  li.employee-of-the-month {
+  .employee-of-the-month {
     @include panel-employee();
   }
 }

@@ -221,7 +221,7 @@ $(document).ready(function() {
         }
     });
     // Widget Drag and Drop.
-    var temp = $(".page-row > ul");
+    var temp = $(".widgets > ul");
     temp.sortable({
         tolerance: 'pointer',
         revert: 'invalid',

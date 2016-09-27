@@ -185,6 +185,12 @@ textarea {
 // Loader
 // @include loader();
 
+// No Padding
+.nopadding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 // Columns
 .col-xs-15,
 .col-sm-15,

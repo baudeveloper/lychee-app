@@ -244,10 +244,12 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     @include margin-and-padding(0, 0);
   }
   li {
     color: $grey;
+    width: 120px;
     list-style-type: none;
     @include font-size(14px);
     @include margin-and-padding(0 0 30px, 0);
@@ -258,19 +260,23 @@
     display: block;
     text-align: left;
     font-weight: $font-weight-light;
-    @include font-size(33px);
+    @include font-size(24px);
     @include border-and-background();
     @include margin-and-padding(0, 0);
   }
   .value {
-    @include font-size(66px);
-    @media #{$desktop} {
-      @include font-size(44px);
-    }
+    @include font-size(34px);
   }
 }
 
 @mixin widget-myteam() {
+  .panel-heading {
+    a {
+      margin-left: 10px;
+      color: $medium-grey;
+      @include hyperlink-hover($medium-grey);
+    }
+  }
   .container {
     width: auto;
     padding: 30px 15px 0;
@@ -288,6 +294,10 @@
       }
       figure {
         width: 75px;
+        margin-right: 10px;
+        img:hover {
+          cursor: move;
+        }
       }
       .info {
         padding-left: 10px;
@@ -301,12 +311,6 @@
           @include font-size(12px);
         }
       }
-    }
-  }
-  figure {
-    margin-right: 10px;
-    img:hover {
-      cursor: move;
     }
   }
 }
@@ -386,48 +390,50 @@
         padding: 20px 15px 0 !important;
       }
     }
-    .container {
-      width: 100%;
-    }
   }
-  figure {
-    margin-bottom: 60px;
-    position: relative;
-    img {
-      width: 100%;
+  .img-employee {
+    width: 100%;
+    @media #{$tablet} {
+      float: left;
+      width: auto;
+      max-width: 120px;
     }
-    &::before {
-      position: absolute;
-      content: '';
-      left: 0;
-      right: 0;
-      bottom: -40px;
-      width: 100px;
-      height: 80px;
-      margin-left: auto;
-      margin-right: auto;
-      background-size: 100px 80px;
-      background-image: url('../images/badge-employee.svg');
-      @media #{$tablet} {
-        bottom: -32px;
-        width: 80px;
-        height: 64px;
-        background-size: 80px 64px;
-        background-image: url('../images/badge-employee.svg');
-      }
+    @media #{$tablet__up} {
+      margin-bottom: 15px;
     }
   }
   p {
     @include font-size(20px);
     &.lead {
+      margin-bottom: 0;
       @include font-size(18px);
-      margin-bottom: 0 !important;
       & + p {
+        margin-bottom: 15px;
         @include font-size(14px);
       }
       & + p + p {
         @include font-size(12px);
       }
+    }
+  }
+  .employee-tags {
+    text-align: center;
+    @media #{$tablet__up} {
+      img {
+        width: auto;
+        max-width: 65px;
+        margin: 15px 5px 5px;
+      }
+    }
+    @media #{$tablet} {
+      img {
+        margin: 15px 5px 5px;
+      }
+    }
+  }
+  @media #{$tablet} {
+    .employee-info {
+      margin-left: 135px;
     }
   }
 }
