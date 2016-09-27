@@ -75,6 +75,13 @@ main {
   @include widget-mystats();
 }
 
+// DYK
+#did-you-know {
+  img {
+    margin-bottom: 15px;
+  }
+}
+
 // To Do Widget widget in Dashboard page
 #my-todo {
   .tab {

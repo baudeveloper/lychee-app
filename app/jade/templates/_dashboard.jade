@@ -189,8 +189,8 @@ main.container-fluid.page-dashboard(role='main')
 										//- 		i.fa.fa-check-square-o(aria-hidden='true')
 										//- 		| Do Something Much
 								a.view-more(href="#", title="View More Tasks")
-									i.fa.fa-angle-double-down(aria-hidden='true')				
-				li#my-team.col-sm-12.col-md-12
+									i.fa.fa-angle-double-down(aria-hidden='true')
+				li#my-team.col-sm-12
 					.panel.panel-default
 						.panel-heading
 							h2.panel-title My Team
@@ -246,14 +246,14 @@ main.container-fluid.page-dashboard(role='main')
 									.info
 										span Tim Wilson
 										span Senior Business Analyst				
-				li#my-projects.col-sm-12.col-md-12
+				li#my-projects.col-sm-12
 					.panel.panel-default
 						.panel-heading
 							h2.panel-title My Projects
 						.panel-body
 							h3 My Projects Allocation Hours
 							.projects-map
-				li#my-stats.col-sm-12.col-md-12
+				li#my-stats.col-sm-12
 					h2 My Stats (12 Months)
 					ul
 						li
@@ -298,10 +298,31 @@ main.container-fluid.page-dashboard(role='main')
 						.panel-heading
 							h2.panel-title Did you know?
 						.panel-body
-							figure
-								img.img-responsive(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
-							p.lead Why does the timesheet week start on a Saturday?
-							p That is to match payroll which is based on Saturday to Friday periods.			
+							//- img.img-responsive(src="../images/calendar.png", alt="Saturday, Match 20, 2016")
+							//- p.lead Why does the timesheet week start on a Saturday?
+							//- p That is to match payroll which is based on Saturday to Friday periods.
+							#carousel-dyk.carousel.slide(data-ride='carousel')
+								ol.carousel-indicators
+									li.active(data-target='#carousel-dyk', data-slide-to='0')
+									li(data-target='#carousel-dyk', data-slide-to='1')
+									li(data-target='#carousel-dyk', data-slide-to='2')
+								.carousel-inner(role='listbox')
+									.item.active
+										img(src='./images/calendar.png', alt='Day')
+										.carousel-caption
+											p.lead Why does the timesheet week start on a Saturday?
+											p That is to match payroll which is based on Saturday to Fridayperiods.
+									.item
+										img(src='./images/calendar.png', alt='Day')
+										.carousel-caption
+											p.lead Questions?
+											p Answers.
+								a.left.carousel-control(href='#carousel-dyk', role='button', data-slide='prev')
+									span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+									span.sr-only Previous
+								a.right.carousel-control(href='#carousel-dyk', role='button', data-slide='next')
+									span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+									span.sr-only Next
 				li#team-member.skinned.employee-of-the-month.col-sm-8.col-md-12
 					.panel.panel-default
 						.panel-heading
