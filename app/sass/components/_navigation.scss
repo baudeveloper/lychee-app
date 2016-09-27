@@ -175,6 +175,9 @@
       transform: translateX(0px);
       @include margin-and-padding(0, 0);
       box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+      li:last-child a {
+        border-bottom: none;
+      }
     }
     &:hover {
       .sub-menu {
@@ -223,10 +226,17 @@
     width: 100%;
     display: table;
     padding: 15px;
+    border-bottom: 1px solid transparent;
     background-color: $grey;
     > * {
       display: table-cell;
       vertical-align: middle;
+    }
+    &:hover {
+      .sub-menu {
+        display: none;
+        transform: translateX(49px);
+      }
     }
   }
   .user-details {
@@ -250,9 +260,6 @@
       color: $white;
       @include font-size(12px);
       text-transform: uppercase;
-    }
-    @media #{$tablet} {
-      display: none;
     }
   }
 }
@@ -278,9 +285,9 @@
   }
   .user {
     background-color: $extra-super-darkest-grey;
+      border-bottom: 1px solid $diamond-inverse;
   }
   .user-authorization {
-    border-top: 1px solid $diamond-inverse;
     border-bottom: 1px solid $diamond-inverse;
   }
 }
@@ -329,10 +336,6 @@
     .user-authorization {
       display: none;
     }
-    .user {
-      height: 60px;
-      background: $red no-repeat center center/cover url('../images/site-user.png');
-    }
     li {
       &:hover {
         .sub-menu {
@@ -341,19 +344,42 @@
         }
       }
     }
-  }
-}
-
-#switch {
-  margin-top: 30px;
-}
-
-#user {
-  color: #FFF;
-  background-color: #000;
-  &.is-admin {
-    color: #000;
-    background-color: #EEE;
+    .user {
+      height: 60px;
+      border-bottom: none;
+      background: $red no-repeat center center/cover url('../images/site-user.png');
+      &:hover {
+        .sub-menu {
+          padding: 15px;
+          display: block;
+          width: 250px;
+          height: auto;
+          transform: translateX(49px);
+          background-color: $extra-super-darkest-grey;
+        }
+        .sub-menu span {
+          display: block !important;
+        }
+        .sub-menu li:first-child span:first-child {
+          color: $darkest-grey;
+          @include font-size(16px);
+        }
+        .sub-menu li:first-child span:last-child {
+          color: $white;
+          @include font-size(16px);
+        }
+        .sub-menu li:last-child {
+          @include margin-and-padding(15px 0 0, 15px 0 0);
+          border-top: 1px solid $diamond-inverse;
+        }
+        .sub-menu li:last-child span:first-child {
+          color: $white;
+          display: inline-block !important;
+          @include font-size(12px);
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }
 
@@ -396,8 +422,7 @@
     right: 0;
     bottom: 0;
     background-color: $red;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: all .4s;
     &::before {
       position: absolute;
       content: "";
@@ -407,8 +432,7 @@
       right: 0;
       bottom: -10px;
       background-color: $red;
-      -webkit-transition: .4s;
-      transition: .4s;
+      transition: all .4s;
       display: flex;
       align-items: center;
       justify-content: center;
