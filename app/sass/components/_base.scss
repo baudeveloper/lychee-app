@@ -24,6 +24,8 @@ $font-weight-bold: 600;
 $grey: #333333;
 $black: #000000;
 $white: #FFFFFF;
+$diamond-grey: #bdbdbd;
+$diamond-inverse: #848484;
 $light-grey: #f3f0f2;
 $lighter-grey: #e6e4e7;
 $lightest-grey: #e1e1e1;
@@ -97,13 +99,13 @@ $purple: #400099;
 // Darken Link Color on hover
 @mixin hyperlink-hover($color) {
   &:hover {
-    color: darken($color, 25%);
+    color: darken($color, 15%);
   }
   &:active {
-    color: darken($color, 25%);
+    color: darken($color, 15%);
   }
   &:focus {
-    color: darken($color, 25%);
+    color: darken($color, 15%);
   }
 }
 
