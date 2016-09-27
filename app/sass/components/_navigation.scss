@@ -123,12 +123,11 @@
 #sidenav {
   position: fixed;
   z-index: 1000;
-  left: 247px;
+  left: 0;
   width: 247px;
   height: 100%;
   overflow: visible;
   background: $white;
-  margin-left: -247px;
   &.is-admin {
     background-color: $extra-super-darkest-grey;
   }
@@ -181,9 +180,6 @@
       .sub-menu {
         display: block;
         transform: translateX(247px);
-        @media #{$tablet} {
-          transform: translateX(49px);
-        }
       }
     }
   }
@@ -321,6 +317,7 @@
       padding: 7px;
       font-size: 0;
     }
+    .sub-menu a,
     .fa {
       @include font-size(14px);
     }
@@ -335,6 +332,14 @@
     .user {
       height: 60px;
       background: $red no-repeat center center/cover url('../images/site-user.png');
+    }
+    li {
+      &:hover {
+        .sub-menu {
+          display: block;
+          transform: translateX(49px);
+        }
+      }
     }
   }
 }
