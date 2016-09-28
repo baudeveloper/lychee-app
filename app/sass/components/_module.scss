@@ -831,8 +831,6 @@
 @mixin dropdown-keyboard-shortcuts() {
   padding: 0;
   min-width: 400px;
-  height: 225px;
-  overflow-y: scroll;
   border-radius: 0;
   &.dropdown-menu::before {
     position: absolute;
@@ -854,6 +852,10 @@
     border-right: 6px solid transparent;
     border-bottom: 6px solid #ffffff;
     border-left: 6px solid transparent;
+  }
+  footer {
+    height: 175px;
+    overflow-y: scroll;
   }
   table {
     width: 100%;
