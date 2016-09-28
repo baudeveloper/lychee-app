@@ -776,22 +776,12 @@
         &:last-of-type {
           text-align: left;
         }
-        &:last-of-type .fa {
-          color: $red;
-          &:first-of-type {
-            margin-right: 15px;
-          }
-        }
-        span .btn {
-          padding: 0px 12px;
+        .input-group .btn {
           height: 30px;
+          padding: 0px 12px;
           border-radius: 4px 0 0 4px;
-          .fa {
-            margin: 0;
-            color: $white;
-          }
         }
-        .description {
+        small {
           display: inline-block;
           text-transform: none;
           @include font-size(12px);

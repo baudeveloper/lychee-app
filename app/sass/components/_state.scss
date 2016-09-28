@@ -14,11 +14,23 @@
 }
 
 // Declarations
+.fa-red {
+  @include fa-color($red);
+}
 .fa-blue {
   @include fa-color($blue);
 }
 .fa-medium-grey {
   @include fa-color($medium-grey);
+}
+.fa-white {
+  @include fa-color($white);
+}
+.tr-blue {
+  background-color: $light-blue;
+}
+.tr-grey {
+  background-color: $medium-light-grey;
 }
 
 // Hyperlinks
