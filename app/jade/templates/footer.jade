@@ -285,26 +285,67 @@
 					span(aria-hidden='true') ×
 				h4.modal-title Did you know?
 			.modal-body
-				nav.container
+				.container
 					.row
-						#carousel-dykm.carousel.slide(data-ride='carousel')
-							.carousel-inner(role='listbox')
-								.item.active
-									img(src='http://placehold.it/120x50', alt='Thumb')
-									.carousel-caption
-										| Why does this timesheet week start on a Satuday?
-								.item
-									img(src='http://placehold.it/120x50', alt='Thumb')
-									.carousel-caption
-										| Why does this timesheet week start on a Satuday?
-								.item
-									img(src='http://placehold.it/120x50', alt='Thumb')
-									.carousel-caption
-										| Why does this timesheet week start on a Satuday?
-							a.left.carousel-control(href='#carousel-dykm', role='button', data-slide='prev')
-								i.fa.fa-chevron-left(aria-hidden="true")
-							a.right.carousel-control(href='#carousel-dykm', role='button', data-slide='next')
-								i.fa.fa-chevron-right(aria-hidden="true")
+						.col-sm-12
+							#dykm-carousel.carousel.slide
+								.carousel-inner
+									.item.active
+										.row
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+									.item
+										.row
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+									.item
+										.row
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+											.col-sm-3
+												a(href='#x')
+													img.img-responsive(src='http://placehold.it/120x50', alt='Image')
+													p adsasd
+								a.left.carousel-control(href='#dykm-carousel', data-slide='prev') ‹
+								a.right.carousel-control(href='#dykm-carousel', data-slide='next') ›
 			.modal-footer
 				.pull-left
 					button.btn.btn-tertiary(type='button', data-dismiss='modal')
