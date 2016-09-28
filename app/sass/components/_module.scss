@@ -973,7 +973,7 @@
   #todo-modal {
     .modal-body {
       padding-bottom: 0;
-      section p {
+      .created-by {
         border-bottom: 1px solid $darkest-grey;
         @include margin-and-padding(15px -15px 0, 0 15px 15px);
       }
@@ -982,79 +982,73 @@
         padding: 0;
         .row {
           display: flex;
-        }
-      }
-      .col-sm-6 {
-        @include typeahead-standard();
-        > .input {
-          margin: 0 -15px;
-        }
-        .bg-color {
-          background-color: $white;
-          border-bottom: 1px solid $darkest-grey;
-          @include margin-and-padding(0 -15px, 15px);
-          p {
-            margin-top: 0;
-          }
-          .input {
-            padding: 15px 0;
-            span {
-              left: 10px;
+          .col-sm-6 {
+            @include typeahead-standard();
+            > .input {
+              margin: 0 -15px;
+            }
+            label {
+              font-weight: $font-weight-bold;
+            }
+            &:last-of-type {
+              border-left: 1px solid $lightest-grey;
+              background-color: $super-light-grey;
             }
           }
         }
       }
-      ul {
-        @include margin-and-padding(0, 0);
-      }
-      .team-member {
-        display: table;
-        margin-bottom: 15px;
-        padding-left: 0;
-        padding-right: 0;
-        > * {
-          display: table-cell;
-          vertical-align: middle;
-        }
-        figure {
-          width: 75px;
-        }
-        .info {
-          padding-left: 10px;
-        }
-        span {
-          display: block;
-          &:first-child {
-            @include font-size(14px);
-          }
-          &:last-child {
-            @include font-size(12px);
-          }
-        }
-      }
-      p {
-        padding-bottom: 0;
-        border-bottom: none;
-      }
-      form {
-        @include margin-and-padding(0 -15px, 0 15px);
-        .form-group {
-          margin-bottom: 0;
-        }
+      .left-col {
         label {
-          @include margin-and-padding(15px 0, 0);
+          @include margin-and-padding(15px 0 0, 0);
+        }
+        ul {
+          @include margin-and-padding(0, 0);
+        }
+        li {
+          display: table;
+          @include margin-and-padding(0 0 15px, 0);
+          > * {
+            display: table-cell;
+            vertical-align: middle;
+          }
+          img {
+            width: 75px;
+          }
+          section {
+            padding-left: 10px;
+            span {
+              display: block;
+              &:first-child {
+                @include font-size(14px);
+              }
+              &:last-child {
+                @include font-size(12px);
+              }
+            }
+          }
         }
       }
-    }
-    .col-sm-6:last-of-type {
-      border-left: 1px solid $lightest-grey;
-      background-color: $super-light-grey;
+      .right-col {
+        .bg-white {
+          background-color: $white;
+          border-bottom: 1px solid $darkest-grey;
+          @include margin-and-padding(0 -15px, 0);
+          label {
+            @include margin-and-padding(0, 15px 0 0 15px);
+          }
+        }
+        .form-group {
+          @include margin-and-padding(0 -15px, 0);
+          label {
+            font-weight: $font-weight-bold;
+            @include margin-and-padding(15px 0, 0);
+          }
+        }
+      }
     }
     .modal-footer {
-      .pull-left {
-        .fa {
-          margin-right: 5px;
-        }
+      .fa {
+        margin-right: 5px;
       }
       .pull-right {
         .form-group {
@@ -1068,7 +1062,7 @@
           border-radius: 0;
           @include border-and-background();
         }
-        input {
+        input[type="text"] {
           width: 36px;
           height: 34px;
           padding-left: 5px;

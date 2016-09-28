@@ -8,43 +8,37 @@
 			.modal-body
 				nav Do Something...
 				section            
-					span Created By:
-					| Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
+					p.created-by #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
 					.container
 						.row              
-							.col-sm-6
-								p
-									strong Collaborators:
+							.col-sm-6.left-col
+								label(for="input-collaborator") Collaborators:
 								.input
 									input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
 									span
 										i.fa.fa-search(aria-hidden='true')
 								ul
-									li.team-member
-										figure
-											img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
-										.info
+									li
+										img.img-circle(src="../images/team-member-abdi.png", alt="Abdikadir Kedie")
+										section
 											span Abdikadir Kedie
 											span Technical Architect
-									li.team-member
-										figure
-											img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
-										.info
+									li
+										img.img-circle(src="../images/team-member-cindy.png", alt="Cindy Lopes")
+										section
 											span Cindy Lopes
 											span Technical Developer
-							.col-sm-6
-								.bg-color
-									p
-										strong Task
+							.col-sm-6.right-col
+								.bg-white
+									label(for="input-tasks") Task
 									.input
 										input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
 										span
 											i.fa.fa-search(aria-hidden='true')
-								form.form-horizontal
-									.form-group                  
-										.col-sm-12
-											label.control-label(for='input-comment') Enter a comment
-											textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
+								.form-group.row                
+									.col-sm-12
+										label.control-label(for='input-comment') Enter a comment
+										textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
 			.modal-footer
 				.pull-left
 					button.btn.btn-primary(type='button')
@@ -57,7 +51,7 @@
 							label(for="input-hours") Hrs.
 							.log-group
 								.log-addon
-									input.form-control(type="text", placeholder="0.0")
+									input.form-control#input-hours(type="text", placeholder="0.0")
 								button.btn.btn-primary(type='button') Log Time
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 .modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
