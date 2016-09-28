@@ -759,7 +759,7 @@
         @include font-size(12px);
         text-transform: uppercase;
         &:last-of-type {
-          text-align: right;
+          text-align: left;
         }
       }
       span {
@@ -773,7 +773,7 @@
         padding: 10px 15px;
         @include font-size(14px);
         &:last-of-type {
-          text-align: right;
+          text-align: left;
         }
         &:last-of-type .fa {
           color: $red;
@@ -786,7 +786,12 @@
           color: $white;
         }
         span .btn {
-          border-radius: 4px;
+          padding: 0px 12px;
+          height: 30px;
+          border-radius: 4px 0 0 4px;
+          .fa {
+            @include font-size(10px);
+          }
         }
         .description {
           display: block;
@@ -794,6 +799,8 @@
           @include font-size(12px);
         }
         .form-control {
+          min-height: 30px !important;
+          height: 30px !important;
           text-align: right;
           color: $dark-green;
           border-color: $dark-green;
