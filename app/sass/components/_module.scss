@@ -1328,6 +1328,10 @@
       .carousel-control {
         background-image: none;
       }
+      p {
+        margin-top: 15px;
+        @include font-size(12px);
+      }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
     .modal-footer {
