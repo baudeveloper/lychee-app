@@ -180,11 +180,10 @@ main {
   overflow-y: scroll;
   transition: all 0.5s;
   background-color: $transparent-grey;
-  @include widget-feed();
   h2 {
     color: $medium-grey;
-    font-weight: $font-weight-light;
     @include font-size(28px);
+    font-weight: $font-weight-light;
     @include margin-and-padding(0, 0);
     &:last-of-type {
       margin-top: 60px;
@@ -193,6 +192,13 @@ main {
   &.active {
     right: -17px;
   }
+  ul {
+    @include margin-and-padding(0, 0);
+    &:last-of-type li:last-child {
+      margin-bottom: 200px;
+    }
+  }
+  @include widget-feed();
 }
 
 // Time Entry Alert Layout
