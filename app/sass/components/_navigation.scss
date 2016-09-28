@@ -268,6 +268,7 @@
   a {
     color: $diamond-grey;
     border-color: $diamond-inverse;
+    background-color: $extra-super-darkest-grey;
     &:hover {
       &::after {
         background-color: $white;
@@ -285,7 +286,7 @@
   }
   .user {
     background-color: $extra-super-darkest-grey;
-      border-bottom: 1px solid $diamond-inverse;
+    border-bottom: 1px solid $diamond-inverse;
   }
   .user-authorization {
     border-bottom: 1px solid $diamond-inverse;
@@ -300,6 +301,68 @@
   padding-left: 49px;
   #sidenav {
     width: 49px;
+    ul {
+      a {
+        padding: 7px;
+        font-size: 0;
+      }
+      .sub-menu a,
+      .fa {
+        @include font-size(14px);
+      }
+      .toggle a i::before {
+        content: "\f178";
+      }
+      .user > *,
+      span,
+      .user-authorization {
+        display: none;
+      }
+      li {
+        &:hover {
+          .sub-menu {
+            display: block;
+            transform: translateX(49px);
+          }
+        }
+      }
+      .user {
+        height: 60px;
+        border-bottom: none;
+        background: $red no-repeat center center/cover url('../images/site-user.png');
+        &:hover {
+          .sub-menu {
+            padding: 15px;
+            display: block;
+            width: 250px;
+            height: auto;
+            transform: translateX(49px);
+            background-color: $extra-super-darkest-grey;
+          }
+          .sub-menu span {
+            display: block !important;
+          }
+          .sub-menu li:first-child span:first-child {
+            color: $darkest-grey;
+            @include font-size(16px);
+          }
+          .sub-menu li:first-child span:last-child {
+            color: $white;
+            @include font-size(16px);
+          }
+          .sub-menu li:last-child {
+            @include margin-and-padding(15px 0 0, 15px 0 0);
+            border-top: 1px solid $diamond-inverse;
+          }
+          .sub-menu li:last-child span:first-child {
+            color: $white;
+            display: inline-block !important;
+            @include font-size(12px);
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
   }
   main {
     position: relative;
@@ -316,68 +379,6 @@
         width: 22px;
         height: 22px;
         background: transparent no-repeat center center/cover url("../images/logo-shape-small.png");
-      }
-    }
-  }
-  #sidenav ul {
-    a {
-      padding: 7px;
-      font-size: 0;
-    }
-    .sub-menu a,
-    .fa {
-      @include font-size(14px);
-    }
-    .toggle a i::before {
-      content: "\f178";
-    }
-    .user > *,
-    span,
-    .user-authorization {
-      display: none;
-    }
-    li {
-      &:hover {
-        .sub-menu {
-          display: block;
-          transform: translateX(49px);
-        }
-      }
-    }
-    .user {
-      height: 60px;
-      border-bottom: none;
-      background: $red no-repeat center center/cover url('../images/site-user.png');
-      &:hover {
-        .sub-menu {
-          padding: 15px;
-          display: block;
-          width: 250px;
-          height: auto;
-          transform: translateX(49px);
-          background-color: $extra-super-darkest-grey;
-        }
-        .sub-menu span {
-          display: block !important;
-        }
-        .sub-menu li:first-child span:first-child {
-          color: $darkest-grey;
-          @include font-size(16px);
-        }
-        .sub-menu li:first-child span:last-child {
-          color: $white;
-          @include font-size(16px);
-        }
-        .sub-menu li:last-child {
-          @include margin-and-padding(15px 0 0, 15px 0 0);
-          border-top: 1px solid $diamond-inverse;
-        }
-        .sub-menu li:last-child span:first-child {
-          color: $white;
-          display: inline-block !important;
-          @include font-size(12px);
-          text-transform: uppercase;
-        }
       }
     }
   }
