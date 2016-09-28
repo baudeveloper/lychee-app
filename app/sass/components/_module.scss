@@ -1082,77 +1082,72 @@
 @mixin modal-content-taskdetails() {
   #task-details-modal {
     .modal-body {
+      img {
+        width: 100%;
+      }
       nav {
-        p {
-          display: inline-block;
-          span {
-            color: $super-dark-grey;
-          }
-        }
-        .modal-info {
-          margin-top: 10px;
-          @include font-size(14px);
-        }
         a {
           color: $white;
           @include font-size(12px);
           text-transform: uppercase;
         }
-      }
-      .toggled {
-        display: block !important;
+        span {
+          margin-right: 5px;
+          display: inline-block;
+          color: $super-dark-grey;
+        }
+        .nav-info {
+          margin-top: 10px;
+          @include font-size(14px);
+        }
       }
       .container {
         width: auto;
-        padding: 0;
+        @include margin-and-padding(0 0 20px, 0);
+        .toggled {
+          display: block !important;
+        }
       }
       ul {
         @include margin-and-padding(0, 0);
-      }
-      li {
-        margin-bottom: 15px;
-        list-style-type: none;
-        &:first-of-type {
+        li {
+          margin-bottom: 15px;
+          &:first-of-type {
+            .title {
+              @include icon-before( '\f0d7', $purple);
+            }
+          }
+          &:first-of-type + li {
+            .title {
+              @include icon-before( '\f0d7', $dark-green);
+            }
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+            .title {
+              @include icon-before( '\f017', $light-green);
+            }
+          }
           .title {
-            @include icon-before( '\f0d7', $purple);
+            color: $grey;
+            @include font-size(14px);
+            text-transform: uppercase;
+          }
+          .input-taskdetails {
+            color: $grey;
+            width: 100%;
+            padding: 0;
+            box-shadow: none;
+            display: inline-block;
+            @include font-size(38px);
+            border: 1px solid transparent;
+            font-weight: $font-weight-light;
+            @include input-placeholder-color($grey);
+            &:focus {
+              border: 1px solid $green;
+            }
           }
         }
-        &:first-of-type + li {
-          .title {
-            @include icon-before( '\f0d7', $dark-green);
-          }
-        }
-        &:last-of-type {
-          margin-bottom: 0;
-          .title {
-            @include icon-before( '\f017', $light-green);
-          }
-        }
-      }
-      .title {
-        color: $grey;
-        @include font-size(14px);
-        text-transform: uppercase;
-        span {
-          text-transform: none;
-        }
-      }
-      .description {
-        padding: 5px 0;
-        @include font-size(38px);
-        font-weight: $font-weight-light;
-        width: 100%;
-        box-shadow: none;
-        border: 1px solid transparent;
-        display: inline-block;
-        color: $grey;
-        @include input-placeholder-color($grey);
-        &:focus {
-          border: 1px solid $green;
-        }
-      }
-      img {
-        width: 100%;
       }
     }
   }

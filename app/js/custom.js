@@ -84,12 +84,12 @@ $(document).ready(function() {
 
     /* Dashboard Page */
     // Task Details Modal
-    $("#task-details-modal .modal-info").hide();
+    $("#task-details-modal .nav-info").hide();
     $("#task-details-modal .modal-details").click(function () {
       $(this).find('i').toggleClass('fa-caret-up fa-caret-down');
-      $(this).siblings(".modal-info").toggleClass("toggled");
+      $(this).siblings(".nav-info").toggleClass("toggled");
       $(this).parents(".modal-body").find(".row").toggleClass("toggled");
-      // $("#task-details-modal .modal-info").toggleClass("toggled");
+      // $("#task-details-modal .nav-info").toggleClass("toggled");
     });
     // Notifications Toggle
     $(".feed-toggle").on('click', function(e) {
