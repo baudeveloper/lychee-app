@@ -1317,24 +1317,25 @@
 
 @mixin modal-content-dyk() {
   #dyk-modal {
-  .modal-body {
-    .container {
-      width: auto;
-      height: auto;
-      padding: 0 15px;
-      min-height: 180px;
-      background-color: $light-grey;
+    .modal-body {
+      .container {
+        width: auto;
+        height: auto;
+        padding: 0 15px;
+        min-height: 180px;
+        background-color: $light-grey;
+      }
+      .carousel-control {
+        background-image: none;
+      }
+      // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
-    .carousel-control {
-      background-image: none;
+    .modal-footer {
+      .fa {
+        margin-right: 5px;
+      }
     }
-    // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
   }
-  .modal-footer {
-    .fa {
-      margin-right: 5px;
-    }
-  }  
 }
 
 @mixin tablesaw-assignments() {
