@@ -781,20 +781,17 @@
             margin-right: 15px;
           }
         }
-        .fa {
-          margin: 0;
-          color: $white;
-        }
         span .btn {
           padding: 0px 12px;
           height: 30px;
           border-radius: 4px 0 0 4px;
           .fa {
-            @include font-size(10px);
+            margin: 0;
+            color: $white;
           }
         }
         .description {
-          display: block;
+          display: inline-block;
           text-transform: none;
           @include font-size(12px);
         }

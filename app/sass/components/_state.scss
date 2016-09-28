@@ -1,3 +1,26 @@
+// Colors
+
+@mixin fa-color($color) {
+  color: $color !important;
+  &:hover {
+    color: darken($color, 15%) !important;
+  }
+  &:active {
+    color: darken($color, 15%) !important;
+  }
+  &:focus {
+    color: darken($color, 15%) !important;
+  }
+}
+
+// Declarations
+.fa-blue {
+  @include fa-color($blue);
+}
+.fa-medium-grey {
+  @include fa-color($medium-grey);
+}
+
 // Hyperlinks
 a {
   // transition: all 0.5s;
