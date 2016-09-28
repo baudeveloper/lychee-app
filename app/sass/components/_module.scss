@@ -1321,16 +1321,31 @@
       .container {
         width: auto;
         height: auto;
-        min-height: 180px;
+        min-height: 120px;
         background-color: $light-grey;
         @include margin-and-padding(-15px -15px 15px, 15px);
       }
+      .carousel {
+        height: auto;
+        min-height: 120px;
+      }
       .carousel-control {
-        background-image: none;
+        top: 50%;
+        background-color: red;
+        transform: translateY(-50%);
+        &::before {
+          vertical-align: -50%;
+        }
       }
       p {
         margin-top: 15px;
         @include font-size(12px);
+      }
+      .left {
+        @include icon-before('\f053', $medium-grey);
+      }
+      .right {
+        @include icon-before('\f054', $medium-grey);
       }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
