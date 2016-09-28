@@ -611,8 +611,8 @@
     line-height: 1.8;
     @include font-size(16px);
     border-radius: 0 !important;
-    font-weight: $font-weight-bold;
     @include border-and-background();
+    font-weight: $font-weight-regular;
     border-bottom: 1px solid $extra-dark-grey;
     &:last-of-type {
       margin-bottom: 60px;
