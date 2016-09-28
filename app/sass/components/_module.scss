@@ -1176,11 +1176,11 @@
         font-weight: $font-weight-light;
         width: 100%;
         box-shadow: none;
-        border-color: transparent;
+        border: 1px solid transparent;
         display: inline-block;
         color: $grey;
         @include input-placeholder-color($grey);
-        &:active, &:focus {
+        &:focus {
           border: 1px solid $green;
         }
       }
