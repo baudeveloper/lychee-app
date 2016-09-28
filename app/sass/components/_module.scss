@@ -752,12 +752,13 @@
     }
     thead {
       border-bottom: 1px solid $medium-grey-dark;
-      td {
+      th {
         color: $grey;
         padding: 15px;
         vertical-align: top;
         @include font-size(12px);
         text-transform: uppercase;
+        font-weight: $font-weight-regular;
         &:last-of-type {
           text-align: left;
         }
