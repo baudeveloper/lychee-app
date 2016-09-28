@@ -34,7 +34,7 @@
       border-radius: 0;
       padding-left: 35px;
       color: $medium-grey;
-      @include input-placeholder-color($medium-grey);    
+      @include input-placeholder-color($medium-grey);
     }
     span {
       position: absolute;
@@ -644,46 +644,40 @@
     right: auto;
     text-align: center;
     transform: translate(-50%, 0);
-  }
-  &.dropdown-menu::before {
-    position: absolute;
-    content: '';
-    top: -7px;
-    left: 48%;
-    display: inline-block;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-left: 7px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
-  }
-  &.dropdown-menu::after {
-    position: absolute;
-    content: '';
-    top: -6px;
-    left: 48%;
-    display: inline-block;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #ffffff;
-    border-left: 6px solid transparent;
-  }
-  header {
-    padding: 15px;
-    border-bottom: 1px solid $medium-grey-dark;
-    h2 {
-      color: $grey;
-      text-align: center;
-      @include font-size(12px);
-      text-transform: uppercase;
-      @include margin-and-padding(0, 0);
+    &::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      left: 48%;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      left: 48%;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
     }
   }
-  section {
-    padding: 15px;
+  h2 {
+    color: $grey;
+    text-align: center;
+    @include font-size(12px);
+    text-transform: uppercase;
+    @include margin-and-padding(0, 15px);
+    border-bottom: 1px solid $medium-grey-dark;
+  }
+  ul {
     max-height: 180px;
     overflow-y: scroll;
-    ul {
-      margin: 0;
-    }
+    @include margin-and-padding(0, 15px);
     li {
       color: $grey;
       border: none;
@@ -691,27 +685,18 @@
       text-align: left;
       @include font-size(14px);
       @include margin-and-padding(0 0 20px, 0);
-    }
-    .fa-red {
-        color: #ff0000;
-    }
-    .fa-yellow {
-        color: #fbaf5d;
-    }
-    .fa-blue {
-        color: #2e3192;
-    }
-    .badge {
-      color: $grey;
-      border-radius: 0;
-      @include font-size(14px);
-      font-weight: $font-weight-regular;
-      @include border-and-background();
-    }
-    .description {
-      display: block;
-      color: $medium-grey;
-      @include font-size(12px);
+      small {
+        display: block;
+        color: $medium-grey;
+        @include font-size(12px);
+      }
+      .badge {
+        color: $grey;
+        border-radius: 0;
+        @include font-size(14px);
+        @include border-and-background();
+        font-weight: $font-weight-regular;
+      }
     }
   }
 }
@@ -720,26 +705,28 @@
   padding: 0;
   min-width: 560px;
   border-radius: 0;
-  &.dropdown-menu::before {
-    position: absolute;
-    content: '';
-    top: -7px;
-    right: 15px;
-    display: inline-block;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-left: 7px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
-  }
-  &.dropdown-menu::after {
-    position: absolute;
-    content: '';
-    top: -6px;
-    right: 15px;
-    display: inline-block;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #ffffff;
-    border-left: 6px solid transparent;
+  .dropdown-menu {
+    &::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      right: 15px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      right: 15px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+    }
   }
   table {
     width: 100%;
@@ -764,10 +751,10 @@
         &:last-of-type {
           text-align: left;
         }
-      }
-      span {
-        display: block;
-        text-transform: none;
+        span {
+          display: block;
+          text-transform: none;
+        }
       }
     }
     tbody {
@@ -808,9 +795,9 @@
       }
     }
     tfoot {
-      background-color: $medium-light-grey;
       @include inline-input();
       @include typeahead-standard();
+      background-color: $medium-light-grey;
       .input {
         width: calc(100% - 40px);
       }

@@ -23,6 +23,9 @@
 .fa-medium-grey {
   @include fa-color($medium-grey);
 }
+.fa-yellow {
+  @include fa-color($yellow);
+}
 .fa-white {
   @include fa-color($white);
 }
