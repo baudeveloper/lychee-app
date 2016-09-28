@@ -33,6 +33,8 @@
       height: 40px;
       border-radius: 0;
       padding-left: 35px;
+      color: $medium-grey;
+      @include input-placeholder-color($medium-grey);    
     }
     span {
       position: absolute;
@@ -773,8 +775,14 @@
         color: $grey;
         padding: 10px 15px;
         @include font-size(14px);
+        &:first-of-type .fa {
+          margin-right: 10px;
+        }
         &:last-of-type {
           text-align: left;
+          * {
+            margin-right: 5px;
+          }
         }
         .input-group .btn {
           height: 30px;
