@@ -89,7 +89,7 @@ main.container-fluid.page-dashboard(role='main')
 					.panel.panel-default
 						.panel-heading
 							h2.panel-title My To-Do's
-							a.pull-right(href='#', title='Expand My To-Do List', data-toggle="modal", data-target="#todo-modal")
+							a.pull-right(href='#', title='Open My To-Do List', data-toggle="modal", data-target="#todo-modal")
 								i.fa.fa-plus(aria-hidden='true')
 						.panel-body
 							.tab
@@ -297,6 +297,8 @@ main.container-fluid.page-dashboard(role='main')
 					.panel.panel-default
 						.panel-heading
 							h2.panel-title Did you know?
+							a(href="#", title='Open Did you Know section', data-toggle="modal", data-target="#dyk-modal")
+								i.fa.fa-pencil
 						.panel-body
 							#carousel-dyk.carousel.slide(data-ride='carousel')
 								.carousel-inner(role='listbox')
