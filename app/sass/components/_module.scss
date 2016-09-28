@@ -1315,6 +1315,16 @@
   }
 }
 
+@mixin modal-content-dyk() {
+  #dyk-modal {
+    .modal-footer {
+      .fa {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
 @mixin tablesaw-assignments() {
   .tablesaw-bar {
     float: left;
