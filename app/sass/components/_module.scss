@@ -1321,9 +1321,9 @@
       .container {
         width: auto;
         height: auto;
-        padding: 0 15px;
         min-height: 180px;
         background-color: $light-grey;
+        @include margin-and-padding(-15px -15px 15px, 15px);
       }
       .carousel-control {
         background-image: none;
