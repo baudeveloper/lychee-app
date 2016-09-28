@@ -625,6 +625,7 @@
       line-height: 1.4;
       color: $dark-grey;
       @include font-size(14px);
+      font-weight: $font-weight-regular;
     }
     .badge {
       color: $medium-grey;
