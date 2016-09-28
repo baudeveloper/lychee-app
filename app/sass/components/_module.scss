@@ -822,28 +822,37 @@
   padding: 0;
   min-width: 400px;
   border-radius: 0;
-  &.dropdown-menu::before {
-    position: absolute;
-    content: '';
-    top: -7px;
-    right: 15px;
-    display: inline-block;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-left: 7px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
+  .dropdown-menu {
+    &::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      right: 15px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: -6px;
+      right: 15px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+    }
   }
-  &.dropdown-menu::after {
-    position: absolute;
-    content: '';
-    top: -6px;
-    right: 15px;
-    display: inline-block;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #ffffff;
-    border-left: 6px solid transparent;
+  h2 {
+    color: $grey;
+    @include font-size(12px);
+    text-transform: uppercase;
+    @include margin-and-padding(0, 15px);
+    border-bottom: 1px solid $medium-grey-dark;
   }
-  footer {
+  section {
     height: 175px;
     overflow-y: scroll;
   }
@@ -855,53 +864,21 @@
     col:last-of-type {
       width: 90%;
     }
-    thead {
-      border-bottom: 1px solid $medium-grey-dark;
-      th {
-        color: $grey;
-        padding: 15px;
-        vertical-align: top;
-        @include font-size(12px);
-        text-transform: uppercase;
-        font-weight: $font-weight-regular;
-      }
-    }
     tbody {
       td {
         color: $grey;
         padding: 10px 15px;
         @include font-size(14px);
-        small {
-          color: $medium-grey;
-          display: block;
-          @include font-size(12px);
-        }
         &:first-of-type {
-          vertical-align: top;
           color: $red;
-          font-weight: $font-weight-bold;
+          vertical-align: top;
           @include font-size(16px);
+          font-weight: $font-weight-bold;
         }
-      }
-    }
-    tfoot {
-      background-color: $medium-light-grey;
-      @include inline-input();
-      @include typeahead-standard();
-      .input {
-        width: calc(100% - 40px);
-      }
-      .btn-sitemap {
-        position: absolute;
-        top: 15px;
-        right: -25px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        color: $medium-grey;
-        @include hyperlink-hover($medium-grey);
-        .fa {
-          line-height: 40px;
+        small {
+          display: block;
+          color: $medium-grey;
+          @include font-size(12px);
         }
       }
     }
