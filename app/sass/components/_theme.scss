@@ -817,9 +817,9 @@
   }
   .input-group {
     margin-bottom: 30px;
-    @media #{$tablet} {
-      margin-bottom: 15px;
-    }
+    // @media #{$tablet} {
+    //   margin-bottom: 15px;
+    // }
     input[type="text"] {
       border-color: $darkest-grey;
     }
