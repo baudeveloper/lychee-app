@@ -1330,10 +1330,16 @@
         min-height: 120px;
       }
       .carousel-control {
+        color: $black;
         top: 50%;
-        background-color: red;
+        width: 30px;
+        // background-color: red;
+        background-image: none;
+        opacity: 1;
+        text-shadow: none;
         transform: translateY(-50%);
         &::before {
+          margin: 0 !important;
           vertical-align: -50%;
         }
       }
@@ -1342,10 +1348,10 @@
         @include font-size(12px);
       }
       .left {
-        @include icon-before('\f053', $medium-grey);
+        // @include icon-before('\f053', $medium-grey);
       }
       .right {
-        @include icon-before('\f054', $medium-grey);
+        // @include icon-before('\f054', $medium-grey);
       }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
