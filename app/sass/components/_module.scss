@@ -1317,6 +1317,21 @@
 
 @mixin modal-content-dyk() {
   #dyk-modal {
+    .modal-body {
+      nav.container {
+        width: auto;
+        height: auto;
+        padding: 0 15px;
+        background-color: $light-grey;
+      }
+      .carousel {
+        min-height: 180px;
+      }
+      .carousel-control {
+        background-image: none;
+      }
+      // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
+    }
     .modal-footer {
       .fa {
         margin-right: 5px;

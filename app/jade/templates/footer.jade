@@ -285,6 +285,26 @@
 					span(aria-hidden='true') ×
 				h4.modal-title Did you know?
 			.modal-body
+				nav.container
+					.row
+						#carousel-dykm.carousel.slide(data-ride='carousel')
+							.carousel-inner(role='listbox')
+								.item.active
+									img(src='http://placehold.it/120x50', alt='Thumb')
+									.carousel-caption
+										| Why does this timesheet week start on a Satuday?
+								.item
+									img(src='http://placehold.it/120x50', alt='Thumb')
+									.carousel-caption
+										| Why does this timesheet week start on a Satuday?
+								.item
+									img(src='http://placehold.it/120x50', alt='Thumb')
+									.carousel-caption
+										| Why does this timesheet week start on a Satuday?
+							a.left.carousel-control(href='#carousel-dykm', role='button', data-slide='prev')
+								i.fa.fa-chevron-left(aria-hidden="true")
+							a.right.carousel-control(href='#carousel-dykm', role='button', data-slide='next')
+								i.fa.fa-chevron-right(aria-hidden="true")
 			.modal-footer
 				.pull-left
 					button.btn.btn-tertiary(type='button', data-dismiss='modal')
