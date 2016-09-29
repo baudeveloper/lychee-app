@@ -1323,7 +1323,7 @@
         height: auto;
         min-height: 120px;
         background-color: $light-grey;
-        @include margin-and-padding(-15px -15px 15px, 15px);
+        @include margin-and-padding(-15px -15px 15px, 15px 15px 0);
       }
       .carousel {
         height: auto;
@@ -1339,6 +1339,9 @@
           margin: 0 !important;
           vertical-align: -50%;
         }
+      }
+      .bg-white {
+        background-color: $white;
       }
       p {
         margin-top: 15px;
