@@ -438,5 +438,82 @@ main.container-fluid.page-project(role='main')
 						tr
 							td.title Initial Budget:
 							td $500.00
+				table.tablesaw.tablesaw-swipe.table-condensed.tbl-budget(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+					colgroup
+						col
+						col
+						col
+						col
+						col
+						col
+						col
+					thead
+						tr
+							th(data-tablesaw-priority="persist", scope="col") Milestones
+							th(data-tablesaw-priority="2", scope="col") Date
+							th(data-tablesaw-priority="3", scope="col") Fixed Amount
+							th(data-tablesaw-priority="4", scope="col") Invoice Status
+							th(data-tablesaw-priority="5", scope="col") Accounting System
+							th(data-tablesaw-priority="6", scope="col") Invoice
+							th(data-tablesaw-priority="7", scope="col")
+					tbody
+						tr
+							td.tablesaw-cell-persist Analysis & Design Complete
+							td.tablesaw-cell-hidden 2016-07-25
+							td.tablesaw-cell-hidden
+								a(href="#") $1,010.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
+								a.btn-edit-milestone(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-mileston(href="#")
+									i.fa.fa-trash
+						tr
+							td.tablesaw-cell-persist Sprint 1 Delivery to UAT
+							td.tablesaw-cell-hidden 2016-07-11
+							td.tablesaw-cell-hidden
+								a(href="#") $2,000.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
+								a.btn-edit-milestone(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-mileston(href="#")
+									i.fa.fa-trash
+						tr
+							td.tablesaw-cell-persist Sprint 2 Delivery to UAT
+							td.tablesaw-cell-hidden 2016-07-11
+							td.tablesaw-cell-hidden
+								a(href="#") $3,000.00
+							td.tablesaw-cell-hidden Not Created
+							td.tablesaw-cell-hidden 
+							td.tablesaw-cell-hidden
+								a.btn-invoice(href="#")
+									i.fa.fa-file-pdf-o
+									| 123456789
+							td.tablesaw-cell-hidden
+								a.btn-edit-milestone(href="#")
+									i.fa.fa-pencil
+								a.btn-remove-mileston(href="#")
+									i.fa.fa-trash
+					tfoot
+						tr
+							td.tablesaw-cell-persist Total
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+								a(href="#") $6,010.00
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
+							td.tablesaw-cell-hidden
 	include feed.jade
 	footer.page-footer Lychee 2.0.0a

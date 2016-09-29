@@ -967,5 +967,28 @@
       }
     }
   }
+  .tablesaw-bar {
+    float: right;
+  }
+  .tbl-budget {
+    margin-bottom: 15px;
+    .tablesaw-cell-persist {
+      border-right: none;
+    }
+    th {
+      border-left: none;
+      border-right: none;
+    }
+    tfoot {
+      font-weight: $font-weight-bold;
+      background-color: $lightest-red;
+      td {
+        font-size: 14px !important;
+        @media #{$tablet} {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
 }
 @include fancytree();
