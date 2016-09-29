@@ -1333,11 +1333,13 @@
         color: $black;
         width: 30px;
         text-shadow: none;
-        background-color: red;
+        // background-color: red;
         background-image: none;
-        &::before {
-          margin: 0 !important;
-          vertical-align: -50%;
+        .fa {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          z-index: 5;
         }
       }
       .bg-white {
