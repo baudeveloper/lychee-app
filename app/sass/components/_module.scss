@@ -423,8 +423,8 @@
     @media #{$desktop__up} {
       img {
         width: auto;
-        max-width: 65px;
-        margin: 15px 5px 5px;
+        // max-width: 65px;
+        margin: 15px 2px 0;
       }
     }
     @media #{$desktop} {
