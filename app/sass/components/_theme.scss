@@ -568,7 +568,7 @@
     float: left;
     display: inline-block;
     list-style-type: none;
-    overflow: hidden;
+    // overflow: hidden;
     @include margin-and-padding(0, 0);
     &.dash-nav {
       position: absolute;
