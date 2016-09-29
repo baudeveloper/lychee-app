@@ -54,7 +54,7 @@ gulp.task('sass', ['clean-sass', 'vendor-styles'], function() {
             errorHandler: onError
         }))
         .pipe($.newer(config.css))
-        // .pipe($.sourcemaps.init())
+        .pipe($.sourcemaps.init())
         .pipe($.sass.sync({
             outputStyle: 'compressed',
             precision: 10
@@ -68,7 +68,7 @@ gulp.task('sass', ['clean-sass', 'vendor-styles'], function() {
           browsers: ['last 25 versions'],
           cascade: false
         }))
-        // .pipe($.sourcemaps.write('./'))
+        .pipe($.sourcemaps.write('./'))
         .pipe(gulp.dest(config.css))
         .pipe($.notify({
             title: 'Gulp',
