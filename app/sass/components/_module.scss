@@ -1344,12 +1344,12 @@
         background-color: $white;
       }
       .img-holder {
-        color: $medium-grey;
         text-align: right;
+        color: $medium-grey;
         @include font-size(16px);
         text-transform: uppercase;
         background-color: $light-grey;
-        border: 1px solid $diamond-grey;
+        border: 1px solid $diamond-grey-light;
       }
       p {
         margin-top: 15px;
@@ -1364,6 +1364,7 @@
         }
         input, textarea {
           margin-bottom: 20px;
+          border-color: $extra-darkest-grey;
         }
       }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
