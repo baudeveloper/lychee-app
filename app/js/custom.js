@@ -55,7 +55,7 @@ $(document).ready(function() {
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
     });
-    $(".input-startdate, .input-enddate, .input-startingdate, .input-endingdate, .input-closingdate").datepicker({
+    $(".input-startdate, .input-enddate, #input-startingdate, #input-endingdate, #input-closingdate").datepicker({
       format: "yyyy-mm-dd"
     });
     $("#fancytree, .all-tasks").fancytree();
