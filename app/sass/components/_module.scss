@@ -1343,11 +1343,18 @@
       .bg-white {
         background-color: $white;
       }
+      .img-holder {
+        color: $medium-grey;
+        @include font-size(16px);
+        text-transform: uppercase;
+        background-color: $light-grey;
+        border: 1px solid $diamond-grey;
+      }
       p {
         margin-top: 15px;
         @include font-size(12px);
       }
-      img, .form-group {
+      .form-group {
         width: 100%;
         margin-top: 30px;
         label {
