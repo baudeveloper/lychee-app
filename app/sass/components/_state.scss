@@ -270,3 +270,13 @@ textarea {
 @include modal-content-assignment();
 @include modal-content-editproject();
 @include modal-content-dyk();
+
+// Dashboard Drag and Drop styles
+.placeholder {
+  margin: 0 15px 15px;
+  border: 1px solid darken($light-grey, 5%);
+  background-color: darken($light-grey, 2.5%);
+}
+.tile {
+  height: 350px;
+}

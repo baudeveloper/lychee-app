@@ -50,7 +50,6 @@ main {
   ul {
     @include margin-and-padding(0, 0);
     li {
-      list-style-type: none;
       &.placeholder {
         margin: 0 15px 15px;
         border: 1px solid darken($light-grey, 5%);
