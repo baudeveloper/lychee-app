@@ -115,19 +115,9 @@ main {
       background: none;
       &.left {
         left: 0;
-        color: inherit;
-        &::before {
-          content: '\f053';
-          font-family: "fontawesome";
-        }
       }
       &.right {
         right: 0;
-        color: inherit;
-        &::before {
-          content: '\f054';
-          font-family: "fontawesome";
-        }
       }
     }
   }
