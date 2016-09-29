@@ -639,6 +639,19 @@
         border-right: none;
         border-bottom: 1px solid $darkest-grey;
       }
+      .btn-group {
+        button, .dropdown-menu a {
+          @include font-size(16px);
+        }
+        .dropdown-header {
+          margin-left: -8px;
+          color: $medium-grey;
+          @include font-size(14px);
+        }
+        .divider {
+          background-color: $darkest-grey;
+        }
+      }
     }
     &.dash-widgets {
       width: calc(70% - 30px);
