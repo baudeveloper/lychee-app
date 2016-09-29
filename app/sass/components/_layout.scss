@@ -49,23 +49,15 @@ main {
 .page-dashboard {
   ul {
     @include margin-and-padding(0, 0);
-    li {
-      &.placeholder {
-        margin: 0 15px 15px;
-        border: 1px solid darken($light-grey, 5%);
-        background-color: darken($light-grey, 2.5%);
-      }
-      &.tile {
-        height: 350px;
-      }
+  }
+  li {
+    @include panel-standard();
+    &.skinned {
+      @include panel-skinned();
     }
-  }
-  @include panel-standard();
-  .skinned {
-    @include panel-skinned();
-  }
-  .employee-of-the-month {
-    @include panel-employee();
+    &.employee-of-the-month {
+      @include panel-employee();
+    }
   }
 }
 
