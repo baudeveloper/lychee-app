@@ -40,11 +40,6 @@ main {
   }
 }
 
-// Widgets row in Dashboard page
-#widgets ul {
-  @include margin-and-padding(0, 0);
-}
-
 // Widget styles in Dashboard page
 .page-dashboard {
   ul {
@@ -68,62 +63,12 @@ main {
 
 // DYK
 #did-you-know {
-  img {
-    margin: 0 auto 15px;
-  }
-  .panel-heading a {
-    color: $red;
-    @include hyperlink-hover($red);
-  }
-  #carousel-dyk {
-    .carousel-inner {
-      padding-bottom: 30px;
-    }
-    .carousel-caption {
-      text-shadow: none;
-      position: relative;
-      left: auto;
-      right: auto;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
-      margin: 30px 0 0;
-      min-height: 150px !important;
-    }
-    .carousel-control {
-      position: absolute;
-      bottom: 0;
-      top: auto;
-      width: 35px;
-      padding: 5px;
-      color: $black;
-      display: block;
-      box-shadow: none;
-      text-shadow: none;
-      border-radius: 4px;
-      @include font-size(16px);
-      border: 1px solid $darker-grey;
-      background: none;
-      .fa {
-        margin: 0;
-      }
-      &.left {
-        left: 0;
-      }
-      &.right {
-        right: 0;
-      }
-    }
-  }
+  @include did-you-know();
 }
 
 // To Do Widget widget in Dashboard page
 #my-todo {
-  .tab {
-    border: 1px solid $lightest-grey;
-    background-color: $extra-light-grey;
-    @include widget-todo();
-  }
+  @include widget-todo();
 }
 
 // My Tasks Widget in Dashboard page
@@ -157,35 +102,7 @@ main {
 }
 
 // Notifications Feed
-.feed {
-  position: fixed;
-  z-index: 10;
-  top: 80px;
-  bottom: 0;
-  width: 378px;
-  right: -378px;
-  padding: 20px;
-  overflow-y: scroll;
-  transition: all 0.5s;
-  background-color: $transparent-grey;
-  h2 {
-    color: $medium-grey;
-    @include font-size(28px);
-    font-weight: $font-weight-light;
-    @include margin-and-padding(0, 0);
-    &:last-of-type {
-      margin-top: 60px;
-    }
-  }
-  &.active {
-    right: -17px;
-  }
-  ul {
-    @include margin-and-padding(0, 0);
-    &:last-of-type li:last-child {
-      margin-bottom: 200px;
-    }
-  }
+.feed {  
   @include widget-feed();
 }
 
