@@ -106,55 +106,55 @@
 						label.col-sm-8 Prasanna Kugananthan
 					fieldset
 						.form-group
-							label.col-sm-4.control-label Start Date:
+							label.col-sm-4.control-label(form="input-startdate") Start Date:
 							.col-sm-8
 								.input-icon
-									input.input-startdate.form-control(type="text", placeholder="2016-07-08")
+									input.form-control(id="input-startdate", type="text", placeholder="2016-07-08")
 									span
 										a.btn-startdate(href="#")
 											i.fa.fa-calendar
 						.form-group
-							label.col-sm-4.control-label End Date:
+							label.col-sm-4.control-label(for="input-enddate") End Date:
 							.col-sm-8
 								.input-icon
-									input.input-enddate.form-control(type="text", placeholder="2017-04-27")
+									input.form-control(id="input-enddate", type="text", placeholder="2017-04-27")
 									span
 										a.btn-enddate(href="#")
 											i.fa.fa-calendar
 						.form-group
-							label.col-sm-4.control-label Rate ($/hr)
+							label.col-sm-4.control-label(for="input-rate") Rate ($/hr)
 							.col-sm-8
-								input.form-control(type="text", placeholder="75.00")
+								input.form-control(id="input-rate", type="text", placeholder="75.00")
 						.form-group
-							label.col-sm-4.control-label Allocation (%)
+							label.col-sm-4.control-label(form="input-allocation") Allocation (%)
 							.col-sm-8
-								input.form-control(type="text", placeholder="100.0")
+								input.form-control(id="input-allocation", type="text", placeholder="100.0")
 						.form-group.contributions
-							label.col-sm-4 Contributions to Accural
+							label.col-sm-4(for="input-check") Contributions to Accural
 							.col-sm-8
-								input(type='checkbox')
+								input(id="input-check", type='checkbox')
 					fieldset
 						legend.lbl-heading Project Roles
 						.form-group
 							.checkbox
-								label
-									input(type='checkbox')
+								label(for="input-projectdirector")
+									input(id="input-projectdirector", type='checkbox')
 									| Project Director
 							.checkbox
-								label
-									input(type='checkbox')
+								label(for="input-projectmanager")
+									input(id="input-projectmanager", type='checkbox')
 									| Project Manager
 							.checkbox
-								label
-									input(type='checkbox')
+								label(for="input-teamlead")
+									input(id="input-teamlead", type='checkbox')
 									| Team Lead
 							.checkbox
-								label
-									input(type='checkbox')
+								label(for="input-approver")
+									input(id="input-approver", type='checkbox')
 									| Approver
 							.checkbox
-								label
-									input(type='checkbox')
+								label(for="input-teammember")
+									input(id="input-teammember", type='checkbox')
 									| Team Member
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Cancel
