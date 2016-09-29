@@ -421,5 +421,22 @@ main.container-fluid.page-project(role='main')
 				a.btn.btn-tertiary(href="#")
 					i.fa.fa-plus
 					| Add Milestone
+		.col-sm-12
+			section#administration.widget
+				.heading
+					h2 Project Administration	
+				table.table.table-condensed.tbl-admin-budget
+					colgroup
+						col
+						col
+					tbody
+						tr
+							td(colspan="2")
+								a(href="#")
+									i.fa.fa-file-pdf-o(aria-hidden="true")
+									| RYER-0532
+						tr
+							td.title Initial Budget:
+							td $500.00
 	include feed.jade
 	footer.page-footer Lychee 2.0.0a
