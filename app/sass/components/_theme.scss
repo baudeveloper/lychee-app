@@ -957,6 +957,13 @@
         &.title {
           color: $super-grey;
         }
+        &:last-of-type, &:last-of-type * {
+          font-weight: $font-weight-bold;
+        }
+        a {
+          color: $red;
+          @include hyperlink-hover($red);
+        }
       }
     }
   }
