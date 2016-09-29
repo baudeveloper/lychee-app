@@ -1329,19 +1329,19 @@
       .carousel {
         height: auto;
         min-height: 120px;
-      }
-      .carousel-control {
-        color: $black;
-        .fa {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &.left .fa {
-          left: 15px;
-        }
-        &.right .fa {
-          right: 15px;
+        .carousel-control {
+          color: $black;
+          .fa {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &.left .fa {
+            left: 15px;
+          }
+          &.right .fa {
+            right: 15px;
+          }
         }
       }
       .bg-white {
@@ -1371,18 +1371,18 @@
           bottom: 10px;
           left: 0;
           right: 0;
-        }
-        a {
-          color: $red;
-          float: left;
-          text-decoration: underline;
-          @include hyperlink-hover($red);
-        }
-        span {
-          float: right;
-        }
-        a, span {
-          display: inline;
+          a {
+            color: $red;
+            float: left;
+            text-decoration: underline;
+            @include hyperlink-hover($red);
+          }
+          span {
+            float: right;
+          }
+          a, span {
+            display: inline;
+          }
         }
       }
       p {
@@ -1408,7 +1408,6 @@
           @include input-placeholder-color($grey);
         }
       }
-      // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
     .modal-footer {
       .fa {
