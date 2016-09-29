@@ -1347,8 +1347,12 @@
       img, .form-group {
         width: 100%;
         margin-top: 30px;
+        label {
+          @include font-size(16px);
+          font-weight: $font-weight-bold;
+        }
         input, textarea {
-          margin-bottom: 15px;
+          margin-bottom: 20px;
         }
       }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
