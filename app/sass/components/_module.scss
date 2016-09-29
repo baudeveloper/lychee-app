@@ -1349,6 +1349,7 @@
         }
       }
       .img-holder {
+        position: relative;
         height: 100%;
         text-align: center;
         color: $medium-grey;
@@ -1362,6 +1363,10 @@
         }
         footer  {
           padding: 0 5px;
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          right: 0;
         }
         a {
           color: $red;
