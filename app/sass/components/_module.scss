@@ -1336,6 +1336,12 @@
           top: 50%;
           transform: translateY(-50%);
         }
+        &.left .fa {
+          left: 15px;
+        }
+        &.right .fa {
+          right: 15px;
+        }
       }
       .bg-white {
         padding: 30px 0 0;
