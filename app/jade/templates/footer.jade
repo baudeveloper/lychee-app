@@ -348,6 +348,15 @@
 									i.fa.fa-chevron-left(aria-hidden="true")
 								a.right.carousel-control(href='#dykm-carousel', data-slide='next')
 									i.fa.fa-chevron-right(aria-hidden="true")
+					.row
+						.col-sm-6
+							img(src="http://placehold.it/400x400", alt="Demo")
+						.col-sm-6
+							.form-group
+								label(for="input-question") Annoucement / questions
+								input#input-question.form-control(type="text", placeholder="Why does the timesheet week start on Sunday?")
+								label(for="input-answer") Details / Answer
+								textarea#input-answer.form-control(type="text", placeholder="That is to match payroll which is based on Saturday to Friday periods.", rows="5")
 			.modal-footer
 				.pull-left
 					button.btn.btn-tertiary(type='button', data-dismiss='modal')

@@ -1331,13 +1331,10 @@
       }
       .carousel-control {
         color: $black;
-        top: 50%;
         width: 30px;
-        // background-color: red;
-        background-image: none;
-        opacity: 1;
         text-shadow: none;
-        transform: translateY(-50%);
+        background-color: red;
+        background-image: none;
         &::before {
           margin: 0 !important;
           vertical-align: -50%;
@@ -1346,6 +1343,13 @@
       p {
         margin-top: 15px;
         @include font-size(12px);
+      }
+      img, .form-group {
+        width: 100%;
+        margin-top: 30px;
+        input, textarea {
+          margin-bottom: 15px;
+        }
       }
       // Source: http://bootsnipp.com/snippets/featured/thumbnail-carousel
     }
