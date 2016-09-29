@@ -83,6 +83,9 @@ $(document).ready(function() {
     $('#tasks-list-modal .modal-body').append($tasksListContent);
 
     /* Dashboard Page */
+    $(".tooltip-myteam").tooltip({
+      placement: 'top'
+    });
     // Task Details Modal
     $("#task-details-modal .nav-info").hide();
     $("#task-details-modal .modal-details").click(function () {
