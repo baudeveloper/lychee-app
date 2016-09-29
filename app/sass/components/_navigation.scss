@@ -396,7 +396,7 @@
   input {
     display: none;
     &:checked + .slider {
-      background-color: $red;
+      background-color: $lightest-grey;
     }
     &:focus + .slider {
       box-shadow: 0 0 1px $red;
@@ -407,12 +407,14 @@
       transform: translateX(20px);
       font-family: "fontawesome";
       content: '\f00c';
+      background-color: $red;
     }
     &:checked + .slider::before {
       -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
       transform: translateX(0px);
       content: '';
+      background-color: $lightest-grey;
     }
   }
   .slider {
