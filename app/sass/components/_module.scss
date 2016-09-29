@@ -1331,10 +1331,10 @@
       }
       .carousel-control {
         color: $black;
-        // width: 30px;
-        // text-shadow: none;
-        // background-color: red;
-        // background-image: none;
+        .fa {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);        }
       }
       .bg-white {
         padding: 30px 0 0;
