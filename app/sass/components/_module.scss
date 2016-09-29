@@ -1344,12 +1344,31 @@
         background-color: $white;
       }
       .img-holder {
-        text-align: right;
+        text-align: center;
         color: $medium-grey;
         @include font-size(16px);
         text-transform: uppercase;
         background-color: $light-grey;
         border: 1px solid $diamond-grey-light;
+        img {
+          width: auto;
+          margin: 30px auto;
+        }
+        footer  {
+          padding: 0 5px 10px;
+        }
+        a {
+          color: $red;
+          float: left;
+          text-decoration: underline;
+          @include hyperlink-hover($red);
+        }
+        span {
+          float: right;
+        }
+        a, span {
+          display: inline;
+        }
       }
       p {
         margin-top: 15px;
