@@ -112,7 +112,10 @@ main {
       box-shadow: none;
       text-shadow: none;
       @include font-size(16px);
-      background: none;
+      background: none;      
+      .fa {
+        margin: 0;
+      }
       &.left {
         left: 0;
       }
