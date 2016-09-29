@@ -1,16 +1,16 @@
 // Source: http://stackoverflow.com/questions/23906956/show-loading-icon-until-the-page-is-load.
-// document.onreadystatechange = function () {
-//   var state = document.readyState
-//   if (state == 'interactive') {
-//        document.getElementById('contents').style.visibility="hidden";
-//   } else if (state == 'complete') {
-//       setTimeout(function(){
-//          document.getElementById('interactive');
-//          document.getElementById('loading').style.visibility="hidden";
-//          document.getElementById('wrapper').style.visibility="visible";
-//       }, 2000);
-//   }
-// }
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('loading').style.visibility="hidden";
+         document.getElementById('wrapper').style.visibility="visible";
+      }, 2000);
+  }
+}
 
 $(window).load(function() {
   /* Team Page | Source: http://jsfiddle.net/desandro/9pSyj/ | http://stackoverflow.com/questions/26538929/jquery-isotope-how-to-sort-alphabetically | http://stackoverflow.com/questions/10163699/jquery-isotope-option-for-auto-height-on-element */
