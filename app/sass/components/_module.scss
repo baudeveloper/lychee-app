@@ -1341,9 +1341,15 @@
         }
       }
       .bg-white {
+        padding: 30px 0;
         background-color: $white;
+        display: flex;
+        > * {
+          flex: 1;
+        }
       }
       .img-holder {
+        height: 100%;
         text-align: center;
         color: $medium-grey;
         @include font-size(16px);
@@ -1376,13 +1382,17 @@
       }
       .form-group {
         width: 100%;
-        margin-top: 30px;
+        height: 100%;
+        margin: 0;
         label {
+          margin: 20px 0 10px;
           @include font-size(16px);
           font-weight: $font-weight-bold;
+          &:first-child {
+            margin-top: 0;
+          }
         }
         input, textarea {
-          margin-bottom: 20px;
           border-color: $extra-darkest-grey;
         }
       }
