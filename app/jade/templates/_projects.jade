@@ -99,18 +99,42 @@ main.container-fluid.page-project(role='main')
 					li.all-tasks.block
 						.button.btn-group
 							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-								| All Tasks 
+								| Filtered Tasks...
 								span.caret
 							ul.dropdown-menu
 								li
-									a(href='#') Action
-								li
-									a(href='#') Another action
-								li
-									a(href='#') Something else here
+									a(href='#') Show All Tasks
 								li.divider(role='separator')
 								li
-									a(href='#') Separated link
+									a(href='#') Active Tasks
+								li
+									a(href='#') Obsolete Tasks
+								li.divider(role='separator')
+								li
+									a(href='#') Billable Tasks
+								li
+									a(href='#') Unbillable Tasks
+								li.divider(role='separator')
+								li
+									a(href='#') Completed Tasks
+								li
+									a(href='#') Incomplete Tasks
+								li.divider(role='separator')
+								li
+									a(href='#') My Tasks
+								li
+									a(href='#') Other's Tasks
+								li.divider(role='separator')
+								li
+									a(href='#') Standard Tasks
+								li
+									a(href='#') Overhead Tasks
+								li
+									a(href='#') JIRA-linked Tasks
+								li
+									a(href='#') Milestones
+								li
+									a(href='#') Unplanned									
 						ul#treeData(style='display: none;')
 							li#id1.folder.expanded(title='RouteOne')
 								| RouteOne
