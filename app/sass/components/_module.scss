@@ -935,6 +935,7 @@
     border-bottom: none;
     background-color: $red;
     @include font-size(18px);
+    text-transform: uppercase;
     button {
       opacity: 1;
       color: inherit;
@@ -1323,7 +1324,7 @@
         height: auto;
         min-height: 120px;
         background-color: $light-grey;
-        @include margin-and-padding(-15px -15px 15px, 15px 15px 0);
+        @include margin-and-padding(0 -15px 15px, 15px 15px 0);
       }
       .carousel {
         height: auto;
