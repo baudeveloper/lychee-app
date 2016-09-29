@@ -1179,12 +1179,12 @@
           @include font-size(14px);
         }
       }
+      .toggled {
+        display: block !important;
+      }
       .container {
         width: auto;
         @include margin-and-padding(0 0 20px, 0);
-        .toggled {
-          display: block !important;
-        }
       }
       ul {
         @include margin-and-padding(0, 0);
