@@ -395,12 +395,12 @@
   }
   .img-employee {
     width: 100%;
-    @media #{$tablet} {
+    @media #{$desktop} {
       float: left;
       width: auto;
       max-width: 120px;
     }
-    @media #{$tablet__up} {
+    @media #{$desktop__up} {
       margin-bottom: 15px;
     }
   }
@@ -420,20 +420,20 @@
   }
   .employee-tags {
     text-align: center;
-    @media #{$tablet__up} {
+    @media #{$desktop__up} {
       img {
         width: auto;
         max-width: 65px;
         margin: 15px 5px 5px;
       }
     }
-    @media #{$tablet} {
+    @media #{$desktop} {
       img {
         margin: 15px 5px 5px;
       }
     }
   }
-  @media #{$tablet} {
+  @media #{$desktop} {
     .employee-info {
       margin-left: 135px;
     }
