@@ -58,6 +58,44 @@ $(document).ready(function() {
       $(this).parents("tr").toggleClass("tr-blue").siblings("*").removeClass("tr-blue");
       $(this).parents("tr").siblings("*").not(".tr-blue").find(".toggle-te .fa").removeClass("fa-blue").addClass("fa-rotate-90");
     });
+    // Timer
+    // Source: http://stackoverflow.com/questions/30466993/making-a-timer-in-javascript-starting-from-000000
+    // Source: http://stackoverflow.com/questions/8539079/start-stop-pause-setinterval-with-javascript-jquery
+    // Source: http://stackoverflow.com/questions/14135264/toggling-click-handlers-in-javascript
+    var timer = null;
+    var msec = 00;
+    var sec = 00;
+    var min = 00;
+    function clock() {
+    	msec += 01;
+    	if (msec == 60) {
+    		sec += 01;
+    		msec = 00;
+    		if (sec == 60) {
+    			sec = 00;
+    			min += 01;
+    			if (sec % 2 == 0) {
+    				alert("Pair");
+    			}
+    		}
+    	}
+    	document.getElementById("input-timer").value = min + ":" + sec + ":" + msec;
+    }
+    $('.btn-timer').bind('click', myHandlerFunction);
+    var first = true;
+    function myHandlerFunction(e) {
+        if(first) {
+          e.stopPropagation();
+          if (timer !== null) return;
+          timer = setInterval(clock, 1000);
+        } else{
+          e.stopPropagation();
+          clearInterval(timer);
+          timer = null
+        }
+        first = !first; // Invert `first`
+    }
+
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
     });
