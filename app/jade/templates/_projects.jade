@@ -9,7 +9,7 @@ main.container-fluid.page-project(role='main')
 		i.fa.fa-briefcase(aria-hidden='true')
 		| RONE-0757 (Remoted Document Delivery)
 		a.btn-edit-project(data-toggle="modal", data-target="#edit-project-modal")
-			i.fa.fa-pencil
+			i.fa.fa-pencil(aria-hidden='true')
 	table.table.table-condensed.tbl-project-info.pull-right
 		colgroup
 			col
@@ -42,7 +42,7 @@ main.container-fluid.page-project(role='main')
 				td Active
 	.row
 		.col-sm-12
-			section#project-dash.widget
+			#project-dash.widget
 				.heading
 					h2 FFD-C2029 - UI Design
 				ul.dash-content
@@ -93,7 +93,7 @@ main.container-fluid.page-project(role='main')
 									i.fa.fa-bars(aria-hidden='true')
 									span View in JIRA
 							li
-								a.dash-toggle(href="#", title="Show/Hide Menu")
+								a(class='dash-toggle', href="#", title="Show/Hide Menu")
 									i.fa.fa-long-arrow-left(aria-hidden='true')
 									span Collapse
 					li.all-tasks.block
@@ -144,36 +144,36 @@ main.container-fluid.page-project(role='main')
 							li#id1.folder.expanded(title='RouteOne')
 								| RouteOne
 								ul
-									li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
+									li#id1.1.folder.expanded(title='Credit Aggregation Platform')
 										| Credit Aggregation Platform
 										ul
-											li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
+											li#id1.1.1.folder.expanded(title='RONE-0757 (Remote Document Delivery)')
 												| RONE-0757 (Remote Document Delivery)
 												ul
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| FFD-C2029 - Analysis
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| FFD-C2029 - Testing
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| FFD-C2029 - Development
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| FFD-C2029 - UI Design
-											li.folder.expanded(id='id1.1.2', title='Release 16.9')
+											li#1.1.2.folder.expanded(title='Release 16.9')
 												| Release 16.9
 												ul
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| CORE-7696 Remove Authy
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| CORE-8758 Black list document to not delivery
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| CORE-8758 Privacy Policy implementation
-													li(id='id1.1.1.1')
+													li#id1.1.1.1
 														| CORE-8758 Capturing billing information
-									li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
+									li#id1.2.folder(title='RONE-0743 (CAMS 2016 Travel)')
 										| RONE-0743 (CAMS 2016 Travel)
-									li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
+									li#id1.3.folder(title='RONE-0749 (R1 Mobile App 2016)')
 										| RONE-0749 (R1 Mobile App 2016)
-									li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
+									li#id1.4.folder(title='RONE-0742 (CAMS 2016)')
 										| RONE-0749 (CAMS 2016)
 					ul.dash-widgets.block.nav.nav-tabs(role="tablist")
 						li.active(role="presentation")
@@ -199,9 +199,9 @@ main.container-fluid.page-project(role='main')
 				.assigned-members-group
 					h3 Assigned Members
 					a.btn-team-listview
-						i.fa.fa-th-list
+						i.fa.fa-th-list(aria-hidden='true')
 					a.btn-team-gridview
-						i.fa.fa-table
+						i.fa.fa-table(aria-hidden='true')
 				.checkbox
 					label
 						input(type="checkbox")
@@ -226,9 +226,9 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden $125.00
 							td.tablesaw-cell-hidden
 								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
+									i.fa.fa-pencil(aria-hidden='true')
 								a.btn-remove-member(href="#")
-									i.fa.fa-trash
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist Abdikidar Kedi
 							td.tablesaw-cell-hidden Team Member
@@ -238,9 +238,9 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden $119.00
 							td.tablesaw-cell-hidden
 								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
+									i.fa.fa-pencil(aria-hidden='true')
 								a.btn-remove-member(href="#")
-									i.fa.fa-trash
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist Cindy Lopes
 							td.tablesaw-cell-hidden Approver, Team Member, Project Manager, Project Director
@@ -250,9 +250,9 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden $125.00
 							td.tablesaw-cell-hidden
 								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
+									i.fa.fa-pencil(aria-hidden='true')
 								a.btn-remove-member(href="#")
-									i.fa.fa-trash
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist Jacob Tseng
 							td.tablesaw-cell-hidden Team Member
@@ -262,9 +262,9 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden $75.00
 							td.tablesaw-cell-hidden
 								a.btn-edit-member(href="#")
-									i.fa.fa-pencil
+									i.fa.fa-pencil(aria-hidden='true')
 								a.btn-remove-member(href="#")
-									i.fa.fa-trash
+									i.fa.fa-trash(aria-hidden='true')
 				.timeline
 					img(src="http://placehold.it/1600x200", alt="Timeline")
 				.container
@@ -300,9 +300,9 @@ main.container-fluid.page-project(role='main')
 								td 2016-12-31
 								td
 									a.btn-edit-milestone(href="#")
-										i.fa.fa-pencil
-									a.btn-remove-mileston(href="#")
-										i.fa.fa-trash
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
 							tr
 								td Walter Drexl
 									span (Last logged in: 08/09/2016)
@@ -310,20 +310,20 @@ main.container-fluid.page-project(role='main')
 								td 2016-12-31
 								td
 									a.btn-edit-milestone(href="#")
-										i.fa.fa-pencil
-									a.btn-remove-mileston(href="#")
-										i.fa.fa-trash
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
 					.well
 						| No Portal Users Associated with This Project
 					a.btn.btn-tertiary.visible-sm.btn-add-user(href="#")
-						i.fa.fa-plus
+						i.fa.fa-plus(aria-hidden='true')
 						| Add User
 		.col-sm-12
 			section#bookkeeping.widget
 				.heading
 					h2 Bookkeeping
 					a.btn-edit-bookkeeping(href="#")
-						i.fa.fa-pencil
+						i.fa.fa-pencil(aria-hidden='true')
 				table.table.table-condensed.tbl-bookkeeping
 					colgroup
 						col
@@ -402,9 +402,9 @@ main.container-fluid.page-project(role='main')
 									| 123456789
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden='true')
+								a.btn-remove-milestone(href="#")
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist Sprint 1 Delivery to UAT
 							td.tablesaw-cell-hidden 2016-07-11
@@ -418,9 +418,9 @@ main.container-fluid.page-project(role='main')
 									| 123456789
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden='true')
+								a.btn-remove-milestone(href="#")
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist Sprint 2 Delivery to UAT
 							td.tablesaw-cell-hidden 2016-07-11
@@ -434,9 +434,9 @@ main.container-fluid.page-project(role='main')
 									| 123456789
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden='true')
+								a.btn-remove-milestone(href="#")
+									i.fa.fa-trash(aria-hidden='true')
 					tfoot
 						tr
 							td.tablesaw-cell-persist Total
@@ -448,7 +448,7 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden
 							td.tablesaw-cell-hidden
 				a.btn.btn-tertiary(href="#")
-					i.fa.fa-plus
+					i.fa.fa-plus(aria-hidden='true')
 					| Add Milestone
 		.col-sm-12
 			section#administration.widget
@@ -502,9 +502,9 @@ main.container-fluid.page-project(role='main')
 								a(href="#") + 4 weeks
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden='true')
+								a.btn-remove-milestone(href="#")
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist
 								a(href="#")
@@ -519,9 +519,9 @@ main.container-fluid.page-project(role='main')
 							td.tablesaw-cell-hidden
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden='true')
+								a.btn-remove-milestone(href="#")
+									i.fa.fa-trash(aria-hidden='true')
 						tr
 							td.tablesaw-cell-persist
 								a(href="#")
@@ -537,9 +537,9 @@ main.container-fluid.page-project(role='main')
 								a(href="#") + 2 weeks
 							td.tablesaw-cell-hidden
 								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil
-								a.btn-remove-mileston(href="#")
-									i.fa.fa-trash
+									i.fa.fa-pencil(aria-hidden="true")
+								a.btn-remove-milestone(href="#")
+									i.fa fa-trash(aria-hidden="true")
 					tfoot
 						tr
 							td.tablesaw-cell-persist Total

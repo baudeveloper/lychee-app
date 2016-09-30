@@ -1,297 +1,297 @@
-main(role='main', class='container-fluid page-dashboard')
-	h1(class='page-title')
-		i(aria-hidden='true', class='fa fa-dashboard')
+main.container-fluid.page-dashboard(role='main')
+	h1.page-title
+		i.fa.fa-dashboard(aria-hidden='true')
 		| Dashboard
-	div(class='row')
-		div(class='col-sm-12 col-lg-10 widgets nopadding')
-			ul(class='row')
-				li(id='my-tasks', class='col-sm-12 col-lg-6')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') My Current Tasks
-						div(class='container panel-body')
-							header(class='row')
-								div(class='tasks col-sm-6')
+	.row
+		.col-sm-12.col-lg-10.widgets.nopadding
+			ul.row
+				li#my-tasks.col-sm-12.col-lg-6
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title My Current Tasks
+						.container.panel-body
+							header.row
+								.tasks.col-sm-6
 									| Tasks
 									span.value (10)
-								div(class='status col-sm-6')
+								.status.col-sm-6
 									| Status
-							ul(class='list-group')
-								li(class='list-group-item')
+							ul.list-grou
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - UI Design
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width: 100%;')
-										span(class='sr-only') 60% Complete
-								li(class='list-group-item')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width: 100%;')
+										span.sr-only 60% Complete
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - Development
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
-										span(class='sr-only') 60% Complete
-								li(class='list-group-item')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+										span.sr-only 60% Complete
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - Testing
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-										span(class='sr-only') 60% Complete
-								li(class='list-group-item')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+										span.sr-only 60% Complete
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - Testing
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-										span(class='sr-only') 60% Complete
-								li(class='list-group-item')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+										span.sr-only 60% Complete
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - Development
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
-										span(class='sr-only') 60% Complete
-								li(class='list-group-item')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+										span.sr-only 60% Complete
+								li.list-group-item
 									a(href="#")
-										i(class='fa fa-check-square-o', aria-hidden='true')
+										i.fa.fa-check-square-o(aria-hidden='true')
 									a(href="#", data-toggle="modal", data-target="#task-details-modal")
-										i(class='fa fa-list-alt', aria-hidden='true')
+										i.fa.fa-list-alt(aria-hidden='true')
 									span 1
 									span FFD-C2029 - Testing
 									| RONE-0757 (Remote Document Delivery)
-									div(class='progress')
-										div(class='progress-bar', role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
-										span(class='sr-only') 60% Complete
-							a(class='view-more', href="#", title="View More Tasks")
-								i(class='fa fa-angle-double-down', aria-hidden='true')
-				li(id='my-todo', class='col-sm-12 col-lg-6')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') My To-Do's
-							a(class='pull-right', href='#', title='Open My To-Do List', data-toggle="modal", data-target="#todo-modal")
-								i(class='fa fa-plus', aria-hidden='true')
-						div(class='panel-body')
-							div(class='tab')
-								ul(class='nav nav-tabs', role='tablist')
-									li(class='active', role='presentation')
+									.progress
+										.progress-bar(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+										span.sr-only 60% Complete
+							a.view-more(href="#", title="View More Tasks")
+								i.fa.fa-angle-double-down(aria-hidden='true')
+				li#my-todo.col-sm-12.col-lg-6
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title My To-Do's
+							a.pull-right(href='#', title='Open My To-Do List', data-toggle="modal", data-target="#todo-modal")
+								i.fa.fa-plus(aria-hidden='true')
+						.panel-body
+							.tab
+								ul.nav.nav-tabs(role='tablist')
+									li.active(role='presentation')
 										a(href='#task-active', aria-controls='home', role='tab', data-toggle='tab') Active
 									li(role='presentation')
 										a(href='#task-deferred', aria-controls='profile', role='tab', data-toggle='tab') Deferred
 									li(role='presentation')
 										a(href='#task-complete', aria-controls='messages', role='tab', data-toggle='tab') Complete
-								div(class='tab-content')
-									div(id='task-active', class='tab-pane active', role='tabpanel')
-										ul(class='list-group')
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
-													img(id='member-1', class='img-circle draggable ui-draggable ui-draggable-handle', src='images/team-member-abdi.png', alt='Abdikadir Kedie')
-													img(id='member-2', class='img-circle draggable ui-draggable ui-draggable-handle', src='images/team-member-cindy.png', alt='Cindy Lopes')
+								.tab-content
+									#task-active.tab-pane.active(role='tabpanel')
+										ul.list-group
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
+													img#member-1.img-circle.draggable.ui-draggable.ui-draggable-handle(src='images/team-member-abdi.png', alt='Abdikadir Kedie')
+													img#member-2.img-circle.draggable.ui-draggable.ui-draggable-handle(src='images/team-member-cindy.png', alt='Cindy Lopes')
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
-													img(id='member-2', class='img-circle draggable ui-draggable ui-draggable-handle', src='images/team-member-cindy.png', alt='Cindy Lopes')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
+													img#member-2.img-circle.draggable.ui-draggable.ui-draggable-handle(src='images/team-member-cindy.png', alt='Cindy Lopes')
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
-											li(class='list-group-item')
-												i(class='fa fa-check-square-o', aria-hidden='true')
-												div(class='droppable')
+											li.list-group-item
+												i.fa.fa-check-square-o(aria-hidden='true')
+												.droppable
 												a(href="#", data-toggle="modal", data-target="#todo-modal") Do Something
 									div(id='task-deferred', class='tab-pane', role='tabpanel')
 										p Dummy content in Deferred Tab.
 									div(id='task-complete', class='tab-pane', role='tabpanel')
 										p Dummy content in Complete Tab.
-								a(class='view-more', href="#", title="View More Tasks")
-									i(class='fa fa-angle-double-down', aria-hidden='true')
-				li(id='my-team', class='col-sm-12')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') My Team
-							a(class='tooltip-myteam', href="#", data-toggle="tooltip", title="Drag and Drop a Team Member in My To Do box.")
-								i(class='fa fa-info-circle', aria-hidden="true")
-						div(class='panel-body container')
-							ul(class='row')
-								li(class='team-member col-sm-4 col-md-3')
+								a.view-more(href="#", title="View More Tasks")
+									i.fa.fa-angle-double-down(aria-hidden='true')
+				li#my-team.col-sm-12
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title My Team
+							a.tooltip-myteam(href="#", data-toggle="tooltip", title="Drag and Drop a Team Member in My To Do box.")
+								i.fa.fa-info-circle(aria-hidden="true")
+						.panel-body.container
+							ul.row
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="1", class='img-circle draggable', src="images/team-member-abdi.png", alt="Abdikadir Kedie")
-									div(class='info')
+										img#1.img-circle.draggable(src="images/team-member-abdi.png", alt="Abdikadir Kedie")
+									.info
 										span Abdikadir Kedie
 										span Technical Architect
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="2", class='img-circle draggable', src="images/team-member-cindy.png", alt="Cindy Lopes")
-									div(class='info')
+										img#2.img-circle.draggable(src="images/team-member-cindy.png", alt="Cindy Lopes")
+									.info
 										span Cindy Lopes
 										span Technical Developer
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="3", class='img-circle draggable', src="images/team-member-dan.png", alt="Dan Sarbu")
-									div(class='info')
+										img#3.img-circle.draggable(src="images/team-member-dan.png", alt="Dan Sarbu")
+									.info
 										span Dan Sarbu
 										span Director - Software
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="4", class='img-circle draggable', src="images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
-									div(class='info')
+										img#4.img-circle.draggable(src="images/team-member-emmanuel.png", alt="Emmanuel Ballerini")
+									.info
 										span Emmanuel Ballerini
 										span Senior Technical Developer
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="5", class='img-circle draggable', src="images/team-member-jacob.png", alt="Jacob Tseng")
-									div(class='info')
+										img#5.img-circle.draggable(src="images/team-member-jacob.png", alt="Jacob Tseng")
+									.info
 										span Jacob Tseng
 										span Technical Architect
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="6", class='img-circle draggable', src="images/team-member-robbie.png", alt="Robbie Bisnath")
-									div(class='info')
+										img#6.img-circle.draggable(src="images/team-member-robbie.png", alt="Robbie Bisnath")
+									.info
 										span Robbie Bisnath
 										span Business Analyst
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="7", class='img-circle draggable', src="images/team-member-saba.png", alt="Saba Saba")
-									div(class='info')
+										img#7.img-circle.draggable(src="images/team-member-saba.png", alt="Saba Saba")
+									.info
 										span Saba Saba
 										span Technical Developer
-								li(class='team-member col-sm-4 col-md-3')
+								li.team-member.col-sm-4.col-md-3
 									figure
-										img(id="8", class='img-circle draggable', src="images/team-member-tim.png", alt="Tim Wilson")
-									div(class='info')
+										img#8.img-circle.draggable(src="images/team-member-tim.png", alt="Tim Wilson")
+									.info
 										span Tim Wilson
 										span Senior Business Analyst				
-				li(id='my-projects', class='col-sm-12')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') My Projects
-						div(class='panel-body')
+				li#my-projects.col-sm-12
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title My Projects
+						.panel-body
 							h3 My Projects Allocation Hours
-							div(class='projects-map')
-				li(id='my-stats', class='col-sm-12')
+							.projects-map
+				li#my-stats.col-sm-12
 					h2 My Stats (12 Months)
 					ul
 						li
-							span(class='badge')
-								span(class='value') 100
+							span.badge
+								span.value 100
 								| %
 							| Billable (avg 75%)
 						li
-							span(class='badge')
-								span(class='value') 0
+							span.badge
+								span.value 0
 								| %
 							| Under-Estimating (avg 43% over)
 						li
-							span(class='badge')
-								span(class='value') 96
+							span.badge
+								span.value 96
 								| %
 							| Timesheets On-time (avg 91%)
 						li
-							span(class='badge')
-								span(class='value') 0.0
+							span.badge
+								span.value 0.0
 								| days
 							| Vacation Taken
 						li
-							span(class='badge')
-								span(class='value') 0
+							span.badge
+								span.value 0
 								| hrs
 							| Overtime Accrued
 						li
-							span(class='badge')
-								span(class='value') 0
+							span.badge
+								span.value 0
 								| hrs
 							| Training Time
 						li
-							span(class='badge')
-								span(class='value') 0
+							span.badge
+								span.value 0
 								| hrs
 							| Working Group Time
-		div(class='col-sm-12 col-lg-2 nopadding')
-			ul(class='row')
-				li(id='did-you-know', class='skinned col-sm-4 col-lg-12')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') Did you know?
+		.col-sm-12.col-lg-2.nopadding
+			ul.row
+				li#did-you-know.skinned.col-sm-4.col-lg-12
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title Did you know?
 							a(href="#", title='Open Did you Know section', data-toggle="modal", data-target="#dyk-modal")
-								i(class='fa fa-pencil', aria-hidden="true")
-						div(class='panel-body')
-							div(id='carousel-dyk', class='carousel slide', data-ride='carousel')
-								div(class='carousel-inner', role='listbox')
-									div(class='item active')
-										img(src='./images/calendar.png', alt='Day')
-										div(class='carousel-caption')
-											p(class='lead') Why does the timesheet week start on a Saturday?
+								i.fa.fa-pencil(aria-hidden="true")
+						.panel-body
+							#carousel-dyk.carousel.slide(data-ride='carousel')
+								.carousel-inner(role='listbox')
+									.item.active
+										img(src='images/calendar.png', alt='Day')
+										.carousel-caption
+											p.lead Why does the timesheet week start on a Saturday?
 											p That is to match payroll which is based on Saturday to Fridayperiods.
-									div(class='item')
-										img(src='./images/calendar.png', alt='Day')
-										div(class='carousel-caption')
-											p(class='lead') Why does the timesheet week start on a Saturday?
+									.item
+										img(src='images/calendar.png', alt='Day')
+										.carousel-caption
+											p.lead Why does the timesheet week start on a Saturday?
 											p That is to match payroll which is based on Saturday to Fridayperiods.
-								a(class='left carousel-control', href='#carousel-dyk', role='button', data-slide='prev')
+								a.left.carousel-control(href='#carousel-dyk', role='button', data-slide='prev')
 									i(class='fa fa-chevron-left', aria-hidden="true")
-								a(class='right carousel-control', href='#carousel-dyk', role='button', data-slide='next')
+								a.right.carousel-control(href='#carousel-dyk', role='button', data-slide='next')
 									i(class='fa fa-chevron-right', aria-hidden="true")
-				li(id='team-member', class='skinned employee-of-the-month col-sm-8 col-lg-12')
-					div(class='panel panel-default')
-						div(class='panel-heading')
-							h2(class='panel-title') Team Member of the Day
-						div(class='panel-body')
-							img(class='img-employee img-responsive', src="images/employee.png", alt="Abdul Basit | Employee of the Month")
-							div(class='employee-info')
-								p(class='lead') Abdul Basit
+				li#team-member.skinned.employee-of-the-month.col-sm-8.col-lg-12
+					.panel.panel-default
+						.panel-heading
+							h2.panel-title Team Member of the Day
+						.panel-body
+							img.img-employee.img-responsive(src="images/employee.png", alt="Abdul Basit | Employee of the Month")
+							div.employee-info
+								p.lead Abdul Basit
 								p Technical Architect
 								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis posuere urna. Integer quam augue, porta ut efficitur id, aliquet faucibus eros. Proin quis odio non arcu iaculis vulputate non sed justo. Duis pellentesque leo vel turpis fringilla, ut volutpat nibh placerat. Aenean egestas blandit nibh, tristique tempor lorem vehicula ac.				
-							figure(class='employee-tags')
-								img(class='img-circle', src="images/badge-technology-leader.png", alt="Badge - Technology Leader")
-								img(class='img-circle', src="images/badge-business-leader.png", alt="Badge - Business Leader")
-								img(class='img-circle', src="images/badge-coach.png", alt="Badge - Coach")
-								img(class='img-circle', src="images/badge-ambassador.png", alt="Badge - Ambassador")
+							figure.employee-tags
+								img.img-circle(src="images/badge-technology-leader.png", alt="Badge - Technology Leader")
+								img.img-circle(src="images/badge-business-leader.png", alt="Badge - Business Leader")
+								img.img-circle(src="images/badge-coach.png", alt="Badge - Coach")
+								img.img-circle(src="images/badge-ambassador.png", alt="Badge - Ambassador")
 	include feed.jade
 	footer(class='page-footer') Lychee 2.0.0a

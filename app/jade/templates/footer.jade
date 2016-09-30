@@ -1,4 +1,4 @@
-.modal.fade(id='todo-modal', tabindex='-1', role='dialog')
+#todo-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
 			.modal-header
@@ -14,7 +14,7 @@
 							.col-sm-6.left-col
 								label(for="input-collaborator") Collaborators:
 								.input
-									input.form-control(id="input-collaborator", type='text', placeholder='Add a Collaborator')
+									input#input-collaborator.form-control(type='text', placeholder='Add a Collaborator')
 									span
 										i.fa.fa-search(aria-hidden='true')
 								ul
@@ -32,7 +32,7 @@
 								.bg-white
 									label(for="input-tasks") Task
 									.input
-										input.form-control(id="input-tasks", type='text', placeholder='Add a Task')
+										input#input-tasks.form-control(type='text', placeholder='Add a Task')
 										span
 											i.fa.fa-search(aria-hidden='true')
 								.form-group.row                
@@ -54,7 +54,7 @@
 									input.form-control#input-hours(type="text", placeholder="0.0")
 								button.btn.btn-primary(type='button') Log Time
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
-.modal.fade(id='task-details-modal', tabindex='-1', role='dialog')
+#task-details-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
 			.modal-header
@@ -89,7 +89,7 @@
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Close
 				button.btn.btn-primary(type='button') Log Time
-.modal.fade(id='assignment-modal', tabindex='-1', role='dialog')
+#assignment-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
 			.modal-header
@@ -109,57 +109,57 @@
 							label.col-sm-4.control-label(for="input-startdate") Start Date:
 							.col-sm-8
 								.input-icon
-									input.form-control(id="input-startdate", type="text", placeholder="2016-07-08")
+									input#input-startdate.form-control(type="text", placeholder="2016-07-08")
 									span
 										a.btn-startdate(href="#")
-											i.fa.fa-calendar
+											i.fa.fa-calendar(aria-hidden='true')
 						.form-group
 							label.col-sm-4.control-label(for="input-enddate") End Date:
 							.col-sm-8
 								.input-icon
-									input.form-control(id="input-enddate", type="text", placeholder="2017-04-27")
+									input#input-enddate.form-control(type="text", placeholder="2017-04-27")
 									span
 										a.btn-enddate(href="#")
-											i.fa.fa-calendar
+											i.fa.fa-calendar(aria-hidden='true')
 						.form-group
 							label.col-sm-4.control-label(for="input-rate") Rate ($/hr)
 							.col-sm-8
-								input.form-control(id="input-rate", type="text", placeholder="75.00")
+								input#input-rate.form-control(type="text", placeholder="75.00")
 						.form-group
 							label.col-sm-4.control-label(for="input-allocation") Allocation (%)
 							.col-sm-8
-								input.form-control(id="input-allocation", type="text", placeholder="100.0")
+								input#input-allocation.form-control(type="text", placeholder="100.0")
 						.form-group.contributions
 							label.col-sm-4(for="input-check") Contributions to Accural
 							.col-sm-8
-								input(id="input-check", type='checkbox')
+								input#input-check(type='checkbox')
 					fieldset
 						legend.lbl-heading Project Roles
 						.form-group
 							.checkbox
 								label(for="input-projectdirector")
-									input(id="input-projectdirector", type='checkbox')
+									input#input-projectdirector(type='checkbox')
 									| Project Director
 							.checkbox
 								label(for="input-projectmanager")
-									input(id="input-projectmanager", type='checkbox')
+									input#input-projectmanager(type='checkbox')
 									| Project Manager
 							.checkbox
 								label(for="input-teamlead")
-									input(id="input-teamlead", type='checkbox')
+									input#input-teamlead(type='checkbox')
 									| Team Lead
 							.checkbox
 								label(for="input-approver")
-									input(id="input-approver", type='checkbox')
+									input#input-approver(type='checkbox')
 									| Approver
 							.checkbox
 								label(for="input-teammember")
-									input(id="input-teammember", type='checkbox')
+									input#input-teammember(type='checkbox')
 									| Team Member
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Cancel
 				button.btn.btn-tertiary(type='button') Ok
-.modal.fade(id='edit-project-modal', tabindex='-1', role='dialog')
+#edit-project-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
 			.modal-header
@@ -171,28 +171,28 @@
 					.form-group
 						label.control-label.col-sm-4(for="select-program-name") Program
 						.col-sm-8
-							select.selectpicker(id="select-program-name")
+							select#select-program-name.selectpicker
 								option Some Program Name
 								option Web Design
 								option Web Development
 					.form-group
 						label.control-label.col-sm-4(for="select-familiar-name") Familiar Name
 						.col-sm-8
-							select.selectpicker(id="select-familiar-name")
+							select#select-familiar-name.selectpicker
 								option ProgramName
 								option WebDesign
 								option WebDevelopment
 					.form-group
 						label.control-label.col-sm-4(for="select-status") This project is currently
 						.col-sm-8
-							select.selectpicker(id="select-status")
+							select#select-status.selectpicker
 								option Active
 								option Inactive
 								option Full
 					.form-group
 						label.control-label.col-sm-4(for="select-associates") Associate JIRA project
 						.col-sm-8
-							select.selectpicker(id="select-associates")
+							select#select-associates.selectpicker
 								option Search JIRA Projects
 								option Search Lychee Projects
 								option Search Baustein Projects
@@ -206,7 +206,7 @@
 							.form-group
 								label.control-label.col-sm-4(for="select-stage") Stage
 								.col-sm-8.span-half
-									select.selectpicker(id="select-stage")
+									select#select-stage.selectpicker
 										option Closed Won (100%)
 										option Closed Won (90%)
 										option Closed Won (80%)
@@ -218,7 +218,7 @@
 								label.control-label.col-sm-4(for="input-startingdate") Closing Date
 								.col-sm-8
 									.input-icon
-										input.form-control(id="input-startingdate", type="text", placeholder="2016-07-08")
+										input#input-startingdate.form-control(type="text", placeholder="2016-07-08")
 										span
 											a.btn-startingdate(href="#")
 												i.fa.fa-calendar
@@ -226,7 +226,7 @@
 								label.control-label.col-sm-4(for="input-closingdate") Starting Date
 								.col-sm-8
 									.input-icon
-										input.form-control(id="input-closingdate", type="text", placeholder="2016-07-08")
+										input#input-closingdate.form-control(type="text", placeholder="2016-07-08")
 										span
 											a.btn-closingdate(href="#")
 												i.fa.fa-calendar
@@ -234,7 +234,7 @@
 								label.control-label.col-sm-4(for="input-endingdate") Ending Date
 								.col-sm-8
 									.input-icon
-										input.form-control(id="input-endingdate", type="text", placeholder="2016-07-08")
+										input#input-endingdate.form-control(type="text", placeholder="2016-07-08")
 										span
 											a.btn-endingdate(href="#")
 												i.fa.fa-calendar
@@ -247,37 +247,37 @@
 						.form-group
 							label.control-label.col-sm-4(for="select-invoicingtype") Invoicing Type
 							.col-sm-8
-								select.selectpicker(id="select-invoicingtype")
+								select#select-invoicingtype.selectpicker
 									option Fixed Price
 									option Flexible Price
 									option Sales
 						.form-group
 							label.control-label.col-sm-4(for="select-paymentterms") Payment Terms
 							.col-sm-8
-								select.selectpicker(id="select-paymentterms")
+								select#select-paymentterms.selectpicker
 									option Net 30 Days
 									option Net 60 Days
 									option Net 90 Days
 						.form-group
 							label.control-label.col-sm-4(for="input-ponumber") PO Number
 							.col-sm-8
-								input.form-control(id="input-ponumber", type="text", placeholder="23135465134534")
+								input#input-ponumber.form-control(type="text", placeholder="23135465134534")
 						.form-group
 							label.control-label.col-sm-4(for="input-budget") Budget $
 							.col-sm-8
-								input.form-control(id="input-budget", type="text", placeholder="1000.00")
+								input#input-budget.form-control(type="text", placeholder="1000.00")
 						.form-group
 							label.control-label.col-sm-4(for="input-svn") SVN
 							.col-sm-8
-								input.form-control(id="input-svn", type="text")
+								input#input-svn.form-control(type="text")
 						.form-group
 							label.control-label.col-sm-4(for="input-invoicingnotes") Invoicing Notes
 							.col-sm-8
-								textarea.form-control(id="input-invoicingnotes", type="textarea", rows="5")
+								textarea#input-invoicingnotes.form-control(type="textarea", rows="5")
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Cancel
 				button.btn.btn-tertiary(type='button') Ok
-.modal.fade(id='dyk-modal', tabindex='-1', role='dialog')
+#dyk-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
 			.modal-header

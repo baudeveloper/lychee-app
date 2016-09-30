@@ -64,13 +64,13 @@ main.container-fluid.page-team-list(role="main")
 								a(href='#') Z
 				.form-group
 					label(for="select-usertype") User Type:
-					select.selectpicker(id="select-usertype")
+					select#select-usertype.selectpicker
 						option(value="*") All
 						option(value=".employees") Employees
 						option(value=".contractors") Contractors
 				.form-group
 					label(for="select-usertype") User Role:
-					select.selectpicker(id="select-userrole")
+					select#select-userrole.selectpicker
 						option(value="*") All
 						option(value=".principal") Principal
 						option(value=".director") Director

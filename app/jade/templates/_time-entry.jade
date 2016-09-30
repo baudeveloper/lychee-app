@@ -29,36 +29,36 @@ main.container-fluid.page-time-entry(role="main")
 						li#id1.folder.expanded(title='RouteOne')
 							| RouteOne
 							ul
-								li.folder.expanded(id='id1.1', title='Credit Aggregation Platform')
+								li#id1.1.folder.expanded(title='Credit Aggregation Platform')
 									| Credit Aggregation Platform
 									ul
-										li.folder.expanded(id='id1.1.1', title='RONE-0757 (Remote Document Delivery)')
+										li#id1.1.1.folder.expanded(title='RONE-0757 (Remote Document Delivery)')
 											| RONE-0757 (Remote Document Delivery)
 											ul
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| FFD-C2029 - Analysis
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| FFD-C2029 - Testing
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| FFD-C2029 - Development
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| FFD-C2029 - UI Design
-										li.folder.expanded(id='id1.1.2', title='Release 16.9')
+										li#id1.1.2.folder.expanded(title='Release 16.9')
 											| Release 16.9
 											ul
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| CORE-7696 Remove Authy
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| CORE-8758 Black list document to not delivery
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| CORE-8758 Privacy Policy implementation
-												li(id='id1.1.1.1')
+												li#id1.1.1.1
 													| CORE-8758 Capturing billing information
-								li.folder(id='id1.2', title='RONE-0743 (CAMS 2016 Travel)')
+								li#id1.2.folder(title='RONE-0743 (CAMS 2016 Travel)')
 									| RONE-0743 (CAMS 2016 Travel)
-								li.folder(id='id1.3', title='RONE-0749 (R1 Mobile App 2016)')
+								li#id1.3.folder(title='RONE-0749 (R1 Mobile App 2016)')
 									| RONE-0749 (R1 Mobile App 2016)
-								li.folder(id='id1.4', title='RONE-0742 (CAMS 2016)')
+								li#id1.4.folder(title='RONE-0742 (CAMS 2016)')
 									| RONE-0749 (CAMS 2016)
 		section#task-list.col-sm-12.col-lg-8
 			form.panel.panel-default
@@ -75,10 +75,10 @@ main.container-fluid.page-time-entry(role="main")
 								button.btn.btn-default.btn-secondary(type='button')
 									i.fa.fa-chevron-right(aria-hidden='true')
 						.btn-group.pull-right(role='group')
-							button.btn.btn-default.btn-secondary(type='button', id='tabone') Day
-							button.btn.btn-default.btn-secondary.active(type='button', id='tabtwo') Week
-							button.btn.btn-default.btn-secondary(type='button', id='tabthree') Business Week
-					.headers(id='headers-one')
+							button#tabone.btn.btn-default.btn-secondary(type='button') Day
+							button#tabtwo.btn.btn-default.btn-secondary.active(type='button') Week
+							button#tabthree.btn.btn-default.btn-secondary(type='button') Business Week
+					.headers#headers-one
 						table(width="100%")
 							colgroup
 								col(width="3%")
@@ -91,7 +91,7 @@ main.container-fluid.page-time-entry(role="main")
 									th Task
 									th &nbsp;
 									th Time
-					.headers(id='headers-two')
+					.headers#headers-two
 						table(width="100%")
 							colgroup
 								col(width="3%")
@@ -116,7 +116,7 @@ main.container-fluid.page-time-entry(role="main")
 									th Thu<br>Aug 18
 									th Fri<br>Aug 19
 									th Total					
-					.headers(id="headers-three")
+					.headers#headers-three
 						table(width="100%")
 							colgroup
 								col(width="3%")
@@ -138,7 +138,7 @@ main.container-fluid.page-time-entry(role="main")
 									th Fri<br>Aug 19
 									th Total					
 				.panel-body
-					ul.list-group.view(id='view-one')
+					ul#view-one.list-group.view
 						li.sticky.list-group-item
 							table
 								colgroup
@@ -172,13 +172,13 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack(aria-hidden='true')
 										td
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
 											a.btn.btn-tertiary.btn-block
 												i.fa.fa-clock-o
 												| Start Timer
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
+											input#input-timer.form-control(type="text", placeholder="2:05", maxlength="4")
 						li.list-group-item
 							table
 								colgroup
@@ -212,13 +212,13 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										td
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
 											a.btn.btn-tertiary.btn-block
 												i.fa.fa-clock-o
 												| Start Timer
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
+											input#input-timer.form-control(type="text", placeholder="2:05", maxlength="4")
 						li.list-group-item
 							table
 								colgroup
@@ -252,14 +252,14 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										td
-											input.form-control(id="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
 											a.btn.btn-tertiary.btn-block
 												i.fa.fa-clock-o
 												| Start Timer
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="2:05", maxlength="4")
-					ul.list-group.view(id='view-two')
+											input#input-timer.form-control(type="text", placeholder="2:05", maxlength="4")
+					ul#view-two.list-group.view
 						li.sticky.list-group-item
 							table
 								colgroup
@@ -299,77 +299,21 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack(aria-hidden='true')
 										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="33%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-sticky-note-o(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group
-											a.btn-details(title="Details", data-toggle="modal", data-target="#task-details-modal")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 						li.list-group-item
@@ -411,24 +355,80 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
-					ul.list-group.view(id='view-three')
+						li.list-group-item
+							table
+								colgroup
+									col(width="3%")
+									col(width="33%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-sticky-note-o(aria-hidden='true')
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil(aria-hidden='true')
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(title="Details", data-toggle="modal", data-target="#task-details-modal")
+												i.fa.fa-list-alt(aria-hidden='true')
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o(aria-hidden='true')
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap(aria-hidden='true')
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history(aria-hidden='true')
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash(aria-hidden='true')
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+										td
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											span 0:00
+					ul#view-three.list-group.view
 						li.sticky.list-group-item
 							table
 								colgroup
@@ -466,67 +466,17 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack(aria-hidden='true')
 										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											span 0:00
-						li.list-group-item
-							table
-								colgroup
-									col(width="3%")
-									col(width="49%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-									col(width="8%")
-								tbody
-									tr
-										td(colspan="1")
-											a.btn-tasks(href="#", title="Tasks")
-												i.fa.fa-sticky-note-o(aria-hidden='true')
-										td(colspan="1")
-											span FFD-C2029 - UI Design
-											a.btn-edit(href="#", title="Edit")
-												i.fa.fa-pencil(aria-hidden='true')
-											small RONE-0757 (Remote Document Delivery)									
-										td(colspan="8").icon-group
-											a.btn-details(title="Details", data-toggle="modal", data-target="#task-details-modal")
-												i.fa.fa-list-alt(aria-hidden='true')
-											a.btn-complete(href="#", title="Complete")
-												i.fa.fa-check-square-o(aria-hidden='true')
-											a.btn-archive(href="#", title="Archive Tree")
-												i.fa.fa-sitemap(aria-hidden='true')
-											a.btn-estimate(href="#", title="Estimate")
-												i.fa.fa-history(aria-hidden='true')
-											a.btn-delete(href="#", title="Delete")
-												i.fa.fa-trash(aria-hidden='true')
-									tr
-										td
-											a.btn-pin(href="#", title="Pin")
-												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
-										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
-										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 						li.list-group-item
@@ -566,17 +516,67 @@ main.container-fluid.page-time-entry(role="main")
 											a.btn-pin(href="#", title="Pin")
 												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										td
-											input.form-control(id-="input-comments", type="text", placeholder="Add Comments here...")
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
-											input.form-control(class-="input-timer", type="text", placeholder="0:00", maxlength="4")
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											span 0:00
+						li.list-group-item
+							table
+								colgroup
+									col(width="3%")
+									col(width="49%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+									col(width="8%")
+								tbody
+									tr
+										td(colspan="1")
+											a.btn-tasks(href="#", title="Tasks")
+												i.fa.fa-sticky-note-o(aria-hidden='true')
+										td(colspan="1")
+											span FFD-C2029 - UI Design
+											a.btn-edit(href="#", title="Edit")
+												i.fa.fa-pencil(aria-hidden='true')
+											small RONE-0757 (Remote Document Delivery)									
+										td(colspan="8").icon-group
+											a.btn-details(title="Details", data-toggle="modal", data-target="#task-details-modal")
+												i.fa.fa-list-alt(aria-hidden='true')
+											a.btn-complete(href="#", title="Complete")
+												i.fa.fa-check-square-o(aria-hidden='true')
+											a.btn-archive(href="#", title="Archive Tree")
+												i.fa.fa-sitemap(aria-hidden='true')
+											a.btn-estimate(href="#", title="Estimate")
+												i.fa.fa-history(aria-hidden='true')
+											a.btn-delete(href="#", title="Delete")
+												i.fa.fa-trash(aria-hidden='true')
+									tr
+										td
+											a.btn-pin(href="#", title="Pin")
+												i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
+										td
+											input#input-comments.form-control(type="text", placeholder="Add Comments here...")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
+										td
+											input.input-timer.form-control(type="text", placeholder="0:00", maxlength="4")
 										td
 											span 0:00
 				.panel-footer
