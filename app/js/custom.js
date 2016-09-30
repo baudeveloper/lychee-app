@@ -52,6 +52,12 @@ $(document).ready(function() {
     }); // Source: http://jsfiddle.net/j3PFE/
 
     /* Time Entry Page */
+    $(".toggle-te").click(function(e) {
+      e.stopPropagation();
+      $(this).find(".fa").toggleClass("fa-blue fa-rotate-90");
+      $(this).parents("tr").toggleClass("tr-blue").siblings("*").removeClass("tr-blue");
+      $(this).parents("tr").siblings("*").not(".tr-blue").find(".toggle-te .fa").removeClass("fa-blue").addClass("fa-rotate-90");
+    });
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
     });

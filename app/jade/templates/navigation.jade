@@ -64,16 +64,27 @@ nav#topnav.navbar.navbar-fixed-top(role="navigation")
 										span (hh:mm:ss:)
 									th Timer Actions
 							tbody
-								tr.tr-blue
+								tr
 									td
-										i.fa.fa-thumb-tack.fa-blue(aria-hidden='true')
+										a.toggle-te(href="#")
+											i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										| FFD-C2029 - UI Design
 										small RONE-0757 (Remote Document Delivery)
 									td
+										.input-group
+											span.input-group-btn
+												button.btn.btn-tertiary
+													i.fa.fa-play.fa-white(aria-hidden='true')
+											input.form-control(type='text', placeholder='00:55:00', maxlength="8")
 									td
-								tr.tr-grey
+										a(href="#")
+											i.fa.fa-share.fa-red(aria-hidden='true')
+										a(href="#")
+											i.fa.fa-close.fa-red(aria-hidden='true')
+								tr
 									td
-										i.fa.fa-thumb-tack.fa-medium-grey.fa-rotate-90(aria-hidden='true')
+										a.toggle-te(href="#")
+											i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										| FFD-C2029 - Development
 										small RONE-0757 (Remote Document Delivery)
 									td
@@ -89,11 +100,21 @@ nav#topnav.navbar.navbar-fixed-top(role="navigation")
 											i.fa.fa-close.fa-red(aria-hidden='true')
 								tr
 									td
-										i.fa.fa-thumb-tack.fa-medium-grey.fa-rotate-90(aria-hidden='true')
+										a.toggle-te(href="#")
+											i.fa.fa-thumb-tack.fa-rotate-90(aria-hidden='true')
 										| FFD-C2029 - Testing
 										small RONE-0757 (Remote Document Delivery)
 									td
+										.input-group
+											span.input-group-btn
+												button.btn.btn-tertiary
+													i.fa.fa-play.fa-white(aria-hidden='true')
+											input.form-control(type='text', placeholder='00:55:00', maxlength="8")
 									td
+										a(href="#")
+											i.fa.fa-share.fa-red(aria-hidden='true')
+										a(href="#")
+											i.fa.fa-close.fa-red(aria-hidden='true')
 							tfoot
 								tr
 									td(colspan="3")
