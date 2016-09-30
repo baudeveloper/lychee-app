@@ -838,6 +838,9 @@
       }
     }
     tbody {
+      tr:hover {
+        background-color: $medium-light-grey;
+      }
       td {
         color: $grey;
         padding: 10px 15px;
