@@ -79,22 +79,24 @@ $(document).ready(function() {
     			}
     		}
     	}
-    	document.getElementById("input-timer").value = min + ":" + sec + ":" + msec;
+      document.getElementById("input-timer").value = min + ":" + sec + ":" + msec;
     }
-    $('.btn-timer').bind('click', myHandlerFunction);
     var first = true;
     function myHandlerFunction(e) {
         if(first) {
           e.stopPropagation();
           if (timer !== null) return;
           timer = setInterval(clock, 1000);
+          $(this).find(".fa").toggleClass("fa-pause fa-play");
         } else{
           e.stopPropagation();
           clearInterval(timer);
-          timer = null
+          timer = null;
+          $(this).find(".fa").toggleClass("fa-pause fa-play");
         }
         first = !first; // Invert `first`
     }
+    $('.btn-timer').bind('click', myHandlerFunction);
 
     $(".input-datepicker").datepicker({
       format: "dd MM, yyyy"
