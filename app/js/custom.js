@@ -79,7 +79,7 @@ $(document).ready(function() {
     			}
     		}
     	}
-      document.getElementById("input-timer").value = min + ":" + sec + ":" + msec;
+      $("#input-timer").val(min + ":" + sec + ":" + msec);
     }
     var first = true;
     function myHandlerFunction(e) {
