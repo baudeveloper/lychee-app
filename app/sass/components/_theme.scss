@@ -130,7 +130,8 @@
 
 // Team Member Page
 .page-team-member {
-  h2 {
+  #user-profile h2,
+  #user-assignments h2 {
     color: $red;
     @include font-size(18px);
     text-transform: uppercase;
