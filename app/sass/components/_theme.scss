@@ -592,7 +592,8 @@
       top: 0;
       bottom: 0;
       width: 100px;
-      height: 500px;
+      height: 100%;
+      min-height: 500px;
       .btn-group {
         width: 100%;
         margin-top: 15px;
@@ -644,7 +645,8 @@
     }
     &.all-tasks {
       width: 30%;
-      height: 500px;
+      height: 100%;
+      min-height: 500px;
       margin-left: 100px;
       padding: 15px;
       border-left: 1px solid $darkest-grey;
@@ -681,7 +683,6 @@
       width: calc(70% - 30px);
       // height: 250px;
       border-left: none;
-
       border-bottom: 1px solid $darkest-grey;
       li a {
         border: none;
@@ -709,8 +710,12 @@
     &.tab-content {
       position: relative;
       width: calc(70% - 100px);
-      height: 500px;
-        padding: 0;
+      height: 100%;
+      min-height: 500px;
+      padding: 0;
+      h3 {
+        margin-top: 10px;
+      }
       @media #{$tablet} {
         width: calc(100% - 100px);
         height: 200px;
