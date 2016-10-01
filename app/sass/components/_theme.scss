@@ -282,6 +282,7 @@
 // Time Entry Page
 #task-directory {
   .bg {
+    padding: 15px;
     background-color: $white;
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     border: 1px solid $extra-super-dark-grey;
@@ -290,15 +291,29 @@
     }
     @include inline-input();
     @include typeahead-standard();
-    .button {
-      padding: 15px 0 0 15px;
+    .input {
+      margin: -15px -15px 0;
     }
-    .dropdown-menu {
-      left: auto;
-    }
-    // Dropdown Menu position.
-    .input > span {
-      color: $medium-grey;
+    .btn-group {
+      width: 100% !important;
+      margin-bottom: 15px;
+      button {
+        @include font-size(16px);
+      }
+      .dropdown-menu a {
+        @include font-size(14px);
+      }
+      .dropdown-header {
+        margin-left: -8px;
+        color: $medium-grey;
+        @include font-size(12px);
+      }
+      .divider {
+        background-color: $darkest-grey;
+      }
+      button {
+        color: $red;
+      }
     }
   }
 }
@@ -641,8 +656,13 @@
         border-bottom: 1px solid $darkest-grey;
       }
       .btn-group {
-        button, .dropdown-menu a {
+        width: 100% !important;
+        margin-bottom: 15px;
+        button {
           @include font-size(16px);
+        }
+        .dropdown-menu a {
+          @include font-size(14px);
         }
         .dropdown-header {
           margin-left: -8px;
@@ -651,6 +671,9 @@
         }
         .divider {
           background-color: $darkest-grey;
+        }
+        button {
+          color: $red;
         }
       }
     }

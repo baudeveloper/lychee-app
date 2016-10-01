@@ -6,20 +6,27 @@ main.container-fluid.page-time-entry(role="main")
 	.row
 		aside#task-directory.hidden-sm.col-sm-12.col-lg-4
 			.bg
-				.button.btn-group
-					button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-						| All Tasks 
-						span.caret
-					ul.dropdown-menu
-						li
-							a(href='#') Action
-						li
-							a(href='#') Another action
-						li
-							a(href='#') Something else here
-						li.divider(role='separator')
-						li
-							a(href='#') Separated link
+				select.selectpicker(multiple, title="Filtered Tasks...")
+					option Show All Tasks
+					optgroup(label="Status")
+						option Active Tasks
+						option Obsolete Tasks
+					optgroup(label="Effort")
+						option Billable Tasks
+						option Unbillable Tasks
+					optgroup(label="Progress")
+						option Completed Tasks
+						option Incomplete Tasks
+					optgroup(label="Ownership")
+						option My Tasks
+						option Other's Tasks
+					optgroup(label="Types")
+						option Standard Tasks
+						option Overhead Tasks
+						option JIRA-linked Tasks
+						option Overhead Tasks
+						option Milestones
+						option Unplanned
 				.input
 					input.form-control(id="input-collaborator", type='text', placeholder='Search for Tasks...')
 					span

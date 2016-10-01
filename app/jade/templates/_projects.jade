@@ -97,49 +97,27 @@ main.container-fluid.page-project(role='main')
 									i.fa.fa-long-arrow-left(aria-hidden='true')
 									span Collapse
 					li.all-tasks.block
-						.button.btn-group
-							button.btn.btn-default.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-								| Filtered Tasks...
-								span.caret
-							ul.dropdown-menu
-								li
-									a(href='#') Show All Tasks
-								li.divider(role='separator')
-								li.dropdown-header Status
-								li
-									a(href='#') Active Tasks
-								li
-									a(href='#') Obsolete Tasks
-								li.divider(role='separator')
-								li.dropdown-header Effort
-								li
-									a(href='#') Billable Tasks
-								li
-									a(href='#') Unbillable Tasks
-								li.divider(role='separator')
-								li.dropdown-header Progress
-								li
-									a(href='#') Completed Tasks
-								li
-									a(href='#') Incomplete Tasks
-								li.divider(role='separator')
-								li.dropdown-header Ownership
-								li
-									a(href='#') My Tasks
-								li
-									a(href='#') Other's Tasks
-								li.divider(role='separator')
-								li.dropdown-header Types
-								li
-									a(href='#') Standard Tasks
-								li
-									a(href='#') Overhead Tasks
-								li
-									a(href='#') JIRA-linked Tasks
-								li
-									a(href='#') Milestones
-								li
-									a(href='#') Unplanned									
+						select.selectpicker(multiple, title="Filtered Tasks...")
+							option Show All Tasks
+							optgroup(label="Status")
+								option Active Tasks
+								option Obsolete Tasks
+							optgroup(label="Effort")
+								option Billable Tasks
+								option Unbillable Tasks
+							optgroup(label="Progress")
+								option Completed Tasks
+								option Incomplete Tasks
+							optgroup(label="Ownership")
+								option My Tasks
+								option Other's Tasks
+							optgroup(label="Types")
+								option Standard Tasks
+								option Overhead Tasks
+								option JIRA-linked Tasks
+								option Overhead Tasks
+								option Milestones
+								option Unplanned
 						ul#treeData(style='display: none;')
 							li#id1.folder.expanded(title='RouteOne')
 								| RouteOne

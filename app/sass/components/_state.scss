@@ -105,6 +105,18 @@ button {
   }
 }
 
+// Button Group with Dropdown, Make it Block level and Push caret to the right, Text to the left.
+.btn-group.btn-block {
+  .btn {
+    text-align: left;
+  }
+  .caret {
+    position: absolute;
+    left: 90%;
+    top: 45%;
+  }
+}
+
 // Labels
 label {
   color: $grey;
@@ -131,9 +143,9 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"], {
-  box-shadow: none;
   min-height: 36px;
   border-radius: 0 !important;
+  box-shadow: none !important;
   @media #{$tablet} {
     min-height: 34px;
   }
@@ -143,6 +155,7 @@ input[type="color"], {
 textarea {
   resize: none;
   border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 // Alert
