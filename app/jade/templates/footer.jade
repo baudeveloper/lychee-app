@@ -7,10 +7,10 @@
 				h4.modal-title FFD-C2029 - UI Design
 			.modal-body
 				nav Do Something...
-				section            
+				section
 					p.created-by #[strong Created By:] Prasanna Kugananthan on Thursday, September 1, 2016 at 4:15 PM
 					.container
-						.row              
+						.row
 							.col-sm-6.left-col
 								label(for="input-collaborator") Collaborators:
 								.input
@@ -35,15 +35,15 @@
 										input#input-tasks.form-control(type='text', placeholder='Add a Task')
 										span
 											i.fa.fa-search(aria-hidden='true')
-								.form-group.row                
+								.form-group.row
 									.col-sm-12
 										label.control-label(for='input-comment') Enter a comment
 										textarea.form-control#input-comment(placeholder='Write a comment...', rows='3')
 			.modal-footer
 				.pull-left
 					button.btn.btn-primary(type='button')
-						i.fa.fa-check-square-o(aria-hidden='true')              
-						| Mark as Complete              
+						i.fa.fa-check-square-o(aria-hidden='true')
+						| Mark as Complete
 					button.btn.btn-default(type='button', data-dismiss='modal') Defer
 				.pull-right
 					form.form-inline
@@ -68,7 +68,7 @@
 					a.modal-details.pull-right(href="#") Details
 						i.fa.fa-caret-down(aria-hidden='true')
 					.nav-info
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.                    
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, officiis id magni iure, architecto ipsum fugiat magnam reprehenderit, mollitia totam alias aut a, nisi quasi velit. Dolore ea qui fugiat.
 				.container
 					.row
 						.col-sm-6
@@ -83,12 +83,19 @@
 										span (33% of Estimate)
 									input.input-taskdetails(type="text", placeholder="250 hrs")
 								li
-									.title Remaining 
+									.title Remaining
 										span (66% of Estimate)
 									input.input-taskdetails(type="text", placeholder="500 hrs")
 			.modal-footer
 				button.btn.btn-default(type='button', data-dismiss='modal') Close
 				button.btn.btn-primary(type='button') Log Time
+#tasks-list-modal.modal.fade(tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+			.modal-body
 #assignment-modal.modal.fade(tabindex='-1', role='dialog')
 	.modal-dialog(role='document')
 		.modal-content
@@ -243,7 +250,7 @@
 								input(type='radio', name='project', value="101")
 								| An Ongoing Project
 					fieldset
-						legend.lbl-heading Contract Details				
+						legend.lbl-heading Contract Details
 						.form-group
 							label.control-label.col-sm-4(for="select-invoicingtype") Invoicing Type
 							.col-sm-8

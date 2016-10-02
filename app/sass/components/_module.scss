@@ -1544,6 +1544,12 @@
   .tablesaw-swipe .tablesaw-cell-persist {
     box-shadow: none !important;
   }
+  .tablesaw-bar {
+    margin-top: -4px;
+    @media #{$tablet__up} {
+      display: none;
+    }
+  }
   .tablesaw-bar .minimap {
     margin-top: -8px;
   }

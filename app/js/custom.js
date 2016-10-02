@@ -123,7 +123,7 @@ $(document).ready(function() {
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
     }); // Source: http://stackoverflow.com/questions/25365491/jquery-tab-like-effect-show-hide-div-on-click
-    var $tasksListDropdown = $('#task-directory .btn-group').clone();
+    var $tasksListDropdown = $('#task-directory .selectpicker').clone();
     var $tasksListContent = $('#task-directory .input, #task-directory #fancytree').clone();
     $('#tasks-list-modal .modal-header').append($tasksListDropdown);
     $('#tasks-list-modal .modal-body').append($tasksListContent);

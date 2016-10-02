@@ -241,7 +241,7 @@
       margin-right: 5px;
     }
     @media #{$tablet__up} {
-      width: 40%;
+      width: 60%;
     }
   }
   table {
@@ -252,11 +252,23 @@
         color: $grey;
       }
       td {
-        text-align: center;
         @include font-size(14px);
         &:first-of-type {
           color: $red;
         }
+      }
+      tr:nth-of-type(2n) {
+        background-color: $extra-light-grey !important;
+      }
+    }
+    @media #{$tablet} {
+      td, th {
+        text-align: left !important;
+      }
+    }
+    @media #{$tablet__up} {
+      td, th {
+        text-align: center !important;
       }
     }
   }
@@ -272,8 +284,10 @@
       @include font-size(14px);
       background-color: $extra-light-grey;
     }
-    tr:nth-of-type(2n) {
-      background-color: $extra-light-grey;
+    @media #{$tablet} {
+      th, td {
+        text-align: left;
+      }
     }
   }
 }
