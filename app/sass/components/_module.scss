@@ -986,9 +986,6 @@
     @include font-size(28px);
     font-weight: $font-weight-light;
   }
-  .tt-dataset:last-child h3 {
-    margin-top: 20px;
-  }
   .tt-suggestion {
     color: $grey;
     line-height: 2;
