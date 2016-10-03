@@ -1205,7 +1205,7 @@
           &:last-of-type {
             margin-bottom: 0;
             .title {
-              @include icon-before( '\f017', $light-green);
+              @include icon-before( '\f1da', $medium-grey);
             }
           }
           .title {
