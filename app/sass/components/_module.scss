@@ -513,6 +513,8 @@
       a {
         color: $grey;
         @include hyperlink-hover($grey);
+        display: block;
+        max-width: 60%;
       }
     }
     .over {
