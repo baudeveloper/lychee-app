@@ -294,7 +294,7 @@ $(document).ready(function() {
     });
     $("#my-todo .view-more").on('click', function(e) {
         e.preventDefault();
-        $("#my-todo .tab-pane.active li:hidden").slice(0, 5).slideDown('normal', function() {
+        $("#my-todo .tab-pane.active li:hidden").slice(0, 4).slideDown('normal', function() {
             $(this).css('display', 'block');
         });
         if ($("#my-todo .tab-pane.active li:hidden").length == 0) {
