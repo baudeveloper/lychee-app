@@ -1213,6 +1213,14 @@
             @include font-size(14px);
             text-transform: uppercase;
           }
+          .taskdetails {
+            color: $grey;
+            @include font-size(38px);
+            font-weight: $font-weight-light;
+            &:focus {
+              border: 1px solid $green;
+            }
+          }
           .input-taskdetails {
             color: $grey;
             width: 100%;
