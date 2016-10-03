@@ -380,11 +380,19 @@
 										| Active Duration
 								.col-sm-6
 									.form-group
-										label(for="input-validfrom") Vaild From:
-										input#input-validfrom.form-control(type="text", placeholder="Date")
+										label(for="input-validfrom") Vaild From:										
+										.input-icon
+											input#input-validfrom.form-control(type="text", placeholder="2016-07-08")
+											span
+												a.btn-startingdate(href="#")
+													i.fa.fa-calendar
 									.form-group
 										label(for="input-validto") Vaild To:
-										input#input-validto.form-control(type="text", placeholder="Date")
+										.input-icon
+											input#input-validto.form-control(type="text", placeholder="2016-07-08")
+											span
+												a.btn-startingdate(href="#")
+													i.fa.fa-calendar
 			.modal-footer
 				.pull-left
 					button.btn.btn-tertiary(type='button', data-dismiss='modal')
