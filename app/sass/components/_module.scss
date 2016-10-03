@@ -1453,12 +1453,10 @@
           }
         }
         .item-expired {
-          // opacity: 0.4;
           position: relative;
-          // background-color: $white;
           pointer-events: none;
-          &::before {
-            content: 'Expired';
+          .overlay {
+            content: '';
             position: absolute;
             height: 100%;
             width: 100%;
@@ -1472,6 +1470,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            .fa {
+              display: block;
+              text-align: center;
+            }
           }
         }
         .carousel-control {
