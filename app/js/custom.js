@@ -223,14 +223,14 @@ $(document).ready(function() {
         display: 'team',
         source: nbaTeams,
         templates: {
-            header: '<h3 class="league-name">NBA Teams</h3>'
+            header: '<h3 class="league-name">Customers</h3>'
         }
     }, {
         name: 'nhl-teams',
         display: 'team',
         source: nhlTeams,
         templates: {
-            header: '<h3 class="league-name">NHL Teams</h3>'
+            header: '<h3 class="league-name">Projects</h3>'
         }
     });
 
