@@ -1528,13 +1528,13 @@
     font-weight: $font-weight-bold !important;
     font-family: "Roboto Condensed", sans-serif !important;
     @media #{$tablet} {
-      font-size: 12px !important;
+      // font-size: 12px !important;
     }
   }
   .tablesaw tbody td {
     font-size: 14px !important;
     @media #{$tablet} {
-      font-size: 12px !important;
+      // font-size: 12px !important;
     }
   }
   .tablesaw td {
