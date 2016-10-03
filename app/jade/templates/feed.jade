@@ -1,34 +1,43 @@
 aside.feed
-	h2 Today
-	ul.list-group
-		li.list-group-item
-			span.badge 2hrs ago
-			| You were assigned to a To-Do:
-			small Do Something... by Dan Sabru
-		li.list-group-item
-			span.badge 4hrs ago
-			| Task was marked 'Completed'
-			small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-	h2 Yesterday
-	ul.list-group
-		li.list-group-item
-			| You were assigned to a Task:
-			small Do Something...
-		li.list-group-item
-			| Task was marked 'Completed'
-			small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-		li.list-group-item
-			| Task was marked 'Completed'
-			small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
-	h2 Audit Log
-	ul.list-group
-		li.list-group-item
-			span.badge 2hrs ago
-			i.fa.fa-check(aria-hidden="true")
-			| Some Task Complete:
-			small Do Something...
-		li.list-group-item
-			span.badge 2hrs ago
-			i.fa.fa-user.fa-white
-			| You were Assigned:
-			small Do Something...
+	div
+		ul.nav.nav-tabs(role='tablist')
+			li.active(role='presentation')
+				a(href='#notifications', aria-controls='notifications', role='tab', data-toggle='tab') Home
+			li(role='presentation')
+				a(href='#auditlog', aria-controls='auditlog', role='tab', data-toggle='tab') Profile
+		.tab-content
+			#notifications.tab-pane.active(role='tabpanel')
+				h2 Today
+				ul.list-group
+					li.list-group-item
+						span.badge 2hrs ago
+						| You were assigned to a To-Do:
+						small Do Something... by Dan Sabru
+					li.list-group-item
+						span.badge 4hrs ago
+						| Task was marked 'Completed'
+						small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+				h2 Yesterday
+				ul.list-group
+					li.list-group-item
+						| You were assigned to a Task:
+						small Do Something...
+					li.list-group-item
+						| Task was marked 'Completed'
+						small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+					li.list-group-item
+						| Task was marked 'Completed'
+						small RONE-757 (Remote Document Delivery)<br>FFD-C2029 - UI Design
+			#auditlog.tab-pane(role='tabpanel')
+				h2 Audit Log
+				ul.list-group
+					li.list-group-item
+						span.badge 2hrs ago
+						i.fa.fa-check(aria-hidden="true")
+						| Some Task Complete:
+						small Do Something...
+					li.list-group-item
+						span.badge 2hrs ago
+						i.fa.fa-user.fa-white
+						| You were Assigned:
+						small Do Something...
