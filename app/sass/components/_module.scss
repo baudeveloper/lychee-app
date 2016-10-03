@@ -1442,6 +1442,16 @@
       .carousel {
         height: auto;
         min-height: 120px;
+        margin-bottom: 15px;
+        .col-sm-2 {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border: 1px solid transparent;
+          &:hover {
+            border: 1px solid $darker-grey;
+            background-color: $white;
+          }
+        }
         .carousel-control {
           color: $black;
           background: none;
