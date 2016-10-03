@@ -718,7 +718,7 @@
       width: 50%;
       text-align: center;
       display: table-row;
-      border: 1px solid transparent;
+      border: none;
       @include margin-and-padding(0, 0);
       &.active a {
         background: none;
