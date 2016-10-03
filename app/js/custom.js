@@ -289,7 +289,7 @@ $(document).ready(function() {
 
     // My ToDo Tasks
     // Source: https://codepen.io/elmahdim/pen/sGkvH
-    $("#my-todo .tab-pane.active li").slice(0, 5).show('normal', function() {
+    $("#my-todo .tab-pane.active li").slice(0, 4).show('normal', function() {
         $(this).css('display', 'block');
     });
     $("#my-todo .view-more").on('click', function(e) {
