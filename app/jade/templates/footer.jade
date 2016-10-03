@@ -368,6 +368,23 @@
 								input#input-question.form-control(type="text", placeholder="Why does the timesheet week start on Sunday?")
 								label(for="input-answer") Details / Answer
 								textarea#input-answer.form-control(type="text", placeholder="That is to match payroll which is based on Saturday to Friday periods.", rows="5")
+					.row.bg-white
+						form.form-inline.form-status.col-sm-12
+							.row
+								.col-sm-6
+									label.radio-inline
+										input(type="radio")
+										| Active Indefinitely
+									label.radio-inline
+										input(type="radio")
+										| Active Status
+								.col-sm-6
+									.form-group
+										label(for="input-validfrom") Vaild From:
+										input#input-validfrom.form-control(type="text", placeholder="Date")
+									.form-group
+										label(for="input-validto") Vaild To:
+										input#input-validto.form-control(type="text", placeholder="Date")							
 			.modal-footer
 				.pull-left
 					button.btn.btn-tertiary(type='button', data-dismiss='modal')

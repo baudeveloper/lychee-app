@@ -1521,6 +1521,30 @@
           @include input-placeholder-color($grey);
         }
       }
+      .form-status {
+        @include font-size(14px);
+        .checkbox {
+          margin-right: 5px;
+        }
+        .form-group {
+          height: auto;
+          width: auto;
+          margin: auto;
+          max-width: 120px;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+            margin-left: 19px;
+          }
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+          input {
+            width: 100%;
+          }
+        }
+      }
     }
     .modal-footer {
       .fa {
