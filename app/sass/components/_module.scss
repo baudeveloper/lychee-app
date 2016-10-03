@@ -1523,8 +1523,8 @@
       }
       .form-status {
         @include font-size(14px);
-        .checkbox {
-          margin-right: 5px;
+        .radio-inline {
+          margin-top: 36px;
         }
         .form-group {
           height: auto;
