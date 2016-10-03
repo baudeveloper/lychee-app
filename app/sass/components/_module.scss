@@ -1543,6 +1543,21 @@
           input {
             width: 100%;
           }
+          .input-icon {
+            position: relative;
+            span {
+              position: absolute;
+              top: 7px;
+              bottom: 0;
+              right: 5px;
+            }
+            a {
+              @include hyperlink-hover($grey);
+              &:hover {
+                cursor: default;
+              }
+            }
+          }
         }
       }
     }
