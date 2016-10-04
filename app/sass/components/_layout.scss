@@ -60,6 +60,7 @@ main {
 
 // My Stats column in Dashboard page
 #my-stats {
+  margin-bottom: 30px;
   @include widget-mystats();
 }
 
