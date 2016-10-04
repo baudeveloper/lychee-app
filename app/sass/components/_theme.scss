@@ -535,8 +535,9 @@
   }
   table {
     color: $grey;
-    border: 1px solid $darkest-grey;
+    margin-bottom: 20px;
     font-size: 14px !important;
+    border: 1px solid $darkest-grey;
     th {
       border-left: none !important;
       border-right: none !important;
@@ -941,11 +942,6 @@
   }
 }
 #bookkeeping {
-  .btn-add-contact,
-  .tbl-invoice-contacts,
-  .tbl-invoice-milestones {
-    margin-bottom: 15px;
-  }
   .tablesaw-cell-persist {
     border-right: none;
   }
