@@ -890,14 +890,10 @@
       width: 100%;
     }
   }
-  .container {
-    padding: 0;
-    width: 100%;
-    .input-group {
-      margin-bottom: 15px;
-      input[type="text"] {
-        border-color: $darkest-grey;
-      }
+  .input-group {
+    margin-bottom: 15px;
+    input[type="text"] {
+      border-color: $darkest-grey;
     }
   }
   .checkbox {
