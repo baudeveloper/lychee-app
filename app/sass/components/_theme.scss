@@ -625,16 +625,14 @@
       }
     }
   }
+  .tablesaw-bar {
+    float: right;
+  }
 }
 #project-dash {
   padding-bottom: 0;
   .widget-head {
     margin-bottom: 0;
-  }
-}
-#administration {
-  .tablesaw-bar {
-    float: right;
   }
 }
 .dash-content {
