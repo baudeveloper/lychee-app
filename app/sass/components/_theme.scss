@@ -639,8 +639,13 @@
 }
 #project-dash {
   padding-bottom: 0;
-  .heading {
+  .widget-head {
     margin-bottom: 0;
+  }
+}
+#administration {
+  .tablesaw-bar {
+    float: right;
   }
 }
 .dash-content {
@@ -938,31 +943,10 @@
       border-color: $darkest-grey;
     }
   }
-  .tbl-assigned-members {
-    margin-bottom: 15px;
-    .tablesaw-cell-persist,
-    th {
-      border: none;
-    }
-    a {
-      color: $red;
-      @include hyperlink-hover($red);
-    }
-    @media #{$tablet} {
-      td, th {
-        text-align: left !important;
-      }
-    }
-  }
   @media #{$tablet} {
     .btn-add-user {
       display: inline-block !important;
     }
-  }
-}
-#administration {
-  .tablesaw-bar {
-    float: right;
   }
 }
 @include fancytree();
