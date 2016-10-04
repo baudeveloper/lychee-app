@@ -90,7 +90,7 @@ main {
   h3 {
     color: $grey;
     @include font-size(16px);
-    @include margin-and-padding(0 0 20px, 0);
+    @include margin-and-padding(15px 0, 0);
   }
 }
 

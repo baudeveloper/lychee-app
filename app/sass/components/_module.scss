@@ -611,8 +611,12 @@
   img {
     margin: 0 auto 15px;
   }
+  .panel-heading {
+    border-bottom: none;
+  }
   .panel-heading a {
     color: $red;
+    margin-left: 0;
     @include hyperlink-hover($red);
   }
   #carousel-dyk {
