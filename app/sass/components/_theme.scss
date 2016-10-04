@@ -881,10 +881,6 @@
   }
 }
 #project-team {
-  .container {
-    padding: 0;
-    width: 100%;
-  }
   .assigned-members-group {
     width: 40%;
     float: left;
@@ -906,7 +902,17 @@
     img {
       width: 100%;
     }
-  }
+  }  
+    .container {
+      padding: 0;
+      width: 100%;
+      .input-group {
+        margin-bottom: 15px;
+        input[type="text"] {
+          border-color: $darkest-grey;
+        }
+      }
+    }
   .checkbox {
     margin: 0;
     width: 30%;
@@ -919,12 +925,6 @@
     }
     input[type="checkbox"] {
       margin-right: 5px;
-    }
-  }
-  .input-group {
-    margin-bottom: 15px;
-    input[type="text"] {
-      border-color: $darkest-grey;
     }
   }
   @media #{$tablet} {
