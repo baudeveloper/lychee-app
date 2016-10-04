@@ -629,6 +629,9 @@
       padding: 0;
       margin: 30px 0 0;
       // min-height: 150px !important;
+      @media #{$tablet} {
+        text-align: left;
+      }
     }
     .carousel-control {
       position: absolute;
