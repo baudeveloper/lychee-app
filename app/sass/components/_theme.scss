@@ -524,14 +524,9 @@
         width: 80%;
       }
     }
-  }
-  .btn-tertiary {
-    min-width: 200px;
-  }
-  .page-row > section {
-    background-color: $white;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
-    @include margin-and-padding(15px, 15px);
+    .btn-tertiary {
+      min-width: 200px;
+    }
   }
   table {
     color: $grey;
@@ -587,9 +582,9 @@
     max-width: 350px;
     margin: 37px 30px 30px 0;
     @media #{$desktop} {
-      margin: 0 0 30px 0;
       display: block;
       max-width: 350px;
+      margin: 0 0 30px 0;
       float: none !important;
     }
     td {
@@ -609,15 +604,9 @@
     }
   }
   .tbl-portal-users {
-    margin-bottom: 15px;
     td:first-child,
     th:first-child {
       text-align: left;
-    }
-    .btn-invoice,
-    a {
-      color: $red;
-      @include hyperlink-hover($red);
     }
   }
   .tbl-bookkeeping {
@@ -902,17 +891,17 @@
     img {
       width: 100%;
     }
-  }  
-    .container {
-      padding: 0;
-      width: 100%;
-      .input-group {
-        margin-bottom: 15px;
-        input[type="text"] {
-          border-color: $darkest-grey;
-        }
+  }
+  .container {
+    padding: 0;
+    width: 100%;
+    .input-group {
+      margin-bottom: 15px;
+      input[type="text"] {
+        border-color: $darkest-grey;
       }
     }
+  }
   .checkbox {
     margin: 0;
     width: 30%;

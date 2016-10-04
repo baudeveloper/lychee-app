@@ -298,107 +298,108 @@ main.container-fluid.page-project(role='main')
 			#administration.widget
 				.widget-head
 					h2 Project Administration
-				table.table.table-condensed.tbl-admin-budget
-					colgroup
-						col
-						col
-					tbody
-						tr
-							td(colspan="2")
-								a(href="#")
-									i.fa.fa-file-pdf-o(aria-hidden="true")
-									| RYER-0532
-						tr
-							td.title Initial Budget:
-							td $500.00
-				table.tablesaw.tablesaw-swipe.table-condensed.tbl-budget(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
-					colgroup
-						col
-						col
-						col
-						col
-						col
-						col
-						col
-					thead
-						tr
-							th(data-tablesaw-priority="persist", scope="col") ID
-							th(data-tablesaw-priority="2", scope="col") Name
-							th(data-tablesaw-priority="3", scope="col") Description
-							th(data-tablesaw-priority="4", scope="col") Creation Date
-							th(data-tablesaw-priority="5", scope="col") Approval Date
-							th(data-tablesaw-priority="6", scope="col") Budget Impact
-							th(data-tablesaw-priority="7", scope="col") Schedule Image
-							th(data-tablesaw-priority="8", scope="col")
-					tbody
-						tr
-							td.tablesaw-cell-persist
-								a(href="#")
-									i.fa.fa-file-pdf-o(aria-hidden="true")
-									| CR-01
-							td.tablesaw-cell-hidden
-								a(href="#") Registry Integration
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden 2015-05-09
-							td.tablesaw-cell-hidden 2016-09-19
-							td.tablesaw-cell-hidden + $25,000
-							td.tablesaw-cell-hidden
-								a(href="#") + 4 weeks
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden='true')
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden='true')
-						tr
-							td.tablesaw-cell-persist
-								a(href="#")
-									i.fa.fa-file-pdf-o(aria-hidden="true")
-									| CR-02
-							td.tablesaw-cell-hidden
-								a(href="#") Remove Phase 2
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden 2015-05-09
-							td.tablesaw-cell-hidden 2016-12-31
-							td.tablesaw-cell-hidden - $10,350
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden='true')
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden='true')
-						tr
-							td.tablesaw-cell-persist
-								a(href="#")
-									i.fa.fa-file-pdf-o(aria-hidden="true")
-									| CR-03
-							td.tablesaw-cell-hidden
-								a(href="#") Delay Delivery
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden 2016-01-01
-							td.tablesaw-cell-hidden 2016-12-31
-							td.tablesaw-cell-hidden N/A
-							td.tablesaw-cell-hidden
-								a(href="#") + 2 weeks
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden="true")
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden="true")
-					tfoot
-						tr
-							td.tablesaw-cell-persist Total
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-								a(href="#") + $14,650
-							td.tablesaw-cell-hidden
-								a(href="#") + 6 weeks
-				a.btn.btn-tertiary(href="#")
-					i.fa.fa-plus(aria-hidden='true')
-					| Add CR
+				.widget-body
+					table.table.table-condensed.tbl-admin-budget
+						colgroup
+							col
+							col
+						tbody
+							tr
+								td(colspan="2")
+									a(href="#")
+										i.fa.fa-file-pdf-o(aria-hidden="true")
+										| RYER-0532
+							tr
+								td.title Initial Budget:
+								td $500.00
+					table.tablesaw.tablesaw-swipe.table-condensed.tbl-budget(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+						colgroup
+							col
+							col
+							col
+							col
+							col
+							col
+							col
+						thead
+							tr
+								th(data-tablesaw-priority="persist", scope="col") ID
+								th(data-tablesaw-priority="2", scope="col") Name
+								th(data-tablesaw-priority="3", scope="col") Description
+								th(data-tablesaw-priority="4", scope="col") Creation Date
+								th(data-tablesaw-priority="5", scope="col") Approval Date
+								th(data-tablesaw-priority="6", scope="col") Budget Impact
+								th(data-tablesaw-priority="7", scope="col") Schedule Image
+								th(data-tablesaw-priority="8", scope="col")
+						tbody
+							tr
+								td.tablesaw-cell-persist
+									a(href="#")
+										i.fa.fa-file-pdf-o(aria-hidden="true")
+										| CR-01
+								td.tablesaw-cell-hidden
+									a(href="#") Registry Integration
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden 2015-05-09
+								td.tablesaw-cell-hidden 2016-09-19
+								td.tablesaw-cell-hidden + $25,000
+								td.tablesaw-cell-hidden
+									a(href="#") + 4 weeks
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
+							tr
+								td.tablesaw-cell-persist
+									a(href="#")
+										i.fa.fa-file-pdf-o(aria-hidden="true")
+										| CR-02
+								td.tablesaw-cell-hidden
+									a(href="#") Remove Phase 2
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden 2015-05-09
+								td.tablesaw-cell-hidden 2016-12-31
+								td.tablesaw-cell-hidden - $10,350
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
+							tr
+								td.tablesaw-cell-persist
+									a(href="#")
+										i.fa.fa-file-pdf-o(aria-hidden="true")
+										| CR-03
+								td.tablesaw-cell-hidden
+									a(href="#") Delay Delivery
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden 2016-01-01
+								td.tablesaw-cell-hidden 2016-12-31
+								td.tablesaw-cell-hidden N/A
+								td.tablesaw-cell-hidden
+									a(href="#") + 2 weeks
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden="true")
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden="true")
+						tfoot
+							tr
+								td.tablesaw-cell-persist Total
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+									a(href="#") + $14,650
+								td.tablesaw-cell-hidden
+									a(href="#") + 6 weeks
+					a.btn.btn-tertiary(href="#")
+						i.fa.fa-plus(aria-hidden='true')
+						| Add CR
 			.widget
 				.widget-head
 					h2 Bookkeeping
