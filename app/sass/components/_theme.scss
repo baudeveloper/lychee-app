@@ -643,7 +643,7 @@
             color: $super-extra-light-grey;
             @include hyperlink-hover($red);
             @media #{$tablet} {
-              @include font-size(12px);
+              // @include font-size(12px);
             }
             &.dash-toggle {
               margin-top: 30px;
@@ -681,7 +681,7 @@
         .dropdown-header {
           margin-left: -8px;
           color: $medium-grey;
-          @include font-size(12px);
+          // @include font-size(12px);
         }
         .divider {
           background-color: $darkest-grey;
@@ -973,7 +973,7 @@
       td {
         font-size: 14px !important;
         @media #{$tablet} {
-          font-size: 12px !important;
+          // font-size: 12px !important;
         }
       }
     }
@@ -1042,7 +1042,7 @@
       td {
         font-size: 14px !important;
         @media #{$tablet} {
-          font-size: 12px !important;
+          // font-size: 12px !important;
         }
       }
     }
