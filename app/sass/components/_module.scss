@@ -1450,6 +1450,14 @@
           &:hover {
             border: 1px solid $darker-grey;
             background-color: $white;
+            &::before {
+              position: absolute;
+              content: '\f014';
+              color: $red;
+              bottom: 0;
+              right: 5px;
+              font-family: "fontawesome";
+            }
           }
         }
         .item-expired {
