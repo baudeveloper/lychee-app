@@ -515,7 +515,7 @@
     border: 1px solid $darkest-grey;
     font-size: 14px !important;
     @media #{$tablet} {
-      font-size: 12px !important;
+      // font-size: 12px !important;
     }
     td,
     th {
