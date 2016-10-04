@@ -853,6 +853,9 @@
       color: $red;
       @include hyperlink-hover($red);
     }
+    @media #{$tablet__up} {
+      width: 60%;
+    }
   }
   .checkbox {
     margin: 0;
