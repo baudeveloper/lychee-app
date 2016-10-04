@@ -868,7 +868,7 @@
   }
 }
 #project-team {
-  .assigned-members-group {
+  .tabber {
     width: 40%;
     float: left;
     display: inline;
@@ -908,11 +908,6 @@
     }
     input[type="checkbox"] {
       margin-right: 5px;
-    }
-  }
-  @media #{$tablet} {
-    .btn-add-user {
-      display: inline-block !important;
     }
   }
 }
