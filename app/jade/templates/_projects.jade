@@ -43,7 +43,7 @@ main.container-fluid.page-project(role='main')
 	.row
 		.col-sm-12
 			#project-dash.widget
-				.heading
+				.widget-head
 					h2 FFD-C2029 - UI Design
 				ul.dash-content
 					li.dash-nav.block
@@ -172,7 +172,7 @@ main.container-fluid.page-project(role='main')
 							p Task Performance Content....
 		.col-sm-12
 			section#project-team.widget
-				.heading
+				.widget-head
 					h2 Project Team
 				.assigned-members-group
 					h3 Assigned Members
@@ -298,7 +298,7 @@ main.container-fluid.page-project(role='main')
 						| Add User
 						.col-sm-12
 			section#administration.widget
-				.heading
+				.widget-head
 					h2 Project Administration
 				table.table.table-condensed.tbl-admin-budget
 					colgroup
@@ -403,135 +403,136 @@ main.container-fluid.page-project(role='main')
 					| Add CR
 		.col-sm-12
 			section#bookkeeping.widget
-				.heading
+				.widget-head
 					h2 Bookkeeping
-					a.btn-edit-bookkeeping(href="#")
+					a(href="#")
 						i.fa.fa-pencil(aria-hidden='true')
-				table.table.table-condensed.tbl-bookkeeping
-					colgroup
-						col
-						col
-						col
-						col
-					tbody
-						tr
-							td.title Invoicing Type:
-							td Fixed Price
-							td.title Payment Terms:
-							td Net 30 Days
-						tr
-							td.title PO Number:
-							td 23425235235223
-							td.title SVN PM Folder:
-							td
-						tr
-							td.title Budget:
-							td $12,000.00
-							td.title
-							td
-						tr
-							td.title Notes:
-							td No Notes
-							td.title
-							td
-				h3 Invoicing Contacts
-				table.table.table-condensed.tbl-invoice-contacts
-					colgroup
-						col
-						col
-					thead
-						tr
-							th Name
-							th Email
-					tbody
-						tr
-							td Prasanna Kugananthan
-							td
-								a(href="mailto:test@test.com") test@test.com
-				a.btn.btn-tertiary.btn-add-contact(href="#")
-					i.fa.fa-plus
-					| Add Contact
-				h3 Invoicing Milestones
-				small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
-				table.tablesaw.tablesaw-swipe.table-condensed.tbl-invoice-milestones(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
-					colgroup
-						col
-						col
-						col
-						col
-						col
-						col
-						col
-					thead
-						tr
-							th(data-tablesaw-priority="persist", scope="col") Milestones
-							th(data-tablesaw-priority="2", scope="col") Date
-							th(data-tablesaw-priority="3", scope="col") Fixed Amount
-							th(data-tablesaw-priority="4", scope="col") Invoice Status
-							th(data-tablesaw-priority="5", scope="col") Accounting System
-							th(data-tablesaw-priority="6", scope="col") Invoice
-							th(data-tablesaw-priority="7", scope="col")
-					tbody
-						tr
-							td.tablesaw-cell-persist Analysis & Design Complete
-							td.tablesaw-cell-hidden 2016-07-25
-							td.tablesaw-cell-hidden
-								a(href="#") $1,010.00
-							td.tablesaw-cell-hidden Not Created
-							td.tablesaw-cell-hidden 
-							td.tablesaw-cell-hidden
-								a.btn-invoice(href="#")
-									i.fa.fa-file-pdf-o
-									| 123456789
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden='true')
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden='true')
-						tr
-							td.tablesaw-cell-persist Sprint 1 Delivery to UAT
-							td.tablesaw-cell-hidden 2016-07-11
-							td.tablesaw-cell-hidden
-								a(href="#") $2,000.00
-							td.tablesaw-cell-hidden Not Created
-							td.tablesaw-cell-hidden 
-							td.tablesaw-cell-hidden
-								a.btn-invoice(href="#")
-									i.fa.fa-file-pdf-o
-									| 123456789
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden='true')
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden='true')
-						tr
-							td.tablesaw-cell-persist Sprint 2 Delivery to UAT
-							td.tablesaw-cell-hidden 2016-07-11
-							td.tablesaw-cell-hidden
-								a(href="#") $3,000.00
-							td.tablesaw-cell-hidden Not Created
-							td.tablesaw-cell-hidden 
-							td.tablesaw-cell-hidden
-								a.btn-invoice(href="#")
-									i.fa.fa-file-pdf-o
-									| 123456789
-							td.tablesaw-cell-hidden
-								a.btn-edit-milestone(href="#")
-									i.fa.fa-pencil(aria-hidden='true')
-								a.btn-remove-milestone(href="#")
-									i.fa.fa-trash(aria-hidden='true')
-					tfoot
-						tr
-							td.tablesaw-cell-persist Total
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-								a(href="#") $6,010.00
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-							td.tablesaw-cell-hidden
-				a.btn.btn-tertiary(href="#")
-					i.fa.fa-plus(aria-hidden='true')
-					| Add Milestone		
+				.widget-body
+					table.table.table-condensed.tbl-bookkeeping
+						colgroup
+							col
+							col
+							col
+							col
+						tbody
+							tr
+								td.title Invoicing Type:
+								td Fixed Price
+								td.title Payment Terms:
+								td Net 30 Days
+							tr
+								td.title PO Number:
+								td 23425235235223
+								td.title SVN PM Folder:
+								td
+							tr
+								td.title Budget:
+								td $12,000.00
+								td.title
+								td
+							tr
+								td.title Notes:
+								td No Notes
+								td.title
+								td
+					h3 Invoicing Contacts
+					table.table.table-condensed.tbl-invoice-contacts
+						colgroup
+							col
+							col
+						thead
+							tr
+								th Name
+								th Email
+						tbody
+							tr
+								td Prasanna Kugananthan
+								td
+									a(href="mailto:test@test.com") test@test.com
+					a.btn.btn-tertiary.btn-add-contact(href="#")
+						i.fa.fa-plus
+						| Add Contact
+					h3 Invoicing Milestones
+					small For Fixed Price projects, the Fixed Amount is manually entered based on the contract. Clicking the amount hyperlink will show you the calculated amount based on actual hours and team member rates.
+					table.tablesaw.tablesaw-swipe.table-condensed.tbl-invoice-milestones(data-tablesaw-mode='swipe', data-tablesaw-sortable-col, data-tablesaw-minimap)
+						colgroup
+							col
+							col
+							col
+							col
+							col
+							col
+							col
+						thead
+							tr
+								th(data-tablesaw-priority="persist", scope="col") Milestones
+								th(data-tablesaw-priority="2", scope="col") Date
+								th(data-tablesaw-priority="3", scope="col") Fixed Amount
+								th(data-tablesaw-priority="4", scope="col") Invoice Status
+								th(data-tablesaw-priority="5", scope="col") Accounting System
+								th(data-tablesaw-priority="6", scope="col") Invoice
+								th(data-tablesaw-priority="7", scope="col")
+						tbody
+							tr
+								td.tablesaw-cell-persist Analysis & Design Complete
+								td.tablesaw-cell-hidden 2016-07-25
+								td.tablesaw-cell-hidden
+									a(href="#") $1,010.00
+								td.tablesaw-cell-hidden Not Created
+								td.tablesaw-cell-hidden 
+								td.tablesaw-cell-hidden
+									a.btn-invoice(href="#")
+										i.fa.fa-file-pdf-o
+										| 123456789
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
+							tr
+								td.tablesaw-cell-persist Sprint 1 Delivery to UAT
+								td.tablesaw-cell-hidden 2016-07-11
+								td.tablesaw-cell-hidden
+									a(href="#") $2,000.00
+								td.tablesaw-cell-hidden Not Created
+								td.tablesaw-cell-hidden 
+								td.tablesaw-cell-hidden
+									a.btn-invoice(href="#")
+										i.fa.fa-file-pdf-o
+										| 123456789
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
+							tr
+								td.tablesaw-cell-persist Sprint 2 Delivery to UAT
+								td.tablesaw-cell-hidden 2016-07-11
+								td.tablesaw-cell-hidden
+									a(href="#") $3,000.00
+								td.tablesaw-cell-hidden Not Created
+								td.tablesaw-cell-hidden 
+								td.tablesaw-cell-hidden
+									a.btn-invoice(href="#")
+										i.fa.fa-file-pdf-o
+										| 123456789
+								td.tablesaw-cell-hidden
+									a.btn-edit-milestone(href="#")
+										i.fa.fa-pencil(aria-hidden='true')
+									a.btn-remove-milestone(href="#")
+										i.fa.fa-trash(aria-hidden='true')
+						tfoot
+							tr
+								td.tablesaw-cell-persist Total
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+									a(href="#") $6,010.00
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+								td.tablesaw-cell-hidden
+					a.btn.btn-tertiary(href="#")
+						i.fa.fa-plus(aria-hidden='true')
+						| Add Milestone		
 	include feed.jade
 	footer.page-footer Lychee 2.0.0a

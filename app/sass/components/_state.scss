@@ -293,3 +293,38 @@ textarea {
 .tile {
   height: 350px;
 }
+
+// Tables
+.table-brief {
+  width: auto;
+  border: none;
+  display: block;
+  min-width: 500px;
+  col {
+    width: auto;
+    &:first-child {
+      min-width: 125px;
+    }
+    &:first-child+col+col {
+      min-width: 125px;
+    }
+    &:first-child+col {
+      min-width: 150px;
+    }
+    &:last-child {
+      min-width: 150px;
+    }
+  }
+  tr {
+    background: none !important;
+    td {
+      padding: 2px;
+      border: none;
+      color: $black;
+      text-align: left;
+      &.title {
+        color: $super-grey;
+      }
+    }
+  }
+}

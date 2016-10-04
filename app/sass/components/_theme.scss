@@ -491,7 +491,7 @@
     border: 1px solid $extra-super-dark-grey;
     @include margin-and-padding(0 0 15px, 15px);
   }
-  .heading {
+  .widget-head {
     border-bottom: 1px solid $red;
     @include margin-and-padding(0 0 20px 0, 0 0 10px);
     h2 {
@@ -500,6 +500,29 @@
       @include font-size(18px);
       text-transform: uppercase;
       @include margin-and-padding(10px 0 0, 0);
+    }
+    a {
+      color: $red;
+      margin-left: 10px;
+      @include hyperlink-hover($red);
+    }
+  }
+  .widget-body {
+    h3 {
+      color: $grey;
+      margin-bottom: 20px;
+      @include font-size(16px);
+    }
+    small {
+      float: left;
+      width: 70%;
+      display: inline;
+      font-style: italic;
+      margin-bottom: 15px;
+      @include font-size(12px);
+      @media #{$tablet__up} {
+        width: 80%;
+      }
     }
   }
   .btn-tertiary {
@@ -514,12 +537,20 @@
     color: $grey;
     border: 1px solid $darkest-grey;
     font-size: 14px !important;
-    @media #{$tablet} {
-      // font-size: 12px !important;
+    th {
+      border-left: none !important;
+      border-right: none !important;
     }
     td,
     th {
       text-align: center;
+      a {
+        color: $red;
+        @include hyperlink-hover($red);
+      }
+      @media #{$tablet} {
+        text-align: left !important;
+      }
     }
     td,
     th,
@@ -532,6 +563,13 @@
     }
     tbody tr:nth-child(even) {
       background-color: $extra-light-grey;
+    }
+    tfoot {
+      font-weight: $font-weight-bold;
+      background-color: $lightest-red;
+      td {
+        font-size: 14px !important;
+      }
     }
   }
   .btn-edit-project {
@@ -903,98 +941,16 @@
   }
 }
 #bookkeeping {
-  h3 {
-    color: $grey;
-    @include font-size(16px);
-  }
-  small {
-    float: left;
-    width: 70%;
-    display: inline;
-    font-style: italic;
-    margin-bottom: 15px;
-    @include font-size(12px);
-    @media #{$tablet__up} {
-      width: 80%;
-    }
-  }
-  .btn-add-contact {
-    margin-bottom: 15px;
-  }
-  .btn-edit-bookkeeping {
-    color: $red;
-    margin-left: 10px;
-    @include hyperlink-hover($red);
-  }
-  td a {
-    color: $red;
-    @include hyperlink-hover($red);
-  }
-  .tbl-bookkeeping {
-    width: auto;
-    border: none;
-    display: block;
-    min-width: 500px;
-    col {
-      width: auto;
-      &:first-child {
-        min-width: 125px;
-      }
-      &:first-child+col+col {
-        min-width: 125px;
-      }
-      &:first-child+col {
-        min-width: 150px;
-      }
-      &:last-child {
-        min-width: 150px;
-      }
-    }
-    tr {
-      background: none !important;
-      td {
-        padding: 2px;
-        border: none;
-        color: $black;
-        text-align: left;
-        &.title {
-          color: $super-grey;
-        }
-      }
-    }
-  }
-  .tbl-invoice-contacts {
-    margin-bottom: 15px;
-    @media #{$tablet} {
-      td, th {
-        text-align: left !important;
-      }
-    }
-  }
+  .btn-add-contact,
+  .tbl-invoice-contacts,
   .tbl-invoice-milestones {
     margin-bottom: 15px;
-    .tablesaw-cell-persist {
-      border-right: none;
-    }
-    th {
-      border-left: none;
-      border-right: none;
-    }
-    tfoot {
-      font-weight: $font-weight-bold;
-      background-color: $lightest-red;
-      td {
-        font-size: 14px !important;
-        @media #{$tablet} {
-          // font-size: 12px !important;
-        }
-      }
-    }
-    @media #{$tablet} {
-      td, th {
-        text-align: left !important;
-      }
-    }
+  }
+  .tablesaw-cell-persist {
+    border-right: none;
+  }
+  .tbl-bookkeeping {
+    @extend .table-brief;
   }
 }
 #administration {
