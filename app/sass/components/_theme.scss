@@ -960,6 +960,11 @@
   }
   .tbl-invoice-contacts {
     margin-bottom: 15px;
+    @media #{$tablet} {
+      td, th {
+        text-align: left !important;
+      }
+    }
   }
   .tbl-invoice-milestones {
     margin-bottom: 15px;
@@ -978,6 +983,11 @@
         @media #{$tablet} {
           // font-size: 12px !important;
         }
+      }
+    }
+    @media #{$tablet} {
+      td, th {
+        text-align: left !important;
       }
     }
   }
@@ -1047,6 +1057,11 @@
         @media #{$tablet} {
           // font-size: 12px !important;
         }
+      }
+    }
+    @media #{$tablet} {
+      td, th {
+        text-align: left !important;
       }
     }
   }
