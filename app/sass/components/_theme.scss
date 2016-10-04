@@ -890,6 +890,11 @@
       color: $red;
       @include hyperlink-hover($red);
     }
+    @media #{$tablet} {
+      td, th {
+        text-align: left !important;
+      }
+    }
   }
   @media #{$tablet} {
     .btn-add-user {
@@ -1057,11 +1062,6 @@
         @media #{$tablet} {
           // font-size: 12px !important;
         }
-      }
-    }
-    @media #{$tablet} {
-      td, th {
-        text-align: left !important;
       }
     }
   }
