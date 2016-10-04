@@ -558,6 +558,9 @@
     tr {
       border-color: $darkest-grey !important;
     }
+    td.tablesaw-cell-persist {
+      border-right: none;
+    }
     thead th {
       background-color: $extra-light-grey !important;
       border-bottom: 1px solid $darkest-grey !important;
@@ -615,6 +618,22 @@
     a {
       color: $red;
       @include hyperlink-hover($red);
+    }
+  }
+  .tbl-bookkeeping {
+    @extend .table-brief;
+  }
+  .tbl-admin-budget {
+    @extend .table-brief;
+    td {
+      &:last-of-type,
+      &:last-of-type * {
+        font-weight: $font-weight-bold;
+        a {
+          color: $red;
+          @include hyperlink-hover($red);
+        }
+      }
     }
   }
 }
@@ -941,81 +960,9 @@
     }
   }
 }
-#bookkeeping {
-  .tablesaw-cell-persist {
-    border-right: none;
-  }
-  .tbl-bookkeeping {
-    @extend .table-brief;
-  }
-}
 #administration {
-  .tbl-admin-budget {
-    width: auto;
-    border: none;
-    display: block;
-    min-width: 500px;
-    col {
-      width: auto;
-      &:first-child {
-        min-width: 125px;
-      }
-      &:first-child+col+col {
-        min-width: 125px;
-      }
-      &:first-child+col {
-        min-width: 150px;
-      }
-      &:last-child {
-        min-width: 150px;
-      }
-    }
-    tr {
-      background: none !important;
-      td {
-        padding: 2px;
-        border: none;
-        color: $black;
-        text-align: left;
-        &.title {
-          color: $super-grey;
-        }
-        &:last-of-type, &:last-of-type * {
-          font-weight: $font-weight-bold;
-        }
-        a {
-          color: $red;
-          @include hyperlink-hover($red);
-        }
-      }
-    }
-  }
   .tablesaw-bar {
     float: right;
-  }
-  .tbl-budget {
-    margin-bottom: 15px;
-    a {
-      color: $red;
-      @include hyperlink-hover($red);
-    }
-    .tablesaw-cell-persist {
-      border-right: none;
-    }
-    th {
-      border-left: none;
-      border-right: none;
-    }
-    tfoot {
-      font-weight: $font-weight-bold;
-      background-color: $lightest-red;
-      td {
-        font-size: 14px !important;
-        @media #{$tablet} {
-          // font-size: 12px !important;
-        }
-      }
-    }
   }
 }
 @include fancytree();
