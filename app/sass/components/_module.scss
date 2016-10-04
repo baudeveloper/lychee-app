@@ -545,7 +545,7 @@
   }
   .status {
     text-align: right;
-    padding-right: 100px;
+    padding-right: 90px;
   }
   .list-group {
     margin: 10px 0;
@@ -572,6 +572,7 @@
         float: right;
         margin-left: 10px;
         .fa {
+          margin-right: 0;
           color: $medium-grey;
           @include font-size(14px);
         }
