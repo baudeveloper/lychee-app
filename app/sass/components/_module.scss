@@ -1467,6 +1467,7 @@
             bottom: 5px;
             right: 5px;
             font-family: "fontawesome";
+            @include hyperlink-hover($red);
           }
           &:hover {
             border: 1px solid $darker-grey;
