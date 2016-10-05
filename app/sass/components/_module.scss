@@ -408,6 +408,7 @@
     @include font-size(20px);
     &.lead {
       margin-bottom: 0;
+      font-weight: $font-weight-regular;
       @include font-size(18px);
       & + p {
         margin-bottom: 15px;
