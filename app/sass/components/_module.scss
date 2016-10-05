@@ -490,6 +490,7 @@
     li {
       display: none;
       border-radius: 0;
+      clear: both;
       @include border-and-background();
       .droppable {
         float: right;
