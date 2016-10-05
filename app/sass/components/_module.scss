@@ -558,31 +558,32 @@
       margin-bottom: 15px;
       @include font-size(12px);
       background-color: transparent;
-      span {
-        display: block;
-        @include font-size(14px);
-        &:first-of-type {
-          float: right;
+      .pull-left {
+        span {
+          display: block;
+          line-height: 1;
+          @include font-size(14px);
+        }
+        small {
           color: $grey;
           line-height: 1;
-          margin-right: 10px;
-          margin-left: 10px;
           @include font-size(12px);
         }
       }
-      a {
-        float: right;
-        margin-left: 10px;
-        .fa {
-          margin-right: 0;
-          color: $medium-grey;
+      .pull-right {
+        span {
+          color: $grey;
+          line-height: 1;
+          margin-right: 6px;
           @include font-size(14px);
         }
-        &:active,
-        &:focus,
-        &:hover {
+        a {
+          margin-left: 10px;
+          color: $medium-grey;
+          @include font-size(14px);
+          @include hyperlink-hover($medium-grey);
           .fa {
-            color: $red;
+            margin-right: 0;
           }
         }
       }
