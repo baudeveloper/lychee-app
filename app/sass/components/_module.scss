@@ -1590,7 +1590,7 @@
         }
         input, textarea {
           color: $grey;
-          border-color: $extra-darkest-grey;
+          // border-color: $extra-darkest-grey;
           @include input-placeholder-color($grey);
         }
       }
