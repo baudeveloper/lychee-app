@@ -1478,6 +1478,9 @@
             .item-remove {
               opacity: 1;
             }
+            a {
+              color: $red;
+            }
           }
         }
         .item-expired {
