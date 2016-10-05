@@ -1472,8 +1472,8 @@
             position: absolute;
             content: '\f014';
             color: $red;
-            bottom: 5px;
-            right: 5px;
+            top: 0;
+            right: 0;
             font-family: "fontawesome";
             @include hyperlink-hover($red);
           }
@@ -1491,6 +1491,7 @@
         .item-expired {
           position: relative;
           pointer-events: none;
+          border: 1px solid $darker-grey;
           .overlay {
             content: '';
             position: absolute;
