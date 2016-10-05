@@ -519,6 +519,7 @@
           color: $medium-grey;
           display: inline-block;
           vertical-align: middle;
+          @include hyperlink-hover($medium-grey);
         }
       }
     }
