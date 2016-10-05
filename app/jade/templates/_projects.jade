@@ -45,131 +45,132 @@ main.container-fluid.page-project(role='main')
 			#project-dash.widget
 				.widget-head
 					h2 FFD-C2029 - UI Design
-				ul.dash-content
-					li.dash-nav.block
-						ul.visible(role="navigation")
-							li
-								a(href="#", title="Log Time")
-									i.fa.fa-clock-o(aria-hidden='true')
-									span Log Time
-							li
-								a(data-toggle="modal", data-target="#assignment-modal", title="Edit")
-									i.fa.fa-pencil(aria-hidden='true')
-									span Edit
-							li
-								a(href="#", title="Complete")
-									i.fa.fa-check-square-o(aria-hidden='true')
-									span Complete
-							li
-								a(href="#", title="Add Subtask")
-									i.fa.fa-cube(aria-hidden='true')
-									span Add Subtask
-							li
-								a(href="#", title="Cut")
-									i.fa.fa-scissors(aria-hidden='true')
-									span Cut
-							li
-								a(href="#", title="Paste")
-									i.fa.fa-clipboard(aria-hidden='true')
-									span Paste
-							li
-								a(href="#", title="Split")
-									i.fa.fa-code-fork(aria-hidden='true')
-									span Split
-							li
-								a(href="#", title="Import Plan")
-									i.fa.fa-sign-in(aria-hidden='true')
-									span Iimport Plan
-							li
-								a(href="#", title="Delete")
-									i.fa.fa-trash(aria-hidden='true')
-									span Delete
-							li
-								a(href="#", title="Make Obsolete")
-									i.fa.fa-minus-circle(aria-hidden='true')
-									span Make Obsolete
-							li
-								a(href="#", title="View in JIRA")
-									i.fa.fa-bars(aria-hidden='true')
-									span View in JIRA
-							li
-								a(class='dash-toggle', href="#", title="Show/Hide Menu")
-									i.fa.fa-long-arrow-left(aria-hidden='true')
-									span Collapse
-					li.all-tasks.block
-						select.selectpicker(multiple, title="Filtered Tasks...")
-							option Show All Tasks
-							optgroup(label="Status")
-								option Active Tasks
-								option Obsolete Tasks
-							optgroup(label="Effort")
-								option Billable Tasks
-								option Unbillable Tasks
-							optgroup(label="Progress")
-								option Completed Tasks
-								option Incomplete Tasks
-							optgroup(label="Ownership")
-								option My Tasks
-								option Other's Tasks
-							optgroup(label="Types")
-								option Standard Tasks
-								option Overhead Tasks
-								option JIRA-linked Tasks
-								option Overhead Tasks
-								option Milestones
-								option Unplanned
-						ul#treeData(style='display: none;')
-							li#id1.folder.expanded(title='RouteOne')
-								| RouteOne
-								ul
-									li#id1.1.folder.expanded(title='Credit Aggregation Platform')
-										| Credit Aggregation Platform
-										ul
-											li#id1.1.1.folder.expanded(title='RONE-0757 (Remote Document Delivery)')
-												| RONE-0757 (Remote Document Delivery)
-												ul
-													li#id1.1.1.1
-														| FFD-C2029 - Analysis
-													li#id1.1.1.1
-														| FFD-C2029 - Testing
-													li#id1.1.1.1
-														| FFD-C2029 - Development
-													li#id1.1.1.1
-														| FFD-C2029 - UI Design
-											li#1.1.2.folder.expanded(title='Release 16.9')
-												| Release 16.9
-												ul
-													li#id1.1.1.1
-														| CORE-7696 Remove Authy
-													li#id1.1.1.1
-														| CORE-8758 Black list document to not delivery
-													li#id1.1.1.1
-														| CORE-8758 Privacy Policy implementation
-													li#id1.1.1.1
-														| CORE-8758 Capturing billing information
-									li#id1.2.folder(title='RONE-0743 (CAMS 2016 Travel)')
-										| RONE-0743 (CAMS 2016 Travel)
-									li#id1.3.folder(title='RONE-0749 (R1 Mobile App 2016)')
-										| RONE-0749 (R1 Mobile App 2016)
-									li#id1.4.folder(title='RONE-0742 (CAMS 2016)')
-										| RONE-0749 (CAMS 2016)
-					ul.dash-widgets.block.nav.nav-tabs(role="tablist")
-						li.active(role="presentation")
-							a(href="#tab-taskeffort", role="tab", data-toggle="tab") Task Effort
-						li(role="presentation")
-							a(href="#tab-taskbreakdown", role="tab", data-toggle="tab") Task Breakdown
-						li(role="presentation")
-							a(href="#tab-taskperformance", role="tab", data-toggle="tab") Task Performance
-					.tab-content.block
-						#tab-taskeffort.tab-pane.active(role="tabpanel")
-							h3.hidden-sm Task Effort
-							p Task Effort Content....
-						#tab-taskbreakdown.tab-pane(role="tabpanel")
-							h3.hidden-sm Task Breakdown
-							p Task Breakdown Content....
-						#tab-taskperformance.tab-pane(role="tabpanel")
-							h3.hidden-sm Task Performance
-							p Task Performance Content....
+				.widget-body
+					ul.dash-content
+						li.dash-nav.block
+							ul.visible(role="navigation")
+								li
+									a(href="#", title="Log Time")
+										i.fa.fa-clock-o(aria-hidden='true')
+										span Log Time
+								li
+									a(data-toggle="modal", data-target="#assignment-modal", title="Edit")
+										i.fa.fa-pencil(aria-hidden='true')
+										span Edit
+								li
+									a(href="#", title="Complete")
+										i.fa.fa-check-square-o(aria-hidden='true')
+										span Complete
+								li
+									a(href="#", title="Add Subtask")
+										i.fa.fa-cube(aria-hidden='true')
+										span Add Subtask
+								li
+									a(href="#", title="Cut")
+										i.fa.fa-scissors(aria-hidden='true')
+										span Cut
+								li
+									a(href="#", title="Paste")
+										i.fa.fa-clipboard(aria-hidden='true')
+										span Paste
+								li
+									a(href="#", title="Split")
+										i.fa.fa-code-fork(aria-hidden='true')
+										span Split
+								li
+									a(href="#", title="Import Plan")
+										i.fa.fa-sign-in(aria-hidden='true')
+										span Iimport Plan
+								li
+									a(href="#", title="Delete")
+										i.fa.fa-trash(aria-hidden='true')
+										span Delete
+								li
+									a(href="#", title="Make Obsolete")
+										i.fa.fa-minus-circle(aria-hidden='true')
+										span Make Obsolete
+								li
+									a(href="#", title="View in JIRA")
+										i.fa.fa-bars(aria-hidden='true')
+										span View in JIRA
+								li
+									a(class='dash-toggle', href="#", title="Show/Hide Menu")
+										i.fa.fa-long-arrow-left(aria-hidden='true')
+										span Collapse
+						li.all-tasks.block
+							select.selectpicker(multiple, title="Filtered Tasks...")
+								option Show All Tasks
+								optgroup(label="Status")
+									option Active Tasks
+									option Obsolete Tasks
+								optgroup(label="Effort")
+									option Billable Tasks
+									option Unbillable Tasks
+								optgroup(label="Progress")
+									option Completed Tasks
+									option Incomplete Tasks
+								optgroup(label="Ownership")
+									option My Tasks
+									option Other's Tasks
+								optgroup(label="Types")
+									option Standard Tasks
+									option Overhead Tasks
+									option JIRA-linked Tasks
+									option Overhead Tasks
+									option Milestones
+									option Unplanned
+							ul#treeData(style='display: none;')
+								li#id1.folder.expanded(title='RouteOne')
+									| RouteOne
+									ul
+										li#id1.1.folder.expanded(title='Credit Aggregation Platform')
+											| Credit Aggregation Platform
+											ul
+												li#id1.1.1.folder.expanded(title='RONE-0757 (Remote Document Delivery)')
+													| RONE-0757 (Remote Document Delivery)
+													ul
+														li#id1.1.1.1
+															| FFD-C2029 - Analysis
+														li#id1.1.1.1
+															| FFD-C2029 - Testing
+														li#id1.1.1.1
+															| FFD-C2029 - Development
+														li#id1.1.1.1
+															| FFD-C2029 - UI Design
+												li#1.1.2.folder.expanded(title='Release 16.9')
+													| Release 16.9
+													ul
+														li#id1.1.1.1
+															| CORE-7696 Remove Authy
+														li#id1.1.1.1
+															| CORE-8758 Black list document to not delivery
+														li#id1.1.1.1
+															| CORE-8758 Privacy Policy implementation
+														li#id1.1.1.1
+															| CORE-8758 Capturing billing information
+										li#id1.2.folder(title='RONE-0743 (CAMS 2016 Travel)')
+											| RONE-0743 (CAMS 2016 Travel)
+										li#id1.3.folder(title='RONE-0749 (R1 Mobile App 2016)')
+											| RONE-0749 (R1 Mobile App 2016)
+										li#id1.4.folder(title='RONE-0742 (CAMS 2016)')
+											| RONE-0749 (CAMS 2016)
+						ul.dash-widgets.block.nav.nav-tabs(role="tablist")
+							li.active(role="presentation")
+								a(href="#tab-taskeffort", role="tab", data-toggle="tab") Task Effort
+							li(role="presentation")
+								a(href="#tab-taskbreakdown", role="tab", data-toggle="tab") Task Breakdown
+							li(role="presentation")
+								a(href="#tab-taskperformance", role="tab", data-toggle="tab") Task Performance
+						.tab-content.block
+							#tab-taskeffort.tab-pane.active(role="tabpanel")
+								h3.hidden-sm Task Effort
+								p Task Effort Content....
+							#tab-taskbreakdown.tab-pane(role="tabpanel")
+								h3.hidden-sm Task Breakdown
+								p Task Breakdown Content....
+							#tab-taskperformance.tab-pane(role="tabpanel")
+								h3.hidden-sm Task Performance
+								p Task Performance Content....
 			#project-team.widget
 				.widget-head
 					h2 Project Team
