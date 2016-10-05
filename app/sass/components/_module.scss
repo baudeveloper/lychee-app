@@ -492,30 +492,32 @@
       border-radius: 0;
       @include border-and-background();
       .droppable {
-        float: right;
+        // float: right;
         width: auto;
         height: auto;
         min-width: 60px;
         min-height: 20px;
-      }
-      .fa {
-        float: right;
-        margin-left: 10px;
-        line-height: 20px;
-        color: $medium-grey;
         display: inline-block;
-        vertical-align: middle;
       }
       img {
-        float: right;
+        // float: right;
         width: 20px;
         margin-right: 10px;
       }
       a {
         color: $grey;
         @include hyperlink-hover($grey);
-        display: block;
+        display: inline-block;
         max-width: 60%;
+        &:last-of-type {
+          // float: right;
+          margin-left: 10px;
+          line-height: 20px;
+          max-width: auto;
+          color: $medium-grey;
+          display: inline-block;
+          vertical-align: middle;
+        }
       }
     }
     .over {
