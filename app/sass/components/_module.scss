@@ -1454,19 +1454,25 @@
         min-height: 120px;
         margin-bottom: 15px;
         .col-sm-2 {
+          position: relative;
           padding-top: 20px;
           padding-bottom: 20px;
           border: 1px solid transparent;
+          .item-remove {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            content: '\f014';
+            color: $red;
+            bottom: 5px;
+            right: 5px;
+            font-family: "fontawesome";
+          }
           &:hover {
             border: 1px solid $darker-grey;
             background-color: $white;
-            &::before {
-              position: absolute;
-              content: '\f014';
-              color: $red;
-              bottom: 0;
-              right: 5px;
-              font-family: "fontawesome";
+            .item-remove {
+              opacity: 1;
             }
           }
         }
