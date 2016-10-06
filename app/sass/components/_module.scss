@@ -232,6 +232,44 @@
         content: '\f007' !important;
       }
     }
+
+    // Icons
+    .user .fancytree-icon::before {
+      content: '\f007';
+    }
+    .briefcase .fancytree-icon::before {
+      content: '\f0b1';
+    }
+    .standard .fancytree-icon::before {
+      content: '\f24a';
+    }
+    .expanded .fancytree-icon::before {
+      content: '\f115';
+    }
+    .folder .fancytree-icon::before {
+      content: '\f07b';
+    }
+    .cube .fancytree-icon::before {
+      content: '\f1b2';
+    }
+    .cubes .fancytree-icon::before {
+      content: '\f1b3';
+    }
+    .overhead .fancytree-icon::before {
+      content: '\f1db';
+    }
+    .milestone .fancytree-icon::before {
+      content: '\f024';
+    }
+    .unplanned .fancytree-icon::before {
+      content: '\f271';
+    }
+    .sales .fancytree-icon::before {
+      content: '\f02b';
+    }
+    .jira .fancytree-icon::before {
+      content: '\ff022';
+    }
   }
 }
 
