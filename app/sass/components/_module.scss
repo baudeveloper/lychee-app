@@ -1454,6 +1454,9 @@
       @include input-placeholder-color($grey);
     }
   }
+  .project-standard {
+    margin: 10px 0 10px 20px;
+  }
 }
 
 @mixin modal-content-dyk() {
