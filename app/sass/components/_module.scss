@@ -234,6 +234,9 @@
     }
 
     // Icons
+    .fancytree-icon::before {
+      font-family: "fontawesome";
+    }
     .user .fancytree-icon::before {
       content: '\f007';
     }
@@ -268,7 +271,7 @@
       content: '\f02b';
     }
     .jira .fancytree-icon::before {
-      content: '\ff022';
+      content: '\f022';
     }
   }
 }
