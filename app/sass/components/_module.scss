@@ -1303,8 +1303,11 @@
     }
     table {
       margin-bottom: 20px;
-      td:first-child {
-        width: 60px;
+      td {
+        padding-bottom: 10px;
+        &:first-child {
+          width: 60px;
+        }
       }
     }
     .form-group {
