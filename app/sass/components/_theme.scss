@@ -608,6 +608,10 @@
     th:first-child {
       text-align: left;
     }
+    span {
+      color: $medium-grey;
+      @include font-size(12px);
+    }
   }
   .tbl-bookkeeping {
     @extend .table-brief;
