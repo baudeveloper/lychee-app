@@ -401,12 +401,12 @@
 							.row
 								.col-sm-6
 									label.radio-inline
-										input(type="radio")
+										input#input-activeindefinite(type="radio", name="radio-active")
 										| Active Indefinitely
 									label.radio-inline
-										input(type="radio")
+										input#input-activeduration(type="radio", name="radio-active")
 										| Active Duration
-								.col-sm-6
+								.col-sm-6.status-holder
 									.form-group
 										label(for="input-validfrom") Vaild From:										
 										.input-icon

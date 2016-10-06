@@ -129,6 +129,14 @@ $(document).ready(function() {
     $('#tasks-list-modal .modal-body').append($tasksListContent);
 
     /* Dashboard Page */
+    $('input[type="radio"]').click(function() {
+     if($(this).attr('id') == 'input-activeduration') {
+      $('.status-holder').show();
+     }
+     else {
+      $('.status-holder').hide();
+     }
+   });
     $(".tooltip-myteam").tooltip({
       placement: 'top'
     });
